@@ -33,9 +33,9 @@ header.top .wrap{display:flex;align-items:center;justify-content:space-between;h
 nav a{color:#cfd8e6;text-decoration:none;margin-left:20px;font-size:.92rem}
 nav a:hover{color:#fff}
 nav{white-space:nowrap}
-nav a:not(.btn){margin-left:14px;font-size:.88rem}
+nav a:not(.btn):not(.home){margin-left:14px;font-size:.88rem}
 .logo{white-space:nowrap}
-@media(max-width:1240px){nav a:not(.btn){display:none}}
+@media(max-width:1240px){nav a:not(.btn):not(.home){display:none}}
 @media(max-width:400px){header.top .btn{padding:7px 10px!important;font-size:.76rem!important}.logo{font-size:.88rem!important}}
 @media(max-width:480px){header.top .btn{padding:8px 12px;font-size:.82rem;margin-left:8px}header.top .wrap{gap:8px}.logo{font-size:.98rem}.logo svg{width:20px;height:22px;margin-right:6px!important}}
 .btn{display:inline-block;background:var(--orange);color:var(--navy) !important;padding:10px 18px;border-radius:999px;font-weight:600;text-decoration:none;border:0;cursor:pointer;font-size:.95rem}
@@ -163,7 +163,58 @@ html[data-productnamen="aan"] .gen{display:none}
 .keten li{margin:.25em 0}
 .keten .wat{margin:.6em 0 0;font-size:.88rem;color:var(--ink)}
 .keten .wat strong{color:var(--navy)}
+.offer3{grid-template-columns:repeat(3,1fr)!important}
+@media(max-width:1000px){.offer3{grid-template-columns:1fr 1fr!important}}
+@media(max-width:680px){.offer3{grid-template-columns:1fr!important}}
+.offer .card{display:flex;flex-direction:column}
+.offer .card .tag{align-self:flex-start}
+.offer .card .lede{color:var(--muted);margin:0}
+.offer .card ul{flex:1}
+.offer .card .offerte{margin-top:16px;align-self:flex-start}
+h3.grp{font-size:1.15rem;margin:28px 0 12px}
+.rub{margin:20px 0 0;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.aud .more{display:inline-block;margin-top:10px;font-size:.88rem;font-weight:700;color:var(--navy);text-decoration:none}
+.aud .more:hover{text-decoration:underline}
+.cform{max-width:760px;margin:8px auto 0;text-align:left;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:var(--r);padding:24px}
+.cform .frow{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:620px){.cform .frow{grid-template-columns:1fr}.cform{padding:18px}}
+.cform label{display:block;font-size:.88rem;font-weight:600;color:#e3e9f2;margin-bottom:14px}
+.cform input,.cform select,.cform textarea{display:block;width:100%;margin-top:6px;font:inherit;font-weight:400;color:var(--ink);background:#fff;border:1.5px solid transparent;border-radius:10px;padding:10px 12px}
+.cform textarea{resize:vertical}
+.cform label.chk{display:flex;gap:10px;align-items:flex-start;font-weight:400;color:#d5deeb}
+.cform label.chk input{width:18px;height:18px;margin:2px 0 0;flex:none}
+.cform label.err{color:#ffb4a8}
+.cform label.err input,.cform label.err select{border-color:#ff8a78}
+.cform .factions{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.cform .cmsg{font-size:.9rem;color:#ffcc00}
+.cform .fnote{font-size:.82rem;color:#b9c5d6;margin:14px 0 0}
+.cform .fnote a{color:#ffcc00}
+#contact .cform p{margin:0}
+.idee{display:grid;grid-template-columns:1fr 1.1fr;gap:28px;align-items:start}
+@media(max-width:860px){.idee{grid-template-columns:1fr}}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips button{font:inherit;font-size:.86rem;text-align:left;background:var(--orange-soft);color:#4d3b00;border:1px solid #f3dc85;border-radius:999px;padding:7px 13px;cursor:pointer}
+.chips button:hover{background:#ffeaa0}
+.iform{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:22px;border-top:4px solid var(--orange)}
+.iform .frow{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:620px){.iform .frow{grid-template-columns:1fr}}
+.iform label{display:block;font-size:.88rem;font-weight:600;color:var(--navy);margin-bottom:14px}
+.iform input,.iform select,.iform textarea{display:block;width:100%;margin-top:6px;font:inherit;font-weight:400;color:var(--ink);background:#fff;border:1.5px solid var(--line);border-radius:10px;padding:10px 12px}
+.iform label.chk{display:flex;gap:10px;align-items:flex-start;font-weight:400;color:var(--muted)}
+.iform label.chk input{width:18px;height:18px;margin:2px 0 0;flex:none}
+.iform label.err{color:var(--neg)}
+.iform label.err textarea,.iform label.err input{border-color:var(--neg)}
+.iform .factions{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.iform .imsg{font-size:.9rem;color:var(--muted)}
 .price{font-size:1.7rem;font-weight:800;color:var(--navy);letter-spacing:-.02em;margin:.2em 0 .4em;white-space:nowrap}
+.home{display:inline-flex;align-items:center;gap:6px;color:#fff!important;text-decoration:none;border:1.5px solid rgba(255,255,255,.35);border-radius:999px;padding:7px 14px;font-size:.88rem;font-weight:600;margin-left:14px}
+.home:hover{border-color:#ffcc00;color:#ffcc00!important}
+@media(max-width:480px){.home{padding:6px 10px;font-size:.78rem;margin-left:6px}.home .ht{display:none}}
+@media(max-width:400px){header.top .wrap{gap:6px}.logo svg{display:none}.home{margin-left:4px}}
+@media(max-width:440px){.bt-x{display:none}.logo{font-size:.86rem!important;letter-spacing:-.02em}}
+.card{min-width:0}
+.card h3,.card p,.card li,td{overflow-wrap:break-word;hyphens:auto}
+h1,h2,h3{overflow-wrap:break-word;hyphens:auto}
 </style>
 </head>
 <body>
@@ -173,15 +224,15 @@ html[data-productnamen="aan"] .gen{display:none}
   <div class="wrap">
     <a class="logo" href="#" aria-label="assurantie-onderzoek.nl, een activiteit van Blinqx"><svg width="26" height="28" viewBox="0 0 26 28" aria-hidden="true" style="vertical-align:-7px;margin-right:8px"><path d="M13 0l13 7v14l-13 7L0 21V7z" fill="#ffcc00"/><path d="M11 12l6 9h-3.4l-6-9z" fill="#1e2533"/></svg>assurantie-<span>onderzoek</span>.nl</a>
     <nav>
+      <a class="home" href="#" aria-label="Naar de homepage"><svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg><span class="ht">Home</span></a>
       <a href="#vragen">Uw vragen</a>
       <a href="#bron">Onze data</a>
-            <a href="#onderzoek">Benchmarks</a>
-      <a href="#schade">Schade &amp; claims</a>
+            <a href="#schade">Schade &amp; claims</a>
       <a href="#ai">AI</a>
       <a href="#aanbod">Aanbod</a>
       <a href="regelgeving.html">Regelgeving</a>
-      <a href="#monitor">Monitor</a>
-      <a href="#contact" class="btn">Offerte aanvragen</a>
+      <a href="#idee">Uw vraag</a>
+      <a href="#contact" class="btn">Offerte<span class="bt-x"> aanvragen</span></a>
     </nav>
   </div>
 </header>
@@ -202,10 +253,10 @@ html[data-productnamen="aan"] .gen{display:none}
 
 <div class="wrap">
   <div class="aud">
-    <div class="card"><span class="tag">Schadeverzekeraars</span><h3>Positie en distributie</h3><p>Uw aandeel in offertes, aanvragen en nieuwe polissen per branche, de trend door het jaar en uw aandeel bij elk assurantiekantoor.</p></div>
-    <div class="card"><span class="tag">Leven &amp; inkomen</span><h3>AOV, ORV, lijfrente en verzuim</h3><p>Uw aandeel in arbeidsongeschiktheids-, overlijdensrisico-, lijfrente- en verzuimproducten, met het klantprofiel per kantoor en per beroepsklasse.</p></div>
-    <div class="card"><span class="tag">Volmachtbedrijven</span><h3>Uw volmachtportefeuille</h3><p>Instroom, royementen, premieontwikkeling en schadelast van uw volmachten, afgezet tegen de markt en tegen andere gevolmachtigden, ook als onderbouwing bij uw volmachtaudit.</p></div>
-    <div class="card"><span class="tag">Assurantiekantoren</span><h3>Uw kantoor in beeld</h3><p>Trends in uw portefeuille: nieuwe polissen, mutaties en schades per maatschappij en per branche, en hoe u zich verhoudt tot vergelijkbare kantoren.</p></div>
+    <div class="card"><span class="tag">Schadeverzekeraars</span><h3>Positie en distributie</h3><p>Uw aandeel in offertes, aanvragen en nieuwe polissen per branche, de trend door het jaar en uw aandeel bij elk assurantiekantoor.</p><a class="more" href="?onderwerp=Verzekeraarsabonnement#contact" data-offerte="Verzekeraarsabonnement">Offerte verzekeraarsabonnement →</a></div>
+    <div class="card"><span class="tag">Leven &amp; inkomen</span><h3>AOV, ORV, lijfrente en verzuim</h3><p>Uw aandeel in arbeidsongeschiktheids-, overlijdensrisico-, lijfrente- en verzuimproducten, met het klantprofiel per kantoor en per beroepsklasse.</p><a class="more" href="?onderwerp=Leven-%20en%20inkomensabonnement#contact" data-offerte="Leven- en inkomensabonnement">Offerte leven- en inkomensabonnement →</a></div>
+    <div class="card"><span class="tag">Volmachtbedrijven</span><h3>Uw volmachtportefeuille</h3><p>Instroom, royementen, premieontwikkeling en schadelast van uw volmachten, afgezet tegen de markt en tegen andere gevolmachtigden, ook als onderbouwing bij uw volmachtaudit.</p><a class="more" href="?onderwerp=Volmachtabonnement#contact" data-offerte="Volmachtabonnement">Offerte volmachtabonnement →</a></div>
+    <div class="card"><span class="tag">Assurantiekantoren</span><h3>Uw kantoor in beeld</h3><p>Trends in uw portefeuille: nieuwe polissen, mutaties en schades per maatschappij en per branche, en hoe u zich verhoudt tot vergelijkbare kantoren.</p><a class="more" href="?onderwerp=Adviseursabonnement#contact" data-offerte="Adviseursabonnement">Offerte adviseursabonnement →</a></div>
   </div>
 </div>
 
@@ -276,7 +327,7 @@ html[data-productnamen="aan"] .gen{display:none}
         <li>Welke kantoren melden relatief veel of weinig schade bij u, gecorrigeerd voor de portefeuille?</li>
       </ul></div>
     </div>
-    <p style="margin:20px 0 0"><a class="btn" href="#contact">Stel uw vraag</a></p>
+    <p class="rub"><a class="btn offerte" href="?onderwerp=Onderzoek%20op%20maat#contact" data-offerte="Onderzoek op maat">Stel uw vraag</a></p>
   </div>
 </section>
 
@@ -357,6 +408,7 @@ html[data-productnamen="aan"] .gen{display:none}
       </tbody>
     </table>
     </div>
+    <p class="rub"><a class="btn offerte" href="?onderwerp=Vraag%20over%20data%2C%20methodologie%20of%20privacy#contact" data-offerte="Vraag over data, methodologie of privacy">Vraag over onze data</a></p>
     <div class="callout">Alle analyses zijn geaggregeerd en gaan over het netwerk van kantoren dat met de software van Blinqx werkt. Ze zijn niet herleidbaar tot individuele consumenten, ondernemingen of adviseurs, en we delen geen concurrentiegevoelige details van andere partijen.</div>
   </div>
 </section>
@@ -387,6 +439,7 @@ html[data-productnamen="aan"] .gen{display:none}
       </ul></div>
       <div class="card cat wide"><h3>Marketing &amp; doelgroepen</h3><ul><li>Doelgroepen waar u onder- of oververtegenwoordigd bent: zzp, starters, mkb, agrarisch, transport</li><li>Van offerte naar aanvraag: in welke fase u klanten verliest</li><li>Regio's en kantoren met de meeste groeiruimte</li><li>Effect van uw eigen premie- of acceptatiewijziging op uw aandeel, achteraf geanalyseerd</li><li>Hoe uw positie zich ontwikkelt rond campagnes en productintroducties</li><li>Kruisverkoop: welke polissen samen worden afgesloten</li><li>Doelgroepprofielen voor uw campagnes</li><li>Timing: in welke maanden welke branches het meest actief zijn</li></ul></div>
     </div>
+    <p class="rub"><a class="btn offerte" href="?onderwerp=Marktrapport#contact" data-offerte="Marktrapport">Offerte aanvragen voor een marktrapport</a><a class="btn ghost offerte" href="?onderwerp=Verzekeraarsabonnement#contact" data-offerte="Verzekeraarsabonnement">Of een abonnement</a></p>
     <div class="callout">Welke onderwerpen en uitsplitsingen beschikbaar zijn, hangt af van de gegevens die in de software zijn vastgelegd en van de minimale aantallen per segment. In de offerte stemmen we samen af wat u precies ontvangt.</div>
   </div>
 </section>
@@ -436,6 +489,7 @@ html[data-productnamen="aan"] .gen{display:none}
       </tbody>
     </table>
     </div>
+    <p class="rub"><a class="btn offerte" href="?onderwerp=Benchmarkonderzoek#contact" data-offerte="Benchmarkonderzoek">Offerte aanvragen voor een benchmark</a></p>
   </div>
 </section>
 
@@ -468,6 +522,7 @@ html[data-productnamen="aan"] .gen{display:none}
       <div class="card feat"><div class="num">3</div><h3>Signalen op portefeuilleniveau</h3><p>Patronen in herhaalclaims, meldingen kort na ingang van de polis en afwijkende schadefrequenties per segment. Een hulpmiddel voor uw fraudebeleid, geen oordeel over een individuele claim.</p></div>
     </div>
     <div class="callout"><strong>Afbakening.</strong> Assurantie-onderzoek.nl doet geen persoonlijk onderzoek naar individuele verzekerden en geeft geen oordeel over individuele claims. Wij leveren geaggregeerde inzichten over het schade- en onderzoeksproces. Voor onderzoek in een individueel dossier verwijzen wij naar een vergunninghoudend onderzoeksbureau, bijvoorbeeld voor digitaal feitenonderzoek in open bronnen (zoals <a href="https://www.ncrb.nl/nl/diensten/verzekeringsonderzoek/" target="_blank" rel="noopener">NCRB</a>), of naar een schade-expert.</div>
+    <p class="rub"><a class="btn offerte" href="?onderwerp=Schadebenchmark#contact" data-offerte="Schadebenchmark">Offerte aanvragen voor een schadebenchmark</a></p>
   </div>
 </section>
 
@@ -485,104 +540,107 @@ html[data-productnamen="aan"] .gen{display:none}
       <div class="card cat"><h3>Verantwoord met AI</h3><ul><li>Wij nemen geen besluiten over individuele klanten of claims</li><li>Onze eigen AI-toepassingen staan beschreven in de <a href="methodologie.html#m6b">methodologie</a></li><li>Aansluiting op de aandachtspunten van <a href="https://www.afm.nl/nl-nl/sector/verzekeraars/rapporten-en-publicaties" target="_blank" rel="noopener">AFM</a> en <a href="https://www.dnb.nl" target="_blank" rel="noopener">DNB</a> en op de AI Act (zie <a href="regelgeving.html#ai-act">regelgeving</a>)</li></ul></div>
     </div>
     <div class="callout"><strong>AI Act.</strong> AI-systemen voor risicobeoordeling en prijsstelling van natuurlijke personen bij levens- en ziektekostenverzekeringen gelden onder de Europese AI Act als hoog risico. Gebruikt u onze inzichten bij zulke systemen, bijvoorbeeld om uitkomsten per doelgroep te toetsen, dan blijft u zelf verantwoordelijk voor de eisen die de AI Act aan uw systeem stelt.</div>
-    <p style="margin:20px 0 0"><a class="btn" href="voorbeeldrapport.html#s15">Bekijk het AI-hoofdstuk in het voorbeeldrapport</a></p>
+    <p class="rub"><a class="btn offerte" href="?onderwerp=AI-onderzoek#contact" data-offerte="AI-onderzoek">Offerte aanvragen voor AI-onderzoek</a><a class="btn ghost" href="voorbeeldrapport.html#s15" style="color:var(--navy)!important">Bekijk het AI-hoofdstuk</a></p>
   </div>
 </section>
 
 <section id="aanbod" style="border-top:1px solid var(--line)">
   <div class="wrap">
     <span class="eyebrow">Aanbod</span>
-    <h2>Voor verzekeraars, volmachtbedrijven en assurantiekantoren</h2>
-    <p class="intro">Alle inzichten zijn als product te koop. U kunt beginnen met een rapport voor een vraag die nu speelt, of kiezen voor een maandelijks bijgewerkt dashboard waarmee u uw positie en portefeuille blijft volgen.</p>
+    <h2>Voor verzekeraars, volmachten, kantoren en serviceproviders</h2>
+    <p class="intro">Alle inzichten zijn als product te koop. Begin met een rapport voor een vraag die nu speelt, of kies een abonnement voor uw rol in de keten: een dashboard dat elke maand wordt bijgewerkt.</p>
     <p style="margin:-12px 0 24px"><a class="btn ghost" href="voorbeeldrapport.html" style="color:var(--navy)!important">Bekijk het voorbeeldrapport</a> <span style="font-size:.85rem;color:var(--muted);margin-left:8px">17 hoofdstukken, met fictieve cijfers</span></p>
-    <div class="offer">
+
+    <h3 class="grp">Eenmalig onderzoek en maatwerk</h3>
+    <div class="offer offer3">
       <div class="card">
         <span class="tag">Instap</span>
         <h3>Positiescan</h3><div class="price">Op aanvraag</div>
-        <p style="color:var(--muted);margin:0">Een compacte eerste meting van uw positie in één branche over één kwartaal, met een bespreking van de uitkomsten.</p>
-        <ul>
-          <li>Uw aandeel in nieuwe polissen en de trend</li>
-          <li>Uw conversie: offerte, aanvraag en polis</li>
-          <li>Uw tien belangrijkste assurantiekantoren</li>
-          <li>Een samenvatting in één rapport, plus een presentatie van een uur</li>
-        </ul>
+        <p class="lede">Een compacte eerste meting van uw positie in één branche over één kwartaal, met een bespreking van de uitkomsten.</p>
+        <ul><li>Uw aandeel in nieuwe polissen en de trend</li><li>Uw conversie: offerte, aanvraag en polis</li><li>Uw tien belangrijkste kantoren</li><li>Eén rapport plus een presentatie van een uur</li></ul>
+        <a class="btn offerte" href="?onderwerp=Positiescan#contact" data-offerte="Positiescan">Offerte aanvragen</a>
       </div>
       <div class="card">
         <span class="tag">Eenmalig</span>
         <h3>Marktrapport</h3><div class="price">Op aanvraag</div>
-        <p style="color:var(--muted);margin:0">Een momentopname over een periode en branches die u kiest, als PDF-rapport met toelichting.</p>
-        <ul>
-          <li>Aandeel per maand, kwartaal en periode, per branche</li>
-          <li>Ranglijst en trendanalyse</li>
-          <li>Klantprofiel en gekozen dekkingen</li>
-          <li>Premiepositie tegenover de markt, op basis van gepubliceerde premies</li>
-          <li>Methodologische verantwoording</li>
-        </ul>
-      </div>
-      <div class="card hl">
-        <span class="tag">Doorlopend</span>
-        <h3>Inzicht-abonnement</h3><div class="price">Op aanvraag</div>
-        <p style="color:var(--muted);margin:0">Een dashboard dat elke maand wordt bijgewerkt, met alerts bij duidelijke verschuivingen.</p>
-        <ul>
-          <li>Alles uit het marktrapport, elke maand bijgewerkt</li>
-          <li>Aandeel per kantoor, met signalering van stijgers en dalers</li>
-          <li>Royementen en portefeuilleverschuivingen</li>
-          <li>Kwartaalrapport voor uw risico- en directierapportage</li>
-          <li>Prognose van uw productie</li>
-        </ul>
+        <p class="lede">Een momentopname over een periode en branches die u kiest, als PDF-rapport met toelichting.</p>
+        <ul><li>Aandeel per maand, kwartaal en branche</li><li>Ranglijst en trendanalyse</li><li>Klantprofiel per verzekering en gekozen dekkingen</li><li>Premiepositie tegenover de markt</li><li>Methodologische verantwoording</li></ul>
+        <a class="btn offerte" href="?onderwerp=Marktrapport#contact" data-offerte="Marktrapport">Offerte aanvragen</a>
       </div>
       <div class="card">
         <span class="tag">Schade</span>
         <h3>Schadebenchmark</h3><div class="price">Op aanvraag</div>
-        <p style="color:var(--muted);margin:0">Uw schadeafhandeling en claimonderzoek tegenover de markt en een anonieme vergelijkingsgroep.</p>
-        <ul>
-          <li>Doorlooptijden van melding tot afwikkeling</li>
-          <li>Inzet van expertise, contra-expertise en onderzoek</li>
-          <li>Afwijzingen, klachten en herhaalclaims</li>
-          <li>Het oordeel van kantoren over uw afhandeling</li>
-        </ul>
+        <p class="lede">Uw schadeafhandeling en claimonderzoek tegenover de markt en een anonieme vergelijkingsgroep.</p>
+        <ul><li>Doorlooptijden van melding tot afwikkeling</li><li>Inzet van expertise, contra-expertise en onderzoek</li><li>Afwijzingen, klachten en herhaalclaims</li><li>Klimaatschade per regio</li></ul>
+        <a class="btn offerte" href="?onderwerp=Schadebenchmark#contact" data-offerte="Schadebenchmark">Offerte aanvragen</a>
       </div>
       <div class="card">
         <span class="tag">Benchmark</span>
         <h3>Benchmarkonderzoek</h3><div class="price">Op aanvraag</div>
-        <p style="color:var(--muted);margin:0">Uw prestaties op een aantal kernindicatoren, vergeleken met een anonieme groep vergelijkbare aanbieders en met de totale markt.</p>
-        <ul>
-          <li>U kiest de vergelijkingsgroep, zoals grote verzekeraars, onderlinges, volmachten of nichespelers</li>
-          <li>Kernindicatoren zoals aandeel, aandeel per kantoor, royementen en schadeafhandeling</li>
-          <li>Een anonieme groep van minstens vijf partijen, zonder concurrenten bij naam</li>
-        </ul>
+        <p class="lede">Uw prestaties op kernindicatoren, vergeleken met een anonieme groep vergelijkbare aanbieders en met de totale markt.</p>
+        <ul><li>U kiest de vergelijkingsgroep: grote verzekeraars, onderlinges, volmachten of nichespelers</li><li>Aandeel, conversie, royementen en schadeafhandeling</li><li>Minstens vijf partijen, zonder concurrenten bij naam</li></ul>
+        <a class="btn offerte" href="?onderwerp=Benchmarkonderzoek#contact" data-offerte="Benchmarkonderzoek">Offerte aanvragen</a>
       </div>
       <div class="card">
         <span class="tag">Maatwerk</span>
         <h3>Onderzoek op maat</h3><div class="price">Op aanvraag</div>
-        <p style="color:var(--muted);margin:0">Ons onderzoeksteam beantwoordt uw specifieke vraag met onze data, eventueel aangevuld met eigen onderzoek.</p>
-        <ul>
-          <li>Doelgroeponderzoek, bijvoorbeeld naar zzp'ers of mkb</li>
-          <li>Onderzoek naar klimaatschade en verduurzaming</li>
-          <li>Onderzoek naar uw distributie en volmachten</li>
-          <li>Kwalitatief onderzoek onder adviseurs en klanten</li>
-          <li>AI-impact- en fairnessonderzoek</li>
-        </ul>
+        <p class="lede">Ons onderzoeksteam beantwoordt uw specifieke vraag met onze data, eventueel aangevuld met eigen onderzoek.</p>
+        <ul><li>Doelgroeponderzoek, bijvoorbeeld zzp of mkb</li><li>Klimaatschade en verduurzaming</li><li>AI-impact- en fairnessonderzoek</li><li>Kwalitatief onderzoek onder adviseurs en klanten</li></ul>
+        <a class="btn offerte" href="?onderwerp=Onderzoek%20op%20maat#contact" data-offerte="Onderzoek op maat">Offerte aanvragen</a>
       </div>
       <div class="card">
-        <span class="tag">Onderzoek</span>
+        <span class="tag">Enquête</span>
         <h3>Adviseursenquête</h3><div class="price">Op aanvraag</div>
-        <p style="color:var(--muted);margin:0">Een jaarlijks onderzoek naar hoe assurantie-adviseurs uw acceptatie, premie, voorwaarden, schadeafhandeling en accountmanagement beoordelen.</p>
-        <ul>
-          <li>Scores en open antwoorden, gekoppeld aan uw conversie</li>
-          <li>Alleen per groep gerapporteerd, nooit per individuele adviseur</li>
-        </ul>
+        <p class="lede">Een jaarlijks onderzoek naar hoe assurantie-adviseurs uw premie, voorwaarden, acceptatie, schadeafhandeling en accountmanagement beoordelen.</p>
+        <ul><li>Scores en open antwoorden, gekoppeld aan uw conversie</li><li>Tegenover de vergelijkingsgroep</li><li>Alleen per groep gerapporteerd</li></ul>
+        <a class="btn offerte" href="?onderwerp=Adviseursenqu%C3%AAte#contact" data-offerte="Adviseursenquête">Offerte aanvragen</a>
+      </div>
+    </div>
+
+    <h3 class="grp">Abonnementen per doelgroep</h3>
+    <p style="color:var(--muted);margin:-4px 0 16px;max-width:760px">Een dashboard dat elke maand wordt bijgewerkt, met alerts bij duidelijke verschuivingen en een kwartaalrapport. Elk abonnement toont uw eigen cijfers naast de markt.</p>
+    <div class="offer offer3">
+      <div class="card hl">
+        <span class="tag">Schadeverzekeraars</span>
+        <h3>Verzekeraarsabonnement</h3><div class="price">Op aanvraag</div>
+        <p class="lede">Doorlopend inzicht in uw positie, distributie, portefeuille en schadeafhandeling.</p>
+        <ul><li>Aandeel per branche, maand en kantoor</li><li>Stijgers en dalers in uw distributie</li><li>Royementen en premieontwikkeling bij prolongatie</li><li>Schade-KPI's en klimaatschade</li><li>Prognose van uw productie</li></ul>
+        <a class="btn offerte" href="?onderwerp=Verzekeraarsabonnement#contact" data-offerte="Verzekeraarsabonnement">Offerte aanvragen</a>
       </div>
       <div class="card">
-        <span class="tag">Kantoren</span>
-        <h3>Kantoorabonnement</h3><div class="price">Op aanvraag</div>
-        <p style="color:var(--muted);margin:0">Een dashboard met de trends in de portefeuille van uw kantoor.</p>
-        <ul>
-          <li>Nieuwe polissen, mutaties en royementen per maand</li>
-          <li>Productie per maatschappij en per branche</li>
-          <li>Schademeldingen en doorlooptijden per maatschappij</li>
-          <li>Uw kantoor naast het gemiddelde in het netwerk</li>
-        </ul>
+        <span class="tag">Volmachtgevers</span>
+        <h3>Volmachtgeversabonnement</h3><div class="price">Op aanvraag</div>
+        <p class="lede">Voor verzekeraars die via gevolmachtigden werken: zicht op elke volmacht, naast de markt.</p>
+        <ul><li>Productie, premie en royementen per volmacht en label</li><li>Schadeafhandeling per volmacht: doorlooptijd, expertise, afwijzing</li><li>Signalen voor uw volmachtaudit en de Leidraad Klantbelang Centraal Volmacht</li><li>Concentratie: hoe afhankelijk u bent van enkele volmachten</li></ul>
+        <a class="btn offerte" href="?onderwerp=Volmachtgeversabonnement#contact" data-offerte="Volmachtgeversabonnement">Offerte aanvragen</a>
+      </div>
+      <div class="card">
+        <span class="tag">Volmachtbedrijven</span>
+        <h3>Volmachtabonnement</h3><div class="price">Op aanvraag</div>
+        <p class="lede">Voor gevolmachtigden: uw eigen volmachtportefeuille tegenover andere volmachten en de markt.</p>
+        <ul><li>Productie per maatschappij, label en aangesloten kantoor</li><li>Instroom, royementen en premieontwikkeling</li><li>Schadebehandeling en doorlooptijden</li><li>Onderbouwing richting uw volmachtgevers</li></ul>
+        <a class="btn offerte" href="?onderwerp=Volmachtabonnement#contact" data-offerte="Volmachtabonnement">Offerte aanvragen</a>
+      </div>
+      <div class="card">
+        <span class="tag">Adviseurs</span>
+        <h3>Adviseursabonnement</h3><div class="price">Op aanvraag</div>
+        <p class="lede">Voor assurantiekantoren en financieel adviseurs: de trends in uw eigen portefeuille.</p>
+        <ul><li>Nieuwe polissen, mutaties en royementen per maand</li><li>Productie per maatschappij en per branche</li><li>Schademeldingen en doorlooptijden per maatschappij</li><li>Signalen: onderverzekering, prolongaties onder druk</li><li>Uw kantoor naast het gemiddelde in het netwerk</li></ul>
+        <a class="btn offerte" href="?onderwerp=Adviseursabonnement#contact" data-offerte="Adviseursabonnement">Offerte aanvragen</a>
+      </div>
+      <div class="card">
+        <span class="tag">Leven &amp; inkomen</span>
+        <h3>Leven- en inkomensabonnement</h3><div class="price">Op aanvraag</div>
+        <p class="lede">Voor aanbieders van AOV, ORV, lijfrente, uitvaart en verzuim.</p>
+        <ul><li>Aandeel in offertes en aanvragen per product</li><li>Beroepsklassen, wachttijden en eindleeftijden</li><li>ORV en woonlastenbescherming bij de hypotheek</li><li>Lijfrente en financiële planning in het advies</li></ul>
+        <a class="btn offerte" href="?onderwerp=Leven-%20en%20inkomensabonnement#contact" data-offerte="Leven- en inkomensabonnement">Offerte aanvragen</a>
+      </div>
+      <div class="card">
+        <span class="tag">Serviceproviders &amp; ketens</span>
+        <h3>Netwerkabonnement</h3><div class="price">Op aanvraag</div>
+        <p class="lede">Voor serviceproviders, franchiseformules en ketens met aangesloten kantoren.</p>
+        <ul><li>Productie en portefeuille per aangesloten kantoor</li><li>Spreiding over maatschappijen en volmachten</li><li>Benchmark van uw kantoren tegenover de markt</li><li>Signalen van groei, krimp en vertrek</li></ul>
+        <a class="btn offerte" href="?onderwerp=Netwerkabonnement#contact" data-offerte="Netwerkabonnement">Offerte aanvragen</a>
       </div>
     </div>
   </div>
@@ -667,15 +725,121 @@ html[data-productnamen="aan"] .gen{display:none}
       <div class="card feat"><div class="num">2</div><h3>Schade</h3><p>Trends in schademeldingen, doorlooptijden en klimaatschade, zoals storm, hagel en wateroverlast.</p></div>
       <div class="card feat"><div class="num">3</div><h3>Inkomen en zzp</h3><p>De ontwikkeling van AOV en verzuim, ook in het licht van de basisverzekering arbeidsongeschiktheid voor zelfstandigen.</p></div>
     </div>
-    <div class="callout">De eerste editie is in voorbereiding. <a href="mailto:jeroen.oversteegen@blinqx.tech?subject=Aanmelden%20Assurantiemonitor">Meld u aan</a> om de Assurantiemonitor te ontvangen zodra hij verschijnt.</div>
+    <div class="callout">De eerste editie is in voorbereiding. <a href="?onderwerp=Aanmelden%20Assurantiemonitor#contact" data-offerte="Aanmelden Assurantiemonitor">Meld u aan</a> om de Assurantiemonitor te ontvangen zodra hij verschijnt.</div>
   </div>
 </section>
 
+<section id="idee">
+  <div class="wrap">
+    <span class="eyebrow">Uw onderzoeksvraag</span>
+    <h2>Stel uw vraag: wat zou u willen onderzoeken?</h2>
+    <p class="intro">Mist u een analyse, of heeft u een vraag over de assurantiemarkt waar nog niemand een antwoord op heeft? Leg hem aan ons voor. Wij kijken of onze data het antwoord kan geven. De meest gestelde vragen nemen we op in de Assurantiemonitor.</p>
+    <div class="idee">
+      <div>
+        <h3 style="margin:0 0 8px;font-size:1.02rem">Inspiratie: klik om over te nemen</h3>
+        <div class="chips" id="chips">
+          <button type="button">Hoe snel stappen klanten over na een premieverhoging bij prolongatie?</button>
+          <button type="button">Welke branches lopen het meeste klimaatschade op, en waar?</button>
+          <button type="button">Hoe vaak zijn zzp'ers zonder AOV, en welke beroepen?</button>
+          <button type="button">Wat doet AI in het adviesgesprek met de doorlooptijd?</button>
+          <button type="button">Zijn pakketpolissen echt trouwer dan losse polissen?</button>
+          <button type="button">Hoe vaak is een woning onderverzekerd na een verbouwing?</button>
+          <button type="button">Welke volmachten groeien het hardst, en in welke branches?</button>
+          <button type="button">Wat bepaalt de keuze van de adviseur: premie of voorwaarden?</button>
+        </div>
+      </div>
+      <form id="iform" class="iform" novalidate>
+        <label>Uw onderzoeksvraag *<textarea name="vraag" id="ivraag" rows="5" required placeholder="Bijvoorbeeld: ik wil weten hoe ..."></textarea></label>
+        <div class="frow">
+          <label>U bent
+            <select name="rol">
+              <option value="">Maak een keuze</option>
+              <option>Verzekeraar</option><option>Volmachtgever</option><option>Volmachtbedrijf</option><option>Assurantiekantoor of adviseur</option><option>Serviceprovider of keten</option><option>Toezicht, wetenschap of journalistiek</option><option>Anders</option>
+            </select>
+          </label>
+          <label>E-mail (als u een reactie wilt)<input name="email" type="email" autocomplete="email"></label>
+        </div>
+        <label class="chk"><input type="checkbox" name="anoniem"> U mag mijn vraag (zonder naam en organisatie) gebruiken in de Assurantiemonitor</label>
+        <div class="factions"><button type="submit" class="btn">Verstuur mijn vraag</button><span id="imsg" class="imsg" role="status" aria-live="polite"></span></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<script>
+(function(){
+  "use strict";
+  var form=document.getElementById('iform'),ta=document.getElementById('ivraag'),msg=document.getElementById('imsg');
+  document.querySelectorAll('#chips button').forEach(function(btn){btn.addEventListener('click',function(){ta.value=btn.textContent;ta.focus()})});
+  form.addEventListener('submit',function(ev){
+    ev.preventDefault();
+    var f=new FormData(form),v=function(k){return (f.get(k)||'').toString().trim()};
+    var em=form.querySelector('[name=email]');
+    ta.closest('label').classList.remove('err');em.closest('label').classList.remove('err');
+    if(!v('vraag')){ta.closest('label').classList.add('err');msg.textContent='Vul uw onderzoeksvraag in.';ta.focus();return}
+    if(v('email')&&!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v('email'))){em.closest('label').classList.add('err');msg.textContent='Controleer uw e-mailadres.';em.focus();return}
+    var body=['Onderzoeksvraag:',v('vraag'),'','Rol: '+(v('rol')||'-'),'E-mail voor reactie: '+(v('email')||'-'),'Mag gebruikt worden in de Assurantiemonitor: '+(f.get('anoniem')?'ja':'nee'),'','Verstuurd via assurantie-onderzoek.nl'].join('\n');
+    var url='mailto:jeroen.oversteegen@blinqx.tech?subject='+encodeURIComponent('Onderzoeksvraag via assurantie-onderzoek.nl')+'&body='+encodeURIComponent(body);
+    var inFrame=true;try{inFrame=window.self!==window.top}catch(e){}
+    if(inFrame){window.open(url,'_blank')}else{window.location.href=url}
+    msg.textContent='Uw e-mailprogramma wordt geopend. Verstuur het bericht om uw vraag in te dienen.';
+  });
+})();
+</script>
+
 <section id="contact">
   <div class="wrap">
-    <h2>Inzicht in uw positie kopen?</h2>
-    <p>Vraag een offerte aan voor een eenmalig rapport, doorlopend inzicht, een schadebenchmark of onderzoek op maat. Dan bespreken we welke inzichten en welke periode u nodig heeft.</p>
-    <h3 style="margin:0 0 16px;font-size:1rem;color:#ffcc00;letter-spacing:.08em;text-transform:uppercase">Voor meer informatie</h3>
+    <h2>Offerte aanvragen of een vraag stellen?</h2>
+    <p>Vul het formulier in. Uw e-mailprogramma opent dan met een ingevuld bericht aan ons onderzoeksteam, dat u alleen nog hoeft te versturen. We nemen binnen twee werkdagen contact met u op.</p>
+
+    <form id="cform" class="cform" novalidate>
+      <div class="frow">
+        <label>Naam *<input name="naam" required autocomplete="name"></label>
+        <label>Organisatie *<input name="organisatie" required autocomplete="organization"></label>
+      </div>
+      <div class="frow">
+        <label>Functie<input name="functie" autocomplete="organization-title"></label>
+        <label>Type organisatie *
+          <select name="type" required>
+            <option value="">Maak een keuze</option>
+            <option>Schadeverzekeraar</option>
+            <option>Leven- of inkomensverzekeraar</option>
+            <option>Volmachtgever</option>
+            <option>Volmachtbedrijf</option>
+            <option>Assurantiekantoor of financieel adviseur</option>
+            <option>Serviceprovider, keten of formule</option>
+            <option>Anders</option>
+          </select>
+        </label>
+      </div>
+      <div class="frow">
+        <label>E-mail *<input name="email" type="email" required autocomplete="email"></label>
+        <label>Telefoon<input name="telefoon" type="tel" autocomplete="tel"></label>
+      </div>
+      <label>Onderwerp *
+        <select name="onderwerp" id="onderwerp" required>
+          <option value="">Maak een keuze</option>
+          <optgroup label="Eenmalig onderzoek en maatwerk">
+            <option>Positiescan</option><option>Marktrapport</option><option>Schadebenchmark</option><option>Benchmarkonderzoek</option><option>Onderzoek op maat</option><option>Adviseursenquête</option><option>AI-onderzoek</option>
+          </optgroup>
+          <optgroup label="Abonnementen">
+            <option>Verzekeraarsabonnement</option><option>Volmachtgeversabonnement</option><option>Volmachtabonnement</option><option>Adviseursabonnement</option><option>Leven- en inkomensabonnement</option><option>Netwerkabonnement</option>
+          </optgroup>
+          <optgroup label="Overig">
+            <option>Aanmelden Assurantiemonitor</option><option>Vraag over data, methodologie of privacy</option><option>Anders</option>
+          </optgroup>
+        </select>
+      </label>
+      <label>Uw vraag of toelichting<textarea name="bericht" rows="5" placeholder="Bijvoorbeeld: welke branches, periode en vergelijkingsgroep u zoekt"></textarea></label>
+      <label class="chk"><input type="checkbox" name="akkoord" required> Ik ga ermee akkoord dat assurantie-onderzoek.nl mijn gegevens gebruikt om op deze aanvraag te reageren. *</label>
+      <div class="factions">
+        <button type="submit" class="btn">Verstuur via e-mail</button>
+        <span id="cmsg" class="cmsg" role="status" aria-live="polite"></span>
+      </div>
+      <p class="fnote">Opent er geen e-mailprogramma? Mail dan naar <a href="mailto:jeroen.oversteegen@blinqx.tech">jeroen.oversteegen@blinqx.tech</a> of bel een van onze contactpersonen.</p>
+    </form>
+
+    <h3 style="margin:40px 0 16px;font-size:1rem;color:#ffcc00;letter-spacing:.08em;text-transform:uppercase">Of neem direct contact op</h3>
     <div class="people">
       <div class="person"><h3>Jos van Driesum</h3><a href="mailto:jos.van.driesum@blinqx.tech?subject=Offerte%20assurantie-onderzoek.nl">jos.van.driesum@blinqx.tech</a><a href="tel:+31644081447">06 44 081 447</a></div>
       <div class="person"><h3>Dennes Roes</h3><a href="mailto:dennes.roes@blinqx.tech?subject=Offerte%20assurantie-onderzoek.nl">dennes.roes@blinqx.tech</a><a href="tel:+31651117893">06 51 117 893</a></div>
@@ -683,6 +847,41 @@ html[data-productnamen="aan"] .gen{display:none}
     </div>
   </div>
 </section>
+
+<script>
+(function(){
+  "use strict";
+  var TO='jeroen.oversteegen@blinqx.tech';
+  var form=document.getElementById('cform'),sel=document.getElementById('onderwerp'),msg=document.getElementById('cmsg');
+  function kies(o){
+    if(!o)return;
+    for(var i=0;i<sel.options.length;i++){if(sel.options[i].text===o){sel.selectedIndex=i;return}}
+  }
+  // Onderwerp uit de URL (?onderwerp=...), bijv. vanaf andere pagina's
+  try{kies(new URLSearchParams(location.search).get('onderwerp'))}catch(e){}
+  // Knoppen op deze pagina: onderwerp kiezen zonder herladen
+  document.querySelectorAll('[data-offerte]').forEach(function(a){
+    a.addEventListener('click',function(ev){
+      ev.preventDefault();kies(a.getAttribute('data-offerte'));
+      document.getElementById('contact').scrollIntoView({behavior:'smooth'});
+      setTimeout(function(){form.querySelector('[name=naam]').focus({preventScroll:true})},500);
+    });
+  });
+  form.addEventListener('submit',function(ev){
+    ev.preventDefault();
+    var bad=[].filter.call(form.querySelectorAll('[required]'),function(el){return el.type==='checkbox'?!el.checked:!el.value.trim()||(el.type==='email'&&!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(el.value))});
+    form.querySelectorAll('.err').forEach(function(el){el.classList.remove('err')});
+    if(bad.length){bad.forEach(function(el){(el.closest('label')||el).classList.add('err')});msg.textContent='Vul de verplichte velden (*) correct in.';bad[0].focus();return}
+    var f=new FormData(form),v=function(k){return (f.get(k)||'').toString().trim()};
+    var subject='Offerteaanvraag assurantie-onderzoek.nl: '+v('onderwerp')+' – '+v('organisatie');
+    var body=['Onderwerp: '+v('onderwerp'),'','Naam: '+v('naam'),'Organisatie: '+v('organisatie'),'Functie: '+(v('functie')||'-'),'Type organisatie: '+v('type'),'E-mail: '+v('email'),'Telefoon: '+(v('telefoon')||'-'),'','Vraag of toelichting:',v('bericht')||'-','','Verstuurd via het contactformulier op assurantie-onderzoek.nl'].join('\n');
+    var url='mailto:'+TO+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+    var inFrame=true;try{inFrame=window.self!==window.top}catch(e){}
+    if(inFrame){window.open(url,'_blank')}else{window.location.href=url}
+    msg.textContent='Uw e-mailprogramma wordt geopend. Verstuur het bericht om de aanvraag af te ronden.';
+  });
+})();
+</script>
 
 </main>
 
