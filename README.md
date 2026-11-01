@@ -1,4 +1,4 @@
-# assurantie-onderzoek.nl
+# Assurantie-onderzoek.nl™
 
 Marktinformatie en onderzoek voor de assurantiebranche (verzekeraars, volmachtbedrijven, assurantiekantoren). Opgezet naar het voorbeeld van hypotheekonderzoek.nl.
 
