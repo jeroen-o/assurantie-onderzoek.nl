@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="nl">
+<html lang="nl" data-productnamen="uit">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -147,6 +147,22 @@ footer{background:var(--navy);color:#b9c5d6;padding:40px 0;font-size:.88rem}
 footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 #contact{background:var(--navy-2);color:#fff;text-align:center}
 #contact p{color:#d5deeb;max-width:640px;margin:0 auto 24px}
+/* Productnamen: standaard verborgen. Zet <html data-productnamen="aan"> om ze te tonen. */
+.pn{display:none}
+html[data-productnamen="aan"] .pn{display:inline}
+html[data-productnamen="aan"] .gen{display:none}
+.keten{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;counter-reset:k}
+@media(max-width:860px){.keten{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.keten{grid-template-columns:1fr}}
+.keten .card{border-top:4px solid var(--orange);position:relative}
+.keten .fase{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.keten .fase b{width:30px;height:30px;border-radius:9px;background:var(--navy);color:#fff;display:grid;place-items:center;font-size:.9rem;flex:none}
+.keten h3{margin:0;font-size:1.05rem}
+.keten .bron{font-size:.8rem;font-weight:700;color:#6b5200;background:var(--orange-soft);border-radius:8px;padding:4px 9px;display:inline-block;margin:4px 0 8px}
+.keten ul{margin:0;padding-left:18px;color:var(--muted);font-size:.9rem}
+.keten li{margin:.25em 0}
+.keten .wat{margin:.6em 0 0;font-size:.88rem;color:var(--ink)}
+.keten .wat strong{color:var(--navy)}
 .price{font-size:1.7rem;font-weight:800;color:var(--navy);letter-spacing:-.02em;margin:.2em 0 .4em;white-space:nowrap}
 </style>
 </head>
@@ -175,7 +191,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
     <span class="eyebrow">Marktinformatie en onderzoek voor de assurantiebranche</span>
     <h1>Dé plek waar u alles vindt over de assurantiemarkt.</h1>
     <p class="lead" style="color:#fff;font-weight:600;margin-bottom:12px">Hier doet u benchmarkonderzoek en analyses: zie waar u staat, per maand, per branche, per assurantiekantoor en per klantprofiel. Van offerte en polis tot schademelding en afwikkeling.</p>
-    <p class="lead"><strong style="color:#ffcc00">Wij zien offertes, aanvragen, polissen, mutaties en schademeldingen uit het intermediaire kanaal</strong>, omdat assurantiekantoren en volmachtbedrijven werken met de advies-, administratie- en CRM-software van Blinqx. Assurantie-onderzoek.nl is het onderzoeksbureau van Blinqx. Wij maken van die data stuurinformatie: een eenmalig rapport, doorlopend inzicht of onderzoek op maat, ook over schadeafhandeling en claimonderzoek.</p>
+    <p class="lead"><strong style="color:#ffcc00">Wij zien offertes, aanvragen, polissen, mutaties en schademeldingen uit het intermediaire kanaal</strong>, omdat assurantiekantoren en volmachtbedrijven werken met de advies-, administratie- en CRM-software van Blinqx<span class="pn">, zoals eBlinqx, DIAS, Premievergelijk en Blinqx Connect CRM</span>. Assurantie-onderzoek.nl is het onderzoeksbureau van Blinqx. Wij maken van die data stuurinformatie: een eenmalig rapport, doorlopend inzicht of onderzoek op maat, ook over schadeafhandeling en claimonderzoek.</p>
     <div class="ctas">
       <a href="#aanbod" class="btn">Bekijk het aanbod</a>
       <a href="#schade" class="btn ghost">Schade &amp; claimonderzoek</a>
@@ -267,7 +283,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
   <div class="wrap">
     <span class="eyebrow">Data uit de bron</span>
     <h2>Direct inzicht in offertes, polissen en schades</h2>
-    <p class="intro">Assurantie-onderzoek.nl is een activiteit van Blinqx. Assurantiekantoren en volmachtbedrijven gebruiken de advies-, administratie- en CRM-software van Blinqx. Daardoor zien wij wat er in het advies gebeurt voordat een aanvraag bij een verzekeraar binnenkomt, wat er een lopende polis wordt, en wat er gebeurt als de klant schade meldt. Wat u ontvangt is altijd geaggregeerd en laat uw eigen positie tegenover de markt zien.</p>
+    <p class="intro">Assurantie-onderzoek.nl is een activiteit van Blinqx. Assurantiekantoren en volmachtbedrijven gebruiken de advies-, administratie- en CRM-software van Blinqx<span class="pn">: van Premievergelijk en Blinqx Connect CRM tot eBlinqx Verzekering en eBlinqx Volmacht (voorheen DIAS)</span>. Daardoor zien wij wat er in het advies gebeurt voordat een aanvraag bij een verzekeraar binnenkomt, wat er een lopende polis wordt, en wat er gebeurt als de klant schade meldt. Wat u ontvangt is altijd geaggregeerd en laat uw eigen positie tegenover de markt zien.</p>
     <div class="flow" aria-label="Van klant tot verzekeraar">
       <div class="step">Klant</div><div class="arr">→</div>
       <div class="step">Assurantiekantoor</div><div class="arr">→</div>
@@ -276,6 +292,36 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
       <div class="step">Verzekeraar of volmacht<small>ziet alleen eigen polissen</small></div><div class="arr">→</div>
       <div class="step">Schademelding<small>ook in beeld</small></div>
     </div>
+
+    <h3 style="margin:32px 0 6px;font-size:1.15rem">De hele keten in beeld, in zes stappen</h3>
+    <p style="color:var(--muted);margin:0 0 16px;max-width:760px">Een verzekeraar ziet de klant pas bij de aanvraag. Onze bronnen beginnen eerder en lopen door tot na de schade. Elke stap levert eigen kerngetallen op, en samen vormen ze één doorlopende klantreis.</p>
+    <div class="keten">
+      <div class="card"><div class="fase"><b>1</b><h3>Oriëntatie</h3></div>
+        <span class="bron"><span class="gen">Kantoorwebsites en online rekentools</span><span class="pn">Engage: websites en rekentools</span></span>
+        <ul><li>Welke rekentools en onderwerpen consumenten gebruiken</li><li>Hoeveel oriëntatie leidt tot contact met het kantoor</li></ul>
+        <p class="wat"><strong>Kerngetal:</strong> de vraag in de markt, voordat de klant bij een adviseur komt.</p></div>
+      <div class="card"><div class="fase"><b>2</b><h3>Advies</h3></div>
+        <span class="bron"><span class="gen">CRM en risico-inventarisatie</span><span class="pn">Blinqx Connect CRM, eBlinqx CRM en Risicomanagement</span></span>
+        <ul><li>Contactmomenten, adviesgesprekken en hun doorlooptijd</li><li>Welke risico's bij zakelijke klanten worden besproken</li></ul>
+        <p class="wat"><strong>Kerngetal:</strong> van lead naar advies, en welke risico's wel en niet worden verzekerd.</p></div>
+      <div class="card"><div class="fase"><b>3</b><h3>Vergelijking</h3></div>
+        <span class="bron"><span class="gen">Premievergelijking door de adviseur</span><span class="pn">Premievergelijk (voorheen MyTP.nl)</span></span>
+        <ul><li>Hoe vaak u wordt vergeleken, met welk profiel en welke dekking</li><li>Uw positie in de vergelijking, achteraf en als bandbreedte</li></ul>
+        <p class="wat"><strong>Kerngetal:</strong> hoe vaak u wordt geoffreerd, en hoe vaak u wint.</p></div>
+      <div class="card"><div class="fase"><b>4</b><h3>Aanvraag &amp; polis</h3></div>
+        <span class="bron"><span class="gen">Administratiesoftware en SIVI-berichten</span><span class="pn">eBlinqx Verzekering en DIAS Assurantie, met koppelingen via Aplaza en Solera (ADN)</span></span>
+        <ul><li>Aanvragen en nieuwe polissen per maatschappij en branche</li><li>Uniforme definities via de SIVI-standaard</li></ul>
+        <p class="wat"><strong>Kerngetal:</strong> uw aandeel in nieuwe productie, per kantoor en tegenover de markt.</p></div>
+      <div class="card"><div class="fase"><b>5</b><h3>Beheer</h3></div>
+        <span class="bron"><span class="gen">Portefeuillebeheer, signalen en naverrekening</span><span class="pn">eBlinqx, Signalen en Naverrekenen</span></span>
+        <ul><li>Mutaties, prolongaties en royementen</li><li>Oversluit- en besparingssignalen, naverrekening bij zakelijke polissen</li></ul>
+        <p class="wat"><strong>Kerngetal:</strong> klantbehoud, en waar klanten naartoe vertrekken.</p></div>
+      <div class="card"><div class="fase"><b>6</b><h3>Schade</h3></div>
+        <span class="bron"><span class="gen">Schadebehandeling bij kantoren en volmachten</span><span class="pn">eBlinqx Volmacht en DIAS Volmacht</span></span>
+        <ul><li>Schademeldingen, expertise-inzet en uitwisseling met experts</li><li>Doorlooptijd van melding tot afwikkeling</li></ul>
+        <p class="wat"><strong>Kerngetal:</strong> de kwaliteit van uw schadeafhandeling, tegenover de markt.</p></div>
+    </div>
+    <div class="callout" style="margin-bottom:8px"><strong>Ook de brug naar de hypotheek.</strong> Via <span class="gen">hypotheeksoftware en HDN-aanvragen</span><span class="pn">eBlinqx Hypotheek en HDN</span> zien we welke overlijdensrisico-, woonlasten- en inkomensbeschermingen bij een hypotheek worden afgesloten. Zie ook <a href="https://jeroen-o.github.io/hypotheekonderzoek.nl/" target="_blank" rel="noopener">hypotheekonderzoek.nl</a>.</div>
     <div class="cats" style="margin-top:24px">
       <div class="card cat"><h3>Welke offertes worden gemaakt</h3><ul><li>Premievergelijkingen die de adviseur maakt</li><li>Welke maatschappijen en dekkingen worden meegenomen</li><li>Welke eigen risico's en clausules worden gekozen</li></ul></div>
       <div class="card cat"><h3>Welke aanvragen niet naar u gaan</h3><ul><li>Hoe vaak u wel in een vergelijking zat, maar de aanvraag niet bij u terechtkwam</li><li>In welke branches en bij welke kantoren dat gebeurt</li><li>Geaggregeerd, zonder te tonen naar welke concurrent de aanvraag ging</li></ul></div>
