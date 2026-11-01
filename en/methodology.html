@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="en" data-productnamen="uit">
+<head>
+<meta charset="utf-8">
+<style id="gate-css">
+html:not(.ok) body>*:not(#gate){display:none!important}
+html.ok #gate{display:none!important}
+#gate{position:fixed;inset:0;z-index:1000;display:flex;align-items:center;justify-content:center;padding:16px;background:linear-gradient(160deg,#1e2533,#2b3345);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+#gate .gbox{width:100%;max-width:380px;background:#fff;border-radius:16px;padding:28px 24px;box-shadow:0 20px 50px rgba(0,0,0,.3);color:#1b2535}
+#gate .glogo{font-weight:800;font-size:1.1rem;margin:0 0 4px;color:#1e2533}#gate .glogo span{color:#b08a00}
+#gate p{margin:0 0 16px;color:#5b6678;font-size:.92rem}
+#gate label{display:block;font-size:.85rem;font-weight:600;margin-bottom:6px}
+#gate input{display:block;width:100%;box-sizing:border-box;font:inherit;padding:11px 12px;border:1.5px solid #e1e6ee;border-radius:10px;margin-bottom:12px}
+#gate input:focus{outline:3px solid #ffcc00;outline-offset:1px}
+#gate button{width:100%;font:inherit;font-weight:700;background:#ffcc00;color:#1e2533;border:0;border-radius:999px;padding:11px 16px;cursor:pointer}
+#gate .gerr{color:#c0392b;font-size:.88rem;min-height:1.2em;margin:10px 0 0}
+.tm{font-size:.5em;vertical-align:super;line-height:0;margin-left:1px;font-weight:700}
+</style>
+<script>try{if(sessionStorage.getItem('ao_ok')==='1')document.documentElement.classList.add('ok')}catch(e){}</script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Methodology · Assurantie-onderzoek.nl</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 26 28%22%3E%3Cpath d=%22M13 0l13 7v14l-13 7L0 21V7z%22 fill=%22%23ffcc00%22/%3E%3Cpath d=%22M11 12l6 9h-3.4l-6-9z%22 fill=%22%231e2533%22/%3E%3C/svg%3E">
+<link rel="canonical" href="https://assurantie-onderzoek.nl/en/methodology.html">
+<link rel="alternate" hreflang="nl" href="https://assurantie-onderzoek.nl/methodologie.html">
+<link rel="alternate" hreflang="en" href="https://assurantie-onderzoek.nl/en/methodology.html">
+<meta name="theme-color" content="#1e2533">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_GB">
+<meta property="og:site_name" content="Assurantie-onderzoek.nl">
+<meta property="og:title" content="Assurantie-onderzoek.nl: market intelligence and research for the insurance sector">
+<meta property="og:description" content="Market intelligence for insurers, MGAs and insurance intermediaries: position, distribution, portfolio, claims handling and claims investigation.">
+<meta property="og:url" content="https://assurantie-onderzoek.nl/en/methodology.html">
+<meta name="description" content="Source, definitions, calculation methods, data quality, privacy, competition and limitations of the reports of Assurantie-onderzoek.nl.">
+<style>
+:root{
+  --navy:#1e2533; --navy-2:#2b3345; --orange:#ffcc00; --orange-soft:#fff5cc;
+  --ink:#1b2535; --muted:#5b6678; --line:#e1e6ee; --bg:#f5f7fa; --card:#fff;
+  --pos:#1f8a5b; --neg:#c0392b; --c2:#8da9c4;
+  --r:14px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+a{color:var(--navy-2)}
+.wrap{max-width:1160px;margin:0 auto;padding:0 16px}
+header.top{background:var(--navy);color:#fff;position:sticky;top:0;z-index:10}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:16px}
+.logo{font-weight:800;letter-spacing:-.01em;font-size:1.1rem;color:#fff;text-decoration:none}
+.logo span{color:var(--orange)}
+nav a{color:#cfd8e6;text-decoration:none;margin-left:20px;font-size:.92rem}
+nav a:hover{color:#fff}
+nav{white-space:nowrap}
+nav>a:not(.btn):not(.home):not(.lang){margin-left:14px;font-size:.88rem}
+.logo{white-space:nowrap}
+@media(max-width:1420px){nav>a:not(.btn):not(.home):not(.lang){display:none}}
+@media(max-width:400px){header.top .btn{padding:7px 10px!important;font-size:.76rem!important}.logo{font-size:.88rem!important}}
+@media(max-width:480px){header.top .btn{padding:8px 12px;font-size:.82rem;margin-left:8px}header.top .wrap{gap:8px}.logo{font-size:.98rem}.logo svg{width:20px;height:22px;margin-right:6px!important}}
+.btn{display:inline-block;background:var(--orange);color:var(--navy) !important;padding:10px 18px;border-radius:999px;font-weight:600;text-decoration:none;border:0;cursor:pointer;font-size:.95rem}
+.btn.ghost{background:transparent;border:1.5px solid currentColor}
+.hero{background:linear-gradient(160deg,var(--navy) 0%,var(--navy-2) 100%);color:#fff;padding:72px 0 88px}
+.eyebrow{display:inline-block;font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#7a5c00}
+.hero .eyebrow,#contact .eyebrow,.kern .eyebrow{color:var(--orange)}
+.skip{position:absolute;left:-9999px;top:8px;z-index:100;background:var(--orange);color:var(--navy);padding:10px 16px;border-radius:8px;font-weight:700}
+.skip:focus{left:16px}
+:focus-visible{outline:3px solid #e0a800;outline-offset:2px;border-radius:4px}
+.hero h1{font-size:clamp(2rem,5vw,3.3rem);line-height:1.08;margin:.4em 0 .35em;letter-spacing:-.02em;max-width:820px}
+.hero p.lead{font-size:1.15rem;color:#d5deeb;max-width:680px;margin:0 0 28px}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap}
+.hero .ctas .ghost{color:#fff !important}
+.aud{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:-48px}
+@media(max-width:1000px){.aud{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.aud{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px}
+.aud .card{box-shadow:0 8px 28px rgba(30,37,51,.10)}
+.aud h3{margin:.2em 0 .3em;font-size:1.1rem}
+.aud p{margin:0;color:var(--muted);font-size:.95rem}
+.tag{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:var(--orange-soft);color:#6b5200;padding:3px 9px;border-radius:999px}
+section{padding:72px 0}
+section h2{font-size:clamp(1.6rem,3.4vw,2.2rem);letter-spacing:-.015em;margin:.25em 0 .4em;line-height:1.15}
+section p.intro{color:var(--muted);max-width:720px;margin:0 0 32px;font-size:1.05rem}
+.grid6{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:860px){.grid6{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.grid6{grid-template-columns:1fr}}
+.feat .num{width:34px;height:34px;border-radius:10px;background:var(--navy);color:#fff;display:grid;place-items:center;font-weight:700;margin-bottom:10px}
+.feat h3{margin:0 0 .3em;font-size:1.05rem}
+.feat p{margin:0;color:var(--muted);font-size:.94rem}
+
+/* tables */
+table{width:100%;border-collapse:collapse;font-size:.9rem}
+th{text-align:left;font-size:.74rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:600;border-bottom:1px solid var(--line);padding:8px 6px}
+td{padding:8px 6px;border-bottom:1px solid var(--line);vertical-align:top}
+.tablewrap{overflow-x:auto}
+.cats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+@media(max-width:1000px){.cats{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.cats{grid-template-columns:1fr}}
+.cat{border-top:4px solid var(--orange)}
+.cat h3{margin:0 0 .5em;font-size:1.02rem}
+.cat ul{margin:0;padding-left:18px;color:var(--muted);font-size:.9rem}
+.cat li{margin:.3em 0}
+.cat.wide{grid-column:1/-1}
+.cats.q{grid-template-columns:repeat(3,1fr)}
+@media(max-width:1000px){.cats.q{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.cats.q{grid-template-columns:1fr}}
+.cat.wide ul{columns:2;column-gap:32px}
+@media(max-width:760px){.cat.wide ul{columns:1}}
+.flow{display:flex;align-items:stretch;gap:8px;flex-wrap:wrap}
+.flow .step{flex:1 1 120px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 12px;text-align:center;font-weight:700;color:var(--navy);display:flex;flex-direction:column;justify-content:center}
+.flow .step small{display:block;font-weight:500;color:var(--muted);font-size:.78rem;margin-top:4px}
+.flow .step.hl{background:var(--orange);border-color:var(--orange)}
+.flow .step.hl small{color:var(--navy)}
+.flow .arr{align-self:center;color:var(--muted);font-size:1.3rem}
+@media(max-width:760px){.flow{flex-direction:column}.flow .arr{transform:rotate(90deg)}}
+/* offer */
+.offer{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+@media(max-width:1180px){.offer{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:1000px){.offer{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.offer{grid-template-columns:1fr}}
+@media(max-width:960px){.offer{grid-template-columns:1fr 1fr}}
+@media(max-width:760px){.offer{grid-template-columns:1fr}}
+.offer .card h3{margin:.3em 0}
+.offer ul{padding-left:18px;margin:.6em 0 0;color:var(--muted)}
+.offer li{margin:.25em 0}
+.offer .card.hl{border:2px solid var(--orange)}
+
+.checks{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+@media(max-width:760px){.checks{grid-template-columns:1fr}}
+.checks li{padding-left:28px;position:relative;font-weight:600}
+.checks li::before{content:"";position:absolute;left:0;top:3px;width:18px;height:18px;border-radius:50%;background:var(--orange)}
+.checks li::after{content:"";position:absolute;left:6px;top:7px;width:5px;height:9px;border:solid var(--navy);border-width:0 2px 2px 0;transform:rotate(45deg)}
+.wp{display:grid;grid-template-columns:1.6fr 1fr;gap:28px;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:32px;border-top:4px solid var(--orange)}
+@media(max-width:860px){.wp{grid-template-columns:1fr;padding:22px}}
+.wp-cta{background:var(--orange-soft);border-radius:12px;padding:22px;align-self:start}
+.checks.one{grid-template-columns:1fr}
+.checks.one li{font-weight:500;color:var(--ink)}
+.mission{margin-top:48px;text-align:center}
+.mission p{font-size:clamp(1.3rem,3vw,1.9rem);font-weight:800;letter-spacing:-.015em;color:var(--navy);margin:.3em auto 0;max-width:820px;line-height:1.25}
+.kern{display:grid;grid-template-columns:1.2fr 1fr;gap:24px;align-items:center;background:var(--navy);color:#fff;border-radius:var(--r);padding:28px;margin-bottom:16px}
+@media(max-width:860px){.kern{grid-template-columns:1fr}}
+.kern h3{margin:.4em 0 .3em;font-size:1.4rem;color:#fff}
+.kern p{margin:0;color:#d5deeb}
+.funnel{display:flex;flex-direction:column;gap:8px;align-items:center}
+.funnel>div{background:var(--orange);color:var(--navy);font-weight:800;text-align:center;padding:12px;border-radius:10px}
+.funnel small{display:block;font-weight:500;font-size:.78rem}
+.funnel .f1{width:100%}.funnel .f2{width:78%}.funnel .f3{width:56%}
+footer a{color:#ffcc00}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin-bottom:10px}
+.faq summary{cursor:pointer;font-weight:700;color:var(--navy)}
+.faq details p{margin:.6em 0 0;color:var(--muted)}
+/* EBA */
+@media(min-width:700px){.eba td:first-child{white-space:nowrap}}
+.eba td:first-child{font-weight:600;color:var(--navy)}
+.callout{border-left:4px solid var(--orange);background:#fff;padding:14px 18px;border-radius:0 10px 10px 0;margin-top:18px;font-size:.92rem;color:var(--muted)}
+.method{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+@media(max-width:760px){.method{grid-template-columns:1fr}}
+.method h3{margin:0 0 .3em;font-size:1.02rem}
+.method p{margin:0;color:var(--muted);font-size:.93rem}
+.people{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:900px;margin:0 auto;text-align:left}
+@media(max-width:760px){.people{grid-template-columns:1fr}}
+.person{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:var(--r);padding:20px}
+.person h3{margin:0 0 8px;font-size:1.05rem;color:#fff}
+.person a{display:block;color:#d5deeb;text-decoration:none;font-size:.92rem;margin-top:4px;word-break:break-all}
+.person a:hover{color:#ffcc00}
+footer{background:var(--navy);color:#b9c5d6;padding:40px 0;font-size:.88rem}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+#contact{background:var(--navy-2);color:#fff;text-align:center}
+#contact p{color:#d5deeb;max-width:640px;margin:0 auto 24px}
+/* Productnamen: standaard verborgen. Zet <html data-productnamen="aan"> om ze te tonen. */
+.pn{display:none}
+html[data-productnamen="aan"] .pn{display:inline}
+html[data-productnamen="aan"] .gen{display:none}
+.keten{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;counter-reset:k}
+@media(max-width:860px){.keten{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.keten{grid-template-columns:1fr}}
+.keten .card{border-top:4px solid var(--orange);position:relative}
+.keten .fase{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.keten .fase b{width:30px;height:30px;border-radius:9px;background:var(--navy);color:#fff;display:grid;place-items:center;font-size:.9rem;flex:none}
+.keten h3{margin:0;font-size:1.05rem}
+.keten .bron{font-size:.8rem;font-weight:700;color:#6b5200;background:var(--orange-soft);border-radius:8px;padding:4px 9px;display:inline-block;margin:4px 0 8px}
+.keten ul{margin:0;padding-left:18px;color:var(--muted);font-size:.9rem}
+.keten li{margin:.25em 0}
+.keten .wat{margin:.6em 0 0;font-size:.88rem;color:var(--ink)}
+.keten .wat strong{color:var(--navy)}
+.price{font-size:1.7rem;font-weight:800;color:var(--navy);letter-spacing:-.02em;margin:.2em 0 .4em;white-space:nowrap}
+.home{display:inline-flex;align-items:center;gap:6px;color:#fff!important;text-decoration:none;border:1.5px solid rgba(255,255,255,.35);border-radius:999px;padding:7px 14px;font-size:.88rem;font-weight:600;margin-left:14px}
+.home:hover{border-color:#ffcc00;color:#ffcc00!important}
+.lang{display:inline-flex;align-items:center;color:#fff!important;text-decoration:none;border:1.5px solid rgba(255,255,255,.35);border-radius:999px;padding:7px 12px;font-size:.82rem;font-weight:700;margin-left:10px;letter-spacing:.04em}.lang:hover{border-color:#ffcc00;color:#ffcc00!important}@media(max-width:480px){.lang{padding:6px 9px;font-size:.74rem;margin-left:4px}}@media(max-width:440px){.lang{padding:5px 7px;margin-left:0}.home{padding:6px 8px}.menu summary{padding:6px 8px}header.top .btn{margin-left:4px}.menu{margin-left:2px}}
+@media(max-width:480px){.home{padding:6px 10px;font-size:.78rem;margin-left:6px}.home .ht{display:none}}
+@media(max-width:400px){header.top .wrap{gap:6px}.logo svg{display:none}.home{margin-left:4px}}
+@media(max-width:440px){.bt-x{display:none}.logo{font-size:.86rem!important;letter-spacing:-.02em}}
+.card{min-width:0}
+.card h3,.card p,.card li,td{overflow-wrap:break-word;hyphens:auto}
+h1,h2,h3{overflow-wrap:break-word;hyphens:auto}
+@media(max-width:380px){header.top nav>a.btn:not(.home){display:none}}
+.menu{display:inline-block;position:relative;margin-left:10px;vertical-align:middle}
+.menu summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:6px;color:#fff;border:1.5px solid rgba(255,255,255,.35);border-radius:999px;padding:7px 14px;font-size:.88rem;font-weight:600}
+.menu summary::-webkit-details-marker{display:none}
+.menu summary:hover,.menu[open] summary{border-color:#ffcc00;color:#ffcc00}
+.menu .mpanel{position:absolute;right:0;top:calc(100% + 10px);background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:0 16px 40px rgba(30,37,51,.25);padding:16px;display:grid;grid-template-columns:1fr 1fr;gap:4px 24px;width:min(460px,calc(100vw - 32px));white-space:normal;z-index:20}
+.menu .mpanel b{display:block;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:2px 0 6px}
+.menu .mpanel a{display:block;color:var(--navy)!important;margin:0!important;padding:6px 0;font-size:.92rem!important;text-decoration:none;border-bottom:1px solid var(--line)}
+.menu .mpanel a:hover{color:#7a5c00!important}
+@media(max-width:560px){.menu .mpanel{grid-template-columns:1fr;position:fixed;left:16px;right:16px;top:64px;width:auto;max-height:calc(100vh - 80px);overflow:auto}}
+@media(max-width:480px){.menu summary{padding:6px 10px;font-size:.78rem}.menu .mt{display:none}.menu{margin-left:4px}}
+/* header-final: één set regels voor de kopbalk, NL en EN */
+@media(max-width:1560px){nav>a:not(.btn):not(.home):not(.lang){display:none!important}}
+@media(max-width:760px){.bt-x,.home .ht,.menu .mt{display:none!important}}
+@media(max-width:600px){.logo svg{display:none!important}header.top .wrap{gap:6px!important}.home,.lang,.menu summary{padding:6px 9px!important}.home,.lang,.menu{margin-left:4px!important}header.top nav>a.btn:not(.home){padding:7px 12px!important;font-size:.8rem!important;margin-left:4px!important}}
+@media(min-width:401px){header.top nav>a.btn:not(.home){display:inline-block!important}}
+@media(max-width:400px){header.top nav>a.btn:not(.home){display:none!important}.logo{font-size:.84rem!important}}
+</style>
+<style>
+.doc{max-width:820px;margin:0 auto;padding:40px 16px 64px}
+.doc h2{margin-top:1.8em;font-size:1.45rem}
+.doc h3{margin:1.4em 0 .3em;font-size:1.08rem}
+.doc p,.doc li{color:#2c3647}
+.doc table{margin:12px 0}
+.box{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin:16px 0}
+.ph{background:var(--orange-soft);padding:0 4px;border-radius:4px}
+.toc{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 20px}
+.toc ol{margin:6px 0 0;padding-left:20px}
+.src{font-size:.88rem;color:var(--muted)}
+.team{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:760px){.team{grid-template-columns:1fr!important}}
+.team .card{text-align:center}
+.team .cat{text-align:left}
+.team .av{width:72px;height:72px;border-radius:50%;background:var(--orange-soft);display:grid;place-items:center;margin:0 auto 10px;font-weight:800;color:var(--navy);font-size:1.3rem}
+</style>
+<meta property="og:image" content="https://assurantie-onderzoek.nl/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://assurantie-onderzoek.nl/og.png">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div id="gate" role="dialog" aria-modal="true" aria-labelledby="gtitle">
+  <form class="gbox" id="gform" autocomplete="off">
+    <p class="glogo" id="gtitle">Assurantie-<span>onderzoek</span>.nl<sup class="tm" aria-hidden="true">™</sup></p>
+    <p>This site is not yet public. Enter the password to continue.</p>
+    <label for="gpw">Password</label>
+    <input id="gpw" type="password" autocomplete="current-password" required>
+    <button type="submit">Open</button>
+    <p class="gerr" id="gerr" role="alert"></p>
+    <noscript><p class="gerr">Please enable JavaScript to view this site.</p></noscript>
+  </form>
+</div>
+<script>
+(function(){
+  var root=document.documentElement;if(root.classList.contains('ok'))return;
+  function h(s){var x=5381;for(var i=0;i<s.length;i++){x=(Math.imul(x,33)^s.charCodeAt(i))>>>0}return x}
+  var f=document.getElementById('gform'),pw=document.getElementById('gpw'),err=document.getElementById('gerr');
+  setTimeout(function(){pw.focus()},50);
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(h(pw.value.trim().toLowerCase())===1121249330){
+      try{sessionStorage.setItem('ao_ok','1')}catch(x){}
+      root.classList.add('ok');
+    }else{err.textContent='Incorrect password. Please try again.';pw.select()}
+  });
+})();
+</script>
+
+<a class="skip" href="index.html#main">Skip to content</a>
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="index.html" aria-label="Assurantie-onderzoek.nl, an activity of Blinqx"><svg width="26" height="28" viewBox="0 0 26 28" aria-hidden="true" style="vertical-align:-7px;margin-right:8px"><path d="M13 0l13 7v14l-13 7L0 21V7z" fill="#ffcc00"/><path d="M11 12l6 9h-3.4l-6-9z" fill="#1e2533"/></svg>Assurantie-<span>onderzoek</span>.nl<sup class="tm" aria-hidden="true">™</sup></a>
+    <nav>
+      <a class="lang" href="../methodologie.html" hreflang="nl" lang="nl" aria-label="Nederlandse versie">NL</a><a class="home" href="index.html" aria-label="To the homepage"><svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg><span class="ht">Home</span></a>
+      <a href="index.html#vragen">Your questions</a>
+      <a href="index.html#bron">Our data</a>
+            <a href="index.html#schade">Claims</a>
+      <a href="index.html#ai">AI</a>
+      <a href="index.html#aanbod">Products</a>
+      <a href="regulation.html">Regulation</a>
+      <a href="index.html#idee">Your question</a>
+      <a href="index.html#contact" class="btn">Request<span class="bt-x"> a quote</span></a>
+      <details class="menu"><summary aria-label="Menu"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span class="mt">Menu</span></summary><div class="mpanel"><div><b>On the homepage</b><a href="index.html#">Home</a><a href="index.html#vragen">Your questions</a><a href="index.html#bron">Our data</a><a href="index.html#rapportages">Reports</a><a href="index.html#onderzoek">Benchmarks</a><a href="index.html#schade">Claims</a><a href="index.html#ai">AI research</a><a href="index.html#aanbod">Products &amp; subscriptions</a><a href="index.html#monitor">Insurance Monitor</a><a href="index.html#idee">Your research question</a><a href="index.html#contact">Contact &amp; quote</a></div><div><b>Pages</b><a href="sample-report.html">Sample report</a><a href="whitepaper.html">Whitepaper</a><a href="regulation.html">Regulation</a><a href="methodology.html">Methodology</a><a href="about.html">About us</a><a href="privacy.html">Privacy statement</a></div></div></details>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<div class="hero" style="padding:56px 0 64px">
+  <div class="wrap">
+    <span class="eyebrow">Methodology · version 1.1</span>
+    <h1 style="font-size:clamp(1.8rem,4vw,2.6rem)">How our figures are produced</h1>
+    <p class="lead" style="margin:0">Source, definitions, calculation methods, data quality, privacy, competition and limitations of the reports of Assurantie-onderzoek.nl.</p>
+  </div>
+</div>
+
+<article class="doc">
+
+  <div class="toc"><strong>Contents</strong><ol>
+    <li><a href="#m1">Purpose and scope</a></li><li><a href="#m2">Data source</a></li><li><a href="#m3">Classification of lines of business</a></li><li><a href="#m4">Definitions</a></li><li><a href="#m5">Calculation methods</a></li><li><a href="#m6">Claims and claims investigation</a></li><li><a href="#m6b">Use of AI</a></li><li><a href="#m7">Data quality</a></li><li><a href="#m8">Privacy</a></li><li><a href="#m9">Competition</a></li><li><a href="#m10">Limitations</a></li><li><a href="#m11">Version history</a></li>
+  </ol></div>
+
+  <h2 id="m1">1. Purpose and scope</h2>
+  <p>Assurantie-onderzoek.nl provides market intelligence to non-life insurers, life and income protection insurers, MGAs (managing general agents) and insurance intermediaries. The reports show the client's position compared with the market or with an anonymous peer group. They cover personal and commercial insurance that is advised on, taken out, administered and, in the event of a claim, handled through the intermediary channel.</p>
+
+  <h2 id="m2">2. Data source</h2>
+  <ul>
+    <li><b>Source:</b> the Blinqx advice, comparison, administration and CRM software used by insurance intermediaries and MGAs.</li>
+    <li><b>Units:</b> quotes (premium comparisons), applications, policies, policy changes, renewals, cancellations and claim notifications, as recorded in these systems.</li>
+    <li><b>Message traffic:</b> where available, standardised messages in accordance with the <a href="https://www.sivi.org" target="_blank" rel="noopener">SIVI</a> standard.</li>
+    <li><b>Coverage:</b> determined per study. Each report states the number of intermediaries, MGAs, quotes, policies and claim notifications in the period studied, together with the reference date.</li>
+    <li><b>Premium data:</b> publicly available premiums for fixed model profiles, recorded with source and date.</li>
+    <li><b>Supplementary open data:</b> where indicated, publications from sources including CBS (Statistics Netherlands), DNB (De Nederlandsche Bank) and the Verbond van Verzekeraars (Dutch Association of Insurers; Data Analytics Centre).</li>
+  </ul>
+  <p>The figures relate to the Blinqx network and the intermediary channel. They are not necessarily representative of the Dutch insurance market as a whole. Direct writers, online providers and intermediaries using other software are not included.</p>
+
+  <h2 id="m3">3. Classification of lines of business</h2>
+  <p>We classify personal insurance according to the <a href="https://www.cbs.nl/nl-nl/longread/diversen/2026/de-ecoicopv2-indeling/120000-verzekeringen-en-financiele-diensten" target="_blank" rel="noopener">ECOICOP v2 classification of CBS</a>, so that premium trends can be compared with the consumer price index. Commercial insurance and income protection insurance are classified by SIVI line of business.</p>
+  <div class="tablewrap"><table class="eba">
+    <thead><tr><th>Group</th><th>ECOICOP v2</th><th>Examples</th></tr></thead>
+    <tbody>
+      <tr><td>Home</td><td>121300</td><td>Buildings, home contents, glass</td></tr>
+      <tr><td>Private vehicles</td><td>121410</td><td>Car, motorcycle, moped, caravan</td></tr>
+      <tr><td>Travel</td><td>121420</td><td>Annual and single-trip travel insurance, cancellation</td></tr>
+      <tr><td>Health</td><td>121200</td><td>Supplementary insurance, insofar as arranged through an intermediary</td></tr>
+      <tr><td>Other</td><td>121900</td><td>Liability, legal expenses</td></tr>
+      <tr><td>Life and accident</td><td>121100 (outside the CPI)</td><td>Term life insurance (ORV), funeral, accident, annuity</td></tr>
+      <tr><td>Income and commercial</td><td>SIVI line of business</td><td>AOV, sickness absence, commercial liability, fire, transport, cyber</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2 id="m4">4. Definitions</h2>
+  <div class="tablewrap"><table class="eba">
+    <thead><tr><th>Term</th><th>Definition</th></tr></thead>
+    <tbody>
+      <tr><td>Quote</td><td>A premium comparison in which an insurer appears. Multiple comparisons within one file for the same insurer and line of business in the same month count as one.</td></tr>
+      <tr><td>Application</td><td>An application sent from the file to an insurer or MGA</td></tr>
+      <tr><td>New policy</td><td>A policy with a recorded inception date in the period that is not a continuation of an existing policy with the same insurer</td></tr>
+      <tr><td>Policy change</td><td>A change to an in-force policy, such as different cover, a different sum insured or a different insured object</td></tr>
+      <tr><td>Renewal</td><td>The extension of a policy on the contract expiry date</td></tr>
+      <tr><td>Cancellation</td><td>A terminated policy, regardless of the reason. A switch to another insurer through the same intermediary counts as a cancellation at the former insurer.</td></tr>
+      <tr><td>Cancellation rate</td><td>The number of cancellations in the period divided by the number of in-force policies at the start of the period, annualised</td></tr>
+      <tr><td>Market share</td><td>The number of new policies (or the new premium, where so stated) at the insurer divided by the total in the same period and line of business. This is a weighted share, not the average of individual monthly percentages.</td></tr>
+      <tr><td>Conversion</td><td>The number of applications divided by the number of quotes in which the insurer appeared</td></tr>
+      <tr><td>Index</td><td>The share at an intermediary, in a region or in a segment, divided by the national share, multiplied by 100</td></tr>
+      <tr><td>Premium</td><td>The annual premium including insurance premium tax and excluding policy fees, unless stated otherwise</td></tr>
+      <tr><td>Peer group</td><td>An anonymous group of at least 5 comparable providers, in which no single party accounts for more than 25% of the volume</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2 id="m5">5. Calculation methods</h2>
+  <h3>Quartiles and ranges</h3>
+  <p>The position within a peer group is expressed in quartiles. For premiums, we show for fixed model profiles the lowest and highest premium, the 25th and 75th percentiles and the median, never the premium of an individual competitor.</p>
+  <h3>Indicative reason for losing out</h3>
+  <p>For quotes in which an insurer appeared but which did not lead to an application with that insurer, we compare premium, cover, excess and underwriting outcome with those of the insurer that was chosen. The largest difference is taken as the indicative reason. This is an inference, not a measured reason. Which insurer received the application is not reported.</p>
+  <h3>Premium development at renewal</h3>
+  <p>The average percentage change in premium at renewal, for policies without a change in cover or insured object in the preceding twelve months, broken down by policy duration. This ensures that the change is not the result of different cover.</p>
+  <h3>Signals of underinsurance</h3>
+  <p>The share of policies whose sum insured was not determined using a home contents value calculator or rebuild value calculator, or has not been reviewed for more than five years. This is a signal, not a determination of underinsurance.</p>
+  <h3>Forecast</h3>
+  <p>The forecast of your own production is based on the historical relationship between quotes, applications and new policies, with seasonal adjustment. The range shows the 80% prediction interval. The method is tested against actual outcomes every quarter.</p>
+
+  <h2 id="m6">6. Claims and claims investigation</h2>
+  <div class="tablewrap"><table class="eba">
+    <thead><tr><th>Term</th><th>Definition</th></tr></thead>
+    <tbody>
+      <tr><td>Claim notification</td><td>A claim recorded in the file through the intermediary or the MGA</td></tr>
+      <tr><td>Taken into handling</td><td>The date on which the claim file was created and cover was checked</td></tr>
+      <tr><td>Lead time</td><td>The number of working days from notification to the final payment or the rejection, median</td></tr>
+      <tr><td>Use of loss adjusting</td><td>A claim for which a loss adjuster was engaged, as recorded in the file</td></tr>
+      <tr><td>Investigation</td><td>An investigation into the cause of loss, a technical investigation or an external investigation recorded in the claim file, regardless of the outcome</td></tr>
+      <tr><td>Climate-related damage</td><td>Damage caused by storm, hail, precipitation, flooding or lightning, per 1,000 in-force home policies</td></tr>
+      <tr><td>Signal</td><td>A pattern at portfolio level that deviates from the market, such as a claim shortly after inception or repeat claims. Never a judgement on an individual claim.</td></tr>
+    </tbody>
+  </table></div>
+  <p>For investigations, we count only the fact and the outcome category (no deviation, payment adjusted, rejected). We do not use data from incident registers or the warning system of Stichting CIS, nor the content of investigation reports.</p>
+
+  <h2 id="m6b">6a. Use of AI in our analyses</h2>
+  <ul>
+    <li><b>Policy terms as data:</b> we use language models to convert public policy terms and conditions into comparable characteristics. Every output is checked by a researcher before it is included in a report.</li>
+    <li><b>Classification:</b> free text, such as a cancellation reason or cause of loss, may be classified into fixed categories using AI. The share classified in this way is stated in the report.</li>
+    <li><b>Forecasts and signals:</b> statistical models on aggregated data, with backtesting and a prediction interval.</li>
+    <li><b>Limits:</b> we do not use AI to make decisions about individual customers, policies or claims, and we do not use protected characteristics such as ethnicity. Personal data is not provided to external AI services.</li>
+    <li><b>Fairness analyses:</b> we report differences between target groups as a signal for further investigation, not as proof of discrimination.</li>
+  </ul>
+
+  <h2 id="m7">7. Data quality</h2>
+  <ul>
+    <li><b>Deduplication:</b> duplicate quotes, applications and policies within one file are merged.</li>
+    <li><b>Plausibility:</b> values outside realistic limits are excluded, for example a negative premium or a lead time of more than three years.</li>
+    <li><b>Missing values:</b> these are reported separately as "unknown" and are not imputed, unless explicitly stated.</li>
+    <li><b>Consistency:</b> every month we check the reconciliation between quotes, applications and policies, and between policies and claim notifications.</li>
+    <li><b>Revision:</b> late registrations may still change earlier months. Figures are final 2 months after the end of the period. Before then, they are marked as provisional.</li>
+  </ul>
+
+  <h2 id="m8">8. Privacy</h2>
+  <ul>
+    <li>Reports contain only aggregated data, without personal data of consumers, business owners or advisers.</li>
+    <li>Segments with fewer than 25 observations are not shown.</li>
+    <li>The intermediary or the MGA is the controller for the customer file. The use of file data for aggregated market research is laid down in an agreement with each participating party. This sets out the purpose, pseudonymisation prior to analysis, the retention periods and the prohibition on re-identification.</li>
+    <li>The legal basis is legitimate interest (Art. 6(1)(f) GDPR), supported by a balancing of interests and a DPIA.</li>
+    <li>We do not use special categories of personal data, such as health data, or personal data relating to criminal convictions and offences.</li>
+    <li>Underlying data is processed in pseudonymised form and anonymised or deleted after 5 years.</li>
+    <li>Age, income, sum insured and postcode are reported only in bands.</li>
+  </ul>
+
+  <h2 id="m9">9. Competition</h2>
+  <ul>
+    <li>A client sees only its own position compared with the market or an anonymous peer group.</li>
+    <li>No figures on individual competitors are provided.</li>
+    <li>Premium information comes only from public sources and is shown as a range, with a delay of at least 4 weeks.</li>
+    <li>No information is provided on future or non-public premiums, commissions or underwriting policy.</li>
+    <li>Clients do not exchange information with one another through Assurantie-onderzoek.nl.</li>
+  </ul>
+
+  <h2 id="m10">10. Limitations</h2>
+  <ul>
+    <li>Coverage is limited to the Blinqx network. Direct channels and other software are not included.</li>
+    <li>Quality depends on what intermediaries and MGAs record, for example the cancellation reason, the cause of loss and the use of a loss adjuster.</li>
+    <li>The reason for losing out, the signals and the forecast are inferences subject to uncertainty.</li>
+    <li>Claims reported directly to the insurer, without the involvement of the intermediary, are not always visible.</li>
+  </ul>
+
+  <h2 id="m11">11. Version history</h2>
+  <div class="tablewrap"><table class="eba"><thead><tr><th>Version</th><th>Date</th><th>Change</th></tr></thead><tbody>
+    <tr><td>0.9</td><td>November 2026</td><td>First draft</td></tr>
+    <tr><td>1.0</td><td>November 2026</td><td>Definitions for claims and claims investigation added</td></tr>
+    <tr><td>1.1</td><td>November 2026</td><td>Use of AI in our analyses added</td></tr>
+  </tbody></table></div>
+</article>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><strong style="color:#fff">Assurantie-onderzoek.nl™</strong><br>Market intelligence and research for the insurance sector<br>An activity of <strong style="color:#ffcc00">Blinqx</strong></div>
+    <div class="colofon">
+      <strong style="color:#fff">Colophon</strong><br>
+      Blinqx (including Blinqx Verzekering &amp; Hypotheek and the eBlinqx cloud platform)<br>
+      Hullenbergweg 109, 1101 CL Amsterdam · Chamber of Commerce (KvK) 84045132<br>
+      <a href="about.html">About us</a> · <a href="privacy.html">Privacy statement</a> · <a href="methodology.html">Methodology</a> · <a href="regulation.html">Regulation</a> · <a href="sample-report.html">Sample report</a> · <a href="index.html#schade">Claims &amp; claims investigation</a> · <a href="https://jeroen-o.github.io/hypotheekonderzoek.nl/" target="_blank" rel="noopener">Hypotheekonderzoek.nl</a><br>
+      <span style="font-size:.8rem">This site does not constitute legal or regulatory advice.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

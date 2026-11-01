@@ -90,10 +90,17 @@ footer b{color:#fff}
 @media print{.bar-top button{display:none}.bar-top{position:static}section.ch{break-inside:avoid-page}.card{break-inside:avoid}body{background:#fff}}
 .home{display:inline-flex;align-items:center;gap:6px;color:#fff!important;text-decoration:none;border:1.5px solid rgba(255,255,255,.35);border-radius:999px;padding:7px 14px;font-size:.88rem;font-weight:600;margin-left:0}
 .home:hover{border-color:#ffcc00;color:#ffcc00!important}
+.lang{display:inline-flex;align-items:center;color:#fff!important;text-decoration:none;border:1.5px solid rgba(255,255,255,.35);border-radius:999px;padding:7px 12px;font-size:.82rem;font-weight:700;margin-left:10px;letter-spacing:.04em}.lang:hover{border-color:#ffcc00;color:#ffcc00!important}
 @media(max-width:480px){.home{padding:6px 10px;font-size:.78rem;margin-left:6px}.home .ht{display:none}}
 @media(max-width:440px){.stamp{display:none}}
 h1,h2,h3{overflow-wrap:break-word;hyphens:auto}
-@media(max-width:560px){.bar-top .wrap>a:first-child{display:none}}
+@media(max-width:620px){.bar-top .wrap>a:first-child{display:none}}
+/* header-final: één set regels voor de kopbalk, NL en EN */
+@media(max-width:1560px){nav>a:not(.btn):not(.home):not(.lang){display:none!important}}
+@media(max-width:760px){.bt-x,.home .ht,.menu .mt{display:none!important}}
+@media(max-width:600px){.logo svg{display:none!important}header.top .wrap{gap:6px!important}.home,.lang,.menu summary{padding:6px 9px!important}.home,.lang,.menu{margin-left:4px!important}header.top nav>a.btn:not(.home){padding:7px 12px!important;font-size:.8rem!important;margin-left:4px!important}}
+@media(min-width:401px){header.top nav>a.btn:not(.home){display:inline-block!important}}
+@media(max-width:400px){header.top nav>a.btn:not(.home){display:none!important}.logo{font-size:.84rem!important}}
 </style>
 <meta property="og:image" content="https://assurantie-onderzoek.nl/og.png">
 <meta property="og:image:width" content="1200">
@@ -101,6 +108,8 @@ h1,h2,h3{overflow-wrap:break-word;hyphens:auto}
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://assurantie-onderzoek.nl/og.png">
 <meta name="robots" content="noindex, nofollow">
+<link rel="alternate" hreflang="nl" href="https://assurantie-onderzoek.nl/voorbeeldrapport.html">
+<link rel="alternate" hreflang="en" href="https://assurantie-onderzoek.nl/en/sample-report.html">
 </head>
 <body>
 <div id="gate" role="dialog" aria-modal="true" aria-labelledby="gtitle">
@@ -132,7 +141,7 @@ h1,h2,h3{overflow-wrap:break-word;hyphens:auto}
 
 <div class="bar-top"><div class="wrap">
   <a href="index.html" style="color:#fff;text-decoration:none"><b>Assurantie-<span>onderzoek</span>.nl<sup class="tm" aria-hidden="true">™</sup></b></a>
-  <span style="display:flex;gap:10px;align-items:center"><a class="home" href="index.html" aria-label="Naar de homepage"><svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg><span class="ht">Home</span></a><span class="stamp">Voorbeeld · fictieve cijfers</span></span>
+  <span style="display:flex;gap:10px;align-items:center"><a class="lang" href="en/sample-report.html" hreflang="en" lang="en" aria-label="English version">EN</a><a class="home" href="index.html" aria-label="Naar de homepage"><svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg><span class="ht">Home</span></a><span class="stamp">Voorbeeld · fictieve cijfers</span></span>
   <button class="pr" id="pr" type="button">Afdrukken / PDF</button>
 </div></div>
 

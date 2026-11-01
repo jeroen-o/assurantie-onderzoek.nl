@@ -1,0 +1,546 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style id="gate-css">
+html:not(.ok) body>*:not(#gate){display:none!important}
+html.ok #gate{display:none!important}
+#gate{position:fixed;inset:0;z-index:1000;display:flex;align-items:center;justify-content:center;padding:16px;background:linear-gradient(160deg,#1e2533,#2b3345);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+#gate .gbox{width:100%;max-width:380px;background:#fff;border-radius:16px;padding:28px 24px;box-shadow:0 20px 50px rgba(0,0,0,.3);color:#1b2535}
+#gate .glogo{font-weight:800;font-size:1.1rem;margin:0 0 4px;color:#1e2533}#gate .glogo span{color:#b08a00}
+#gate p{margin:0 0 16px;color:#5b6678;font-size:.92rem}
+#gate label{display:block;font-size:.85rem;font-weight:600;margin-bottom:6px}
+#gate input{display:block;width:100%;box-sizing:border-box;font:inherit;padding:11px 12px;border:1.5px solid #e1e6ee;border-radius:10px;margin-bottom:12px}
+#gate input:focus{outline:3px solid #ffcc00;outline-offset:1px}
+#gate button{width:100%;font:inherit;font-weight:700;background:#ffcc00;color:#1e2533;border:0;border-radius:999px;padding:11px 16px;cursor:pointer}
+#gate .gerr{color:#c0392b;font-size:.88rem;min-height:1.2em;margin:10px 0 0}
+.tm{font-size:.5em;vertical-align:super;line-height:0;margin-left:1px;font-weight:700}
+</style>
+<script>try{if(sessionStorage.getItem('ao_ok')==='1')document.documentElement.classList.add('ok')}catch(e){}</script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sample report · Assurantie-onderzoek.nl</title>
+<meta name="description" content="Sample report with fictitious figures: market position, conversion, distribution, portfolio, claims handling, claims investigation and climate-related damage for a non-life insurer.">
+<meta name="theme-color" content="#1e2533">
+<link rel="canonical" href="https://assurantie-onderzoek.nl/en/sample-report.html">
+<link rel="alternate" hreflang="nl" href="https://assurantie-onderzoek.nl/voorbeeldrapport.html">
+<link rel="alternate" hreflang="en" href="https://assurantie-onderzoek.nl/en/sample-report.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 26 28%22%3E%3Cpath d=%22M13 0l13 7v14l-13 7L0 21V7z%22 fill=%22%23ffcc00%22/%3E%3Cpath d=%22M11 12l6 9h-3.4l-6-9z%22 fill=%22%231e2533%22/%3E%3C/svg%3E">
+<style>
+:root{--navy:#1e2533;--navy2:#2b3345;--y:#ffcc00;--y2:#e0a800;--ys:#fff5cc;--ink:#1b2535;--mut:#5b6678;--line:#e1e6ee;--bg:#f5f7fa;--pos:#1f8a5b;--neg:#c0392b;--mkt:#9aa6b8}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55;font-size:15px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+.bar-top{position:sticky;top:0;z-index:5;background:var(--navy);color:#fff}
+.bar-top .wrap{display:flex;align-items:center;justify-content:space-between;height:54px;gap:12px}
+.bar-top b span{color:var(--y)}
+.stamp{background:var(--y);color:var(--navy);font-weight:800;font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:999px;white-space:nowrap}
+button.pr{font:inherit;font-weight:700;background:var(--y);color:var(--navy);border:0;border-radius:999px;padding:8px 16px;cursor:pointer}
+.cover{background:linear-gradient(160deg,var(--navy),var(--navy2));color:#fff;padding:64px 0 72px}
+.cover .ey{color:var(--y);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.8rem}
+.cover h1{font-size:clamp(2rem,5vw,3rem);line-height:1.08;margin:.3em 0 .3em;letter-spacing:-.02em}
+.cover h1 em{color:var(--y);font-style:normal}
+.cover p{color:#d5deeb;max-width:640px;margin:0}
+.meta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.meta div{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:10px 14px;font-size:.85rem;color:#d5deeb}
+.meta b{display:block;color:#fff;font-size:.95rem}
+.warn{background:var(--ys);border-left:4px solid var(--y2);padding:12px 16px;border-radius:0 10px 10px 0;font-size:.9rem;margin:24px 0 0;color:#4d3b00}
+.toc{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:20px 0 0;padding:0;list-style:none;counter-reset:t}
+@media(max-width:760px){.toc{grid-template-columns:1fr}}
+.toc li{counter-increment:t;background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-size:.9rem}
+.toc li::before{content:counter(t);display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--navy);color:#fff;font-size:.75rem;font-weight:700;margin-right:8px}
+.toc a{color:var(--ink);text-decoration:none;font-weight:600}
+section.ch{padding:48px 0;border-bottom:1px solid var(--line)}
+section.ch:nth-of-type(even){background:#fff}
+.chn{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#7a5c00}
+.chn i{font-style:normal;display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--y);color:var(--navy)}
+h2{font-size:clamp(1.4rem,3vw,1.9rem);margin:.3em 0 .3em;letter-spacing:-.015em;line-height:1.2}
+.lead{color:var(--mut);max-width:760px;margin:0 0 20px}
+h3{font-size:1rem;margin:0 0 2px}
+.sub{font-size:.84rem;color:var(--mut);margin:0 0 12px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+@media(max-width:860px){.g2,.g3{grid-template-columns:1fr}.g4{grid-template-columns:1fr 1fr}}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px;min-width:0}
+section.ch:nth-of-type(even) .card{background:var(--bg)}
+.kpi .l{font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:var(--mut);font-weight:700}
+.kpi .v{font-size:1.7rem;font-weight:800;letter-spacing:-.02em;color:var(--navy)}
+.kpi .d{font-size:.84rem}
+.pos{color:var(--pos)}.neg{color:var(--neg)}
+.find{background:var(--navy);color:#fff;border-radius:14px;padding:20px 22px;margin-top:14px}
+.find h3{color:var(--y);margin-bottom:8px}
+.find ol{margin:0;padding-left:20px}.find li{margin:.35em 0;color:#e3e9f2}
+.note{font-size:.84rem;color:var(--mut);margin-top:10px;padding-top:10px;border-top:1px dashed var(--line)}
+.ins{font-size:.9rem;margin-top:10px;padding:10px 12px;background:var(--ys);border-radius:10px}
+.ins b{color:#5c4600}
+.legend{display:flex;flex-wrap:wrap;gap:14px;font-size:.8rem;color:var(--mut);margin-bottom:6px}
+.legend i{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+table{width:100%;border-collapse:collapse;font-size:.88rem}
+th{text-align:left;font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--mut);border-bottom:1px solid var(--line);padding:7px 6px;font-weight:700}
+td{padding:7px 6px;border-bottom:1px solid var(--line);vertical-align:middle}
+.r{text-align:right;font-variant-numeric:tabular-nums}
+.tw{overflow-x:auto}
+.mini{height:7px;background:var(--line);border-radius:99px;overflow:hidden;min-width:60px}
+.mini span{display:block;height:100%;background:var(--navy)}
+.pill{display:inline-block;padding:2px 8px;border-radius:99px;font-size:.75rem;font-weight:700}
+.pill.g{background:#e3f4ec;color:var(--pos)}.pill.r{background:#fbe7e5;color:var(--neg)}.pill.n{background:var(--line);color:var(--mut)}
+svg text{font-family:inherit}
+.sc td:nth-child(n+2){text-align:center}
+footer{background:var(--navy);color:#b9c5d6;padding:28px 0;font-size:.85rem}
+footer b{color:#fff}
+@media(max-width:560px){.bar-top a b{display:none}.stamp{font-size:.66rem;padding:3px 8px}button.pr{padding:7px 12px;font-size:.8rem}}
+@media print{.bar-top button{display:none}.bar-top{position:static}section.ch{break-inside:avoid-page}.card{break-inside:avoid}body{background:#fff}}
+.home{display:inline-flex;align-items:center;gap:6px;color:#fff!important;text-decoration:none;border:1.5px solid rgba(255,255,255,.35);border-radius:999px;padding:7px 14px;font-size:.88rem;font-weight:600;margin-left:0}
+.home:hover{border-color:#ffcc00;color:#ffcc00!important}
+.lang{display:inline-flex;align-items:center;color:#fff!important;text-decoration:none;border:1.5px solid rgba(255,255,255,.35);border-radius:999px;padding:7px 12px;font-size:.82rem;font-weight:700;margin-left:10px;letter-spacing:.04em}.lang:hover{border-color:#ffcc00;color:#ffcc00!important}@media(max-width:480px){.lang{padding:6px 9px;font-size:.74rem;margin-left:4px}}
+@media(max-width:480px){.home{padding:6px 10px;font-size:.78rem;margin-left:6px}.home .ht{display:none}}
+@media(max-width:440px){.stamp{display:none}}
+h1,h2,h3{overflow-wrap:break-word;hyphens:auto}
+@media(max-width:620px){.bar-top .wrap>a:first-child{display:none}}
+/* header-final: één set regels voor de kopbalk, NL en EN */
+@media(max-width:1560px){nav>a:not(.btn):not(.home):not(.lang){display:none!important}}
+@media(max-width:760px){.bt-x,.home .ht,.menu .mt{display:none!important}}
+@media(max-width:600px){.logo svg{display:none!important}header.top .wrap{gap:6px!important}.home,.lang,.menu summary{padding:6px 9px!important}.home,.lang,.menu{margin-left:4px!important}header.top nav>a.btn:not(.home){padding:7px 12px!important;font-size:.8rem!important;margin-left:4px!important}}
+@media(min-width:401px){header.top nav>a.btn:not(.home){display:inline-block!important}}
+@media(max-width:400px){header.top nav>a.btn:not(.home){display:none!important}.logo{font-size:.84rem!important}}
+</style>
+<meta property="og:image" content="https://assurantie-onderzoek.nl/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://assurantie-onderzoek.nl/og.png">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div id="gate" role="dialog" aria-modal="true" aria-labelledby="gtitle">
+  <form class="gbox" id="gform" autocomplete="off">
+    <p class="glogo" id="gtitle">Assurantie-<span>onderzoek</span>.nl<sup class="tm" aria-hidden="true">™</sup></p>
+    <p>This site is not yet public. Enter the password to continue.</p>
+    <label for="gpw">Password</label>
+    <input id="gpw" type="password" autocomplete="current-password" required>
+    <button type="submit">Open</button>
+    <p class="gerr" id="gerr" role="alert"></p>
+    <noscript><p class="gerr">Please enable JavaScript to view this site.</p></noscript>
+  </form>
+</div>
+<script>
+(function(){
+  var root=document.documentElement;if(root.classList.contains('ok'))return;
+  function h(s){var x=5381;for(var i=0;i<s.length;i++){x=(Math.imul(x,33)^s.charCodeAt(i))>>>0}return x}
+  var f=document.getElementById('gform'),pw=document.getElementById('gpw'),err=document.getElementById('gerr');
+  setTimeout(function(){pw.focus()},50);
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(h(pw.value.trim().toLowerCase())===1121249330){
+      try{sessionStorage.setItem('ao_ok','1')}catch(x){}
+      root.classList.add('ok');
+    }else{err.textContent='Incorrect password. Please try again.';pw.select()}
+  });
+})();
+</script>
+
+<div class="bar-top"><div class="wrap">
+  <a href="index.html" style="color:#fff;text-decoration:none"><b>Assurantie-<span>onderzoek</span>.nl<sup class="tm" aria-hidden="true">™</sup></b></a>
+  <span style="display:flex;gap:10px;align-items:center"><a class="lang" href="../voorbeeldrapport.html" hreflang="nl" lang="nl" aria-label="Nederlandse versie">NL</a><a class="home" href="index.html" aria-label="To the homepage"><svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg><span class="ht">Home</span></a><span class="stamp">Sample · fictitious figures</span></span>
+  <button class="pr" id="pr" type="button">Print / PDF</button>
+</div></div>
+
+<div class="cover"><div class="wrap">
+  <div class="ey">Sample report · Market position, portfolio &amp; claims</div>
+  <h1>Insurer X<br><em>Q3 2026</em></h1>
+  <p>This report shows what Assurantie-onderzoek.nl can produce for a non-life insurer: position, conversion in the advice process, distribution, customer profile, cover, premium, portfolio, claims handling, claims investigation, climate and insurability. Everything is always set against the market and against an anonymous peer group.</p>
+  <div class="meta">
+    <div><b>Period</b>Jan to Oct 2026, focus on Q3</div>
+    <div><b>Source</b>quotes, applications, policies and claim notifications in the Blinqx network</div>
+    <div><b>Lines of business</b>personal lines: motor, home, liability, travel</div>
+    <div><b>Peer group</b>8 non-life insurers (anonymous)</div>
+    <div><b>Version</b>sample 1.0</div>
+  </div>
+  <div class="warn"><b>Please note: all figures, parties and intermediaries in this report are fictitious.</b> They only show which analyses are possible and say nothing about actual insurers, MGAs or insurance intermediaries.</div>
+</div></div>
+
+<div class="wrap" style="padding-top:28px">
+  <h3>Contents</h3>
+  <ol class="toc" id="toc"></ol>
+</div>
+
+<!-- 1 -->
+<section class="ch" id="s1"><div class="wrap">
+  <span class="chn"><i>1</i> Executive summary</span>
+  <h2>Your position at a glance</h2>
+  <div class="g4" id="kpis"></div>
+  <div class="find"><h3>Five key findings</h3><ol>
+    <li>Your <b>share of new policies rose</b> from 7,2% in January to 8,6% in October, mainly driven by the home line. The peer group grew more slowly.</li>
+    <li>You are quoted often, but <b>in motor you lose out on premium</b>. In 41% of the comparisons in which you were not chosen, you were in the most expensive quarter.</li>
+    <li>After the renewal in July, <b>the number of cancellations was 1,4 percentage points higher</b> than in the market. The outflow mainly comes from customers who have been insured for more than five years.</li>
+    <li>Your <b>claims handling is faster than the market</b>: a median of 9 working days from notification to settlement, against 13 in the market. When a loss adjuster is involved, this rises to 34 working days.</li>
+    <li>After the storms in August, more climate-related damage was reported in the <b>North and East</b> than in the market. Your portfolio is over-represented there.</li>
+  </ol></div>
+</div></section>
+
+<!-- 2 -->
+<section class="ch" id="s2"><div class="wrap">
+  <span class="chn"><i>2</i> Market position</span>
+  <h2>Share of new policies and trend</h2>
+  <p class="lead">Your share of new policies in the network, per month, against the median of the peer group. The share is weighted: your new policies divided by the total in the same period.</p>
+  <div class="card"><h3>Share of new policies per month</h3><p class="sub">You against the median of the peer group, all personal lines</p><div id="c_trend"></div></div>
+  <div class="g3" style="margin-top:14px">
+    <div class="card"><h3>By line of business (Q3)</h3><div class="tw" id="t_br"></div></div>
+    <div class="card"><h3>By region (Q3)</h3><p class="sub">Your share against your national share (index 100 = equal)</p><div class="tw" id="t_reg"></div></div>
+    <div class="card"><h3>By quarter</h3><div class="tw" id="t_q"></div></div>
+  </div>
+</div></section>
+
+<!-- 3 -->
+<section class="ch" id="s3"><div class="wrap">
+  <span class="chn"><i>3</i> Conversion in the advice process</span>
+  <h2>From quote to application to policy</h2>
+  <p class="lead">This key figure starts at the premium comparison. How often are you quoted, how often does that lead to an application with you, and how often does that application become an in-force policy?</p>
+  <div class="g2">
+    <div class="card"><h3>Q3 funnel: you against the market</h3><p class="sub">Per 100 comparisons in which you appear</p><div id="c_funnel"></div></div>
+    <div class="card"><h3>Conversion by line of business</h3><p class="sub">From quote to application, in percent</p><div class="tw" id="t_conv"></div>
+      <div class="ins"><b>Insight:</b> you convert strongly in home and liability. In motor you are often included in the comparison, but rarely chosen.</div></div>
+  </div>
+  <div class="card" style="margin-top:14px"><h3>Lead time</h3><p class="sub">Median in working days</p><div class="tw" id="t_dl"></div></div>
+</div></section>
+
+<!-- 4 -->
+<section class="ch" id="s4"><div class="wrap">
+  <span class="chn"><i>4</i> Why the application does not come to you</span>
+  <h2>Premium, cover or acceptance?</h2>
+  <p class="lead">We compare the quotes in which you appeared with the insurer the application eventually went to. That gives an indication of the reason. We deliberately do not show which competitor the application went to.</p>
+  <div class="g2">
+    <div class="card"><h3>Indicative reason for dropping out (Q3)</h3><p class="sub">Share of the quotes in which you appeared but which did not lead to an application with you</p><div id="c_reason"></div></div>
+    <div class="card"><h3>Your place in the comparison</h3><p class="sub">The quarter of the displayed premiums you fell into, for quotes in which you were not chosen (Q3)</p><div id="c_quart"></div>
+      <div class="ins"><b>Insight:</b> in motor you are often in the most expensive quarter, especially for drivers under 25. In home you do not lose on premium but on cover, for example for glass and garden.</div></div>
+  </div>
+</div></section>
+
+<!-- 5 -->
+<section class="ch" id="s5"><div class="wrap">
+  <span class="chn"><i>5</i> Distribution</span>
+  <h2>Your position with insurance intermediaries</h2>
+  <div class="g2">
+    <div class="card"><h3>Top 10 intermediaries (Q3)</h3><p class="sub">Your share at the intermediary and the index against your market share</p><div class="tw" id="t_off"></div></div>
+    <div class="card"><h3>Concentration</h3><p class="sub">Share of your new policies coming from the largest intermediaries</p><div id="c_conc"></div>
+      <h3 style="margin-top:16px">Risers and fallers (Q3 against Q2)</h3><div class="tw" id="t_mov"></div></div>
+  </div>
+</div></section>
+
+<!-- 6 -->
+<section class="ch" id="s6"><div class="wrap">
+  <span class="chn"><i>6</i> Customer profile</span>
+  <h2>Who insures with you?</h2>
+  <p class="lead">The customer profile per insurance: who takes out the policy and which risk goes with it, against the market. We do not process medical or other special categories of personal data.</p>
+  <div class="g2">
+    <div class="card"><h3>Customer type</h3><div id="c_type"></div></div>
+    <div class="card"><h3>Age of policyholder (personal lines)</h3><div id="c_age"></div><div class="note">An average of 47,2 years with you, against 44,6 years in the market.</div></div>
+    <div class="card"><h3>Household</h3><div id="c_hh"></div></div>
+    <div class="card"><h3>Housing situation (home contents and buildings)</h3><div id="c_won2"></div></div>
+    <div class="card"><h3>Type of dwelling (buildings)</h3><div id="c_wtype"></div><div class="note">Your portfolio has more detached houses and houses with a thatched roof. That partly explains the higher climate-related damage in the North and East.</div></div>
+    <div class="card"><h3>Motor: no-claims years</h3><div id="c_svj"></div></div>
+    <div class="card"><h3>Motor: age of the vehicle</h3><div id="c_vlft"></div></div>
+    <div class="card"><h3>Self-employed (zzp) and SME: sector</h3><div id="c_sbi"></div></div>
+    <div class="card" style="grid-column:1/-1"><h3>Number of policies per customer</h3><div id="c_pol"></div><div class="note">Customers with three or more policies with you have a cancellation rate of 4,1%, against 11,8% for customers with one policy.</div></div>
+  </div>
+</div></section>
+
+<!-- 7 -->
+<section class="ch" id="s7"><div class="wrap">
+  <span class="chn"><i>7</i> Product &amp; cover</span>
+  <h2>Which cover customers choose</h2>
+  <div class="g2">
+    <div class="card"><h3>Motor insurance: cover</h3><div id="c_auto"></div></div>
+    <div class="card"><h3>Motor insurance: own-damage excess</h3><div id="c_er"></div></div>
+    <div class="card"><h3>Home contents and buildings: cover</h3><div id="c_won"></div></div>
+    <div class="card"><h3>Bundled (package) policy or separate policies</h3><div id="c_pak"></div></div>
+  </div>
+  <div class="card" style="margin-top:14px"><h3>Additional cover</h3><p class="sub">How often a cover is included with your policies, against the market</p><div id="c_add"></div></div>
+</div></section>
+
+<!-- 8 -->
+<section class="ch" id="s8"><div class="wrap">
+  <span class="chn"><i>8</i> Premium &amp; terms</span>
+  <h2>Your published premium against the market range</h2>
+  <p class="lead">Based on publicly available premiums for fixed model profiles, reference date 30 September 2026, annual premium including insurance premium tax. The bar runs from the lowest to the highest premium in the market; the dark section is the middle range from the first to the third quartile. We do not show premiums of individual competitors.</p>
+  <div class="card"><div class="legend"><span><i style="background:#cfd6e1"></i>Lowest – highest</span><span><i style="background:#8a97ab"></i>25% – 75%</span><span><i style="background:#1e2533"></i>Median</span><span><i style="background:#e0a800"></i>Your premium</span></div><div id="c_prem"></div></div>
+  <div class="g2" style="margin-top:14px">
+    <div class="card"><h3>Effect of your premium change, in hindsight</h3><p class="sub">Your 6% premium reduction on home contents insurance, as of 1 July 2026</p><div class="tw" id="t_eff"></div></div>
+    <div class="card"><h3>What was decisive?</h3><p class="sub">Indicative decisive factor in the comparisons in which you appeared (Q3)</p><div id="c_drv"></div></div>
+  </div>
+</div></section>
+
+<!-- 9 -->
+<section class="ch" id="s9"><div class="wrap">
+  <span class="chn"><i>9</i> Portfolio &amp; cancellations</span>
+  <h2>Customer retention and where customers go</h2>
+  <p class="lead">The cancellation rate is the number of policies terminated in the period divided by the in-force policies at the start of the period, annualised. We count a switch of a policy to another insurer via the same intermediary as a cancellation.</p>
+  <div class="card"><h3>Cancellation rate per month (annualised)</h3><p class="sub">You against the market; the peak in July coincides with your renewal and premium review</p><div id="c_roy"></div></div>
+  <div class="g2" style="margin-top:14px">
+    <div class="card"><h3>Reason for cancellation (where recorded)</h3><div id="c_rr"></div></div>
+    <div class="card"><h3>Premium development at renewal</h3><p class="sub">Average premium change at renewal, by policy duration (home contents, Q3)</p><div class="tw" id="t_loy"></div>
+      <div class="ins"><b>Insight:</b> customers who have been insured with you for more than five years receive a higher premium increase at renewal than new customers. That is a point of attention in light of the AFM (Dutch Authority for the Financial Markets) call for a fair premium for loyal customers.</div></div>
+  </div>
+</div></section>
+
+<!-- 10 -->
+<section class="ch" id="s10"><div class="wrap">
+  <span class="chn"><i>10</i> Claims handling</span>
+  <h2>From notification to settlement</h2>
+  <p class="lead">Measured in the channel where the customer reports the claim: the insurance intermediary or the MGA. Lead times in working days, median.</p>
+  <div class="g4" id="kpis2"></div>
+  <div class="g2" style="margin-top:14px">
+    <div class="card"><h3>Lead time by line of business</h3><div id="c_dlb"></div></div>
+    <div class="card"><h3>Handling per 100 claims</h3><div class="tw" id="t_sch"></div>
+      <div class="note">A rejection is not a negative signal in itself: it depends on the cover and the cause of loss. The difference with the market is, however, a reason to look into the causes.</div></div>
+  </div>
+</div></section>
+
+<!-- 11 -->
+<section class="ch" id="s11"><div class="wrap">
+  <span class="chn"><i>11</i> Claims investigation &amp; signals</span>
+  <h2>How often you use investigation, and with what outcome</h2>
+  <p class="lead">At portfolio level, never per insured person. Investigation here covers: an investigation into the cause of loss, a technical investigation or an investigation by an external agency, as recorded in the claim file.</p>
+  <div class="g2">
+    <div class="card"><h3>Investigations per 1.000 claims</h3><div id="c_onz"></div></div>
+    <div class="card"><h3>Outcome of the investigation (Q1 to Q3)</h3><div id="c_uit"></div></div>
+    <div class="card"><h3>Signals at portfolio level</h3><div class="tw" id="t_sig"></div></div>
+    <div class="card"><h3>How to read this?</h3><p style="margin:0;color:var(--mut);font-size:.92rem">A signal is a pattern that deviates from the market, not an indication of fraud by an individual customer. Use it to test your acceptance and fraud policy. Investigation in an individual file takes place within the GPO (Code of Conduct for Personal Investigations) and the GDPR, and falls outside the scope of this report.</p></div>
+  </div>
+</div></section>
+
+<!-- 12 -->
+<section class="ch" id="s12"><div class="wrap">
+  <span class="chn"><i>12</i> Climate &amp; ESG</span>
+  <h2>Climate-related damage in your portfolio</h2>
+  <div class="card"><h3>Reported climate-related damage per month</h3><p class="sub">Storm, hail and flooding from heavy rain, per 1.000 home policies</p><div id="c_klim"></div></div>
+  <div class="g2" style="margin-top:14px">
+    <div class="card"><h3>Climate-related damage by region (Q3)</h3><p class="sub">Per 1.000 home policies</p><div id="c_kreg"></div></div>
+    <div class="card"><h3>Prevention and sustainability</h3><p class="sub">Share of home policies with a recorded prevention or sustainability measure</p><div id="c_prev"></div></div>
+  </div>
+</div></section>
+
+<!-- 13 -->
+<section class="ch" id="s13"><div class="wrap">
+  <span class="chn"><i>13</i> Insurability &amp; underinsurance</span>
+  <h2>Who you do not reach, and who is underinsured</h2>
+  <div class="g2">
+    <div class="card"><h3>Rejection or loading at acceptance</h3><p class="sub">Share of applications with a rejection, loading or restrictive clause</p><div id="c_acc"></div></div>
+    <div class="card"><h3>Signals of underinsurance</h3><p class="sub">How the sum insured was determined: with a contents value or rebuild value calculator, or as a fixed amount that has not been reviewed for a long time</p><div id="c_onder"></div>
+      <div class="ins"><b>Insight:</b> your customers more often choose a fixed sum insured without a value calculator, for both home contents and buildings. That makes underinsurance more likely, especially after a renovation or a move.</div></div>
+  </div>
+</div></section>
+
+<!-- 14 -->
+<section class="ch" id="s14"><div class="wrap">
+  <span class="chn"><i>14</i> Advisers' assessment</span>
+  <h2>How insurance advisers rate you</h2>
+  <p class="lead">From the annual adviser survey, 412 respondents, scale of 1 to 10. Reported per group only, never per individual adviser.</p>
+  <div class="card"><div id="c_score"></div></div>
+</div></section>
+
+<!-- 15 -->
+<section class="ch" id="s15"><div class="wrap">
+  <span class="chn"><i>15</i> AI in advice</span>
+  <h2>What AI does in your distribution, and whether outcomes are fair</h2>
+  <p class="lead">How often the intermediaries that serve you use AI in their advice, what that does to lead times, and how your acceptance outcomes per target group compare with the market. Plus a comparison of your policy terms, converted into data with AI and checked by a researcher.</p>
+  <div class="g2">
+    <div class="card"><h3>Advice meetings with AI support</h3><p class="sub">Share of advice files with an AI meeting report or AI risk inventory</p><div id="c_ai"></div></div>
+    <div class="card"><h3>Lead time quote → policy</h3><p class="sub">Median in working days, files with and without AI support (Q3)</p><div id="c_aidl"></div>
+      <div class="ins"><b>Insight:</b> at intermediaries that use AI, you are chosen faster and more often. Your integrations and fast acceptance fit in well with that.</div></div>
+    <div class="card"><h3>Fairness check on acceptance</h3><p class="sub">Rejection or loading per target group, as an index against your average (100), next to the same index in the market</p><div class="tw" id="t_fair"></div>
+      <div class="note">A deviating index is a signal for further investigation into your acceptance rules or model, not proof of unequal treatment. We do not use protected characteristics such as ethnicity.</div></div>
+    <div class="card"><h3>Your policy terms against the market</h3><p class="sub">Home contents extended cover, 12 features from public policy terms (reference date 30 September 2026)</p><div class="tw" id="t_vw"></div></div>
+  </div>
+</div></section>
+
+<!-- 16 -->
+<section class="ch" id="s16"><div class="wrap">
+  <span class="chn"><i>16</i> Benchmark</span>
+  <h2>Scorecard against the peer group</h2>
+  <p class="lead">The peer group consists of eight anonymous non-life insurers that you selected yourself from a category. Green: better than the group median. Red: worse.</p>
+  <div class="card"><div class="tw sc" id="t_sc"></div></div>
+</div></section>
+
+<!-- 17 -->
+<section class="ch" id="s17"><div class="wrap">
+  <span class="chn"><i>17</i> Methodology &amp; competition law</span>
+  <h2>How the figures are produced</h2>
+  <div class="g2">
+    <div class="card"><h3>Source and coverage</h3><p style="margin:0;color:var(--mut);font-size:.92rem">Quotes, applications, policies, policy changes and claim notifications from the intermediated channel, insofar as recorded in the software of the participating intermediaries and MGAs. Direct writers and online providers are out of scope.</p></div>
+    <div class="card"><h3>Calculation method</h3><p style="margin:0;color:var(--mut);font-size:.92rem">Shares are weighted: the number per party divided by the total in the same period and line of business. Personal lines follow the ECOICOP v2 classification of CBS (Statistics Netherlands), commercial lines the SIVI classification.</p></div>
+    <div class="card"><h3>Privacy</h3><p style="margin:0;color:var(--mut);font-size:.92rem">Aggregated figures only. We do not show segments with fewer than 25 observations. Intermediaries in the top 10 are pseudonymised; in a real report you only see the intermediaries you have a relationship with yourself.</p></div>
+    <div class="card"><h3>Competition law</h3><p style="margin:0;color:var(--mut);font-size:.92rem">You see your own position against the market or an anonymous group of at least five parties. Premiums from public sources only, with a delay and as a range. No information about future premiums, commissions or acceptance policies of others.</p></div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <b>Assurantie-onderzoek.nl™</b> · sample report with fictitious figures · an activity of Blinqx · <a href="index.html" style="color:#ffcc00">back to the site</a> · <a href="index.html?onderwerp=Market%20report#contact" style="color:#ffcc00">request a quote</a> · <a href="regulation.html" style="color:#ffcc00">regulation</a> · <a href="methodology.html" style="color:#ffcc00">methodology</a> · <a href="privacy.html" style="color:#ffcc00">privacy</a>
+</div></footer>
+
+<script>
+(function(){
+"use strict";
+const nl=(v,d=1)=>v.toLocaleString('nl-NL',{minimumFractionDigits:d,maximumFractionDigits:d});
+const P=(v,d=1)=>nl(v,d)+'%';
+const PP=v=>(v>=0?'+':'−')+nl(Math.abs(v),1)+' pp';
+const EUR=v=>'€ '+v.toLocaleString('nl-NL',{maximumFractionDigits:0});
+const $=id=>document.getElementById(id);
+const NAVY='#1e2533',MKT='#9aa6b8',Y='#e0a800';
+const M=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct'];
+
+// Print: inside an iframe (e.g. Google Sites) window.print() does not work, so open a new window.
+$('pr').addEventListener('click',()=>{
+  let inFrame=true;try{inFrame=window.self!==window.top}catch(e){inFrame=true}
+  if(!inFrame){window.print();return}
+  const w=window.open(location.href.split('#')[0]+'#print','_blank');
+  if(!w)alert('Please allow pop-ups to print the report.');
+});
+if(location.hash==='#print'){window.addEventListener('load',()=>setTimeout(()=>window.print(),400))}
+
+// Contents
+$('toc').innerHTML=[...document.querySelectorAll('section.ch')].map(s=>`<li><a href="#${s.id}">${s.querySelector('.chn').textContent.replace(/^\s*\d+\s*/,'')}</a></li>`).join('');
+
+const kpi=(l,v,d)=>`<div class="card kpi"><div class="l">${l}</div><div class="v">${v}</div><div class="d">${d}</div></div>`;
+const pos=t=>`<span class="pos">${t}</span>`,neg=t=>`<span class="neg">${t}</span>`;
+$('kpis').innerHTML=
+ kpi('Share of new policies Q3',P(8.2),pos(PP(0.7))+' vs Q2')+
+ kpi('Conversion quote → application',P(22,0),pos('+3 pp')+' vs market (19%)')+
+ kpi('Cancellation rate Q3',P(10.9),neg('+1,4 pp')+' vs market (9,5%)')+
+ kpi('Claims lead time',nl(9,0)+' days',pos('4 days faster')+' than the market');
+
+function line(series,labels,opt={}){
+  const W=760,H=240,L=48,R=14,T=12,B=28;const all=series.flatMap(s=>s.v);const mx=opt.max??Math.ceil(Math.max(...all)*1.15),mn=opt.min??0;
+  const x=i=>L+i*(W-L-R)/(labels.length-1),y=v=>T+(H-T-B)*(1-(v-mn)/(mx-mn));
+  let g='';for(let k=0;k<=4;k++){const v=mn+(mx-mn)*k/4;g+=`<line x1="${L}" x2="${W-R}" y1="${y(v)}" y2="${y(v)}" stroke="#e1e6ee"/><text x="${L-8}" y="${y(v)+4}" text-anchor="end" font-size="11" fill="#5b6678">${nl(v,opt.dec??0)}${opt.u??'%'}</text>`;}
+  const xl=labels.map((m,i)=>`<text x="${x(i)}" y="${H-8}" text-anchor="middle" font-size="11" fill="#5b6678">${m}</text>`).join('');
+  const ps=series.map(s=>`<path d="${s.v.map((v,i)=>(i?'L':'M')+x(i)+','+y(v)).join('')}" fill="none" stroke="${s.c}" stroke-width="${s.w||2.5}" ${s.dash?'stroke-dasharray="5 4"':''}/>`+s.v.map((v,i)=>`<circle cx="${x(i)}" cy="${y(v)}" r="3" fill="${s.c}"><title>${labels[i]}: ${nl(v,1)}${opt.u??'%'}</title></circle>`).join('')).join('');
+  return `<div class="legend">${series.map(s=>`<span><i style="background:${s.c}"></i>${s.n}</span>`).join('')}</div><svg viewBox="0 0 ${W} ${H}" width="100%" role="img">${g}${ps}${xl}</svg>`;
+}
+function pair(cats,me,mk,u='%',dec=0,L=130,W=460){
+  const mx=Math.max(...me,...mk),rh=30,H=cats.length*rh+4;let s='';
+  cats.forEach((c,i)=>{const y=i*rh+4,a=(W-L-50)*me[i]/mx,b=(W-L-50)*mk[i]/mx;
+   s+=`<text x="0" y="${y+14}" font-size="12" fill="#1b2535">${c}</text><rect x="${L}" y="${y+2}" width="${a}" height="11" rx="3" fill="${NAVY}"/><rect x="${L}" y="${y+15}" width="${b}" height="8" rx="3" fill="${MKT}"/><text x="${L+a+5}" y="${y+12}" font-size="11" font-weight="700" fill="#1b2535">${nl(me[i],dec)}${u}</text><text x="${L+b+5}" y="${y+23}" font-size="10" fill="#5b6678">${nl(mk[i],dec)}${u}</text>`;});
+  return `<div class="legend"><span><i style="background:${NAVY}"></i>You</span><span><i style="background:${MKT}"></i>Market</span></div><svg viewBox="0 0 ${W} ${H}" width="100%" style="max-width:${W*1.35}px">${s}</svg>`;
+}
+function bars(cats,vals,u='%',col=NAVY,dec=0){
+  const mx=Math.max(...vals),W=480,L=210,rh=26,H=cats.length*rh+4;let s='';
+  cats.forEach((c,i)=>{const y=i*rh+4,a=(W-L-50)*vals[i]/mx;s+=`<text x="0" y="${y+14}" font-size="12" fill="#1b2535">${c}</text><rect x="${L}" y="${y+3}" width="${a}" height="14" rx="3" fill="${col}"/><text x="${L+a+5}" y="${y+14}" font-size="11" font-weight="700" fill="#1b2535">${nl(vals[i],dec)}${u}</text>`;});
+  return `<svg viewBox="0 0 ${W} ${H}" width="100%" style="max-width:${W*1.35}px">${s}</svg>`;
+}
+function split(parts,me,mkt){
+  const row=(lbl,vals)=>`<div style="display:grid;grid-template-columns:56px 1fr;gap:8px;align-items:center;margin-bottom:6px;font-size:.84rem;color:#5b6678"><span>${lbl}</span><div style="display:flex;height:28px;border-radius:7px;overflow:hidden;font-size:.78rem;font-weight:700">${vals.map((v,i)=>`<div style="width:${v}%;background:${parts[i][1]};color:${parts[i][2]||'#fff'};display:flex;align-items:center;justify-content:center;white-space:nowrap;overflow:hidden">${v>=12?nl(v,0)+'%':''}</div>`).join('')}</div></div>`;
+  return row('You',me)+row('Market',mkt)+`<div class="legend" style="margin-top:4px">${parts.map((p,i)=>`<span><i style="background:${p[1]}"></i>${p[0]} (${nl(me[i],0)}% / ${nl(mkt[i],0)}%)</span>`).join('')}</div>`;
+}
+const tbl=(head,rows,rc=[])=>`<table><thead><tr>${head.map((h,i)=>`<th class="${rc.includes(i)?'r':''}">${h}</th>`).join('')}</tr></thead><tbody>${rows.map(r=>`<tr>${r.map((c,i)=>`<td class="${rc.includes(i)?'r':''}">${c}</td>`).join('')}</tr>`).join('')}</tbody></table>`;
+const idx=v=>`<span class="pill ${v>=110?'g':v<=90?'r':'n'}">${v}</span>`;
+const dlt=(v,inv)=>`<span class="${(inv?-v:v)>0?'pos':(inv?-v:v)<0?'neg':''}">${PP(v)}</span>`;
+const C4=['#1e2533','#4a5872','#8a97ab','#cfd6e1'];
+
+// 2
+$('c_trend').innerHTML=line([{n:'Your share of new policies',c:NAVY,v:[7.2,7.3,7.1,7.5,7.6,7.9,8.0,8.1,8.4,8.6]},{n:'Peer group median',c:Y,dash:1,w:2,v:[6.6,6.7,6.6,6.8,6.8,6.9,6.9,7.0,7.1,7.1]}],M,{dec:0,max:10});
+$('t_br').innerHTML=tbl(['Line','You','Δ market'],[['Motor',P(5.1),dlt(-1.6)],['Home',P(11.4),dlt(3.2)],['Liability',P(9.8),dlt(1.9)],['Travel',P(6.2),dlt(-0.4)]],[1,2]);
+$('t_reg').innerHTML=tbl(['Region','Share','Index'],[['North',P(10.7),idx(130)],['East',P(9.5),idx(116)],['Central',P(7.9),idx(96)],['Randstad',P(6.9),idx(84)],['South',P(8.3),idx(101)]],[1,2]);
+$('t_q').innerHTML=tbl(['Quarter','Share','Δ'],[['Q1',P(7.2),'–'],['Q2',P(7.5),dlt(0.3)],['Q3',P(8.2),dlt(0.7)],['Oct',P(8.6),dlt(0.4)]],[1,2]);
+
+// 3
+(function(){const W=440,H=200;const st=[['Quote',100,100],['Application',22,19],['Policy',20.5,17.1]];let s='';
+ st.forEach((r,i)=>{const y=i*64+6,wm=(W-160)*r[1]/100,wk=(W-160)*r[2]/100;s+=`<text x="0" y="${y+18}" font-size="13" font-weight="700" fill="#1b2535">${r[0]}</text><rect x="110" y="${y}" width="${wm}" height="24" rx="5" fill="${NAVY}"/><text x="${110+wm+6}" y="${y+17}" font-size="12" font-weight="700">${nl(r[1],i==2?1:0)}</text><rect x="110" y="${y+28}" width="${wk}" height="14" rx="4" fill="${MKT}"/><text x="${110+wk+6}" y="${y+40}" font-size="11" fill="#5b6678">${nl(r[2],i==2?1:0)}</text>`;});
+ $('c_funnel').innerHTML=`<div class="legend"><span><i style="background:${NAVY}"></i>You</span><span><i style="background:${MKT}"></i>Market</span></div><svg viewBox="0 0 ${W} ${H}" width="100%">${s}</svg><div class="note">Out of every 100 comparisons in which you appear, 22 result in an application with you and 20,5 become an in-force policy. In the market these figures are 19 and 17,1.</div>`;})();
+$('t_conv').innerHTML=tbl(['Line','You','Market','Δ'],[['Motor','12%','18%',dlt(-6)],['Home','31%','21%',dlt(10)],['Liability','29%','22%',dlt(7)],['Travel','17%','16%',dlt(1)]],[1,2,3]);
+$('t_dl').innerHTML=tbl(['Step','You','Market','Peer group'],[['Quote → application','2','3','3'],['Application → policy','1','2','2'],['Quote → policy','3','5','5']],[1,2,3]);
+
+// 4
+$('c_reason').innerHTML=bars(['Premium','Cover and terms','Acceptance (rejection or loading)','Excess','No clear reason'],[46,24,12,7,11]);
+$('c_quart').innerHTML=(function(){const parts=[['Cheapest quarter','#1f8a5b'],['Second quarter','#8fc7a9','#1b2535'],['Third quarter','#e8b4ad','#1b2535'],['Most expensive quarter','#c0392b']];
+ const rows=[['Motor',[9,17,33,41]],['Home',[31,34,22,13]],['Liability',[28,30,25,17]]];
+ return rows.map(([l,v])=>`<div style="display:grid;grid-template-columns:120px 1fr;gap:8px;align-items:center;margin-bottom:6px;font-size:.84rem;color:#5b6678"><span>${l}</span><div style="display:flex;height:26px;border-radius:7px;overflow:hidden;font-size:.76rem;font-weight:700">${v.map((x,i)=>`<div style="width:${x}%;background:${parts[i][1]};color:${parts[i][2]||'#fff'};display:flex;align-items:center;justify-content:center">${x>=10?nl(x,0)+'%':''}</div>`).join('')}</div></div>`).join('')+`<div class="legend" style="margin-top:4px">${parts.map(p=>`<span><i style="background:${p[1]}"></i>${p[0]}</span>`).join('')}</div>`;})();
+
+// 5
+const offs=[['Intermediary A','North',24.1,281],['Intermediary B','East',19.6,239],['Intermediary C','Randstad',4.2,51],['Intermediary D','South',12.8,156],['Intermediary E','North',17.3,211],['Intermediary F','Central',6.1,74],['Intermediary G','Randstad',9.4,115],['Intermediary H','East',15.0,183],['Intermediary I','South',3.1,38],['Intermediary J','Central',8.8,107]];
+$('t_off').innerHTML=tbl(['Intermediary','Region','Your share','Index'],offs.map(o=>[o[0],o[1],P(o[2]),idx(Math.round(o[2]/8.2*100))]),[2,3]);
+$('c_conc').innerHTML=pair(['Top 3 intermediaries','Top 10 intermediaries','Top 25 intermediaries'],[16,31,49],[9,21,38],'%',0,150);
+$('t_mov').innerHTML=tbl(['Intermediary','Q2','Q3','Δ'],[['Intermediary E',P(12.9),P(17.3),dlt(4.4)],['Intermediary H',P(11.8),P(15.0),dlt(3.2)],['Intermediary C',P(7.9),P(4.2),dlt(-3.7)],['Intermediary I',P(5.6),P(3.1),dlt(-2.5)]],[1,2,3]);
+
+// 6
+$('c_type').innerHTML=split([['Private individual',NAVY],['Self-employed','#4a5872'],['SME','#8a97ab','#1b2535']],[81,12,7],[74,15,11]);
+$('c_age').innerHTML=pair(['18–29','30–44','45–59','60–74','75+'],[8,24,33,26,9],[13,29,30,21,7]);
+$('c_hh').innerHTML=pair(['Single','Cohabiting without children','Family with children','Other'],[29,31,34,6],[34,28,32,6],'%',0,190);
+$('c_won2').innerHTML=pair(['Owner-occupied','Rented'],[71,29],[63,37]);
+$('c_wtype').innerHTML=pair(['Terraced house','End-of-terrace','Semi-detached','Detached','Thatched roof (all types)'],[31,19,18,32,6],[38,21,19,22,3],'%',0,170);
+$('c_svj').innerHTML=pair(['0–2 years','3–5 years','6–10 years','11 years or more'],[14,19,24,43],[19,22,23,36]);
+$('c_vlft').innerHTML=pair(['0–3 years','4–7 years','8–12 years','13 years or older'],[18,27,31,24],[22,29,28,21]);
+$('c_sbi').innerHTML=pair(['Construction','Business services','Retail','Healthcare','Transport','Other'],[24,22,14,11,9,20],[19,26,13,12,8,22],'%',0,170);
+$('c_pol').innerHTML=pair(['1 policy','2 policies','3 or more'],[38,27,35],[45,28,27]);
+
+// 7
+$('c_auto').innerHTML=split([['Third party',NAVY],['Third party, fire & theft','#4a5872'],['All-risks','#8a97ab','#1b2535']],[34,39,27],[29,38,33]);
+$('c_er').innerHTML=pair(['€ 0','€ 150','€ 250','€ 500 or more'],[11,38,36,15],[16,41,31,12]);
+$('c_won').innerHTML=split([['Extended cover',NAVY],['All-risks','#8a97ab','#1b2535']],[58,42],[49,51]);
+$('c_pak').innerHTML=split([['Bundled policy',NAVY],['Separate policies','#8a97ab','#1b2535']],[46,54],[39,61]);
+$('c_add').innerHTML=pair(['Glass','Garden and outdoor items','Passenger accident','Motor legal expenses','Breakdown assistance'],[41,22,48,36,55],[47,31,52,33,58],'%',0,170);
+
+// 8 premium range
+(function(){const rows=[['Motor, age 22, TPFT, € 15.000',540,690,820,1180,1510,1245],['Motor, age 45, all-risks, € 30.000',610,760,860,980,1290,845],['Home contents, family, extended',118,149,171,198,264,162],['Buildings, terraced house, extended',156,191,214,243,318,201],['Liability, family',42,51,58,66,84,49]];
+ const W=760,L=250,R=20,rh=34,H=rows.length*rh+30;const mn=0;const sc=(v,r)=>L+(W-L-R)*(v-r[1]*0.9)/(r[5]*1.05-r[1]*0.9);let s='';
+ rows.forEach((r,i)=>{const y=i*rh+8;const X=v=>sc(v,r);
+  s+=`<text x="0" y="${y+15}" font-size="12" fill="#1b2535">${r[0]}</text><rect x="${X(r[1])}" y="${y+6}" width="${X(r[5])-X(r[1])}" height="10" rx="3" fill="#cfd6e1"/><rect x="${X(r[2])}" y="${y+6}" width="${X(r[4])-X(r[2])}" height="10" fill="#8a97ab"/><rect x="${X(r[3])-1.5}" y="${y+2}" width="3" height="18" fill="${NAVY}"/><circle cx="${X(r[6])}" cy="${y+11}" r="6.5" fill="${Y}" stroke="#fff" stroke-width="2"><title>Your premium ${EUR(r[6])}</title></circle><text x="${X(r[1])}" y="${y+30}" font-size="10" fill="#5b6678" text-anchor="middle">${EUR(r[1])}</text><text x="${X(r[5])}" y="${y+30}" font-size="10" fill="#5b6678" text-anchor="middle">${EUR(r[5])}</text><text x="${X(r[6])}" y="${y-1}" font-size="10" font-weight="700" fill="#7a5c00" text-anchor="middle">${EUR(r[6])}</text>`;});
+ $('c_prem').innerHTML=`<svg viewBox="0 0 ${W} ${H}" width="100%">${s}</svg><div class="note">For the young driver, your premium falls in the most expensive quarter. For home contents, buildings and liability you are around or below the median.</div>`;})();
+$('t_eff').innerHTML=tbl(['','Q2 (before)','Q3 (after)','Δ'],[['Share of new home contents policies',P(10.1),P(12.0),dlt(1.9)],['Conversion quote → application',P(26,0),P(31,0),dlt(5)],['Cancellation rate home contents',P(8.4),P(8.1),dlt(-0.3,1)],['Market: peer group share',P(7.0),P(7.1),dlt(0.1)]],[1,2,3]);
+$('c_drv').innerHTML=bars(['Premium','Cover and terms','Familiarity to the adviser','Claims handling','Acceptance'],[44,23,15,11,7]);
+
+// 9
+$('c_roy').innerHTML=line([{n:'Your cancellation rate',c:NAVY,v:[9.1,9.0,9.3,9.2,9.4,9.6,12.8,11.1,10.4,10.0]},{n:'Market',c:MKT,w:2,v:[9.3,9.2,9.4,9.3,9.5,9.6,9.8,9.6,9.5,9.4]}],M,{dec:0,min:6,max:14});
+$('c_rr').innerHTML=pair(['Premium','Switch via intermediary','Move or sale','After a claim','Death or other'],[38,24,19,9,10],[31,26,22,8,13],'%',0,160);
+$('t_loy').innerHTML=tbl(['Policy duration','You','Market'],[['Less than 1 year',P(3.1),P(3.4)],['1 to 5 years',P(4.2),P(3.9)],['5 to 10 years',P(6.8),P(4.3)],['More than 10 years',P(7.4),P(4.5)]],[1,2]);
+
+// 10
+$('kpis2').innerHTML=
+ kpi('Taken into handling',nl(1.6)+' days',pos('faster')+' than market (2,4)')+
+ kpi('Notification → settlement',nl(9,0)+' days',pos('faster')+' than market (13)')+
+ kpi('With loss adjuster',nl(34,0)+' days','market: 36')+
+ kpi('Complaints per 1.000 claims',nl(4.8),neg('+1,1')+' vs market (3,7)');
+$('c_dlb').innerHTML=pair(['Motor','Home contents','Buildings','Liability','Travel'],[8,7,15,19,6],[11,10,18,24,9],' d');
+$('t_sch').innerHTML=tbl(['Per 100 claims','You','Market'],[['Fully paid','78','76'],['Partly paid','12','13'],['Rejected','10','11'],['With a loss adjuster','18','21'],['With counter-assessment','1,2','0,9']],[1,2]);
+
+// 11
+$('c_onz').innerHTML=pair(['Motor','Home contents','Buildings','Liability','Travel'],[14,9,6,4,11],[11,8,7,5,9],'',0);
+$('c_uit').innerHTML=split([['No irregularity','#8a97ab','#1b2535'],['Payment adjusted','#4a5872'],['Claim rejected',NAVY]],[71,17,12],[68,19,13]);
+$('t_sig').innerHTML=tbl(['Signal','You','Market'],[['Claim within 3 months of inception (per 1.000 policies)','6,2','4,9'],['Repeat claim within 12 months','8,4%','8,1%'],['Notification more than 30 days after date of loss','5,1%','4,6%'],['Large claim without loss adjuster (> € 5.000)','2,3%','3,0%']],[1,2]);
+
+// 12
+$('c_klim').innerHTML=line([{n:'You',c:NAVY,v:[3.1,4.8,2.2,1.4,1.6,2.0,2.4,9.8,3.6,2.9]},{n:'Market',c:MKT,w:2,v:[2.9,4.1,2.0,1.3,1.5,1.9,2.2,7.4,3.1,2.6]}],M,{dec:0,u:''});
+$('c_kreg').innerHTML=pair(['North','East','Central','Randstad','South'],[19.8,17.4,12.1,10.3,11.6],[15.2,14.9,11.8,10.6,11.9],'',1);
+$('c_prev').innerHTML=pair(['Water-resistant or backflow valve','Solar panels covered','Fire or smoke detectors recorded'],[7,24,31],[6,21,29],'%',0,210);
+
+// 13
+$('c_acc').innerHTML=pair(['Driver under 25','Self-employed (liability)','Thatched roof or detached','Previous claims (3+)','Other'],[21,14,33,27,4],[18,11,26,24,4],'%',0,190);
+$('c_onder').innerHTML=pair(['Contents: with value calculator','Contents: fixed sum, > 5 years old','Buildings: with rebuild value calculator','Buildings: fixed sum, > 5 years old'],[54,17,61,14],[63,13,72,9],'%',0,230);
+
+// 14
+(function(){const rows=[['Premium',6.8,7.1],['Cover and terms',7.6,7.2],['Acceptance',7.1,7.0],['Policy issuing speed',7.9,7.3],['Claims handling',7.7,7.0],['Account management',6.9,7.2],['Digital integrations (SIVI)',7.4,6.9]];
+ $('c_score').innerHTML=pair(rows.map(r=>r[0]),rows.map(r=>r[1]),rows.map(r=>r[2]),'',1,190,520).replace('>Market<','>Peer group<');})();
+
+// 15
+const sc=(n,me,gr,ok)=>[n,me,gr,`<span class="pill ${ok?'g':'r'}">${ok?'better':'worse'}</span>`];
+$('t_sc').innerHTML=tbl(['Indicator','You','Group median','Assessment'],[
+ sc('Share of new policies',P(8.2),P(7.0),true),
+ sc('Conversion quote → application',P(22,0),P(19,0),true),
+ sc('Cancellation rate',P(10.9),P(9.5),false),
+ sc('Claims lead time (working days)','9','13',true),
+ sc('Complaints per 1.000 claims',nl(4.8),nl(3.7),false),
+ sc('Share of top 3 intermediaries',P(16,0),P(9,0),false),
+ sc('Advisers\' rating (average)',nl(7.3),nl(7.1),true)
+],[1,2]);
+// 15 AI
+$('c_ai').innerHTML=line([{n:'Intermediaries serving you',c:NAVY,v:[11,13,15,18,20,23,25,29,32,35]},{n:'Market',c:MKT,w:2,v:[10,11,13,15,17,19,21,24,26,28]}],M,{dec:0,max:40});
+$('c_aidl').innerHTML=pair(['With AI','Without AI'],[2,4],[3,5],' d');
+const fi=(v,m)=>`<span class="pill ${v>=120?'r':v<=80?'g':'n'}">${v}</span>`;
+$('t_fair').innerHTML=tbl(['Target group','You','Market'],[['Age 18–24',fi(168),fi(141)],['Age 65 and over',fi(124),fi(108)],['Single',fi(97),fi(102)],['Rented home',fi(131),fi(112)],['Self-employed',fi(118),fi(121)],['Urban region',fi(104),fi(99)]],[1,2]);
+const vw=(k,u)=>[k,`<span class="pill ${u==='better'?'g':u==='weaker'?'r':'n'}">${u}</span>`];
+$('t_vw').innerHTML=tbl(['Feature','You against the median'],[vw('Glass cover included','weaker'),vw('Garden and outdoor items','weaker'),vw('Excess for storm damage','better'),vw('Alternative accommodation, maximum','better'),vw('New-for-old cover','equal'),vw('Underinsurance waiver','better'),vw('Valuables without valuation','equal'),vw('Inherent defect','equal'),vw('Burglary without signs of forced entry','weaker'),vw('Solar panels covered','better'),vw('Waiting period after inception','equal'),vw('Cover when moving house','equal')]);
+})();
+</script>
+</body>
+</html>
