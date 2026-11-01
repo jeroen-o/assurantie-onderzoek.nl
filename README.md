@@ -10,4 +10,4 @@ De sectie "Onze data" bestaat in twee versies. Standaard (`<html data-productnam
 
 ## Engelse versie
 
-De Engelse site staat in `/en/` (index, sample-report, regulation, methodology, about, privacy, whitepaper). Elke pagina heeft een NL/EN-knop naar de tegenhanger en `hreflang`-tags. Getallen staan ook in de Engelse versie in Nederlandse notatie (€ 1.234,56).
+De Engelse site staat in `/en/` (index, sample-report, regulation, methodology, about, privacy, whitepaper). Elke pagina heeft een NL/EN-knop naar de tegenhanger en `hreflang`-tags. De Engelse versie gebruikt Engelse getalnotatie (€1,234.56, 8.2%); de Nederlandse versie Nederlandse notatie (€ 1.234,56, 8,2%).
