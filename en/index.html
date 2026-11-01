@@ -1,0 +1,985 @@
+<!doctype html>
+<html lang="en" data-productnamen="uit">
+<head>
+<meta charset="utf-8">
+<style id="gate-css">
+html:not(.ok) body>*:not(#gate){display:none!important}
+html.ok #gate{display:none!important}
+#gate{position:fixed;inset:0;z-index:1000;display:flex;align-items:center;justify-content:center;padding:16px;background:linear-gradient(160deg,#1e2533,#2b3345);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+#gate .gbox{width:100%;max-width:380px;background:#fff;border-radius:16px;padding:28px 24px;box-shadow:0 20px 50px rgba(0,0,0,.3);color:#1b2535}
+#gate .glogo{font-weight:800;font-size:1.1rem;margin:0 0 4px;color:#1e2533}#gate .glogo span{color:#b08a00}
+#gate p{margin:0 0 16px;color:#5b6678;font-size:.92rem}
+#gate label{display:block;font-size:.85rem;font-weight:600;margin-bottom:6px}
+#gate input{display:block;width:100%;box-sizing:border-box;font:inherit;padding:11px 12px;border:1.5px solid #e1e6ee;border-radius:10px;margin-bottom:12px}
+#gate input:focus{outline:3px solid #ffcc00;outline-offset:1px}
+#gate button{width:100%;font:inherit;font-weight:700;background:#ffcc00;color:#1e2533;border:0;border-radius:999px;padding:11px 16px;cursor:pointer}
+#gate .gerr{color:#c0392b;font-size:.88rem;min-height:1.2em;margin:10px 0 0}
+.tm{font-size:.5em;vertical-align:super;line-height:0;margin-left:1px;font-weight:700}
+</style>
+<script>try{if(sessionStorage.getItem('ao_ok')==='1')document.documentElement.classList.add('ok')}catch(e){}</script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Assurantie-onderzoek.nl</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 26 28%22%3E%3Cpath d=%22M13 0l13 7v14l-13 7L0 21V7z%22 fill=%22%23ffcc00%22/%3E%3Cpath d=%22M11 12l6 9h-3.4l-6-9z%22 fill=%22%231e2533%22/%3E%3C/svg%3E">
+<link rel="canonical" href="https://assurantie-onderzoek.nl/en/">
+<link rel="alternate" hreflang="nl" href="https://assurantie-onderzoek.nl/">
+<link rel="alternate" hreflang="en" href="https://assurantie-onderzoek.nl/en/">
+<meta name="theme-color" content="#1e2533">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_GB">
+<meta property="og:site_name" content="Assurantie-onderzoek.nl">
+<meta property="og:title" content="Assurantie-onderzoek.nl: market intelligence and research for the insurance sector">
+<meta property="og:description" content="Market intelligence for insurers, MGAs and insurance intermediaries: position, distribution, portfolio, claims handling and claims investigation.">
+<meta property="og:url" content="https://assurantie-onderzoek.nl/en/">
+<meta name="description" content="Market intelligence for insurers, MGAs and insurance intermediaries: market share, distribution, customer profile, claims handling and claims investigation from the intermediary channel.">
+<style>
+:root{
+  --navy:#1e2533; --navy-2:#2b3345; --orange:#ffcc00; --orange-soft:#fff5cc;
+  --ink:#1b2535; --muted:#5b6678; --line:#e1e6ee; --bg:#f5f7fa; --card:#fff;
+  --pos:#1f8a5b; --neg:#c0392b; --c2:#8da9c4;
+  --r:14px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+a{color:var(--navy-2)}
+.wrap{max-width:1160px;margin:0 auto;padding:0 16px}
+header.top{background:var(--navy);color:#fff;position:sticky;top:0;z-index:10}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:16px}
+.logo{font-weight:800;letter-spacing:-.01em;font-size:1.1rem;color:#fff;text-decoration:none}
+.logo span{color:var(--orange)}
+nav a{color:#cfd8e6;text-decoration:none;margin-left:20px;font-size:.92rem}
+nav a:hover{color:#fff}
+nav{white-space:nowrap}
+nav>a:not(.btn):not(.home):not(.lang){margin-left:14px;font-size:.88rem}
+.logo{white-space:nowrap}
+@media(max-width:1420px){nav>a:not(.btn):not(.home):not(.lang){display:none}}
+@media(max-width:400px){header.top .btn{padding:7px 10px!important;font-size:.76rem!important}.logo{font-size:.88rem!important}}
+@media(max-width:480px){header.top .btn{padding:8px 12px;font-size:.82rem;margin-left:8px}header.top .wrap{gap:8px}.logo{font-size:.98rem}.logo svg{width:20px;height:22px;margin-right:6px!important}}
+.btn{display:inline-block;background:var(--orange);color:var(--navy) !important;padding:10px 18px;border-radius:999px;font-weight:600;text-decoration:none;border:0;cursor:pointer;font-size:.95rem}
+.btn.ghost{background:transparent;border:1.5px solid currentColor}
+.hero{background:linear-gradient(160deg,var(--navy) 0%,var(--navy-2) 100%);color:#fff;padding:72px 0 88px}
+.eyebrow{display:inline-block;font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#7a5c00}
+.hero .eyebrow,#contact .eyebrow,.kern .eyebrow{color:var(--orange)}
+.skip{position:absolute;left:-9999px;top:8px;z-index:100;background:var(--orange);color:var(--navy);padding:10px 16px;border-radius:8px;font-weight:700}
+.skip:focus{left:16px}
+:focus-visible{outline:3px solid #e0a800;outline-offset:2px;border-radius:4px}
+.hero h1{font-size:clamp(2rem,5vw,3.3rem);line-height:1.08;margin:.4em 0 .35em;letter-spacing:-.02em;max-width:820px}
+.hero p.lead{font-size:1.15rem;color:#d5deeb;max-width:680px;margin:0 0 28px}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap}
+.hero .ctas .ghost{color:#fff !important}
+.aud{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:-48px}
+@media(max-width:1000px){.aud{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.aud{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px}
+.aud .card{box-shadow:0 8px 28px rgba(30,37,51,.10)}
+.aud h3{margin:.2em 0 .3em;font-size:1.1rem}
+.aud p{margin:0;color:var(--muted);font-size:.95rem}
+.tag{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:var(--orange-soft);color:#6b5200;padding:3px 9px;border-radius:999px}
+section{padding:72px 0}
+section h2{font-size:clamp(1.6rem,3.4vw,2.2rem);letter-spacing:-.015em;margin:.25em 0 .4em;line-height:1.15}
+section p.intro{color:var(--muted);max-width:720px;margin:0 0 32px;font-size:1.05rem}
+.grid6{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:860px){.grid6{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.grid6{grid-template-columns:1fr}}
+.feat .num{width:34px;height:34px;border-radius:10px;background:var(--navy);color:#fff;display:grid;place-items:center;font-weight:700;margin-bottom:10px}
+.feat h3{margin:0 0 .3em;font-size:1.05rem}
+.feat p{margin:0;color:var(--muted);font-size:.94rem}
+
+/* tables */
+table{width:100%;border-collapse:collapse;font-size:.9rem}
+th{text-align:left;font-size:.74rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:600;border-bottom:1px solid var(--line);padding:8px 6px}
+td{padding:8px 6px;border-bottom:1px solid var(--line);vertical-align:top}
+.tablewrap{overflow-x:auto}
+.cats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+@media(max-width:1000px){.cats{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.cats{grid-template-columns:1fr}}
+.cat{border-top:4px solid var(--orange)}
+.cat h3{margin:0 0 .5em;font-size:1.02rem}
+.cat ul{margin:0;padding-left:18px;color:var(--muted);font-size:.9rem}
+.cat li{margin:.3em 0}
+.cat.wide{grid-column:1/-1}
+.cats.q{grid-template-columns:repeat(3,1fr)}
+@media(max-width:1000px){.cats.q{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.cats.q{grid-template-columns:1fr}}
+.cat.wide ul{columns:2;column-gap:32px}
+@media(max-width:760px){.cat.wide ul{columns:1}}
+.flow{display:flex;align-items:stretch;gap:8px;flex-wrap:wrap}
+.flow .step{flex:1 1 120px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 12px;text-align:center;font-weight:700;color:var(--navy);display:flex;flex-direction:column;justify-content:center}
+.flow .step small{display:block;font-weight:500;color:var(--muted);font-size:.78rem;margin-top:4px}
+.flow .step.hl{background:var(--orange);border-color:var(--orange)}
+.flow .step.hl small{color:var(--navy)}
+.flow .arr{align-self:center;color:var(--muted);font-size:1.3rem}
+@media(max-width:760px){.flow{flex-direction:column}.flow .arr{transform:rotate(90deg)}}
+/* offer */
+.offer{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+@media(max-width:1180px){.offer{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:1000px){.offer{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.offer{grid-template-columns:1fr}}
+@media(max-width:960px){.offer{grid-template-columns:1fr 1fr}}
+@media(max-width:760px){.offer{grid-template-columns:1fr}}
+.offer .card h3{margin:.3em 0}
+.offer ul{padding-left:18px;margin:.6em 0 0;color:var(--muted)}
+.offer li{margin:.25em 0}
+.offer .card.hl{border:2px solid var(--orange)}
+
+.checks{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+@media(max-width:760px){.checks{grid-template-columns:1fr}}
+.checks li{padding-left:28px;position:relative;font-weight:600}
+.checks li::before{content:"";position:absolute;left:0;top:3px;width:18px;height:18px;border-radius:50%;background:var(--orange)}
+.checks li::after{content:"";position:absolute;left:6px;top:7px;width:5px;height:9px;border:solid var(--navy);border-width:0 2px 2px 0;transform:rotate(45deg)}
+.wp{display:grid;grid-template-columns:1.6fr 1fr;gap:28px;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:32px;border-top:4px solid var(--orange)}
+@media(max-width:860px){.wp{grid-template-columns:1fr;padding:22px}}
+.wp-cta{background:var(--orange-soft);border-radius:12px;padding:22px;align-self:start}
+.checks.one{grid-template-columns:1fr}
+.checks.one li{font-weight:500;color:var(--ink)}
+.mission{margin-top:48px;text-align:center}
+.mission p{font-size:clamp(1.3rem,3vw,1.9rem);font-weight:800;letter-spacing:-.015em;color:var(--navy);margin:.3em auto 0;max-width:820px;line-height:1.25}
+.kern{display:grid;grid-template-columns:1.2fr 1fr;gap:24px;align-items:center;background:var(--navy);color:#fff;border-radius:var(--r);padding:28px;margin-bottom:16px}
+@media(max-width:860px){.kern{grid-template-columns:1fr}}
+.kern h3{margin:.4em 0 .3em;font-size:1.4rem;color:#fff}
+.kern p{margin:0;color:#d5deeb}
+.funnel{display:flex;flex-direction:column;gap:8px;align-items:center}
+.funnel>div{background:var(--orange);color:var(--navy);font-weight:800;text-align:center;padding:12px;border-radius:10px}
+.funnel small{display:block;font-weight:500;font-size:.78rem}
+.funnel .f1{width:100%}.funnel .f2{width:78%}.funnel .f3{width:56%}
+footer a{color:#ffcc00}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin-bottom:10px}
+.faq summary{cursor:pointer;font-weight:700;color:var(--navy)}
+.faq details p{margin:.6em 0 0;color:var(--muted)}
+/* EBA */
+@media(min-width:700px){.eba td:first-child{white-space:nowrap}}
+.eba td:first-child{font-weight:600;color:var(--navy)}
+.callout{border-left:4px solid var(--orange);background:#fff;padding:14px 18px;border-radius:0 10px 10px 0;margin-top:18px;font-size:.92rem;color:var(--muted)}
+.method{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+@media(max-width:760px){.method{grid-template-columns:1fr}}
+.method h3{margin:0 0 .3em;font-size:1.02rem}
+.method p{margin:0;color:var(--muted);font-size:.93rem}
+.people{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:900px;margin:0 auto;text-align:left}
+@media(max-width:760px){.people{grid-template-columns:1fr}}
+.person{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:var(--r);padding:20px}
+.person h3{margin:0 0 8px;font-size:1.05rem;color:#fff}
+.person a{display:block;color:#d5deeb;text-decoration:none;font-size:.92rem;margin-top:4px;word-break:break-all}
+.person a:hover{color:#ffcc00}
+footer{background:var(--navy);color:#b9c5d6;padding:40px 0;font-size:.88rem}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+#contact{background:var(--navy-2);color:#fff;text-align:center}
+#contact p{color:#d5deeb;max-width:640px;margin:0 auto 24px}
+/* Productnamen: standaard verborgen. Zet <html data-productnamen="aan"> om ze te tonen. */
+.pn{display:none}
+html[data-productnamen="aan"] .pn{display:inline}
+html[data-productnamen="aan"] .gen{display:none}
+.keten{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;counter-reset:k}
+@media(max-width:860px){.keten{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.keten{grid-template-columns:1fr}}
+.keten .card{border-top:4px solid var(--orange);position:relative}
+.keten .fase{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.keten .fase b{width:30px;height:30px;border-radius:9px;background:var(--navy);color:#fff;display:grid;place-items:center;font-size:.9rem;flex:none}
+.keten h3{margin:0;font-size:1.05rem}
+.keten .bron{font-size:.8rem;font-weight:700;color:#6b5200;background:var(--orange-soft);border-radius:8px;padding:4px 9px;display:inline-block;margin:4px 0 8px}
+.keten ul{margin:0;padding-left:18px;color:var(--muted);font-size:.9rem}
+.keten li{margin:.25em 0}
+.keten .wat{margin:.6em 0 0;font-size:.88rem;color:var(--ink)}
+.keten .wat strong{color:var(--navy)}
+.offer3{grid-template-columns:repeat(3,1fr)!important}
+@media(max-width:1000px){.offer3{grid-template-columns:1fr 1fr!important}}
+@media(max-width:680px){.offer3{grid-template-columns:1fr!important}}
+.offer .card{display:flex;flex-direction:column}
+.offer .card .tag{align-self:flex-start}
+.offer .card .lede{color:var(--muted);margin:0}
+.offer .card ul{flex:1}
+.offer .card .offerte{margin-top:16px;align-self:flex-start}
+h3.grp{font-size:1.15rem;margin:28px 0 12px}
+.rub{margin:20px 0 0;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.aud .more{display:inline-block;margin-top:10px;font-size:.88rem;font-weight:700;color:var(--navy);text-decoration:none}
+.aud .more:hover{text-decoration:underline}
+.cform{max-width:760px;margin:8px auto 0;text-align:left;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:var(--r);padding:24px}
+.cform .frow{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:620px){.cform .frow{grid-template-columns:1fr}.cform{padding:18px}}
+.cform label{display:block;font-size:.88rem;font-weight:600;color:#e3e9f2;margin-bottom:14px}
+.cform input,.cform select,.cform textarea{display:block;width:100%;margin-top:6px;font:inherit;font-weight:400;color:var(--ink);background:#fff;border:1.5px solid transparent;border-radius:10px;padding:10px 12px}
+.cform textarea{resize:vertical}
+.cform label.chk{display:flex;gap:10px;align-items:flex-start;font-weight:400;color:#d5deeb}
+.cform label.chk input{width:18px;height:18px;margin:2px 0 0;flex:none}
+.cform label.err{color:#ffb4a8}
+.cform label.err input,.cform label.err select{border-color:#ff8a78}
+.cform .factions{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.cform .cmsg{font-size:.9rem;color:#ffcc00}
+.cform .fnote{font-size:.82rem;color:#b9c5d6;margin:14px 0 0}
+.cform .fnote a,.cform label.chk a{color:#ffcc00}
+#contact .cform p{margin:0}
+.idee{display:grid;grid-template-columns:1fr 1.1fr;gap:28px;align-items:start}
+@media(max-width:860px){.idee{grid-template-columns:1fr}}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips button{font:inherit;font-size:.86rem;text-align:left;background:var(--orange-soft);color:#4d3b00;border:1px solid #f3dc85;border-radius:999px;padding:7px 13px;cursor:pointer}
+.chips button:hover{background:#ffeaa0}
+.iform{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:22px;border-top:4px solid var(--orange)}
+.iform .frow{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:620px){.iform .frow{grid-template-columns:1fr}}
+.iform label{display:block;font-size:.88rem;font-weight:600;color:var(--navy);margin-bottom:14px}
+.iform input,.iform select,.iform textarea{display:block;width:100%;margin-top:6px;font:inherit;font-weight:400;color:var(--ink);background:#fff;border:1.5px solid var(--line);border-radius:10px;padding:10px 12px}
+.iform label.chk{display:flex;gap:10px;align-items:flex-start;font-weight:400;color:var(--muted)}
+.iform label.chk input{width:18px;height:18px;margin:2px 0 0;flex:none}
+.iform label.err{color:var(--neg)}
+.iform label.err textarea,.iform label.err input{border-color:var(--neg)}
+.iform .factions{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.iform .imsg{font-size:.9rem;color:var(--muted)}
+.price{font-size:1.7rem;font-weight:800;color:var(--navy);letter-spacing:-.02em;margin:.2em 0 .4em;white-space:nowrap}
+.home{display:inline-flex;align-items:center;gap:6px;color:#fff!important;text-decoration:none;border:1.5px solid rgba(255,255,255,.35);border-radius:999px;padding:7px 14px;font-size:.88rem;font-weight:600;margin-left:14px}
+.home:hover{border-color:#ffcc00;color:#ffcc00!important}
+.lang{display:inline-flex;align-items:center;color:#fff!important;text-decoration:none;border:1.5px solid rgba(255,255,255,.35);border-radius:999px;padding:7px 12px;font-size:.82rem;font-weight:700;margin-left:10px;letter-spacing:.04em}.lang:hover{border-color:#ffcc00;color:#ffcc00!important}@media(max-width:480px){.lang{padding:6px 9px;font-size:.74rem;margin-left:4px}}
+@media(max-width:480px){.home{padding:6px 10px;font-size:.78rem;margin-left:6px}.home .ht{display:none}}
+@media(max-width:400px){header.top .wrap{gap:6px}.logo svg{display:none}.home{margin-left:4px}}
+@media(max-width:440px){.bt-x{display:none}.logo{font-size:.86rem!important;letter-spacing:-.02em}}
+.card{min-width:0}
+.card h3,.card p,.card li,td{overflow-wrap:break-word;hyphens:auto}
+h1,h2,h3{overflow-wrap:break-word;hyphens:auto}
+@media(max-width:380px){header.top nav>a.btn:not(.home){display:none}}
+.menu{display:inline-block;position:relative;margin-left:10px;vertical-align:middle}
+.menu summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:6px;color:#fff;border:1.5px solid rgba(255,255,255,.35);border-radius:999px;padding:7px 14px;font-size:.88rem;font-weight:600}
+.menu summary::-webkit-details-marker{display:none}
+.menu summary:hover,.menu[open] summary{border-color:#ffcc00;color:#ffcc00}
+.menu .mpanel{position:absolute;right:0;top:calc(100% + 10px);background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:0 16px 40px rgba(30,37,51,.25);padding:16px;display:grid;grid-template-columns:1fr 1fr;gap:4px 24px;width:min(460px,calc(100vw - 32px));white-space:normal;z-index:20}
+.menu .mpanel b{display:block;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:2px 0 6px}
+.menu .mpanel a{display:block;color:var(--navy)!important;margin:0!important;padding:6px 0;font-size:.92rem!important;text-decoration:none;border-bottom:1px solid var(--line)}
+.menu .mpanel a:hover{color:#7a5c00!important}
+@media(max-width:560px){.menu .mpanel{grid-template-columns:1fr;position:fixed;left:16px;right:16px;top:64px;width:auto;max-height:calc(100vh - 80px);overflow:auto}}
+@media(max-width:480px){.menu summary{padding:6px 10px;font-size:.78rem}.menu .mt{display:none}.menu{margin-left:4px}}
+@media(max-width:440px){.lang{padding:5px 7px;margin-left:2px}.home{padding:6px 8px}.menu summary{padding:6px 8px}header.top .btn{margin-left:4px}}
+</style>
+<meta property="og:image" content="https://assurantie-onderzoek.nl/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://assurantie-onderzoek.nl/og.png">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div id="gate" role="dialog" aria-modal="true" aria-labelledby="gtitle">
+  <form class="gbox" id="gform" autocomplete="off">
+    <p class="glogo" id="gtitle">Assurantie-<span>onderzoek</span>.nl<sup class="tm" aria-hidden="true">™</sup></p>
+    <p>This site is not yet public. Enter the password to continue.</p>
+    <label for="gpw">Password</label>
+    <input id="gpw" type="password" autocomplete="current-password" required>
+    <button type="submit">Open</button>
+    <p class="gerr" id="gerr" role="alert"></p>
+    <noscript><p class="gerr">Please enable JavaScript to view this site.</p></noscript>
+  </form>
+</div>
+<script>
+(function(){
+  var root=document.documentElement;if(root.classList.contains('ok'))return;
+  function h(s){var x=5381;for(var i=0;i<s.length;i++){x=(Math.imul(x,33)^s.charCodeAt(i))>>>0}return x}
+  var f=document.getElementById('gform'),pw=document.getElementById('gpw'),err=document.getElementById('gerr');
+  setTimeout(function(){pw.focus()},50);
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(h(pw.value.trim().toLowerCase())===1121249330){
+      try{sessionStorage.setItem('ao_ok','1')}catch(x){}
+      root.classList.add('ok');
+    }else{err.textContent='Incorrect password. Please try again.';pw.select()}
+  });
+})();
+</script>
+
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#" aria-label="Assurantie-onderzoek.nl, an activity of Blinqx"><svg width="26" height="28" viewBox="0 0 26 28" aria-hidden="true" style="vertical-align:-7px;margin-right:8px"><path d="M13 0l13 7v14l-13 7L0 21V7z" fill="#ffcc00"/><path d="M11 12l6 9h-3.4l-6-9z" fill="#1e2533"/></svg>Assurantie-<span>onderzoek</span>.nl<sup class="tm" aria-hidden="true">™</sup></a>
+    <nav>
+      <a class="lang" href="../index.html" hreflang="nl" lang="nl" aria-label="Nederlandse versie">NL</a>
+      <a class="home" href="#" aria-label="To the homepage"><svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg><span class="ht">Home</span></a>
+      <a href="#vragen">Your questions</a>
+      <a href="#bron">Our data</a>
+            <a href="#schade">Claims</a>
+      <a href="#ai">AI</a>
+      <a href="#aanbod">Products</a>
+      <a href="regulation.html">Regulation</a>
+      <a href="#idee">Your question</a>
+      <a href="#contact" class="btn">Request<span class="bt-x"> a quote</span></a>
+      <details class="menu"><summary aria-label="Menu"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span class="mt">Menu</span></summary><div class="mpanel"><div><b>On the homepage</b><a href="#">Home</a><a href="#vragen">Your questions</a><a href="#bron">Our data</a><a href="#rapportages">Reports</a><a href="#onderzoek">Benchmarks</a><a href="#schade">Claims</a><a href="#ai">AI research</a><a href="#aanbod">Products &amp; subscriptions</a><a href="#monitor">Insurance Monitor</a><a href="#idee">Your research question</a><a href="#contact">Contact &amp; quote</a></div><div><b>Pages</b><a href="sample-report.html">Sample report</a><a href="whitepaper.html">Whitepaper</a><a href="regulation.html">Regulation</a><a href="methodology.html">Methodology</a><a href="about.html">About us</a><a href="privacy.html">Privacy statement</a></div></div></details>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<div class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Market intelligence and research for the insurance sector</span>
+    <h1>The place to find everything about the Dutch insurance market.</h1>
+    <p class="lead" style="color:#fff;font-weight:600;margin-bottom:12px">This is where you carry out benchmark research and analysis: see where you stand, by month, by line of business, by insurance intermediary and by customer profile. From quote and policy to claim notification and settlement.</p>
+    <p class="lead"><strong style="color:#ffcc00">We see quotes, applications, policies, policy changes and claim notifications from the intermediary channel</strong>, because insurance intermediaries and MGAs work with Blinqx's advice, administration and CRM software<span class="pn">, such as eBlinqx, DIAS, Premievergelijk and Blinqx Connect CRM</span>. Assurantie-onderzoek.nl is the research agency of Blinqx. We turn that data into management information: a one-off report, ongoing insight or bespoke research, including on claims handling and claims investigation.</p>
+    <div class="ctas">
+      <a href="#aanbod" class="btn">View our products</a>
+      <a href="sample-report.html" class="btn ghost">Sample report</a>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="aud">
+    <div class="card"><span class="tag">Non-life insurers</span><h3>Position and distribution</h3><p>Your share of quotes, applications and new policies by line of business, the trend through the year and your share at each insurance intermediary.</p><a class="more" href="?onderwerp=Insurer%20subscription#contact" data-offerte="Insurer subscription">Quote for an insurer subscription →</a></div>
+    <div class="card"><span class="tag">Life &amp; income</span><h3>AOV, ORV, annuities and sickness absence</h3><p>Your share of disability, term life, annuity and sickness absence products, with the customer profile by intermediary and by occupational class.</p><a class="more" href="?onderwerp=Life%20and%20income%20subscription#contact" data-offerte="Life and income subscription">Quote for a life and income subscription →</a></div>
+    <div class="card"><span class="tag">MGAs</span><h3>Your MGA portfolio</h3><p>Inflow, cancellations, premium development and claims costs of your delegated authorities, compared with the market and with other MGAs, also as supporting evidence for your delegated authority audit.</p><a class="more" href="?onderwerp=MGA%20subscription#contact" data-offerte="MGA subscription">Quote for an MGA subscription →</a></div>
+    <div class="card"><span class="tag">Insurance intermediaries</span><h3>Your firm in focus</h3><p>Trends in your portfolio: new policies, policy changes and claims by insurer and by line of business, and how you compare with similar firms.</p><a class="more" href="?onderwerp=Adviser%20subscription#contact" data-offerte="Adviser subscription">Quote for an adviser subscription →</a></div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="mission">
+    <span class="eyebrow">Our aim</span>
+    <p>Market intelligence and research for insurers, MGAs and insurance intermediaries.</p>
+  </div>
+</div>
+
+<section id="inzichten">
+  <div class="wrap">
+    <span class="eyebrow">What you see</span>
+    <h2>Your position, always compared with the market</h2>
+    <p class="intro">For non-life insurers, life and income protection insurers, MGAs and insurance intermediaries. With every figure you also see the market average and the difference from it.</p>
+    <div class="kern">
+      <div>
+        <span class="tag">Key metric</span>
+        <h3>Conversion in the advice process</h3>
+        <p>A key metric that starts at the quote: how often your premium is requested, how often that leads to an application, and how often that application becomes an in-force policy. Every month, by line of business, for your own position and against the market.</p>
+      </div>
+      <div class="funnel" aria-label="Quote, application, policy">
+        <div class="f1">Quote<small>your premium is compared</small></div>
+        <div class="f2">Application<small>the adviser chooses you</small></div>
+        <div class="f3">Policy<small>the insurance is in force</small></div>
+      </div>
+    </div>
+    <div class="kern">
+      <div>
+        <span class="tag">Key metric</span>
+        <h3>Quality of claims handling</h3>
+        <p>From notification to payment: how quickly a claim is taken into handling, how often a loss adjuster or an investigation is used, and how long it takes until settlement. Measured in the channel where the customer reports the claim: at the insurance intermediary.</p>
+      </div>
+      <div class="funnel" aria-label="Notification, handling, settlement">
+        <div class="f1">Notification<small>the customer reports the claim</small></div>
+        <div class="f2">Handling<small>cover, loss adjusting, investigation</small></div>
+        <div class="f3">Settlement<small>payment or rejection</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="vragen">
+  <div class="wrap">
+    <span class="eyebrow">Your questions</span>
+    <h2>What do you want to know as an insurer?</h2>
+    <p class="intro">These are the questions we answer for insurers and MGAs, always for your own position and compared with the market.</p>
+    <div class="cats q">
+      <div class="card cat"><h3>Commercial</h3><ul><li>Is my share of new policies growing or shrinking, and in which lines of business?</li><li>Where do I win and where do I lose compared with the market?</li><li>How often am I quoted, and how often does that lead to an application and a policy?</li><li>At what premium differences does the adviser choose someone else?</li></ul></div>
+      <div class="card cat"><h3>Distribution</h3><ul><li>At which insurance intermediaries am I strong, and where is there room for growth?</li><li>How dependent am I on a small number of intermediaries or MGAs?</li><li>Which intermediaries are rising or falling in my production?</li><li>How am I doing by region and by firm size?</li></ul></div>
+      <div class="card cat"><h3>Customer &amp; target group</h3><ul><li>Who are my policyholders: private or business, age, household, sector?</li><li>Do I reach the self-employed (zzp), SMEs and first-time buyers as well as the market does?</li><li>Which occupational classes take out an income protection policy (AOV) with me, and which do not?</li><li>Which groups fall outside my acceptance criteria more often than in the market?</li><li>Do loyal customers see a different premium development at renewal than new customers?</li></ul></div>
+      <div class="card cat"><h3>Product &amp; premium</h3><ul><li>How does my published premium compare with the market range?</li><li>What did my last premium or terms change do to my share, in hindsight?</li><li>Which covers, excesses and clauses do customers choose with me and in the market?</li><li>How often is a bundled policy chosen over separate policies?</li><li>For buildings insurance, do customers choose extended cover or all-risks, and with what excess?</li></ul></div>
+      <div class="card cat"><h3>Portfolio &amp; cancellations</h3><ul><li>How many policies are leaving me, and to which line of business or channel?</li><li>What is the cause: premium, claims handling, or an intermediary moving its portfolio?</li><li>How often do customers combine buildings and home contents with me, compared with the market?</li><li>How often does a premium increase at renewal lead to switching?</li><li>How are policy changes in my in-force portfolio developing?</li></ul></div>
+      <div class="card cat"><h3>Claims &amp; handling</h3><ul><li>How quickly do I take a claim into handling, compared with the market?</li><li>How often do I appoint a loss adjuster, and what does that do to the lead time?</li><li>How many claims do I reject, and how often does a complaint or counter-assessment follow?</li><li>How do advisers rate my claims handling?</li><li>What does AI in claims handling do to speed and outcome?</li></ul></div>
+      <div class="card cat"><h3>Claims investigation &amp; fraud</h3><ul><li>How often do I start an investigation into the cause of loss or a claims investigation, and in which lines of business?</li><li>Which signals precede an investigation more often in the market than with me?</li><li>How many investigations lead to a changed outcome?</li><li>How is the number of repeat claims developing by line of business?</li></ul></div>
+      <div class="card cat"><h3>Regulation &amp; ESG</h3><ul><li>Can I use market data to show that my product fits the target group (PARP)?</li><li>How is climate-related damage (storm, hail, flooding from rainfall) developing in my portfolio?</li><li>Which reference data can I use for my ESG and Solvency II reporting?</li><li>Do my policyholders take out the cover that fits their risk?</li></ul></div>
+      <div class="card cat"><h3>Looking ahead</h3><ul><li>How many new policies can I expect over the next three months?</li><li>Can I see a fall in quotes before my production falls?</li><li>Which renewals will be under pressure in the coming months?</li></ul></div>
+      <div class="card cat wide"><h3>Your intermediaries: what they quote, apply for and report</h3><ul>
+        <li>At which intermediaries am I often quoted but rarely applied for?</li>
+        <li>Does an intermediary drop me on premium, on terms or on acceptance?</li>
+        <li>Which lines of business and covers does an intermediary quote with me, compared with the market?</li>
+        <li>How long does it take per intermediary from quote to application and policy?</li>
+        <li>Which intermediaries specialise in the target groups where I am weak, such as the self-employed, agriculture, transport or real estate?</li>
+        <li>Which intermediaries are growing, which are new, and which are using me less and less?</li>
+        <li>At which intermediaries are you losing in-force policies to other insurers?</li>
+        <li>How do intermediaries experience your claims handling, and where does that lead to portfolios being moved?</li>
+        <li>How much of your production comes from a few intermediaries, and how vulnerable does that make you?</li>
+        <li>Which intermediaries report relatively many or few claims to you, adjusted for the portfolio?</li>
+      </ul></div>
+    </div>
+    <p class="rub"><a class="btn offerte" href="?onderwerp=Bespoke%20research#contact" data-offerte="Bespoke research">Ask your question</a></p>
+  </div>
+</section>
+
+<section id="bron">
+  <div class="wrap">
+    <span class="eyebrow">Data from the source</span>
+    <h2>Direct insight into quotes, policies and claims</h2>
+    <p class="intro">Assurantie-onderzoek.nl is an activity of Blinqx. Insurance intermediaries and MGAs use Blinqx's advice, administration and CRM software<span class="pn">: from Premievergelijk and Blinqx Connect CRM to eBlinqx Verzekering and eBlinqx Volmacht (formerly DIAS)</span>. This means we see what happens in the advice process before an application reaches an insurer, what becomes an in-force policy, and what happens when the customer reports a claim. What you receive is always aggregated and shows your own position against the market.</p>
+    <div class="flow" aria-label="From customer to insurer">
+      <div class="step">Customer</div><div class="arr">→</div>
+      <div class="step">Insurance intermediary</div><div class="arr">→</div>
+      <div class="step hl">Advice, administration &amp; CRM software<small>this is where the data is created</small></div><div class="arr">→</div>
+      <div class="step">Application &amp; policy<small>via SIVI messages</small></div><div class="arr">→</div>
+      <div class="step">Insurer or MGA<small>sees only its own policies</small></div><div class="arr">→</div>
+      <div class="step">Claim notification<small>also in view</small></div>
+    </div>
+
+    <h3 style="margin:32px 0 6px;font-size:1.15rem">The whole chain in view, in six steps</h3>
+    <p style="color:var(--muted);margin:0 0 16px;max-width:760px">An insurer only sees the customer at the application stage. Our sources start earlier and continue until after the claim. Each step yields its own key metrics, and together they form one continuous customer journey.</p>
+    <div class="keten">
+      <div class="card"><div class="fase"><b>1</b><h3>Orientation</h3></div>
+        <span class="bron"><span class="gen">Intermediary websites and online calculators</span><span class="pn">Engage: websites and calculators</span></span>
+        <ul><li>Which calculators and topics consumers use</li><li>How much orientation leads to contact with the intermediary</li></ul>
+        <p class="wat"><strong>Key metric:</strong> demand in the market, before the customer reaches an adviser.</p></div>
+      <div class="card"><div class="fase"><b>2</b><h3>Advice</h3></div>
+        <span class="bron"><span class="gen">CRM, financial planning and risk assessment</span><span class="pn">Blinqx Connect CRM, eBlinqx CRM, Finrust and Risicomanagement</span></span>
+        <ul><li>Contact moments, advice meetings and their lead time</li><li>Financial planning: pensions, annuities and banking products</li><li>Which risks are discussed with business customers</li></ul>
+        <p class="wat"><strong>Key metric:</strong> from lead to advice, and which risks are and are not insured.</p></div>
+      <div class="card"><div class="fase"><b>3</b><h3>Comparison</h3></div>
+        <span class="bron"><span class="gen">Premium comparison by the adviser</span><span class="pn">Premievergelijk (formerly MyTP.nl)</span></span>
+        <ul><li>How often you are compared, with which profile and which cover</li><li>Your position in the comparison, in hindsight and as a range</li></ul>
+        <p class="wat"><strong>Key metric:</strong> how often you are quoted, and how often you win.</p></div>
+      <div class="card"><div class="fase"><b>4</b><h3>Application &amp; policy</h3></div>
+        <span class="bron"><span class="gen">Administration software and SIVI messages</span><span class="pn">eBlinqx Verzekering and DIAS Assurantie, with connections via Aplaza and Solera (ADN)</span></span>
+        <ul><li>Applications and new policies by insurer and line of business</li><li>Uniform definitions via the SIVI standard</li></ul>
+        <p class="wat"><strong>Key metric:</strong> your share of new business, by intermediary and against the market.</p></div>
+      <div class="card"><div class="fase"><b>5</b><h3>Management</h3></div>
+        <span class="bron"><span class="gen">Portfolio management, signals and premium adjustment</span><span class="pn">eBlinqx, Signalen and Naverrekenen</span></span>
+        <ul><li>Policy changes, renewals and cancellations</li><li>Switching and savings signals, premium adjustment on business policies</li></ul>
+        <p class="wat"><strong>Key metric:</strong> customer retention, and where customers go when they leave.</p></div>
+      <div class="card"><div class="fase"><b>6</b><h3>Claims</h3></div>
+        <span class="bron"><span class="gen">Claims handling at intermediaries and MGAs</span><span class="pn">eBlinqx Volmacht and DIAS Volmacht</span></span>
+        <ul><li>Claim notifications, use of loss adjusters and exchange with adjusters</li><li>Lead time from notification to settlement</li></ul>
+        <p class="wat"><strong>Key metric:</strong> the quality of your claims handling, against the market.</p></div>
+    </div>
+    <div class="callout" style="margin-bottom:8px"><strong>The bridge to mortgages, too.</strong> Through <span class="gen">mortgage software and HDN applications</span><span class="pn">eBlinqx Hypotheek and HDN</span> we see which term life, mortgage payment protection and income protection products are taken out with a mortgage. See also <a href="https://jeroen-o.github.io/hypotheekonderzoek.nl/" target="_blank" rel="noopener">hypotheekonderzoek.nl</a>.</div>
+    <div class="cats" style="margin-top:24px">
+      <div class="card cat"><h3>Which quotes are made</h3><ul><li>Premium comparisons made by the adviser</li><li>Which insurers and covers are included</li><li>Which excesses and clauses are chosen</li></ul></div>
+      <div class="card cat"><h3>Which applications do not go to you</h3><ul><li>How often you were in a comparison but the application did not come to you</li><li>In which lines of business and at which intermediaries this happens</li><li>Aggregated, without showing which competitor received the application</li></ul></div>
+      <div class="card cat"><h3>Your share of the whole network</h3><ul><li>Measured across all insurers and MGAs in the network</li><li>By month, quarter and year, by line of business</li><li>By segment, region and intermediary, against the market or an anonymous group of comparable parties</li></ul></div>
+      <div class="card cat"><h3>What happens to the policy</h3><ul><li>Policy changes, renewals and cancellations</li><li>Claim notifications and the lead time to settlement</li><li>Combinations of policies per customer, such as packages and cross-selling</li></ul></div>
+    </div>
+    <h3 style="margin:32px 0 6px;font-size:1.15rem">What we know that you as an insurer do not</h3>
+    <p style="color:var(--muted);margin:0 0 12px;max-width:760px">An insurer only sees what comes in. We also see what happens before the application, what goes to the rest of the market, and how your claims handling compares with that of others.</p>
+    <div class="tablewrap">
+    <table class="eba"><thead><tr><th>Topic</th><th>What you see yourself</th><th>What Assurantie-onderzoek.nl sees</th></tr></thead><tbody>
+      <tr><td>Quotes</td><td>Little: you only see a customer at the application stage</td><td>Every premium comparison in which you do or do not appear</td></tr>
+      <tr><td>Lost applications</td><td>Nothing: you never see a customer who takes out cover elsewhere</td><td>How often you were in view but the application did not come to you (aggregated)</td></tr>
+      <tr><td>Market share</td><td>Only your own production, without a denominator</td><td>Your share of the whole network, by line of business, month, region and intermediary</td></tr>
+      <tr><td>Cancellations</td><td>That a policy leaves</td><td>Where the customer goes (as a group) and whether that happens at renewal or after a claim</td></tr>
+      <tr><td>Insurance intermediaries</td><td>Your production per intermediary</td><td>Your share at each intermediary, including the part that goes to the market</td></tr>
+      <tr><td>Customer profile</td><td>Only your own policyholders</td><td>Your policyholders alongside all customers in the advice process: private, business, sector, occupational class</td></tr>
+      <tr><td>Claims handling</td><td>Your own lead times</td><td>Your lead time, use of loss adjusters and rejections against the market</td></tr>
+      <tr><td>Premium</td><td>Your own rates</td><td>Your published premium against the range of all providers, in hindsight</td></tr>
+    </tbody></table>
+    </div>
+    <h3 style="margin:32px 0 6px;font-size:1.15rem">Complementary to public sources</h3>
+    <p style="color:var(--muted);margin:0 0 12px;max-width:760px">The Verbond van Verzekeraars (Dutch Association of Insurers), DNB (De Nederlandsche Bank), CBS (Statistics Netherlands) and Adfiz publish valuable figures on the insurance market and on advice. They show the market as a whole. Assurantie-onderzoek.nl goes one level deeper: by party, by insurance intermediary and by customer profile.</p>
+    <div class="tablewrap">
+    <table class="eba">
+      <thead><tr><th>Public source</th><th>What it shows</th><th>What Assurantie-onderzoek.nl adds</th></tr></thead>
+      <tbody>
+        <tr><td><a href="https://www.verzekeraars.nl/branche/data-analytics-en-onderzoek/cijfers-statistieken" target="_blank" rel="noopener">Verbond: figures and statistics (DAC)</a></td><td>Public data products such as the extreme weather monitor, the market size per non-life product cluster, index figures for home contents and buildings, the solidarity monitor and the insurance crime factsheet.</td><td>Each insurer's share of new business via intermediaries, by month, line of business and intermediary.</td></tr>
+        <tr><td><a href="https://www.dnb.nl/statistieken/dashboards/verzekeraars/" target="_blank" rel="noopener">DNB: insurers dashboard</a></td><td>Balance sheet, premium and solvency data of insurers at aggregate level.</td><td>What happens in the advice process before the policy: quotes, lost applications and the intermediaries through which the customer arrives.</td></tr>
+        <tr><td><a href="https://www.cbs.nl/nl-nl/onze-diensten/methoden/onderzoeksomschrijvingen/korte-onderzoeksomschrijvingen/verzekeraars-en-pensioenfondsen-financiele-gegevens-en-specificaties" target="_blank" rel="noopener">CBS: financial data of insurers</a></td><td>The financial position of life, non-life and reinsurers and pension funds in business-economic terms, at sector level.</td><td>The commercial side per party: production, conversion and customer retention in the intermediary channel.</td></tr>
+        <tr><td><a href="https://www.adfiz.nl" target="_blank" rel="noopener">Adfiz: Advies in Cijfers</a></td><td>A reference work on the financial advice market: numbers of firms, customer satisfaction and developments in advice.</td><td>Production and claims handling per insurer, as visible in the intermediaries' software.</td></tr>
+        <tr><td><a href="https://www.cbs.nl" target="_blank" rel="noopener">CBS</a></td><td>Data on households, businesses, the self-employed and vehicles by region, and the price development of insurance in the consumer price index (ECOICOP v2, division 12).</td><td>How well your portfolio covers that population, and how your own premium development compares with the CPI for the same insurance group.</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="rub"><a class="btn offerte" href="?onderwerp=Question%20about%20data%2C%20methodology%20or%20privacy#contact" data-offerte="Question about data, methodology or privacy">Question about our data</a></p>
+    <div class="callout">All analyses are aggregated and cover the network of intermediaries that work with Blinqx software. They cannot be traced back to individual consumers, businesses or advisers, and we do not share competitively sensitive details of other parties.</div>
+  </div>
+</section>
+
+<section id="rapportages" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <span class="eyebrow">Overview</span>
+    <h2>Our reports provide insight into:</h2>
+    <p class="intro">Insurers, MGAs and intermediaries can request information on a wide range of topics. Each topic can be purchased separately, combined in a market report, or as part of ongoing insight.</p>
+    <div class="cats">
+      <div class="card cat"><h3>Market &amp; position</h3><ul><li>Share of new policies by month, quarter and year</li><li>By line of business: motor, home, liability, legal expenses, commercial, AOV, ORV, sickness absence</li><li>Ranking and position against competitors as a group</li><li>Trend and seasonal analysis</li><li>Regional distribution</li></ul></div>
+      <div class="card cat"><h3>Distribution &amp; intermediaries</h3><ul><li>Share per insurance intermediary</li><li>Index against your market share per intermediary</li><li>Risers and fallers in your distribution</li><li>Concentration at the largest intermediaries and MGAs</li><li>Spread across networks, service providers and franchises</li></ul></div>
+      <div class="card cat"><h3>Customer profile</h3><ul><li>Private, self-employed (zzp) and SME</li><li>Age bands and household</li><li>Sector and SBI code for business customers</li><li>Occupational class for AOV</li><li>Number of policies per customer</li></ul></div>
+      <div class="card cat"><h3>Product &amp; cover</h3><ul><li>Covers chosen and sums insured</li><li>Excess and clauses</li><li>Bundled or separate policy</li><li>Waiting periods and end age for AOV</li><li>Contract term and payment frequency</li></ul></div>
+      <div class="card cat"><h3>Portfolio</h3><ul><li>Inflow, policy changes and cancellations</li><li>Cancellation reason where recorded</li><li>Effect of renewal and premium review</li><li>Portfolio shifts between insurers</li><li>Portfolio transfers between intermediaries</li></ul></div>
+      <div class="card cat"><h3>Premium &amp; terms</h3><ul><li>Publicly published premiums and terms of all providers, structured</li><li>Your position against the market range, with a delay</li><li>History of premium and terms changes</li><li>Relationship between your premium level and your own share, in hindsight</li></ul></div>
+      <div class="card cat"><h3>Claims &amp; handling</h3><ul><li>Claim notifications by line of business and cause</li><li>Lead time from notification to settlement</li><li>Use of loss adjusters and counter-assessment</li><li>Rejections and payment bands</li><li>Claims frequency by intermediary and customer profile</li></ul></div>
+      <div class="card cat"><h3>Risk &amp; regulation</h3><ul><li>Market reference for product review and target market definition (PARP)</li><li>Climate-related damage by region for ESG and ORSA analyses</li><li>Signals of underinsurance and lack of insurance</li><li>Insurability: which groups are rejected or loaded more often</li><li>Reports for the risk committee and the board</li></ul></div>
+      <div class="card cat wide"><h3>Customer profile by type of insurance</h3><ul>
+        <li><b>Motor:</b> driver age, no-claims years, type and age of the vehicle, mileage, region</li>
+        <li><b>Buildings:</b> type of home, year of construction, roofing (e.g. thatch or tiles), rebuild value via calculator or fixed amount, solar panels, outbuildings</li>
+        <li><b>Home contents:</b> household, owner-occupied or rented, contents value via calculator, valuables</li>
+        <li><b>Liability and legal expenses:</b> household composition, modules chosen</li>
+        <li><b>AOV:</b> occupational class, income band, waiting period, end age, self-employed or director-major shareholder (dga)</li>
+        <li><b>ORV and annuities:</b> age, sum insured, term, link with the mortgage</li>
+        <li><b>SME:</b> sector (SBI), number of employees, turnover band, policies chosen per business</li>
+        <li><b>Travel:</b> annual or single-trip, family or single-person cover, worldwide cover</li>
+      </ul></div>
+      <div class="card cat wide"><h3>Marketing &amp; target groups</h3><ul><li>Target groups where you are under- or over-represented: self-employed, first-time buyers, SME, agriculture, transport</li><li>From quote to application: at which stage you lose customers</li><li>Regions and intermediaries with the most room for growth</li><li>Effect of your own premium or acceptance change on your share, analysed in hindsight</li><li>How your position develops around campaigns and product launches</li><li>Cross-selling: which policies are taken out together</li><li>Target group profiles for your campaigns</li><li>Timing: in which months which lines of business are most active</li></ul></div>
+    </div>
+    <p class="rub"><a class="btn offerte" href="?onderwerp=Market%20report#contact" data-offerte="Market report">Request a quote for a market report</a><a class="btn ghost offerte" href="?onderwerp=Insurer%20subscription#contact" data-offerte="Insurer subscription">Or a subscription</a></p>
+    <div class="callout">Which topics and breakdowns are available depends on the data recorded in the software and on the minimum numbers per segment. In the quote we agree together on exactly what you will receive.</div>
+  </div>
+</section>
+
+<section id="onderzoek">
+  <div class="wrap">
+    <span class="eyebrow">Research in the sector</span>
+    <h2>Three types of research in the insurance world</h2>
+    <p class="intro">Research in the insurance sector serves different purposes: checking a claim, assessing a risk at application, or mapping the sector as a whole. Assurantie-onderzoek.nl provides the market data that fits all three, always aggregated.</p>
+    <div class="grid6">
+      <div class="card feat"><div class="num">1</div><h3>Claims investigation and investigation into the cause of loss</h3><p>When there is doubt about how a loss occurred, such as a fire, a collision or a theft. Using interviews, registers, technical investigation and sometimes predictive software, within the GPO (Code of Conduct for Personal Investigations). <a href="#schade">Read more</a></p></div>
+      <div class="card feat"><div class="num">2</div><h3>Underwriting and medical examination</h3><p>For life and disability insurance, a health declaration or medical examination may be required. Legal limits apply, for example the threshold above which questions about genetic testing are not allowed. We only measure how often acceptance takes place and how long it takes, never medical data.</p></div>
+      <div class="card feat"><div class="num">3</div><h3>Sector research</h3><p>DNB examines, among other things, risk management and the use of AI in risk assessment and pricing. The AFM (Dutch Authority for the Financial Markets) publishes research on conduct and duty of care. The Verbond van Verzekeraars carries out sector research through its Data Analytics Centre. We add the view from the intermediary channel.</p></div>
+    </div>
+
+    <div class="card" style="margin-top:16px;border-top:4px solid var(--orange)">
+      <h3 style="margin:0 0 .4em;font-size:1.1rem">From behavioural assumptions to actual choices</h3>
+      <p style="margin:0 0 .6em;color:var(--muted)">Insurance law and economics assume rational choices, moral hazard (being less careful because you are insured) and adverse selection (mainly those at high risk take out insurance). Empirical research shows that these assumptions by no means always hold. Rational choice is less dominant than assumed, and underinsurance is common (Faure &amp; Van Boom, <em>Gedragsveronderstellingen en verzekeringen</em>). Our data shows which choices are actually made in the advice process.</p>
+      <ul class="checks one">
+        <li>Which covers, sums insured and excesses do customers really choose, and where does that point to underinsurance?</li>
+        <li>Is it mainly higher-risk customers who take out insurance, or is that not reflected in the claims pattern per segment?</li>
+        <li>What do a default option in the quote or a bundled policy do to the cover customers choose?</li>
+        <li>How often is an in-force policy reviewed mid-term, and what changes then?</li>
+      </ul>
+    </div>
+
+    <h3 style="margin:32px 0 6px;font-size:1.15rem">Existing benchmarks, and what we add</h3>
+    <p style="color:var(--muted);margin:0 0 12px;max-width:760px">There are valuable benchmarks of insurers. They measure sustainability, digital processes, brand perception or the commercial market. We measure your position in the advice process itself: what advisers quote, apply for and report.</p>
+    <div class="tablewrap">
+    <table class="eba">
+      <thead><tr><th>Benchmark</th><th>What it measures</th><th>What Assurantie-onderzoek.nl adds</th></tr></thead>
+      <tbody>
+        <tr><td><a href="https://www.verzekeraars.nl/branche/data-analytics-en-onderzoek" target="_blank" rel="noopener">Verbond: Data Analytics Centre</a></td><td>Sector research, trends and dashboards based on insurers' data.</td><td>The intermediary channel per intermediary, including quotes and lost applications.</td></tr>
+        <tr><td><a href="https://www.verzekeraars.nl/branche/data-analytics-en-onderzoek" target="_blank" rel="noopener">Verbond: Consumentenmonitor</a></td><td>Annual consumer research into the image of insurers, service, trust in claims handling, customer interest and sustainability.</td><td>Behaviour alongside opinion: what claims handling and the checking of insurance look like in practice.</td></tr>
+        <tr><td><a href="https://vbdo.nl/ons-werk/benchmarks/" target="_blank" rel="noopener">VBDO Sustainability Benchmark</a></td><td>The responsible and sustainable investment policy of the largest insurers.</td><td>Sustainability on the insurance side: climate-related damage and sustainability measures in the portfolio.</td></tr>
+        <tr><td><a href="https://benchmark.novulo.com/" target="_blank" rel="noopener">Digital Insurance Benchmark</a></td><td>Digital processes and customer convenience at non-life insurers, MGAs and intermediaries.</td><td>The effect in the market: what the lead time of applications and claims does to your share.</td></tr>
+        <tr><td><a href="https://www.verzekeraars.nl/publicaties/actueel/digitale-klantreizen-verzekeraars-sterk-verdere-verbetering-mogelijk" target="_blank" rel="noopener">Digital customer journeys benchmark</a></td><td>International comparison of insurers' digital customer journeys: information, buying online, submitting and tracking claims, self-service and AI.</td><td>The customer journey via the adviser: from quote to policy and from notification to settlement.</td></tr>
+        <tr><td><a href="https://www.multiscope.nl/diensten/marktcijfers/nationale-benchmark-autoverzekeringen.html" target="_blank" rel="noopener">Nationale Benchmark Autoverzekeringen</a></td><td>Advertising, brand awareness, NPS and loyalty among consumers.</td><td>The adviser's choice behaviour: when your motor policy is quoted and chosen.</td></tr>
+        <tr><td><a href="https://www.marsh.com/nl/services/international-placement-services/insights/national-benchmark-general-insurance.html" target="_blank" rel="noopener">Marsh: National Benchmark General Insurance</a></td><td>Risks, costs and premium development in the commercial non-life market.</td><td>The SME and self-employed market via the insurance intermediary, by line of business and sector.</td></tr>
+        <tr><td><a href="https://www.dnb.nl/nieuws-voor-de-sector/toezicht-2025/q2/resultaten-dnb-benchmarkstudie-aov-fma/" target="_blank" rel="noopener">DNB: AOV benchmark study</a></td><td>Supervisory research into disability insurance.</td><td>Demand for AOV in the advice process: occupational classes, waiting periods and conversion.</td></tr>
+        <tr><td><a href="https://www.letselschade.nu/letselschadebranche/benchmark-slechts-drie-van-48-verzekeraars-en-labels-bieden-online-letselschademelding-voor-slachtoffers/" target="_blank" rel="noopener">Online personal injury notification benchmark</a></td><td>Which insurers and labels allow victims to report personal injury online.</td><td>The notification channel and lead time of claims handled via the insurance intermediary.</td></tr>
+        <tr><td><a href="https://www.ipsos.com/nl-nl/marktonderzoek-de-financiele-sector-nieuws-en-publicaties" target="_blank" rel="noopener">Ipsos and am: Verzekeringsmonitor</a></td><td>Market research among consumers, intermediaries and insurers, for example on the spread of the non-life package, switching and the leading insurers.</td><td>Measured behaviour in the portfolio: how many policies per customer, and when and why customers switch.</td></tr>
+        <tr><td><a href="https://www.consumentenbond.nl/woonverzekering/opstalverzekering-vergelijken" target="_blank" rel="noopener">Consumentenbond: home insurance comparison</a></td><td>Test ratings of premiums and terms of, among others, buildings insurance, from the consumer's perspective.</td><td>Which cover (extended or all-risks), which excess and which rebuild value advisers choose in practice.</td></tr>
+        <tr><td><a href="https://www.independer.nl/woonverzekering/intro.aspx" target="_blank" rel="noopener">Online comparison sites</a></td><td>Comparison sites such as Independer, Pricewise and Overstappen.nl set premiums, terms, package discounts and customer ratings side by side for the consumer.</td><td>The advice channel: which insurer the adviser chooses after comparison, with which cover, and how that differs from what is chosen online.</td></tr>
+        <tr><td><a href="https://dfobv.nl" target="_blank" rel="noopener">DFO: service provider survey</a></td><td>How financial advisers rate service providers, compared with what they consider important.</td><td>Behaviour alongside opinion: how ratings relate to what intermediaries actually apply for.</td></tr>
+        <tr><td><a href="https://www.pwc.nl/nl/actueel-en-publicaties/diensten-en-sectoren/verzekeraars/global-pricing-benchmark-dynamisch-pricen-is-in-opkomst.html" target="_blank" rel="noopener">PwC: Global Pricing Benchmark</a></td><td>How advanced insurers are in pricing, such as dynamic pricing.</td><td>In hindsight: what your premium change did to your share in the advice process.</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="rub"><a class="btn offerte" href="?onderwerp=Benchmark%20study#contact" data-offerte="Benchmark study">Request a quote for a benchmark</a></p>
+  </div>
+</section>
+
+<section id="schade" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <span class="eyebrow">Claims &amp; claims investigation</span>
+    <h2>What is an insurance investigation?</h2>
+    <p class="intro">In the sector, "assurantieonderzoek" (insurance investigation) also means the investigation that an insurer, or an external agency on the insurer's behalf, carries out in connection with a claim, a payment or an application. The aim is to establish how a loss occurred, to check liability, or to investigate a suspicion of insurance fraud. We make that investigation measurable: how often, why, and with what outcome, against the market.</p>
+
+    <h3 style="margin:0 0 12px;font-size:1.15rem">How a claims procedure works</h3>
+    <div class="flow" aria-label="Claims procedure">
+      <div class="step">Notification<small>via the intermediary or online</small></div><div class="arr">→</div>
+      <div class="step">File &amp; cover<small>the claims handler checks the policy</small></div><div class="arr">→</div>
+      <div class="step">Loss adjusting<small>loss adjuster, possibly a counter-assessment</small></div><div class="arr">→</div>
+      <div class="step hl">Investigation<small>only if the claim raises questions</small></div><div class="arr">→</div>
+      <div class="step">Settlement<small>with the customer or repairer</small></div>
+    </div>
+
+    <div class="cats" style="margin-top:24px">
+      <div class="card cat"><h3>Why an investigation</h3><ul><li>Cause of loss: what happened and who was involved?</li><li>Cover: is the loss covered by the policy?</li><li>Liability: who bears the loss?</li><li>Suspicion of fraud: unusual signals, high amounts or inconsistencies, at application or at the claim</li></ul></div>
+      <div class="card cat"><h3>Investigation methods</h3><ul><li>Desk research: public registers such as RDW (vehicle authority), KvK (Chamber of Commerce) and Kadaster (Land Registry), open sources and previous notifications</li><li>Technical investigation: fire investigation, accident analysis, signs of forced entry, invoice checks</li><li>Interviews with the policyholder and witnesses</li><li>Personal investigation, only within strict rules</li></ul></div>
+      <div class="card cat"><h3>Rules and privacy</h3><ul><li>The GDPR and the GPO (Code of Conduct for Personal Investigations) of the Verbond van Verzekeraars</li><li>The insurer's interest is always weighed against the privacy of the person concerned</li><li>An external investigation agency needs a licence under the Wpbr (Private Security Organisations and Detective Agencies Act)</li><li>Loss adjusters are registered with NIVRE and follow the code of conduct for loss adjusting organisations</li></ul></div>
+      <div class="card cat"><h3>Consequences of established fraud</h3><ul><li>No payment or compensation</li><li>Recovery of investigation costs and claims paid</li><li>Termination of the insurance</li><li>Registration in the incident register and with Stichting CIS</li><li>Report to the police</li></ul></div>
+    </div>
+
+    <h3 style="margin:32px 0 12px;font-size:1.15rem">What we measure for you</h3>
+    <div class="grid6">
+      <div class="card feat"><div class="num">1</div><h3>Claims benchmark</h3><p>Your lead time from notification to settlement, the use of loss adjusters, the share of rejections and the number of complaints and counter-assessments, by line of business and against the market.</p></div>
+      <div class="card feat"><div class="num">2</div><h3>Investigation monitor</h3><p>How often you start an investigation into the cause of loss or a claims investigation, in which lines of business and at which claim amounts, and how often that leads to a different outcome. Always at portfolio level.</p></div>
+      <div class="card feat"><div class="num">3</div><h3>Signals at portfolio level</h3><p>Patterns in repeat claims, notifications shortly after the policy start date and unusual claims frequencies per segment. A tool for your fraud policy, not a judgement on an individual claim.</p></div>
+    </div>
+    <div class="callout"><strong>Scope.</strong> Assurantie-onderzoek.nl does not carry out personal investigations into individual policyholders and does not give a judgement on individual claims. We provide aggregated insights into the claims and investigation process. For investigation in an individual file, we refer you to a licensed investigation agency, for example for digital fact-finding in open sources (such as <a href="https://www.ncrb.nl/nl/diensten/verzekeringsonderzoek/" target="_blank" rel="noopener">NCRB</a>), or to a loss adjuster.</div>
+    <p class="rub"><a class="btn offerte" href="?onderwerp=Claims%20benchmark#contact" data-offerte="Claims benchmark">Request a quote for a claims benchmark</a></p>
+  </div>
+</section>
+
+<section id="ai">
+  <div class="wrap">
+    <span class="eyebrow">AI research</span>
+    <h2>AI in the insurance chain: measuring what it does</h2>
+    <p class="intro">Insurers and advisers are increasingly using AI: in the advice meeting, underwriting, pricing and claims handling. The AFM and DNB examine this from a supervisory perspective. We measure it from practice: what AI does to speed, quality and outcomes in the advice process, and whether those outcomes are fair for all target groups.</p>
+    <div class="cats q">
+      <div class="card cat"><h3>AI monitor in the advice process</h3><ul><li>How often intermediaries use AI, for example for meeting notes and risk assessments</li><li>What that does to the lead time from quote to policy</li><li>Whether files with AI support are more complete</li><li>At which of the intermediaries serving you AI is already common</li></ul></div>
+      <div class="card cat"><h3>Fairness benchmark</h3><ul><li>Rejections, loadings and premiums per target group, against the market</li><li>Signals of undesirable differences between groups</li><li>Support for your testing of underwriting and pricing models</li><li>Only aggregated and without protected characteristics such as ethnicity</li></ul></div>
+      <div class="card cat"><h3>Predictive signals</h3><ul><li>Cancellation risk per segment and intermediary</li><li>Signals of underinsurance in the portfolio</li><li>Forecast of production and claims costs</li><li>Always with backtesting and a prediction interval</li></ul></div>
+      <div class="card cat"><h3>Policy terms as data</h3><ul><li>Policy terms converted with AI into comparable characteristics, with human review</li><li>Where your terms are better or weaker than the market</li><li>Which terms determine the adviser's choice in practice</li><li>A contribution to comparability, for example for cyber insurance</li></ul></div>
+      <div class="card cat"><h3>AI usage survey</h3><ul><li>How advisers and insurers use AI, and what they do not use it for</li><li>What they expect and what concerns them</li><li>Annually, so that the development becomes visible</li><li>Reported only by group</li></ul></div>
+      <div class="card cat"><h3>Responsible with AI</h3><ul><li>We do not make decisions about individual customers or claims</li><li>Our own AI applications are described in the <a href="methodology.html#m6b">methodology</a></li><li>Alignment with the points of attention of the <a href="https://www.afm.nl/nl-nl/sector/verzekeraars/rapporten-en-publicaties" target="_blank" rel="noopener">AFM</a> and <a href="https://www.dnb.nl" target="_blank" rel="noopener">DNB</a> and with the AI Act (see <a href="regulation.html#ai-act">regulation</a>)</li></ul></div>
+    </div>
+    <div class="callout"><strong>AI Act.</strong> AI systems for risk assessment and pricing in relation to natural persons for life and health insurance are classified as high-risk under the European AI Act. If you use our insights with such systems, for example to test outcomes per target group, you remain responsible yourself for the requirements the AI Act imposes on your system.</div>
+    <p class="rub"><a class="btn offerte" href="?onderwerp=AI%20research#contact" data-offerte="AI research">Request a quote for AI research</a><a class="btn ghost" href="sample-report.html#s15" style="color:var(--navy)!important">View the AI chapter</a></p>
+  </div>
+</section>
+
+<section id="aanbod" style="border-top:1px solid var(--line)">
+  <div class="wrap">
+    <span class="eyebrow">Products</span>
+    <h2>For insurers, MGAs, intermediaries and service providers</h2>
+    <p class="intro">All insights are available to buy as a product. Start with a report for a question that is relevant now, or choose a subscription for your role in the chain: a dashboard that is updated every month.</p>
+    <p style="margin:-12px 0 24px"><a class="btn ghost" href="sample-report.html" style="color:var(--navy)!important">View the sample report</a> <span style="font-size:.85rem;color:var(--muted);margin-left:8px">17 chapters, with fictitious figures</span></p>
+
+    <h3 class="grp">One-off research and bespoke work</h3>
+    <div class="offer offer3">
+      <div class="card">
+        <span class="tag">Entry level</span>
+        <h3>Position scan</h3><div class="price">On request</div>
+        <p class="lede">A compact first measurement of your position in one line of business over one quarter, with a discussion of the results.</p>
+        <ul><li>Your share of new policies and the trend</li><li>Your conversion: quote, application and policy</li><li>Your ten most important intermediaries</li><li>One report plus a one-hour presentation</li></ul>
+        <a class="btn offerte" href="?onderwerp=Position%20scan#contact" data-offerte="Position scan">Request a quote</a>
+      </div>
+      <div class="card">
+        <span class="tag">One-off</span>
+        <h3>Market report</h3><div class="price">On request</div>
+        <p class="lede">A snapshot over a period and lines of business of your choice, as a PDF report with explanatory notes.</p>
+        <ul><li>Share by month, quarter and line of business</li><li>Ranking and trend analysis</li><li>Customer profile per type of insurance and covers chosen</li><li>Premium position against the market</li><li>Methodological statement</li></ul>
+        <a class="btn offerte" href="?onderwerp=Market%20report#contact" data-offerte="Market report">Request a quote</a>
+      </div>
+      <div class="card">
+        <span class="tag">Claims</span>
+        <h3>Claims benchmark</h3><div class="price">On request</div>
+        <p class="lede">Your claims handling and claims investigation against the market and an anonymous comparison group.</p>
+        <ul><li>Lead times from notification to settlement</li><li>Use of loss adjusters, counter-assessment and investigation</li><li>Rejections, complaints and repeat claims</li><li>Climate-related damage by region</li></ul>
+        <a class="btn offerte" href="?onderwerp=Claims%20benchmark#contact" data-offerte="Claims benchmark">Request a quote</a>
+      </div>
+      <div class="card">
+        <span class="tag">Benchmark</span>
+        <h3>Benchmark study</h3><div class="price">On request</div>
+        <p class="lede">Your performance on key indicators, compared with an anonymous group of comparable providers and with the total market.</p>
+        <ul><li>You choose the comparison group: large insurers, mutuals, MGAs or niche players</li><li>Share, conversion, cancellations and claims handling</li><li>At least five parties, without naming competitors</li></ul>
+        <a class="btn offerte" href="?onderwerp=Benchmark%20study#contact" data-offerte="Benchmark study">Request a quote</a>
+      </div>
+      <div class="card">
+        <span class="tag">Bespoke</span>
+        <h3>Bespoke research</h3><div class="price">On request</div>
+        <p class="lede">Our research team answers your specific question with our data, supplemented with our own research where needed.</p>
+        <ul><li>Target group research, for example self-employed or SME</li><li>Climate-related damage and sustainability</li><li>AI impact and fairness research</li><li>Qualitative research among advisers and customers</li></ul>
+        <a class="btn offerte" href="?onderwerp=Bespoke%20research#contact" data-offerte="Bespoke research">Request a quote</a>
+      </div>
+      <div class="card">
+        <span class="tag">Survey</span>
+        <h3>Adviser survey</h3><div class="price">On request</div>
+        <p class="lede">An annual survey of how insurance advisers rate your premium, terms, acceptance, claims handling and account management.</p>
+        <ul><li>Scores and open answers, linked to your conversion</li><li>Against the comparison group</li><li>Reported only by group</li></ul>
+        <a class="btn offerte" href="?onderwerp=Adviser%20survey#contact" data-offerte="Adviser survey">Request a quote</a>
+      </div>
+    </div>
+
+    <h3 class="grp">Subscriptions by target group</h3>
+    <p style="color:var(--muted);margin:-4px 0 16px;max-width:760px">A dashboard that is updated every month, with alerts for clear shifts and a quarterly report. Every subscription shows your own figures alongside the market.</p>
+    <div class="offer offer3">
+      <div class="card hl">
+        <span class="tag">Non-life insurers</span>
+        <h3>Insurer subscription</h3><div class="price">On request</div>
+        <p class="lede">Ongoing insight into your position, distribution, portfolio and claims handling.</p>
+        <ul><li>Share by line of business, month and intermediary</li><li>Risers and fallers in your distribution</li><li>Cancellations and premium development at renewal</li><li>Claims KPIs and climate-related damage</li><li>Forecast of your production</li></ul>
+        <a class="btn offerte" href="?onderwerp=Insurer%20subscription#contact" data-offerte="Insurer subscription">Request a quote</a>
+      </div>
+      <div class="card">
+        <span class="tag">MGA principals</span>
+        <h3>MGA principal subscription</h3><div class="price">On request</div>
+        <p class="lede">For insurers that work through MGAs: a view of every MGA, alongside the market.</p>
+        <ul><li>Production, premium and cancellations per MGA and label</li><li>Claims handling per MGA: lead time, loss adjusting, rejection</li><li>Signals for your delegated authority audit and the Leidraad Klantbelang Centraal Volmacht (customer interest guideline for MGAs)</li><li>Concentration: how dependent you are on a few MGAs</li></ul>
+        <a class="btn offerte" href="?onderwerp=MGA%20principal%20subscription#contact" data-offerte="MGA principal subscription">Request a quote</a>
+      </div>
+      <div class="card">
+        <span class="tag">MGAs</span>
+        <h3>MGA subscription</h3><div class="price">On request</div>
+        <p class="lede">For MGAs: your own MGA portfolio against other MGAs and the market.</p>
+        <ul><li>Production by insurer, label and affiliated intermediary</li><li>Inflow, cancellations and premium development</li><li>Claims handling and lead times</li><li>Supporting evidence for your MGA principals</li></ul>
+        <a class="btn offerte" href="?onderwerp=MGA%20subscription#contact" data-offerte="MGA subscription">Request a quote</a>
+      </div>
+      <div class="card">
+        <span class="tag">Advisers</span>
+        <h3>Adviser subscription</h3><div class="price">On request</div>
+        <p class="lede">For insurance intermediaries and financial advisers: the trends in your own portfolio.</p>
+        <ul><li>New policies, policy changes and cancellations per month</li><li>Production by insurer and by line of business</li><li>Claim notifications and lead times by insurer</li><li>Signals: underinsurance, renewals under pressure</li><li>Your firm alongside the network average</li></ul>
+        <a class="btn offerte" href="?onderwerp=Adviser%20subscription#contact" data-offerte="Adviser subscription">Request a quote</a>
+      </div>
+      <div class="card">
+        <span class="tag">Life &amp; income</span>
+        <h3>Life and income subscription</h3><div class="price">On request</div>
+        <p class="lede">For providers of AOV, ORV, annuities, funeral insurance and sickness absence insurance.</p>
+        <ul><li>Share of quotes and applications per product</li><li>Occupational classes, waiting periods and end ages</li><li>ORV and mortgage payment protection with the mortgage</li><li>Annuities and financial planning in the advice process</li></ul>
+        <a class="btn offerte" href="?onderwerp=Life%20and%20income%20subscription#contact" data-offerte="Life and income subscription">Request a quote</a>
+      </div>
+      <div class="card">
+        <span class="tag">Service providers &amp; networks</span>
+        <h3>Network subscription</h3><div class="price">On request</div>
+        <p class="lede">For service providers, franchises and networks with affiliated intermediaries.</p>
+        <ul><li>Production and portfolio per affiliated intermediary</li><li>Spread across insurers and MGAs</li><li>Benchmark of your intermediaries against the market</li><li>Signals of growth, decline and departure</li></ul>
+        <a class="btn offerte" href="?onderwerp=Network%20subscription#contact" data-offerte="Network subscription">Request a quote</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="regelgeving" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <span class="eyebrow">Regulation &amp; supervision</span>
+    <h2>Data for supervision, product development and ESG</h2>
+    <p class="intro">The rules for insurers and advisers increasingly call for evidence based on data. Per framework: what is required and how market data can help.</p>
+    <div class="tablewrap">
+    <table class="eba">
+      <thead><tr><th>Framework</th><th>What is required</th><th>What we provide</th></tr></thead>
+      <tbody>
+        <tr><td>Wft (Dutch Financial Supervision Act) and IDD: product development (PARP)</td><td>Products must fit the target group and be reviewed regularly.</td><td>Market reference for target group, covers chosen and sales channel.</td></tr>
+        <tr><td>Transparency in non-life insurance</td><td>Insight into the costs of advice and intermediation for the customer.</td><td>Aggregated trends in the advice process, without rates of individual parties.</td></tr>
+        <tr><td><a href="https://www.afm.nl/nl-nl/sector/verzekeraars/rapporten-en-publicaties" target="_blank" rel="noopener">AFM</a>: premium personalisation and loyal customers</td><td>The AFM asks insurers to give loyal customers a fair premium and has published points of attention for personalising premiums and terms.</td><td>Premium development at renewal compared with new customers, per target group and against the market, as a range and in hindsight.</td></tr>
+        <tr><td><a href="https://www.afm.nl/nl-nl/sector/verzekeraars/rapporten-en-publicaties" target="_blank" rel="noopener">AFM</a>: active commission transparency</td><td>The AFM has given an interpretation of active commission transparency for non-life insurance.</td><td>Aggregated trends in the form of advice and channel, without commissions or rates of individual parties.</td></tr>
+        <tr><td><a href="https://www.afm.nl/nl-nl/sector/verzekeraars/rapporten-en-publicaties" target="_blank" rel="noopener">AFM</a>: embedded insurance</td><td>Points of attention to safeguard the customer's interest when insurance is sold alongside another product.</td><td>How often an insurance policy is still reviewed or cancelled via the intermediary after an embedded purchase, where recorded.</td></tr>
+        <tr><td><a href="https://www.afm.nl/nl-nl/sector/verzekeraars/rapporten-en-publicaties" target="_blank" rel="noopener">AFM</a>: climate-related damage and insurability</td><td>Damage caused by climate change is increasingly becoming uninsurable.</td><td>Development of climate-related damage, exclusions and rejections by region and line of business.</td></tr>
+        <tr><td>Solvency II and ORSA</td><td>Insight into insurance risks, including climate risk.</td><td>Climate-related damage and claims frequency by region, alongside the market.</td></tr>
+        <tr><td>ESG and CSRD</td><td>Reporting on sustainability and the impact of climate change.</td><td>Reference data on climate-related damage and sustainability measures in the portfolio.</td></tr>
+        <tr><td><a href="https://www.verzekeraars.nl/branche/verzekerbaarheid" target="_blank" rel="noopener">Insurability</a></td><td>As many people and businesses as possible should be able to take out suitable insurance. Premium differentiation and loyalty pricing are receiving attention.</td><td>Aggregated insights into acceptance, rejections, loadings and premium development at renewal, per target group and against the market.</td></tr>
+        <tr><td>GDPR and GPO</td><td>Careful handling of personal data, including in claims investigations.</td><td>Only aggregated figures, without traceable personal data.</td></tr>
+        <tr><td>MGAs: NVGA and Verbond</td><td>MGAs and MGA principals account for underwriting, claims handling and customer interest.</td><td>Benchmark of production, cancellations and claims handling per MGA, against the market.</td></tr>
+        <tr><td>Kifid (Dutch Financial Services Complaints Institute) and complaints handling</td><td>Careful and timely handling of complaints and disputes.</td><td>Benchmark of rejections, complaints and lead times.</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="callout">This table is a simplified overview and not legal advice. Whether and how market data contributes to your obligations is for you to assess yourself, together with your compliance department.</div>
+    <p style="margin:20px 0 0"><a class="btn" href="regulation.html">Go to regulation &amp; supervision</a></p>
+  </div>
+</section>
+
+<section id="methode">
+  <div class="wrap">
+    <span class="eyebrow">Method &amp; privacy</span>
+    <h2>How the figures are produced</h2>
+    <p class="intro">The main points are below. All definitions, calculation methods and limitations are set out in our <a href="methodology.html">methodology</a>.</p>
+    <div class="method">
+      <div class="card"><h3>Data source</h3><p>The figures are based on quotes, applications, policies, policy changes and claim notifications registered via the intermediary channel. They give a picture of that channel and not of the total Dutch insurance market. Direct writers and online providers are outside the scope.</p></div>
+      <div class="card"><h3>Calculation method</h3><p>Market share is a weighted share: the number of policies or the premium per party divided by the total in the same period and line of business. For quarters and years it is therefore not the average of individual monthly percentages.</p></div>
+      <div class="card"><h3>Aggregated only</h3><p>We only report aggregated figures. Segments with too few observations are not shown, so that figures cannot be traced back to individual consumers, businesses or advisers.</p></div>
+      <div class="card"><h3>Competition</h3><p>To avoid restricting competition, we apply fixed safeguards:</p>
+        <ul style="margin:.6em 0 0;padding-left:18px;color:var(--muted);font-size:.93rem">
+          <li>You see your own position against the market, never figures of individual competitors</li>
+          <li>Comparison groups consist of at least five parties, without any single party determining the outcome</li>
+          <li>Premium information comes only from publicly published sources, with a delay and as a range</li>
+          <li>No information on future or non-public premiums, commissions or underwriting policy</li>
+          <li>Clients do not exchange information with one another through us</li>
+        </ul></div>
+      <div class="card"><h3>Supervision and frameworks</h3><p>Our methodology is aligned with publications by
+        <a href="https://www.dnb.nl" target="_blank" rel="noopener">DNB</a>,
+        <a href="https://www.afm.nl" target="_blank" rel="noopener">AFM</a>,
+        <a href="https://www.autoriteitpersoonsgegevens.nl" target="_blank" rel="noopener">AP (Dutch Data Protection Authority)</a>,
+        <a href="https://www.kifid.nl" target="_blank" rel="noopener">Kifid</a>,
+        <a href="https://www.adfiz.nl" target="_blank" rel="noopener">Adfiz</a>,
+        <a href="https://www.sivi.org" target="_blank" rel="noopener">SIVI</a>,
+        <a href="https://www.nvga.nl" target="_blank" rel="noopener">NVGA</a>,
+        <a href="https://www.contactgroepautomatisering.nl" target="_blank" rel="noopener">Contactgroep Automatisering</a> and the
+        <a href="https://www.verzekeraars.nl" target="_blank" rel="noopener">Verbond van Verzekeraars</a>.</p></div>
+      <div class="card"><h3>Classification of lines of business</h3><p>For personal insurance we follow the <a href="https://www.cbs.nl/nl-nl/longread/diversen/2026/de-ecoicopv2-indeling/120000-verzekeringen-en-financiele-diensten" target="_blank" rel="noopener">ECOICOP v2 classification of CBS</a>: dwelling (121300), private vehicles (121410), travel (121420), health (121200) and other insurance (121900). This allows our premium trends to be compared with the consumer price index. Life and accident insurance (121100) fall outside the CPI and we report them separately, as we do commercial insurance, which we classify by SIVI line of business.</p></div>
+    </div>
+    <h3 style="margin:32px 0 12px;font-size:1.15rem">Frequently asked questions from procurement and compliance</h3>
+    <div class="faq">
+      <details><summary>What may we do with the data and reports?</summary><p>Usage is set out in a licence agreement with the quote. As standard, this is for internal use within your organisation, without further distribution to third parties.</p></details>
+      <details><summary>Do you investigate individual claims or policyholders?</summary><p>No. We provide aggregated insights into the claims and investigation process. Personal investigation in an individual file is outside the scope of our services.</p></details>
+      <details><summary>How is information security arranged?</summary><p>With the quote, we complete your security and supplier questionnaire, and explain how hosting, access and logging are set up.</p></details>
+      <details><summary>Do we get a data processing agreement?</summary><p>Our reports do not contain personal data of consumers. For the contact details of your employees, we conclude a data processing agreement where necessary.</p></details>
+      <details><summary>Can we run a trial first?</summary><p>Yes. The Position scan is intended as a first introduction: one line of business, one quarter, one report and a discussion of the results.</p></details>
+    </div>
+  </div>
+</section>
+
+<section id="monitor" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <span class="eyebrow">Insurance Monitor</span>
+    <h2>The Insurance Monitor: the trends from the advice process, every quarter</h2>
+    <p class="intro">A public quarterly publication with the most important market-wide trends from insurance advice. It contains only aggregated figures, without naming parties.</p>
+    <div class="grid6">
+      <div class="card feat"><div class="num">1</div><h3>Demand in the advice process</h3><p>The development of quotes, applications and new policies by line of business, for private and business customers.</p></div>
+      <div class="card feat"><div class="num">2</div><h3>Claims</h3><p>Trends in claim notifications, lead times and climate-related damage, such as storm, hail and flooding from rainfall.</p></div>
+      <div class="card feat"><div class="num">3</div><h3>Income and the self-employed</h3><p>The development of AOV and sickness absence insurance, also in light of the basic disability insurance for the self-employed.</p></div>
+    </div>
+    <div class="callout">The first edition is in preparation. <a href="?onderwerp=Subscribe%20to%20the%20Insurance%20Monitor#contact" data-offerte="Subscribe to the Insurance Monitor">Sign up</a> to receive the Insurance Monitor as soon as it is published.</div>
+    <div class="wp" style="margin-top:32px">
+      <div>
+        <span class="eyebrow">Whitepaper</span>
+        <h2 style="margin-top:.2em">Customer interest in figures</h2>
+        <p style="color:var(--muted);margin:0 0 16px">A practical guide for product, pricing, compliance and claims teams at insurers and MGAs. What questions do supervisors ask about customer interest, and how do you support the answers with market data?</p>
+        <ul class="checks one">
+          <li>Product review (PARP): does the product fit the target group?</li>
+          <li>Price and loyalty: do loyal customers pay a fair premium?</li>
+          <li>Claims handling, AI and fair outcomes, climate and insurability</li>
+          <li>With a checklist for your organisation</li>
+        </ul>
+      </div>
+      <div class="wp-cta">
+        <p style="margin:0 0 12px;font-weight:700;color:var(--navy)">Free to read</p>
+        <a class="btn" href="whitepaper.html">Read the whitepaper</a>
+        <p style="margin:12px 0 0;font-size:.85rem;color:var(--muted)">Can also be printed as a PDF from the page.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="idee">
+  <div class="wrap">
+    <span class="eyebrow">Your research question</span>
+    <h2>Ask your question: what would you like to research?</h2>
+    <p class="intro">Is there an analysis you are missing, or do you have a question about the insurance market that nobody has answered yet? Put it to us. We will see whether our data can provide the answer. We include the most frequently asked questions in the Insurance Monitor.</p>
+    <div class="idee">
+      <div>
+        <h3 style="margin:0 0 8px;font-size:1.02rem">Inspiration: click to use</h3>
+        <div class="chips" id="chips">
+          <button type="button">How quickly do customers switch after a premium increase at renewal?</button>
+          <button type="button">Which lines of business incur the most climate-related damage, and where?</button>
+          <button type="button">How often are self-employed people without income protection (AOV), and in which occupations?</button>
+          <button type="button">What does AI in the advice meeting do to the lead time?</button>
+          <button type="button">Are bundled policies really more loyal than separate policies?</button>
+          <button type="button">How often is a home underinsured after a renovation?</button>
+          <button type="button">Which MGAs are growing fastest, and in which lines of business?</button>
+          <button type="button">What determines the adviser's choice: premium or terms?</button>
+        </div>
+      </div>
+      <form id="iform" class="iform" novalidate>
+        <label>Your research question *<textarea name="vraag" id="ivraag" rows="5" required placeholder="For example: I would like to know how ..."></textarea></label>
+        <div class="frow">
+          <label>You are
+            <select name="rol">
+              <option value="">Please choose</option>
+              <option>Insurer</option><option>MGA principal</option><option>MGA</option><option>Insurance intermediary or adviser</option><option>Service provider or network</option><option>Supervision, academia or journalism</option><option>Other</option>
+            </select>
+          </label>
+          <label>Email (if you would like a reply)<input name="email" type="email" autocomplete="email"></label>
+        </div>
+        <label class="chk"><input type="checkbox" name="anoniem"> <span>You may use my question (without name and organisation) in the Insurance Monitor. See the <a href="privacy.html">privacy statement</a>.</span></label>
+        <div class="factions"><button type="submit" class="btn">Send my question</button><span id="imsg" class="imsg" role="status" aria-live="polite"></span></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<script>
+(function(){
+  "use strict";
+  var form=document.getElementById('iform'),ta=document.getElementById('ivraag'),msg=document.getElementById('imsg');
+  document.querySelectorAll('#chips button').forEach(function(btn){btn.addEventListener('click',function(){ta.value=btn.textContent;ta.focus()})});
+  form.addEventListener('submit',function(ev){
+    ev.preventDefault();
+    var f=new FormData(form),v=function(k){return (f.get(k)||'').toString().trim()};
+    var em=form.querySelector('[name=email]');
+    ta.closest('label').classList.remove('err');em.closest('label').classList.remove('err');
+    if(!v('vraag')){ta.closest('label').classList.add('err');msg.textContent='Please enter your research question.';ta.focus();return}
+    if(v('email')&&!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v('email'))){em.closest('label').classList.add('err');msg.textContent='Please check your email address.';em.focus();return}
+    var body=['Research question:',v('vraag'),'','Role: '+(v('rol')||'-'),'Email for reply: '+(v('email')||'-'),'May be used in the Insurance Monitor: '+(f.get('anoniem')?'yes':'no'),'','Sent via Assurantie-onderzoek.nl (English site)'].join('\n');
+    var url='mailto:jeroen.oversteegen@blinqx.tech?subject='+encodeURIComponent('Research question via Assurantie-onderzoek.nl')+'&body='+encodeURIComponent(body);
+    var inFrame=true;try{inFrame=window.self!==window.top}catch(e){}
+    if(inFrame){window.open(url,'_blank')}else{window.location.href=url}
+    msg.textContent='Your email program is opening. Send the message to submit your question.';
+  });
+})();
+</script>
+
+<section id="contact">
+  <div class="wrap">
+    <h2>Request a quote or ask a question?</h2>
+    <p>Fill in the form. Your email program will then open with a pre-filled message to our research team, which you only need to send. We will contact you within two working days.</p>
+
+    <form id="cform" class="cform" novalidate>
+      <div class="frow">
+        <label>Name *<input name="naam" required autocomplete="name"></label>
+        <label>Organisation *<input name="organisatie" required autocomplete="organization"></label>
+      </div>
+      <div class="frow">
+        <label>Job title<input name="functie" autocomplete="organization-title"></label>
+        <label>Type of organisation *
+          <select name="type" required>
+            <option value="">Please choose</option>
+            <option>Non-life insurer</option>
+            <option>Life or income protection insurer</option>
+            <option>MGA principal</option>
+            <option>MGA</option>
+            <option>Insurance intermediary or financial adviser</option>
+            <option>Service provider, network or franchise</option>
+            <option>Other</option>
+          </select>
+        </label>
+      </div>
+      <div class="frow">
+        <label>Email *<input name="email" type="email" required autocomplete="email"></label>
+        <label>Phone<input name="telefoon" type="tel" autocomplete="tel"></label>
+      </div>
+      <label>Subject *
+        <select name="onderwerp" id="onderwerp" required>
+          <option value="">Please choose</option>
+          <optgroup label="One-off research and bespoke work">
+            <option>Position scan</option><option>Market report</option><option>Claims benchmark</option><option>Benchmark study</option><option>Bespoke research</option><option>Adviser survey</option><option>AI research</option>
+          </optgroup>
+          <optgroup label="Subscriptions">
+            <option>Insurer subscription</option><option>MGA principal subscription</option><option>MGA subscription</option><option>Adviser subscription</option><option>Life and income subscription</option><option>Network subscription</option>
+          </optgroup>
+          <optgroup label="Other">
+            <option>Subscribe to the Insurance Monitor</option><option>Question about data, methodology or privacy</option><option>Other</option>
+          </optgroup>
+        </select>
+      </label>
+      <label>Your question or comments<textarea name="bericht" rows="5" placeholder="For example: which lines of business, period and comparison group you are looking for"></textarea></label>
+      <label class="chk"><input type="checkbox" name="akkoord" required> <span>I agree that Assurantie-onderzoek.nl may use my details to respond to this request. See the <a href="privacy.html">privacy statement</a>. *</span></label>
+      <div class="factions">
+        <button type="submit" class="btn">Send by email</button>
+        <span id="cmsg" class="cmsg" role="status" aria-live="polite"></span>
+      </div>
+      <p class="fnote">No email program opening? Then email <a href="mailto:jeroen.oversteegen@blinqx.tech">jeroen.oversteegen@blinqx.tech</a> or call one of our contacts.</p>
+    </form>
+
+    <h3 style="margin:40px 0 16px;font-size:1rem;color:#ffcc00;letter-spacing:.08em;text-transform:uppercase">Or contact us directly</h3>
+    <div class="people">
+      <div class="person"><h3>Jos van Driesum</h3><a href="mailto:jos.van.driesum@blinqx.tech?subject=Quote%20request%20Assurantie-onderzoek.nl">jos.van.driesum@blinqx.tech</a><a href="tel:+31644081447">06 44 081 447</a></div>
+      <div class="person"><h3>Dennes Roes</h3><a href="mailto:dennes.roes@blinqx.tech?subject=Quote%20request%20Assurantie-onderzoek.nl">dennes.roes@blinqx.tech</a><a href="tel:+31651117893">06 51 117 893</a></div>
+      <div class="person"><h3>Jeroen Oversteegen</h3><a href="mailto:jeroen.oversteegen@blinqx.tech?subject=Quote%20request%20Assurantie-onderzoek.nl">jeroen.oversteegen@blinqx.tech</a><a href="tel:+31621247257">06 21 247 257</a></div>
+    </div>
+  </div>
+</section>
+
+<script>
+(function(){
+  "use strict";
+  var TO='jeroen.oversteegen@blinqx.tech';
+  var form=document.getElementById('cform'),sel=document.getElementById('onderwerp'),msg=document.getElementById('cmsg');
+  function kies(o){
+    if(!o)return;
+    for(var i=0;i<sel.options.length;i++){if(sel.options[i].text===o){sel.selectedIndex=i;return}}
+  }
+  // Subject from the URL (?onderwerp=...), e.g. from other pages
+  try{kies(new URLSearchParams(location.search).get('onderwerp'))}catch(e){}
+  // Buttons on this page: select the subject without reloading
+  document.querySelectorAll('[data-offerte]').forEach(function(a){
+    a.addEventListener('click',function(ev){
+      ev.preventDefault();kies(a.getAttribute('data-offerte'));
+      document.getElementById('contact').scrollIntoView({behavior:'smooth'});
+      setTimeout(function(){form.querySelector('[name=naam]').focus({preventScroll:true})},500);
+    });
+  });
+  form.addEventListener('submit',function(ev){
+    ev.preventDefault();
+    var bad=[].filter.call(form.querySelectorAll('[required]'),function(el){return el.type==='checkbox'?!el.checked:!el.value.trim()||(el.type==='email'&&!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(el.value))});
+    form.querySelectorAll('.err').forEach(function(el){el.classList.remove('err')});
+    if(bad.length){bad.forEach(function(el){(el.closest('label')||el).classList.add('err')});msg.textContent='Please fill in the required fields (*) correctly.';bad[0].focus();return}
+    var f=new FormData(form),v=function(k){return (f.get(k)||'').toString().trim()};
+    var subject='Quote request Assurantie-onderzoek.nl: '+v('onderwerp')+' – '+v('organisatie');
+    var body=['Subject: '+v('onderwerp'),'','Name: '+v('naam'),'Organisation: '+v('organisatie'),'Job title: '+(v('functie')||'-'),'Type of organisation: '+v('type'),'Email: '+v('email'),'Phone: '+(v('telefoon')||'-'),'','Question or comments:',v('bericht')||'-','','Sent via the contact form on Assurantie-onderzoek.nl (English site)'].join('\n');
+    var url='mailto:'+TO+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+    var inFrame=true;try{inFrame=window.self!==window.top}catch(e){}
+    if(inFrame){window.open(url,'_blank')}else{window.location.href=url}
+    msg.textContent='Your email program is opening. Send the message to complete your request.';
+  });
+})();
+</script>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><strong style="color:#fff">Assurantie-onderzoek.nl™</strong><br>Market intelligence and research for the insurance sector<br>An activity of <strong style="color:#ffcc00">Blinqx</strong></div>
+    <div class="colofon">
+      <strong style="color:#fff">Colophon</strong><br>
+      Blinqx (including Blinqx Verzekering &amp; Hypotheek and the eBlinqx cloud platform)<br>
+      Hullenbergweg 109, 1101 CL Amsterdam · Chamber of Commerce (KvK) 84045132<br>
+      <a href="about.html">About us</a> · <a href="privacy.html">Privacy statement</a> · <a href="methodology.html">Methodology</a> · <a href="regulation.html">Regulation</a> · <a href="sample-report.html">Sample report</a> · <a href="#schade">Claims &amp; claims investigation</a> · <a href="https://jeroen-o.github.io/hypotheekonderzoek.nl/" target="_blank" rel="noopener">Hypotheekonderzoek.nl</a><br>
+      <span style="font-size:.8rem">This site does not constitute legal or regulatory advice.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
