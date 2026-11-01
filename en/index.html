@@ -53,7 +53,7 @@ nav a:hover{color:#fff}
 nav{white-space:nowrap}
 nav>a:not(.btn):not(.home):not(.lang){margin-left:14px;font-size:.88rem}
 .logo{white-space:nowrap}
-@media(max-width:1420px){nav>a:not(.btn):not(.home):not(.lang){display:none}}
+@media(max-width:1480px){nav>a:not(.btn):not(.home):not(.lang){display:none}}
 @media(max-width:400px){header.top .btn{padding:7px 10px!important;font-size:.76rem!important}.logo{font-size:.88rem!important}}
 @media(max-width:480px){header.top .btn{padding:8px 12px;font-size:.82rem;margin-left:8px}header.top .wrap{gap:8px}.logo{font-size:.98rem}.logo svg{width:20px;height:22px;margin-right:6px!important}}
 .btn{display:inline-block;background:var(--orange);color:var(--navy) !important;padding:10px 18px;border-radius:999px;font-weight:600;text-decoration:none;border:0;cursor:pointer;font-size:.95rem}
@@ -245,7 +245,14 @@ h1,h2,h3{overflow-wrap:break-word;hyphens:auto}
 .menu .mpanel a:hover{color:#7a5c00!important}
 @media(max-width:560px){.menu .mpanel{grid-template-columns:1fr;position:fixed;left:16px;right:16px;top:64px;width:auto;max-height:calc(100vh - 80px);overflow:auto}}
 @media(max-width:480px){.menu summary{padding:6px 10px;font-size:.78rem}.menu .mt{display:none}.menu{margin-left:4px}}
-@media(max-width:440px){.lang{padding:5px 7px;margin-left:2px}.home{padding:6px 8px}.menu summary{padding:6px 8px}header.top .btn{margin-left:4px}}
+@media(max-width:760px){.bt-x{display:none}.home .ht{display:none}.menu .mt{display:none}}
+@media(max-width:600px){.logo svg{display:none}header.top .btn{padding:8px 12px}.lang{padding:5px 7px;margin-left:2px}.home{padding:6px 8px}.menu summary{padding:6px 8px}header.top .btn{margin-left:4px}}
+/* header-final: één set regels voor de kopbalk, NL en EN */
+@media(max-width:1560px){nav>a:not(.btn):not(.home):not(.lang){display:none!important}}
+@media(max-width:760px){.bt-x,.home .ht,.menu .mt{display:none!important}}
+@media(max-width:600px){.logo svg{display:none!important}header.top .wrap{gap:6px!important}.home,.lang,.menu summary{padding:6px 9px!important}.home,.lang,.menu{margin-left:4px!important}header.top nav>a.btn:not(.home){padding:7px 12px!important;font-size:.8rem!important;margin-left:4px!important}}
+@media(min-width:401px){header.top nav>a.btn:not(.home){display:inline-block!important}}
+@media(max-width:400px){header.top nav>a.btn:not(.home){display:none!important}.logo{font-size:.84rem!important}}
 </style>
 <meta property="og:image" content="https://assurantie-onderzoek.nl/og.png">
 <meta property="og:image:width" content="1200">

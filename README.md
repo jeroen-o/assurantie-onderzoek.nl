@@ -7,3 +7,7 @@ Eén statische pagina: `index.html`. Geen build-step en geen externe scripts. Pu
 ## Productnamen aan/uit
 
 De sectie "Onze data" bestaat in twee versies. Standaard (`<html data-productnamen="uit">`) beschrijft de site de bronnen algemeen. Zet het attribuut op `"aan"` om de Blinqx-productnamen te tonen (Premievergelijk, Blinqx Connect CRM, eBlinqx, DIAS, Signalen, enz.). Doe dat pas als de juridische basis voor hergebruik van de data rond is (AVG-rol, contracten met kantoren en verzekeraars, mededinging).
+
+## Engelse versie
+
+De Engelse site staat in `/en/` (index, sample-report, regulation, methodology, about, privacy, whitepaper). Elke pagina heeft een NL/EN-knop naar de tegenhanger en `hreflang`-tags. Getallen staan ook in de Engelse versie in Nederlandse notatie (€ 1.234,56).
