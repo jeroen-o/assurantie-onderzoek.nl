@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Voorbeeldrapport · assurantie-onderzoek.nl</title>
+<meta name="description" content="Voorbeeldrapport met fictieve cijfers: marktpositie, conversie, distributie, portefeuille, schadeafhandeling, claimonderzoek en klimaatschade voor een schadeverzekeraar.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#1e2533">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 26 28%22%3E%3Cpath d=%22M13 0l13 7v14l-13 7L0 21V7z%22 fill=%22%23ffcc00%22/%3E%3Cpath d=%22M11 12l6 9h-3.4l-6-9z%22 fill=%22%231e2533%22/%3E%3C/svg%3E">
+<style>
+:root{--navy:#1e2533;--navy2:#2b3345;--y:#ffcc00;--y2:#e0a800;--ys:#fff5cc;--ink:#1b2535;--mut:#5b6678;--line:#e1e6ee;--bg:#f5f7fa;--pos:#1f8a5b;--neg:#c0392b;--mkt:#9aa6b8}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55;font-size:15px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+.bar-top{position:sticky;top:0;z-index:5;background:var(--navy);color:#fff}
+.bar-top .wrap{display:flex;align-items:center;justify-content:space-between;height:54px;gap:12px}
+.bar-top b span{color:var(--y)}
+.stamp{background:var(--y);color:var(--navy);font-weight:800;font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:999px;white-space:nowrap}
+button.pr{font:inherit;font-weight:700;background:var(--y);color:var(--navy);border:0;border-radius:999px;padding:8px 16px;cursor:pointer}
+.cover{background:linear-gradient(160deg,var(--navy),var(--navy2));color:#fff;padding:64px 0 72px}
+.cover .ey{color:var(--y);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.8rem}
+.cover h1{font-size:clamp(2rem,5vw,3rem);line-height:1.08;margin:.3em 0 .3em;letter-spacing:-.02em}
+.cover h1 em{color:var(--y);font-style:normal}
+.cover p{color:#d5deeb;max-width:640px;margin:0}
+.meta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.meta div{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:10px 14px;font-size:.85rem;color:#d5deeb}
+.meta b{display:block;color:#fff;font-size:.95rem}
+.warn{background:var(--ys);border-left:4px solid var(--y2);padding:12px 16px;border-radius:0 10px 10px 0;font-size:.9rem;margin:24px 0 0;color:#4d3b00}
+.toc{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:20px 0 0;padding:0;list-style:none;counter-reset:t}
+@media(max-width:760px){.toc{grid-template-columns:1fr}}
+.toc li{counter-increment:t;background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-size:.9rem}
+.toc li::before{content:counter(t);display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--navy);color:#fff;font-size:.75rem;font-weight:700;margin-right:8px}
+.toc a{color:var(--ink);text-decoration:none;font-weight:600}
+section.ch{padding:48px 0;border-bottom:1px solid var(--line)}
+section.ch:nth-of-type(even){background:#fff}
+.chn{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#7a5c00}
+.chn i{font-style:normal;display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--y);color:var(--navy)}
+h2{font-size:clamp(1.4rem,3vw,1.9rem);margin:.3em 0 .3em;letter-spacing:-.015em;line-height:1.2}
+.lead{color:var(--mut);max-width:760px;margin:0 0 20px}
+h3{font-size:1rem;margin:0 0 2px}
+.sub{font-size:.84rem;color:var(--mut);margin:0 0 12px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+@media(max-width:860px){.g2,.g3{grid-template-columns:1fr}.g4{grid-template-columns:1fr 1fr}}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px;min-width:0}
+section.ch:nth-of-type(even) .card{background:var(--bg)}
+.kpi .l{font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:var(--mut);font-weight:700}
+.kpi .v{font-size:1.7rem;font-weight:800;letter-spacing:-.02em;color:var(--navy)}
+.kpi .d{font-size:.84rem}
+.pos{color:var(--pos)}.neg{color:var(--neg)}
+.find{background:var(--navy);color:#fff;border-radius:14px;padding:20px 22px;margin-top:14px}
+.find h3{color:var(--y);margin-bottom:8px}
+.find ol{margin:0;padding-left:20px}.find li{margin:.35em 0;color:#e3e9f2}
+.note{font-size:.84rem;color:var(--mut);margin-top:10px;padding-top:10px;border-top:1px dashed var(--line)}
+.ins{font-size:.9rem;margin-top:10px;padding:10px 12px;background:var(--ys);border-radius:10px}
+.ins b{color:#5c4600}
+.legend{display:flex;flex-wrap:wrap;gap:14px;font-size:.8rem;color:var(--mut);margin-bottom:6px}
+.legend i{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+table{width:100%;border-collapse:collapse;font-size:.88rem}
+th{text-align:left;font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--mut);border-bottom:1px solid var(--line);padding:7px 6px;font-weight:700}
+td{padding:7px 6px;border-bottom:1px solid var(--line);vertical-align:middle}
+.r{text-align:right;font-variant-numeric:tabular-nums}
+.tw{overflow-x:auto}
+.mini{height:7px;background:var(--line);border-radius:99px;overflow:hidden;min-width:60px}
+.mini span{display:block;height:100%;background:var(--navy)}
+.pill{display:inline-block;padding:2px 8px;border-radius:99px;font-size:.75rem;font-weight:700}
+.pill.g{background:#e3f4ec;color:var(--pos)}.pill.r{background:#fbe7e5;color:var(--neg)}.pill.n{background:var(--line);color:var(--mut)}
+svg text{font-family:inherit}
+.sc td:nth-child(n+2){text-align:center}
+footer{background:var(--navy);color:#b9c5d6;padding:28px 0;font-size:.85rem}
+footer b{color:#fff}
+@media(max-width:560px){.bar-top a b{display:none}.stamp{font-size:.66rem;padding:3px 8px}button.pr{padding:7px 12px;font-size:.8rem}}
+@media print{.bar-top button{display:none}.bar-top{position:static}section.ch{break-inside:avoid-page}.card{break-inside:avoid}body{background:#fff}}
+</style>
+</head>
+<body>
+
+<div class="bar-top"><div class="wrap">
+  <a href="index.html" style="color:#fff;text-decoration:none"><b>assurantie-<span>onderzoek</span>.nl</b></a>
+  <span class="stamp">Voorbeeld · fictieve cijfers</span>
+  <button class="pr" id="pr" type="button">Afdrukken / PDF</button>
+</div></div>
+
+<div class="cover"><div class="wrap">
+  <div class="ey">Voorbeeldrapport · Marktpositie, portefeuille &amp; schade</div>
+  <h1>Verzekeraar X<br><em>Q3 2026</em></h1>
+  <p>Dit rapport laat zien wat assurantie-onderzoek.nl voor een schadeverzekeraar kan maken: positie, conversie in het advies, distributie, klantprofiel, dekking, premie, portefeuille, schadeafhandeling, claimonderzoek, klimaat en verzekerbaarheid. Alles staat steeds tegenover de markt en tegenover een anonieme vergelijkingsgroep.</p>
+  <div class="meta">
+    <div><b>Periode</b>jan t/m okt 2026, focus Q3</div>
+    <div><b>Bron</b>offertes, aanvragen, polissen en schademeldingen in het Blinqx-netwerk</div>
+    <div><b>Branches</b>particulier: auto, wonen, aansprakelijkheid, reis</div>
+    <div><b>Vergelijkingsgroep</b>8 schadeverzekeraars (anoniem)</div>
+    <div><b>Versie</b>voorbeeld 1.0</div>
+  </div>
+  <div class="warn"><b>Let op: alle cijfers, partijen en kantoren in dit rapport zijn fictief.</b> Ze laten alleen zien welke analyses mogelijk zijn en zeggen niets over werkelijke verzekeraars, volmachtbedrijven of assurantiekantoren.</div>
+</div></div>
+
+<div class="wrap" style="padding-top:28px">
+  <h3>Inhoud</h3>
+  <ol class="toc" id="toc"></ol>
+</div>
+
+<!-- 1 -->
+<section class="ch" id="s1"><div class="wrap">
+  <span class="chn"><i>1</i> Managementsamenvatting</span>
+  <h2>Uw positie in één oogopslag</h2>
+  <div class="g4" id="kpis"></div>
+  <div class="find"><h3>Vijf belangrijkste bevindingen</h3><ol>
+    <li>Uw <b>aandeel in nieuwe polissen steeg</b> van 7,2% in januari naar 8,6% in oktober, vooral door de branche wonen. De vergelijkingsgroep groeide minder hard.</li>
+    <li>U wordt vaak geoffreerd, maar <b>bij auto valt u af op premie</b>. In 41% van de vergelijkingen waarin u niet werd gekozen, zat u in het duurste kwart.</li>
+    <li>Na de prolongatie in juli lag <b>het aantal royementen 1,4 procentpunt hoger</b> dan in de markt. De uitstroom komt vooral van klanten die al langer dan vijf jaar verzekerd zijn.</li>
+    <li>Uw <b>schadeafhandeling is sneller dan de markt</b>: mediaan 9 werkdagen van melding tot afwikkeling, tegen 13 in de markt. Bij inzet van een expert loopt dat op tot 34 werkdagen.</li>
+    <li>Na de stormen in augustus werd in <b>Noord en Oost</b> meer klimaatschade gemeld dan bij de markt. Uw portefeuille is daar oververtegenwoordigd.</li>
+  </ol></div>
+</div></section>
+
+<!-- 2 -->
+<section class="ch" id="s2"><div class="wrap">
+  <span class="chn"><i>2</i> Marktpositie</span>
+  <h2>Aandeel in nieuwe polissen en trend</h2>
+  <p class="lead">Uw aandeel in de nieuwe polissen in het netwerk, per maand, tegenover de mediaan van de vergelijkingsgroep. Het aandeel is gewogen: uw nieuwe polissen gedeeld door het totaal in dezelfde periode.</p>
+  <div class="card"><h3>Aandeel nieuwe polissen per maand</h3><p class="sub">U tegenover de mediaan van de vergelijkingsgroep, alle particuliere branches</p><div id="c_trend"></div></div>
+  <div class="g3" style="margin-top:14px">
+    <div class="card"><h3>Per branche (Q3)</h3><div class="tw" id="t_br"></div></div>
+    <div class="card"><h3>Per regio (Q3)</h3><p class="sub">Uw aandeel tegenover uw landelijke aandeel (index 100 = gelijk)</p><div class="tw" id="t_reg"></div></div>
+    <div class="card"><h3>Per kwartaal</h3><div class="tw" id="t_q"></div></div>
+  </div>
+</div></section>
+
+<!-- 3 -->
+<section class="ch" id="s3"><div class="wrap">
+  <span class="chn"><i>3</i> Conversie in het advies</span>
+  <h2>Van offerte naar aanvraag naar polis</h2>
+  <p class="lead">Dit kerngetal begint al bij de premievergelijking. Hoe vaak wordt u geoffreerd, hoe vaak leidt dat tot een aanvraag bij u, en hoe vaak wordt die aanvraag een lopende polis?</p>
+  <div class="g2">
+    <div class="card"><h3>Trechter Q3: u tegenover de markt</h3><p class="sub">Per 100 vergelijkingen waarin u voorkomt</p><div id="c_funnel"></div></div>
+    <div class="card"><h3>Conversie per branche</h3><p class="sub">Van offerte naar aanvraag, in procenten</p><div class="tw" id="t_conv"></div>
+      <div class="ins"><b>Inzicht:</b> u converteert sterk bij wonen en aansprakelijkheid. Bij auto wordt u vaak meegenomen in de vergelijking, maar zelden gekozen.</div></div>
+  </div>
+  <div class="card" style="margin-top:14px"><h3>Doorlooptijd</h3><p class="sub">Mediaan in werkdagen</p><div class="tw" id="t_dl"></div></div>
+</div></section>
+
+<!-- 4 -->
+<section class="ch" id="s4"><div class="wrap">
+  <span class="chn"><i>4</i> Waarom de aanvraag niet bij u komt</span>
+  <h2>Premie, dekking of acceptatie?</h2>
+  <p class="lead">We vergelijken de offertes waarin u voorkwam met de maatschappij waar de aanvraag uiteindelijk heen ging. Dat geeft een indicatie van de reden. Naar welke concurrent de aanvraag ging, tonen we bewust niet.</p>
+  <div class="g2">
+    <div class="card"><h3>Indicatieve reden van afvallen (Q3)</h3><p class="sub">Aandeel van de offertes waarin u voorkwam, maar die niet tot een aanvraag bij u leidden</p><div id="c_reason"></div></div>
+    <div class="card"><h3>Uw plaats in de vergelijking</h3><p class="sub">In welk kwart van de getoonde premies u viel, bij offertes waarin u niet werd gekozen (Q3)</p><div id="c_quart"></div>
+      <div class="ins"><b>Inzicht:</b> bij auto zit u vaak in het duurste kwart, vooral voor bestuurders onder de 25 jaar. Bij wonen verliest u niet op premie maar op dekking, bijvoorbeeld bij glas en tuin.</div></div>
+  </div>
+</div></section>
+
+<!-- 5 -->
+<section class="ch" id="s5"><div class="wrap">
+  <span class="chn"><i>5</i> Distributie</span>
+  <h2>Uw positie bij assurantiekantoren</h2>
+  <div class="g2">
+    <div class="card"><h3>Top 10 kantoren (Q3)</h3><p class="sub">Uw aandeel bij het kantoor en de index tegenover uw marktaandeel</p><div class="tw" id="t_off"></div></div>
+    <div class="card"><h3>Concentratie</h3><p class="sub">Aandeel van uw nieuwe polissen afkomstig van de grootste kantoren</p><div id="c_conc"></div>
+      <h3 style="margin-top:16px">Stijgers en dalers (Q3 tegenover Q2)</h3><div class="tw" id="t_mov"></div></div>
+  </div>
+</div></section>
+
+<!-- 6 -->
+<section class="ch" id="s6"><div class="wrap">
+  <span class="chn"><i>6</i> Klantprofiel</span>
+  <h2>Wie verzekert zich bij u?</h2>
+  <p class="lead">Het klantprofiel per verzekering: wie de polis afsluit en welk risico daarbij hoort, tegenover de markt. Medische en andere bijzondere persoonsgegevens verwerken we niet.</p>
+  <div class="g2">
+    <div class="card"><h3>Type klant</h3><div id="c_type"></div></div>
+    <div class="card"><h3>Leeftijd verzekeringnemer (particulier)</h3><div id="c_age"></div><div class="note">Gemiddeld 47,2 jaar bij u, tegen 44,6 jaar in de markt.</div></div>
+    <div class="card"><h3>Huishouden</h3><div id="c_hh"></div></div>
+    <div class="card"><h3>Woonsituatie (inboedel en opstal)</h3><div id="c_won2"></div></div>
+    <div class="card"><h3>Woningtype (opstal)</h3><div id="c_wtype"></div><div class="note">Uw portefeuille heeft meer vrijstaande woningen en woningen met een rieten kap. Dat verklaart deels de hogere klimaatschade in Noord en Oost.</div></div>
+    <div class="card"><h3>Auto: schadevrije jaren</h3><div id="c_svj"></div></div>
+    <div class="card"><h3>Auto: leeftijd van het voertuig</h3><div id="c_vlft"></div></div>
+    <div class="card"><h3>Zzp en mkb: sector</h3><div id="c_sbi"></div></div>
+    <div class="card" style="grid-column:1/-1"><h3>Aantal polissen per klant</h3><div id="c_pol"></div><div class="note">Klanten met drie of meer polissen bij u hebben een royementsratio van 4,1%, tegen 11,8% bij klanten met één polis.</div></div>
+  </div>
+</div></section>
+
+<!-- 7 -->
+<section class="ch" id="s7"><div class="wrap">
+  <span class="chn"><i>7</i> Product &amp; dekking</span>
+  <h2>Welke dekking klanten kiezen</h2>
+  <div class="g2">
+    <div class="card"><h3>Autoverzekering: dekking</h3><div id="c_auto"></div></div>
+    <div class="card"><h3>Autoverzekering: eigen risico casco</h3><div id="c_er"></div></div>
+    <div class="card"><h3>Inboedel en opstal: dekking</h3><div id="c_won"></div></div>
+    <div class="card"><h3>Pakketpolis of losse polissen</h3><div id="c_pak"></div></div>
+  </div>
+  <div class="card" style="margin-top:14px"><h3>Aanvullende dekkingen</h3><p class="sub">Hoe vaak een dekking wordt meegesloten bij uw polissen, tegenover de markt</p><div id="c_add"></div></div>
+</div></section>
+
+<!-- 8 -->
+<section class="ch" id="s8"><div class="wrap">
+  <span class="chn"><i>8</i> Premie &amp; voorwaarden</span>
+  <h2>Uw gepubliceerde premie tegenover de marktbandbreedte</h2>
+  <p class="lead">Op basis van openbaar beschikbare premies voor vaste modelprofielen, peildatum 30 september 2026, jaarpremie inclusief assurantiebelasting. De balk loopt van de laagste tot de hoogste premie in de markt; het donkere deel is het middelste kwart tot driekwart. Premies van individuele concurrenten tonen we niet.</p>
+  <div class="card"><div class="legend"><span><i style="background:#cfd6e1"></i>Laagste – hoogste</span><span><i style="background:#8a97ab"></i>25% – 75%</span><span><i style="background:#1e2533"></i>Mediaan</span><span><i style="background:#e0a800"></i>Uw premie</span></div><div id="c_prem"></div></div>
+  <div class="g2" style="margin-top:14px">
+    <div class="card"><h3>Effect van uw premiewijziging, achteraf</h3><p class="sub">Uw premieverlaging van 6% op de inboedelverzekering, per 1 juli 2026</p><div class="tw" id="t_eff"></div></div>
+    <div class="card"><h3>Wat gaf de doorslag?</h3><p class="sub">Indicatieve doorslaggevende factor in de vergelijkingen waarin u voorkwam (Q3)</p><div id="c_drv"></div></div>
+  </div>
+</div></section>
+
+<!-- 9 -->
+<section class="ch" id="s9"><div class="wrap">
+  <span class="chn"><i>9</i> Portefeuille &amp; royementen</span>
+  <h2>Klantbehoud en waar klanten naartoe gaan</h2>
+  <p class="lead">De royementsratio is het aantal beëindigde polissen in de periode gedeeld door de lopende polissen aan het begin van de periode, op jaarbasis. Een overstap van een polis naar een andere maatschappij via hetzelfde kantoor tellen we als royement.</p>
+  <div class="card"><h3>Royementsratio per maand (op jaarbasis)</h3><p class="sub">U tegenover de markt; de piek in juli valt samen met uw prolongatie en premieherziening</p><div id="c_roy"></div></div>
+  <div class="g2" style="margin-top:14px">
+    <div class="card"><h3>Reden van royement (waar vastgelegd)</h3><div id="c_rr"></div></div>
+    <div class="card"><h3>Premieontwikkeling bij prolongatie</h3><p class="sub">Gemiddelde premiewijziging bij prolongatie, naar looptijd van de polis (inboedel, Q3)</p><div class="tw" id="t_loy"></div>
+      <div class="ins"><b>Inzicht:</b> klanten die langer dan vijf jaar bij u verzekerd zijn, krijgen bij prolongatie een hogere premiestijging dan nieuwe klanten. Dat is een aandachtspunt in het licht van de AFM-oproep over een eerlijke premie voor loyale klanten.</div></div>
+  </div>
+</div></section>
+
+<!-- 10 -->
+<section class="ch" id="s10"><div class="wrap">
+  <span class="chn"><i>10</i> Schadeafhandeling</span>
+  <h2>Van melding tot afwikkeling</h2>
+  <p class="lead">Gemeten in het kanaal waar de klant zijn schade meldt: het assurantiekantoor of de volmacht. Doorlooptijden in werkdagen, mediaan.</p>
+  <div class="g4" id="kpis2"></div>
+  <div class="g2" style="margin-top:14px">
+    <div class="card"><h3>Doorlooptijd per branche</h3><div id="c_dlb"></div></div>
+    <div class="card"><h3>Afhandeling per 100 schades</h3><div class="tw" id="t_sch"></div>
+      <div class="note">Een afwijzing is geen negatief signaal op zich: het hangt af van de dekking en de toedracht. Het verschil met de markt is wel een aanleiding om de oorzaken te bekijken.</div></div>
+  </div>
+</div></section>
+
+<!-- 11 -->
+<section class="ch" id="s11"><div class="wrap">
+  <span class="chn"><i>11</i> Claimonderzoek &amp; signalen</span>
+  <h2>Hoe vaak u onderzoek inzet, en met welke uitkomst</h2>
+  <p class="lead">Op portefeuilleniveau, nooit per verzekerde. Onder onderzoek valt hier: een toedrachtonderzoek, een technisch onderzoek of een onderzoek door een extern bureau, zoals vastgelegd in het schadedossier.</p>
+  <div class="g2">
+    <div class="card"><h3>Onderzoek per 1.000 schades</h3><div id="c_onz"></div></div>
+    <div class="card"><h3>Uitkomst van het onderzoek (Q1 t/m Q3)</h3><div id="c_uit"></div></div>
+    <div class="card"><h3>Signalen op portefeuilleniveau</h3><div class="tw" id="t_sig"></div></div>
+    <div class="card"><h3>Hoe lezen?</h3><p style="margin:0;color:var(--mut);font-size:.92rem">Een signaal is een patroon dat afwijkt van de markt, geen aanwijzing voor fraude bij een individuele klant. Gebruik het om uw acceptatie- en fraudebeleid te toetsen. Onderzoek in een individueel dossier gebeurt binnen de Gedragscode Persoonlijk Onderzoek en de AVG, en valt buiten dit rapport.</p></div>
+  </div>
+</div></section>
+
+<!-- 12 -->
+<section class="ch" id="s12"><div class="wrap">
+  <span class="chn"><i>12</i> Klimaat &amp; ESG</span>
+  <h2>Klimaatschade in uw portefeuille</h2>
+  <div class="card"><h3>Gemelde klimaatschade per maand</h3><p class="sub">Storm, hagel en wateroverlast, per 1.000 woonpolissen</p><div id="c_klim"></div></div>
+  <div class="g2" style="margin-top:14px">
+    <div class="card"><h3>Klimaatschade per regio (Q3)</h3><p class="sub">Per 1.000 woonpolissen</p><div id="c_kreg"></div></div>
+    <div class="card"><h3>Preventie en verduurzaming</h3><p class="sub">Aandeel woonpolissen met een vastgelegde preventiemaatregel of verduurzaming</p><div id="c_prev"></div></div>
+  </div>
+</div></section>
+
+<!-- 13 -->
+<section class="ch" id="s13"><div class="wrap">
+  <span class="chn"><i>13</i> Verzekerbaarheid &amp; onderverzekering</span>
+  <h2>Wie u niet bereikt, en wie te weinig is verzekerd</h2>
+  <div class="g2">
+    <div class="card"><h3>Afwijzing of opslag bij acceptatie</h3><p class="sub">Aandeel aanvragen met een afwijzing, opslag of beperkende clausule</p><div id="c_acc"></div></div>
+    <div class="card"><h3>Signalen van onderverzekering</h3><p class="sub">Hoe het verzekerde bedrag is bepaald: met een inboedelwaarde- of herbouwwaardemeter, of als vast bedrag dat lang niet is herzien</p><div id="c_onder"></div>
+      <div class="ins"><b>Inzicht:</b> uw klanten kiezen vaker een vast verzekerd bedrag zonder waardemeter, bij inboedel én bij opstal. Dat maakt onderverzekering waarschijnlijker, vooral na een verbouwing of verhuizing.</div></div>
+  </div>
+</div></section>
+
+<!-- 14 -->
+<section class="ch" id="s14"><div class="wrap">
+  <span class="chn"><i>14</i> Oordeel van adviseurs</span>
+  <h2>Hoe assurantie-adviseurs u beoordelen</h2>
+  <p class="lead">Uit de jaarlijkse adviseursenquête, 412 respondenten, schaal 1 tot 10. Alleen per groep gerapporteerd, nooit per individuele adviseur.</p>
+  <div class="card"><div id="c_score"></div></div>
+</div></section>
+
+<!-- 15 -->
+<section class="ch" id="s15"><div class="wrap">
+  <span class="chn"><i>15</i> Benchmark</span>
+  <h2>Scorecard tegenover de vergelijkingsgroep</h2>
+  <p class="lead">De vergelijkingsgroep bestaat uit acht anonieme schadeverzekeraars die u zelf heeft gekozen uit een categorie. Groen: beter dan de mediaan van de groep. Rood: slechter.</p>
+  <div class="card"><div class="tw sc" id="t_sc"></div></div>
+</div></section>
+
+<!-- 16 -->
+<section class="ch" id="s16"><div class="wrap">
+  <span class="chn"><i>16</i> Methodologie &amp; mededinging</span>
+  <h2>Zo komen de cijfers tot stand</h2>
+  <div class="g2">
+    <div class="card"><h3>Bron en dekking</h3><p style="margin:0;color:var(--mut);font-size:.92rem">Offertes, aanvragen, polissen, mutaties en schademeldingen uit het intermediaire kanaal, voor zover vastgelegd in de software van de deelnemende kantoren en volmachten. Direct writers en online aanbieders vallen buiten beeld.</p></div>
+    <div class="card"><h3>Rekenmethode</h3><p style="margin:0;color:var(--mut);font-size:.92rem">Aandelen zijn gewogen: het aantal per partij gedeeld door het totaal in dezelfde periode en branche. Particuliere branches volgen de ECOICOP v2-indeling van het CBS, zakelijke branches de SIVI-indeling.</p></div>
+    <div class="card"><h3>Privacy</h3><p style="margin:0;color:var(--mut);font-size:.92rem">Alleen geaggregeerde cijfers. Segmenten met minder dan 25 waarnemingen tonen we niet. Kantoren in de top 10 zijn gepseudonimiseerd; in een echt rapport ziet u alleen de kantoren waarmee u zelf een relatie heeft.</p></div>
+    <div class="card"><h3>Mededinging</h3><p style="margin:0;color:var(--mut);font-size:.92rem">U ziet uw eigen positie tegenover de markt of een anonieme groep van minstens vijf partijen. Premies alleen uit openbare bronnen, met vertraging en als bandbreedte. Geen informatie over toekomstige premies, provisies of acceptatiebeleid van anderen.</p></div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <b>assurantie-onderzoek.nl</b> · voorbeeldrapport met fictieve cijfers · een activiteit van Blinqx · <a href="index.html" style="color:#ffcc00">terug naar de site</a> · <a href="regelgeving.html" style="color:#ffcc00">regelgeving</a>
+</div></footer>
+
+<script>
+(function(){
+"use strict";
+const nl=(v,d=1)=>v.toLocaleString('nl-NL',{minimumFractionDigits:d,maximumFractionDigits:d});
+const P=(v,d=1)=>nl(v,d)+'%';
+const PP=v=>(v>=0?'+':'−')+nl(Math.abs(v),1)+' pp';
+const EUR=v=>'€ '+v.toLocaleString('nl-NL',{maximumFractionDigits:0});
+const $=id=>document.getElementById(id);
+const NAVY='#1e2533',MKT='#9aa6b8',Y='#e0a800';
+const M=['Jan','Feb','Mrt','Apr','Mei','Jun','Jul','Aug','Sep','Okt'];
+
+// Print: in een iframe (bijv. Google Sites) werkt window.print() niet, dus open een nieuw venster.
+$('pr').addEventListener('click',()=>{
+  let inFrame=true;try{inFrame=window.self!==window.top}catch(e){inFrame=true}
+  if(!inFrame){window.print();return}
+  const w=window.open(location.href.split('#')[0]+'#print','_blank');
+  if(!w)alert('Sta pop-ups toe om het rapport af te drukken.');
+});
+if(location.hash==='#print'){window.addEventListener('load',()=>setTimeout(()=>window.print(),400))}
+
+// Inhoud
+$('toc').innerHTML=[...document.querySelectorAll('section.ch')].map(s=>`<li><a href="#${s.id}">${s.querySelector('.chn').textContent.replace(/^\s*\d+\s*/,'')}</a></li>`).join('');
+
+const kpi=(l,v,d)=>`<div class="card kpi"><div class="l">${l}</div><div class="v">${v}</div><div class="d">${d}</div></div>`;
+const pos=t=>`<span class="pos">${t}</span>`,neg=t=>`<span class="neg">${t}</span>`;
+$('kpis').innerHTML=
+ kpi('Aandeel nieuwe polissen Q3',P(8.2),pos(PP(0.7))+' t.o.v. Q2')+
+ kpi('Conversie offerte → aanvraag',P(22,0),pos('+3 pp')+' t.o.v. markt (19%)')+
+ kpi('Royementsratio Q3',P(10.9),neg('+1,4 pp')+' t.o.v. markt (9,5%)')+
+ kpi('Doorlooptijd schade',nl(9,0)+' dagen',pos('4 dagen sneller')+' dan de markt');
+
+function line(series,labels,opt={}){
+  const W=760,H=240,L=48,R=14,T=12,B=28;const all=series.flatMap(s=>s.v);const mx=opt.max??Math.ceil(Math.max(...all)*1.15),mn=opt.min??0;
+  const x=i=>L+i*(W-L-R)/(labels.length-1),y=v=>T+(H-T-B)*(1-(v-mn)/(mx-mn));
+  let g='';for(let k=0;k<=4;k++){const v=mn+(mx-mn)*k/4;g+=`<line x1="${L}" x2="${W-R}" y1="${y(v)}" y2="${y(v)}" stroke="#e1e6ee"/><text x="${L-8}" y="${y(v)+4}" text-anchor="end" font-size="11" fill="#5b6678">${nl(v,opt.dec??0)}${opt.u??'%'}</text>`;}
+  const xl=labels.map((m,i)=>`<text x="${x(i)}" y="${H-8}" text-anchor="middle" font-size="11" fill="#5b6678">${m}</text>`).join('');
+  const ps=series.map(s=>`<path d="${s.v.map((v,i)=>(i?'L':'M')+x(i)+','+y(v)).join('')}" fill="none" stroke="${s.c}" stroke-width="${s.w||2.5}" ${s.dash?'stroke-dasharray="5 4"':''}/>`+s.v.map((v,i)=>`<circle cx="${x(i)}" cy="${y(v)}" r="3" fill="${s.c}"><title>${labels[i]}: ${nl(v,1)}${opt.u??'%'}</title></circle>`).join('')).join('');
+  return `<div class="legend">${series.map(s=>`<span><i style="background:${s.c}"></i>${s.n}</span>`).join('')}</div><svg viewBox="0 0 ${W} ${H}" width="100%" role="img">${g}${ps}${xl}</svg>`;
+}
+function pair(cats,me,mk,u='%',dec=0,L=130,W=460){
+  const mx=Math.max(...me,...mk),rh=30,H=cats.length*rh+4;let s='';
+  cats.forEach((c,i)=>{const y=i*rh+4,a=(W-L-50)*me[i]/mx,b=(W-L-50)*mk[i]/mx;
+   s+=`<text x="0" y="${y+14}" font-size="12" fill="#1b2535">${c}</text><rect x="${L}" y="${y+2}" width="${a}" height="11" rx="3" fill="${NAVY}"/><rect x="${L}" y="${y+15}" width="${b}" height="8" rx="3" fill="${MKT}"/><text x="${L+a+5}" y="${y+12}" font-size="11" font-weight="700" fill="#1b2535">${nl(me[i],dec)}${u}</text><text x="${L+b+5}" y="${y+23}" font-size="10" fill="#5b6678">${nl(mk[i],dec)}${u}</text>`;});
+  return `<div class="legend"><span><i style="background:${NAVY}"></i>U</span><span><i style="background:${MKT}"></i>Markt</span></div><svg viewBox="0 0 ${W} ${H}" width="100%" style="max-width:${W*1.35}px">${s}</svg>`;
+}
+function bars(cats,vals,u='%',col=NAVY,dec=0){
+  const mx=Math.max(...vals),W=480,L=210,rh=26,H=cats.length*rh+4;let s='';
+  cats.forEach((c,i)=>{const y=i*rh+4,a=(W-L-50)*vals[i]/mx;s+=`<text x="0" y="${y+14}" font-size="12" fill="#1b2535">${c}</text><rect x="${L}" y="${y+3}" width="${a}" height="14" rx="3" fill="${col}"/><text x="${L+a+5}" y="${y+14}" font-size="11" font-weight="700" fill="#1b2535">${nl(vals[i],dec)}${u}</text>`;});
+  return `<svg viewBox="0 0 ${W} ${H}" width="100%" style="max-width:${W*1.35}px">${s}</svg>`;
+}
+function split(parts,me,mkt){
+  const row=(lbl,vals)=>`<div style="display:grid;grid-template-columns:56px 1fr;gap:8px;align-items:center;margin-bottom:6px;font-size:.84rem;color:#5b6678"><span>${lbl}</span><div style="display:flex;height:28px;border-radius:7px;overflow:hidden;font-size:.78rem;font-weight:700">${vals.map((v,i)=>`<div style="width:${v}%;background:${parts[i][1]};color:${parts[i][2]||'#fff'};display:flex;align-items:center;justify-content:center;white-space:nowrap;overflow:hidden">${v>=12?nl(v,0)+'%':''}</div>`).join('')}</div></div>`;
+  return row('U',me)+row('Markt',mkt)+`<div class="legend" style="margin-top:4px">${parts.map((p,i)=>`<span><i style="background:${p[1]}"></i>${p[0]} (${nl(me[i],0)}% / ${nl(mkt[i],0)}%)</span>`).join('')}</div>`;
+}
+const tbl=(head,rows,rc=[])=>`<table><thead><tr>${head.map((h,i)=>`<th class="${rc.includes(i)?'r':''}">${h}</th>`).join('')}</tr></thead><tbody>${rows.map(r=>`<tr>${r.map((c,i)=>`<td class="${rc.includes(i)?'r':''}">${c}</td>`).join('')}</tr>`).join('')}</tbody></table>`;
+const idx=v=>`<span class="pill ${v>=110?'g':v<=90?'r':'n'}">${v}</span>`;
+const dlt=(v,inv)=>`<span class="${(inv?-v:v)>0?'pos':(inv?-v:v)<0?'neg':''}">${PP(v)}</span>`;
+const C4=['#1e2533','#4a5872','#8a97ab','#cfd6e1'];
+
+// 2
+$('c_trend').innerHTML=line([{n:'Uw aandeel nieuwe polissen',c:NAVY,v:[7.2,7.3,7.1,7.5,7.6,7.9,8.0,8.1,8.4,8.6]},{n:'Mediaan vergelijkingsgroep',c:Y,dash:1,w:2,v:[6.6,6.7,6.6,6.8,6.8,6.9,6.9,7.0,7.1,7.1]}],M,{dec:0,max:10});
+$('t_br').innerHTML=tbl(['Branche','U','Δ markt'],[['Auto',P(5.1),dlt(-1.6)],['Wonen',P(11.4),dlt(3.2)],['Aansprakelijkheid',P(9.8),dlt(1.9)],['Reis',P(6.2),dlt(-0.4)]],[1,2]);
+$('t_reg').innerHTML=tbl(['Regio','Aandeel','Index'],[['Noord',P(10.7),idx(130)],['Oost',P(9.5),idx(116)],['Midden',P(7.9),idx(96)],['Randstad',P(6.9),idx(84)],['Zuid',P(8.3),idx(101)]],[1,2]);
+$('t_q').innerHTML=tbl(['Kwartaal','Aandeel','Δ'],[['Q1',P(7.2),'–'],['Q2',P(7.5),dlt(0.3)],['Q3',P(8.2),dlt(0.7)],['Okt',P(8.6),dlt(0.4)]],[1,2]);
+
+// 3
+(function(){const W=440,H=200;const st=[['Offerte',100,100],['Aanvraag',22,19],['Polis',20.5,17.1]];let s='';
+ st.forEach((r,i)=>{const y=i*64+6,wm=(W-160)*r[1]/100,wk=(W-160)*r[2]/100;s+=`<text x="0" y="${y+18}" font-size="13" font-weight="700" fill="#1b2535">${r[0]}</text><rect x="110" y="${y}" width="${wm}" height="24" rx="5" fill="${NAVY}"/><text x="${110+wm+6}" y="${y+17}" font-size="12" font-weight="700">${nl(r[1],i==2?1:0)}</text><rect x="110" y="${y+28}" width="${wk}" height="14" rx="4" fill="${MKT}"/><text x="${110+wk+6}" y="${y+40}" font-size="11" fill="#5b6678">${nl(r[2],i==2?1:0)}</text>`;});
+ $('c_funnel').innerHTML=`<div class="legend"><span><i style="background:${NAVY}"></i>U</span><span><i style="background:${MKT}"></i>Markt</span></div><svg viewBox="0 0 ${W} ${H}" width="100%">${s}</svg><div class="note">Van elke 100 vergelijkingen waarin u voorkomt, worden er 22 bij u aangevraagd en worden er 20,5 een lopende polis. In de markt zijn dat 19 en 17,1.</div>`;})();
+$('t_conv').innerHTML=tbl(['Branche','U','Markt','Δ'],[['Auto','12%','18%',dlt(-6)],['Wonen','31%','21%',dlt(10)],['Aansprakelijkheid','29%','22%',dlt(7)],['Reis','17%','16%',dlt(1)]],[1,2,3]);
+$('t_dl').innerHTML=tbl(['Stap','U','Markt','Vergelijkingsgroep'],[['Offerte → aanvraag','2','3','3'],['Aanvraag → polis','1','2','2'],['Offerte → polis','3','5','5']],[1,2,3]);
+
+// 4
+$('c_reason').innerHTML=bars(['Premie','Dekking en voorwaarden','Acceptatie (afwijzing of opslag)','Eigen risico','Geen duidelijke reden'],[46,24,12,7,11]);
+$('c_quart').innerHTML=(function(){const parts=[['Goedkoopste kwart','#1f8a5b'],['Tweede kwart','#8fc7a9','#1b2535'],['Derde kwart','#e8b4ad','#1b2535'],['Duurste kwart','#c0392b']];
+ const rows=[['Auto',[9,17,33,41]],['Wonen',[31,34,22,13]],['Aansprakelijkheid',[28,30,25,17]]];
+ return rows.map(([l,v])=>`<div style="display:grid;grid-template-columns:120px 1fr;gap:8px;align-items:center;margin-bottom:6px;font-size:.84rem;color:#5b6678"><span>${l}</span><div style="display:flex;height:26px;border-radius:7px;overflow:hidden;font-size:.76rem;font-weight:700">${v.map((x,i)=>`<div style="width:${x}%;background:${parts[i][1]};color:${parts[i][2]||'#fff'};display:flex;align-items:center;justify-content:center">${x>=10?nl(x,0)+'%':''}</div>`).join('')}</div></div>`).join('')+`<div class="legend" style="margin-top:4px">${parts.map(p=>`<span><i style="background:${p[1]}"></i>${p[0]}</span>`).join('')}</div>`;})();
+
+// 5
+const offs=[['Kantoor A','Noord',24.1,281],['Kantoor B','Oost',19.6,239],['Kantoor C','Randstad',4.2,51],['Kantoor D','Zuid',12.8,156],['Kantoor E','Noord',17.3,211],['Kantoor F','Midden',6.1,74],['Kantoor G','Randstad',9.4,115],['Kantoor H','Oost',15.0,183],['Kantoor I','Zuid',3.1,38],['Kantoor J','Midden',8.8,107]];
+$('t_off').innerHTML=tbl(['Kantoor','Regio','Uw aandeel','Index'],offs.map(o=>[o[0],o[1],P(o[2]),idx(Math.round(o[2]/8.2*100))]),[2,3]);
+$('c_conc').innerHTML=pair(['Top 3 kantoren','Top 10 kantoren','Top 25 kantoren'],[16,31,49],[9,21,38]);
+$('t_mov').innerHTML=tbl(['Kantoor','Q2','Q3','Δ'],[['Kantoor E',P(12.9),P(17.3),dlt(4.4)],['Kantoor H',P(11.8),P(15.0),dlt(3.2)],['Kantoor C',P(7.9),P(4.2),dlt(-3.7)],['Kantoor I',P(5.6),P(3.1),dlt(-2.5)]],[1,2,3]);
+
+// 6
+$('c_type').innerHTML=split([['Particulier',NAVY],['Zzp','#4a5872'],['Mkb','#8a97ab','#1b2535']],[81,12,7],[74,15,11]);
+$('c_age').innerHTML=pair(['18–29','30–44','45–59','60–74','75+'],[8,24,33,26,9],[13,29,30,21,7]);
+$('c_hh').innerHTML=pair(['Alleenstaand','Samenwonend zonder kinderen','Gezin met kinderen','Overig'],[29,31,34,6],[34,28,32,6],'%',0,190);
+$('c_won2').innerHTML=pair(['Eigen woning','Huurwoning'],[71,29],[63,37]);
+$('c_wtype').innerHTML=pair(['Tussenwoning','Hoekwoning','2-onder-1-kap','Vrijstaand','Rieten kap (alle typen)'],[31,19,18,32,6],[38,21,19,22,3],'%',0,170);
+$('c_svj').innerHTML=pair(['0–2 jaar','3–5 jaar','6–10 jaar','11 jaar of meer'],[14,19,24,43],[19,22,23,36]);
+$('c_vlft').innerHTML=pair(['0–3 jaar','4–7 jaar','8–12 jaar','13 jaar of ouder'],[18,27,31,24],[22,29,28,21]);
+$('c_sbi').innerHTML=pair(['Bouw','Zakelijke dienstverlening','Detailhandel','Zorg','Transport','Overig'],[24,22,14,11,9,20],[19,26,13,12,8,22],'%',0,170);
+$('c_pol').innerHTML=pair(['1 polis','2 polissen','3 of meer'],[38,27,35],[45,28,27]);
+
+// 7
+$('c_auto').innerHTML=split([['WA',NAVY],['WA + beperkt casco','#4a5872'],['Allrisk','#8a97ab','#1b2535']],[34,39,27],[29,38,33]);
+$('c_er').innerHTML=pair(['€ 0','€ 150','€ 250','€ 500 of meer'],[11,38,36,15],[16,41,31,12]);
+$('c_won').innerHTML=split([['Uitgebreid',NAVY],['Allrisk','#8a97ab','#1b2535']],[58,42],[49,51]);
+$('c_pak').innerHTML=split([['Pakketpolis',NAVY],['Losse polissen','#8a97ab','#1b2535']],[46,54],[39,61]);
+$('c_add').innerHTML=pair(['Glas','Tuin en buitenzaken','Ongevallen inzittenden','Rechtsbijstand verkeer','Pechhulp'],[41,22,48,36,55],[47,31,52,33,58]);
+
+// 8 premie-bandbreedte
+(function(){const rows=[['Auto, 22 jaar, WA+, € 15.000',540,690,820,1180,1510,1245],['Auto, 45 jaar, allrisk, € 30.000',610,760,860,980,1290,845],['Inboedel, gezin, uitgebreid',118,149,171,198,264,162],['Opstal, tussenwoning, uitgebreid',156,191,214,243,318,201],['Aansprakelijkheid, gezin',42,51,58,66,84,49]];
+ const W=760,L=250,R=20,rh=34,H=rows.length*rh+30;const mn=0;const sc=(v,r)=>L+(W-L-R)*(v-r[1]*0.9)/(r[5]*1.05-r[1]*0.9);let s='';
+ rows.forEach((r,i)=>{const y=i*rh+8;const X=v=>sc(v,r);
+  s+=`<text x="0" y="${y+15}" font-size="12" fill="#1b2535">${r[0]}</text><rect x="${X(r[1])}" y="${y+6}" width="${X(r[5])-X(r[1])}" height="10" rx="3" fill="#cfd6e1"/><rect x="${X(r[2])}" y="${y+6}" width="${X(r[4])-X(r[2])}" height="10" fill="#8a97ab"/><rect x="${X(r[3])-1.5}" y="${y+2}" width="3" height="18" fill="${NAVY}"/><circle cx="${X(r[6])}" cy="${y+11}" r="6.5" fill="${Y}" stroke="#fff" stroke-width="2"><title>Uw premie ${EUR(r[6])}</title></circle><text x="${X(r[1])}" y="${y+30}" font-size="10" fill="#5b6678" text-anchor="middle">${EUR(r[1])}</text><text x="${X(r[5])}" y="${y+30}" font-size="10" fill="#5b6678" text-anchor="middle">${EUR(r[5])}</text><text x="${X(r[6])}" y="${y-1}" font-size="10" font-weight="700" fill="#7a5c00" text-anchor="middle">${EUR(r[6])}</text>`;});
+ $('c_prem').innerHTML=`<svg viewBox="0 0 ${W} ${H}" width="100%">${s}</svg><div class="note">Bij de jonge bestuurder valt uw premie in het duurste kwart. Bij inboedel, opstal en aansprakelijkheid zit u rond of onder de mediaan.</div>`;})();
+$('t_eff').innerHTML=tbl(['','Q2 (voor)','Q3 (na)','Δ'],[['Aandeel nieuwe inboedelpolissen',P(10.1),P(12.0),dlt(1.9)],['Conversie offerte → aanvraag',P(26,0),P(31,0),dlt(5)],['Royementsratio inboedel',P(8.4),P(8.1),dlt(-0.3,1)],['Markt: aandeel vergelijkingsgroep',P(7.0),P(7.1),dlt(0.1)]],[1,2,3]);
+$('c_drv').innerHTML=bars(['Premie','Dekking en voorwaarden','Bekendheid bij de adviseur','Schadeafhandeling','Acceptatie'],[44,23,15,11,7]);
+
+// 9
+$('c_roy').innerHTML=line([{n:'Uw royementsratio',c:NAVY,v:[9.1,9.0,9.3,9.2,9.4,9.6,12.8,11.1,10.4,10.0]},{n:'Markt',c:MKT,w:2,v:[9.3,9.2,9.4,9.3,9.5,9.6,9.8,9.6,9.5,9.4]}],M,{dec:0,min:6,max:14});
+$('c_rr').innerHTML=pair(['Premie','Overstap via kantoor','Verhuizing of verkoop','Na een schade','Overlijden of overig'],[38,24,19,9,10],[31,26,22,8,13]);
+$('t_loy').innerHTML=tbl(['Looptijd polis','U','Markt'],[['Minder dan 1 jaar',P(3.1),P(3.4)],['1 tot 5 jaar',P(4.2),P(3.9)],['5 tot 10 jaar',P(6.8),P(4.3)],['Meer dan 10 jaar',P(7.4),P(4.5)]],[1,2]);
+
+// 10
+$('kpis2').innerHTML=
+ kpi('In behandeling genomen',nl(1.6)+' dagen',pos('sneller')+' dan markt (2,4)')+
+ kpi('Melding → afwikkeling',nl(9,0)+' dagen',pos('sneller')+' dan markt (13)')+
+ kpi('Met expert',nl(34,0)+' dagen','markt: 36')+
+ kpi('Klachten per 1.000 schades',nl(4.8),neg('+1,1')+' t.o.v. markt (3,7)');
+$('c_dlb').innerHTML=pair(['Auto','Inboedel','Opstal','Aansprakelijkheid','Reis'],[8,7,15,19,6],[11,10,18,24,9],' d');
+$('t_sch').innerHTML=tbl(['Per 100 schades','U','Markt'],[['Volledig vergoed','78','76'],['Gedeeltelijk vergoed','12','13'],['Afgewezen','10','11'],['Met inzet van een expert','18','21'],['Met contra-expertise','1,2','0,9']],[1,2]);
+
+// 11
+$('c_onz').innerHTML=pair(['Auto','Inboedel','Opstal','Aansprakelijkheid','Reis'],[14,9,6,4,11],[11,8,7,5,9],'',0);
+$('c_uit').innerHTML=split([['Geen afwijking','#8a97ab','#1b2535'],['Uitkering aangepast','#4a5872'],['Claim afgewezen',NAVY]],[71,17,12],[68,19,13]);
+$('t_sig').innerHTML=tbl(['Signaal','U','Markt'],[['Schade binnen 3 maanden na ingang (per 1.000 polissen)','6,2','4,9'],['Herhaalschade binnen 12 maanden','8,4%','8,1%'],['Melding meer dan 30 dagen na schadedatum','5,1%','4,6%'],['Hoge schade zonder expert (> € 5.000)','2,3%','3,0%']],[1,2]);
+
+// 12
+$('c_klim').innerHTML=line([{n:'U',c:NAVY,v:[3.1,4.8,2.2,1.4,1.6,2.0,2.4,9.8,3.6,2.9]},{n:'Markt',c:MKT,w:2,v:[2.9,4.1,2.0,1.3,1.5,1.9,2.2,7.4,3.1,2.6]}],M,{dec:0,u:''});
+$('c_kreg').innerHTML=pair(['Noord','Oost','Midden','Randstad','Zuid'],[19.8,17.4,12.1,10.3,11.6],[15.2,14.9,11.8,10.6,11.9],'',1);
+$('c_prev').innerHTML=pair(['Waterbestendig of terugslagklep','Zonnepanelen meeverzekerd','Brand- of rookmelders vastgelegd'],[7,24,31],[6,21,29],'%',0,210);
+
+// 13
+$('c_acc').innerHTML=pair(['Bestuurder onder 25','Zzp (aansprakelijkheid)','Rieten kap of vrijstaand','Eerdere schades (3+)','Overig'],[21,14,33,27,4],[18,11,26,24,4],'%',0,190);
+$('c_onder').innerHTML=pair(['Inboedel: met waardemeter','Inboedel: vast bedrag, > 5 jaar oud','Opstal: met herbouwwaardemeter','Opstal: vast bedrag, > 5 jaar oud'],[54,17,61,14],[63,13,72,9],'%',0,220);
+
+// 14
+(function(){const rows=[['Premie',6.8,7.1],['Dekking en voorwaarden',7.6,7.2],['Acceptatie',7.1,7.0],['Snelheid polis',7.9,7.3],['Schadeafhandeling',7.7,7.0],['Accountmanagement',6.9,7.2],['Digitale koppelingen (SIVI)',7.4,6.9]];
+ $('c_score').innerHTML=pair(rows.map(r=>r[0]),rows.map(r=>r[1]),rows.map(r=>r[2]),'',1,190,520).replace('>Markt<','>Vergelijkingsgroep<');})();
+
+// 15
+const sc=(n,me,gr,ok)=>[n,me,gr,`<span class="pill ${ok?'g':'r'}">${ok?'beter':'slechter'}</span>`];
+$('t_sc').innerHTML=tbl(['Indicator','U','Mediaan groep','Oordeel'],[
+ sc('Aandeel nieuwe polissen',P(8.2),P(7.0),true),
+ sc('Conversie offerte → aanvraag',P(22,0),P(19,0),true),
+ sc('Royementsratio',P(10.9),P(9.5),false),
+ sc('Doorlooptijd schade (werkdagen)','9','13',true),
+ sc('Klachten per 1.000 schades',nl(4.8),nl(3.7),false),
+ sc('Aandeel top 3 kantoren',P(16,0),P(9,0),false),
+ sc('Oordeel adviseurs (gemiddeld)',nl(7.3),nl(7.1),true)
+],[1,2]);
+})();
+</script>
+</body>
+</html>
