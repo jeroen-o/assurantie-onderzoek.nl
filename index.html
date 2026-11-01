@@ -188,7 +188,7 @@ h3.grp{font-size:1.15rem;margin:28px 0 12px}
 .cform .factions{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
 .cform .cmsg{font-size:.9rem;color:#ffcc00}
 .cform .fnote{font-size:.82rem;color:#b9c5d6;margin:14px 0 0}
-.cform .fnote a{color:#ffcc00}
+.cform .fnote a,.cform label.chk a{color:#ffcc00}
 #contact .cform p{margin:0}
 .idee{display:grid;grid-template-columns:1fr 1.1fr;gap:28px;align-items:start}
 @media(max-width:860px){.idee{grid-template-columns:1fr}}
@@ -759,7 +759,7 @@ h1,h2,h3{overflow-wrap:break-word;hyphens:auto}
           </label>
           <label>E-mail (als u een reactie wilt)<input name="email" type="email" autocomplete="email"></label>
         </div>
-        <label class="chk"><input type="checkbox" name="anoniem"> U mag mijn vraag (zonder naam en organisatie) gebruiken in de Assurantiemonitor</label>
+        <label class="chk"><input type="checkbox" name="anoniem"> <span>U mag mijn vraag (zonder naam en organisatie) gebruiken in de Assurantiemonitor. Zie de <a href="privacy.html">privacyverklaring</a>.</span></label>
         <div class="factions"><button type="submit" class="btn">Verstuur mijn vraag</button><span id="imsg" class="imsg" role="status" aria-live="polite"></span></div>
       </form>
     </div>
@@ -831,7 +831,7 @@ h1,h2,h3{overflow-wrap:break-word;hyphens:auto}
         </select>
       </label>
       <label>Uw vraag of toelichting<textarea name="bericht" rows="5" placeholder="Bijvoorbeeld: welke branches, periode en vergelijkingsgroep u zoekt"></textarea></label>
-      <label class="chk"><input type="checkbox" name="akkoord" required> Ik ga ermee akkoord dat assurantie-onderzoek.nl mijn gegevens gebruikt om op deze aanvraag te reageren. *</label>
+      <label class="chk"><input type="checkbox" name="akkoord" required> <span>Ik ga ermee akkoord dat assurantie-onderzoek.nl mijn gegevens gebruikt om op deze aanvraag te reageren. Zie de <a href="privacy.html">privacyverklaring</a>. *</span></label>
       <div class="factions">
         <button type="submit" class="btn">Verstuur via e-mail</button>
         <span id="cmsg" class="cmsg" role="status" aria-live="polite"></span>
@@ -892,7 +892,7 @@ h1,h2,h3{overflow-wrap:break-word;hyphens:auto}
       <strong style="color:#fff">Colofon</strong><br>
       Blinqx · Hullenbergweg 109, 1101 CL Amsterdam<br>
       KvK 84045132 · btw [nummer]<br>
-      <a href="over-ons.html">Over ons</a> · <a href="methodologie.html">Methodologie</a> · <a href="regelgeving.html">Regelgeving</a> · <a href="voorbeeldrapport.html">Voorbeeldrapport</a> · <a href="#schade">Schade &amp; claimonderzoek</a> · <a href="https://jeroen-o.github.io/hypotheekonderzoek.nl/" target="_blank" rel="noopener">Hypotheekonderzoek.nl</a><br>
+      <a href="over-ons.html">Over ons</a> · <a href="privacy.html">Privacyverklaring</a> · <a href="methodologie.html">Methodologie</a> · <a href="regelgeving.html">Regelgeving</a> · <a href="voorbeeldrapport.html">Voorbeeldrapport</a> · <a href="#schade">Schade &amp; claimonderzoek</a> · <a href="https://jeroen-o.github.io/hypotheekonderzoek.nl/" target="_blank" rel="noopener">Hypotheekonderzoek.nl</a><br>
       <span style="font-size:.8rem">Deze site is geen juridisch of regelgevend advies.</span>
     </div>
   </div>
