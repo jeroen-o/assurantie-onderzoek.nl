@@ -281,6 +281,12 @@ h1,h2,h3{overflow-wrap:break-word;hyphens:auto}
     <div class="card"><h3>Premieontwikkeling bij prolongatie</h3><p class="sub">Gemiddelde premiewijziging bij prolongatie, naar looptijd van de polis (inboedel, Q3)</p><div class="tw" id="t_loy"></div>
       <div class="ins"><b>Inzicht:</b> klanten die langer dan vijf jaar bij u verzekerd zijn, krijgen bij prolongatie een hogere premiestijging dan nieuwe klanten. Dat is een aandachtspunt in het licht van de AFM-oproep over een eerlijke premie voor loyale klanten.</div></div>
   </div>
+  <div class="g2" style="margin-top:14px">
+    <div class="card"><h3>Berichtenverkeer per maand (Aplaza en ADN)</h3><p class="sub">Aantal berichten als index, januari = 100</p><div id="c_msg"></div>
+      <div class="ins"><b>Inzicht:</b> de piek in juli is uw prolongatiegolf: 38% meer berichten dan in januari, tegen 12% in de markt. Het hogere aandeel royementsberichten bevestigt de grotere uitstroom na de premieherziening.</div></div>
+    <div class="card"><h3>Berichten per type (Q3)</h3><p class="sub">Uw aandeel in het berichtenverkeer en het deel dat digitaal is verwerkt</p><div class="tw" id="t_msg"></div>
+      <div class="note">Een bericht is geen polis: herhaalde en dubbele berichten zijn ontdubbeld. Zie de <a href="methodologie.html#m5b">methodologie</a>.</div></div>
+  </div>
 </div></section>
 
 <!-- 10 -->
@@ -493,6 +499,8 @@ $('c_drv').innerHTML=bars(['Premie','Dekking en voorwaarden','Bekendheid bij de 
 $('c_roy').innerHTML=line([{n:'Uw royementsratio',c:NAVY,v:[9.1,9.0,9.3,9.2,9.4,9.6,12.8,11.1,10.4,10.0]},{n:'Markt',c:MKT,w:2,v:[9.3,9.2,9.4,9.3,9.5,9.6,9.8,9.6,9.5,9.4]}],M,{dec:0,min:6,max:14});
 $('c_rr').innerHTML=pair(['Premie','Overstap via kantoor','Verhuizing of verkoop','Na een schade','Overlijden of overig'],[38,24,19,9,10],[31,26,22,8,13]);
 $('t_loy').innerHTML=tbl(['Looptijd polis','U','Markt'],[['Minder dan 1 jaar',P(3.1),P(3.4)],['1 tot 5 jaar',P(4.2),P(3.9)],['5 tot 10 jaar',P(6.8),P(4.3)],['Meer dan 10 jaar',P(7.4),P(4.5)]],[1,2]);
+$('c_msg').innerHTML=line([{n:'Uw berichten',c:NAVY,v:[100,97,104,102,99,101,138,112,106,104]},{n:'Markt',c:MKT,w:2,v:[100,98,103,101,100,100,112,105,103,102]}],M,{dec:0,u:'',min:80,max:160});
+$('t_msg').innerHTML=tbl(['Berichttype','Uw aandeel','Δ t.o.v. Q2','Digitaal: u','Digitaal: markt'],[['Aanvraag',P(8.4),dlt(0.6),P(94,0),P(89,0)],['Polis',P(8.1),dlt(0.5),P(97,0),P(93,0)],['Mutatie',P(9.0),dlt(0.2),P(88,0),P(85,0)],['Prolongatie',P(10.6),dlt(2.1),P(99,0),P(98,0)],['Royement',P(11.2),dlt(1.3,1),P(91,0),P(87,0)],['Schade',P(7.6),dlt(-0.3),P(72,0),P(68,0)]],[1,2,3,4]);
 
 // 10
 $('kpis2').innerHTML=
