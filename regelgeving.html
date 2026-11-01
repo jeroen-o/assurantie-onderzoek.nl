@@ -33,9 +33,9 @@ header.top .wrap{display:flex;align-items:center;justify-content:space-between;h
 nav a{color:#cfd8e6;text-decoration:none;margin-left:20px;font-size:.92rem}
 nav a:hover{color:#fff}
 nav{white-space:nowrap}
-nav a:not(.btn){margin-left:14px;font-size:.88rem}
+nav a:not(.btn):not(.home){margin-left:14px;font-size:.88rem}
 .logo{white-space:nowrap}
-@media(max-width:1240px){nav a:not(.btn){display:none}}
+@media(max-width:1240px){nav a:not(.btn):not(.home){display:none}}
 @media(max-width:400px){header.top .btn{padding:7px 10px!important;font-size:.76rem!important}.logo{font-size:.88rem!important}}
 @media(max-width:480px){header.top .btn{padding:8px 12px;font-size:.82rem;margin-left:8px}header.top .wrap{gap:8px}.logo{font-size:.98rem}.logo svg{width:20px;height:22px;margin-right:6px!important}}
 .btn{display:inline-block;background:var(--orange);color:var(--navy) !important;padding:10px 18px;border-radius:999px;font-weight:600;text-decoration:none;border:0;cursor:pointer;font-size:.95rem}
@@ -164,6 +164,14 @@ html[data-productnamen="aan"] .gen{display:none}
 .keten .wat{margin:.6em 0 0;font-size:.88rem;color:var(--ink)}
 .keten .wat strong{color:var(--navy)}
 .price{font-size:1.7rem;font-weight:800;color:var(--navy);letter-spacing:-.02em;margin:.2em 0 .4em;white-space:nowrap}
+.home{display:inline-flex;align-items:center;gap:6px;color:#fff!important;text-decoration:none;border:1.5px solid rgba(255,255,255,.35);border-radius:999px;padding:7px 14px;font-size:.88rem;font-weight:600;margin-left:14px}
+.home:hover{border-color:#ffcc00;color:#ffcc00!important}
+@media(max-width:480px){.home{padding:6px 10px;font-size:.78rem;margin-left:6px}.home .ht{display:none}}
+@media(max-width:400px){header.top .wrap{gap:6px}.logo svg{display:none}.home{margin-left:4px}}
+@media(max-width:440px){.bt-x{display:none}.logo{font-size:.86rem!important;letter-spacing:-.02em}}
+.card{min-width:0}
+.card h3,.card p,.card li,td{overflow-wrap:break-word;hyphens:auto}
+h1,h2,h3{overflow-wrap:break-word;hyphens:auto}
 </style>
 </head>
 <body>
@@ -173,14 +181,15 @@ html[data-productnamen="aan"] .gen{display:none}
   <div class="wrap">
     <a class="logo" href="index.html" aria-label="assurantie-onderzoek.nl, een activiteit van Blinqx"><svg width="26" height="28" viewBox="0 0 26 28" aria-hidden="true" style="vertical-align:-7px;margin-right:8px"><path d="M13 0l13 7v14l-13 7L0 21V7z" fill="#ffcc00"/><path d="M11 12l6 9h-3.4l-6-9z" fill="#1e2533"/></svg>assurantie-<span>onderzoek</span>.nl</a>
     <nav>
+      <a class="home" href="index.html" aria-label="Naar de homepage"><svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg><span class="ht">Home</span></a>
       <a href="index.html#vragen">Uw vragen</a>
       <a href="index.html#bron">Onze data</a>
-            <a href="index.html#onderzoek">Benchmarks</a>
-      <a href="index.html#schade">Schade &amp; claims</a>
+            <a href="index.html#schade">Schade &amp; claims</a>
+      <a href="index.html#ai">AI</a>
       <a href="index.html#aanbod">Aanbod</a>
       <a href="regelgeving.html">Regelgeving</a>
-      <a href="index.html#monitor">Monitor</a>
-      <a href="index.html#contact" class="btn">Offerte aanvragen</a>
+      <a href="index.html#idee">Uw vraag</a>
+      <a href="index.html#contact" class="btn">Offerte<span class="bt-x"> aanvragen</span></a>
     </nav>
   </div>
 </header>
@@ -296,12 +305,13 @@ html[data-productnamen="aan"] .gen{display:none}
 
 <section id="digitaal">
   <div class="wrap">
-    <span class="eyebrow">Digitale weerbaarheid &amp; toegankelijkheid</span>
-    <h2>DORA, toegankelijkheid en standaarden</h2>
+    <span class="eyebrow">AI, digitale weerbaarheid &amp; toegankelijkheid</span>
+    <h2>AI Act, DORA, toegankelijkheid en standaarden</h2>
     <div class="tablewrap">
     <table class="eba">
       <thead><tr><th>Kader</th><th>Wat het vraagt</th><th>Relevantie</th></tr></thead>
       <tbody>
+        <tr id="ai-act"><td>AI Act</td><td>De Europese AI-verordening wordt gefaseerd van kracht. AI voor risicobeoordeling en prijsstelling van natuurlijke personen bij levens- en ziektekostenverzekeringen geldt als hoog risico, met eisen aan onder meer datakwaliteit, documentatie, menselijk toezicht en het voorkomen van discriminatie.</td><td>Een externe referentie om uitkomsten van modellen per doelgroep naast de markt te leggen, en onze AI-monitor in het advies.</td></tr>
         <tr><td>DORA</td><td>Sinds 17 januari 2025 gelden Europese eisen voor digitale operationele weerbaarheid, onder meer voor verzekeraars en grotere verzekeringstussenpersonen, inclusief eisen aan ICT-leveranciers.</td><td>Onze leveranciersinformatie en beveiliging lichten we toe bij de offerte.</td></tr>
         <tr><td>European Accessibility Act</td><td>Sinds 28 juni 2025 gelden toegankelijkheidseisen voor bepaalde digitale diensten, wat ook online verkoop van verzekeringen kan raken. Zie onder meer <a href="https://www.adfiz.nl" target="_blank" rel="noopener">Adfiz</a>.</td><td>Benchmark van digitale klantreizen en meldkanalen, tegenover de markt.</td></tr>
         <tr><td>SIVI-standaarden</td><td>Gestandaardiseerde gegevensuitwisseling tussen kantoren, volmachten en verzekeraars (<a href="https://www.sivi.org" target="_blank" rel="noopener">SIVI</a>).</td><td>Basis voor onze uniforme definities van branches, dekkingen en mutaties.</td></tr>
@@ -324,7 +334,7 @@ html[data-productnamen="aan"] .gen{display:none}
       <li>Geen informatie over toekomstige of niet-openbare premies, provisies of acceptatiebeleid</li>
       <li>Afnemers wisselen via ons geen informatie onderling uit</li>
     </ul>
-    <p style="margin:24px 0 0"><a class="btn" href="index.html#contact">Stel uw vraag</a> <a class="btn ghost" href="voorbeeldrapport.html" style="color:var(--navy)!important;margin-left:8px">Bekijk het voorbeeldrapport</a></p>
+    <p style="margin:24px 0 0"><a class="btn" href="index.html?onderwerp=Vraag%20over%20data%2C%20methodologie%20of%20privacy#contact">Stel uw vraag</a> <a class="btn ghost" href="voorbeeldrapport.html" style="color:var(--navy)!important;margin-left:8px">Bekijk het voorbeeldrapport</a></p>
   </div>
 </section>
 </main>
