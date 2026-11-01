@@ -1,0 +1,602 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Assurantie-onderzoek.nl</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 26 28%22%3E%3Cpath d=%22M13 0l13 7v14l-13 7L0 21V7z%22 fill=%22%23ffcc00%22/%3E%3Cpath d=%22M11 12l6 9h-3.4l-6-9z%22 fill=%22%231e2533%22/%3E%3C/svg%3E">
+<link rel="canonical" href="https://assurantie-onderzoek.nl/">
+<meta name="theme-color" content="#1e2533">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nl_NL">
+<meta property="og:site_name" content="assurantie-onderzoek.nl">
+<meta property="og:title" content="Assurantie-onderzoek.nl: marktinformatie en onderzoek voor de assurantiebranche">
+<meta property="og:description" content="Marktinformatie voor verzekeraars, volmachtbedrijven en assurantiekantoren: positie, distributie, portefeuille, schadeafhandeling en claimonderzoek.">
+<meta property="og:url" content="https://assurantie-onderzoek.nl/">
+<meta name="description" content="Marktinformatie voor verzekeraars, volmachtbedrijven en assurantiekantoren: marktaandeel, distributie, klantprofiel, schadeafhandeling en claimonderzoek uit het intermediaire kanaal.">
+<style>
+:root{
+  --navy:#1e2533; --navy-2:#2b3345; --orange:#ffcc00; --orange-soft:#fff5cc;
+  --ink:#1b2535; --muted:#5b6678; --line:#e1e6ee; --bg:#f5f7fa; --card:#fff;
+  --pos:#1f8a5b; --neg:#c0392b; --c2:#8da9c4;
+  --r:14px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+a{color:var(--navy-2)}
+.wrap{max-width:1160px;margin:0 auto;padding:0 16px}
+header.top{background:var(--navy);color:#fff;position:sticky;top:0;z-index:10}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:16px}
+.logo{font-weight:800;letter-spacing:-.01em;font-size:1.1rem;color:#fff;text-decoration:none}
+.logo span{color:var(--orange)}
+nav a{color:#cfd8e6;text-decoration:none;margin-left:20px;font-size:.92rem}
+nav a:hover{color:#fff}
+nav{white-space:nowrap}
+nav a:not(.btn){margin-left:14px;font-size:.88rem}
+.logo{white-space:nowrap}
+@media(max-width:1240px){nav a:not(.btn){display:none}}
+@media(max-width:400px){header.top .btn{padding:7px 10px!important;font-size:.76rem!important}.logo{font-size:.88rem!important}}
+@media(max-width:480px){header.top .btn{padding:8px 12px;font-size:.82rem;margin-left:8px}header.top .wrap{gap:8px}.logo{font-size:.98rem}.logo svg{width:20px;height:22px;margin-right:6px!important}}
+.btn{display:inline-block;background:var(--orange);color:var(--navy) !important;padding:10px 18px;border-radius:999px;font-weight:600;text-decoration:none;border:0;cursor:pointer;font-size:.95rem}
+.btn.ghost{background:transparent;border:1.5px solid currentColor}
+.hero{background:linear-gradient(160deg,var(--navy) 0%,var(--navy-2) 100%);color:#fff;padding:72px 0 88px}
+.eyebrow{display:inline-block;font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#7a5c00}
+.hero .eyebrow,#contact .eyebrow,.kern .eyebrow{color:var(--orange)}
+.skip{position:absolute;left:-9999px;top:8px;z-index:100;background:var(--orange);color:var(--navy);padding:10px 16px;border-radius:8px;font-weight:700}
+.skip:focus{left:16px}
+:focus-visible{outline:3px solid #e0a800;outline-offset:2px;border-radius:4px}
+.hero h1{font-size:clamp(2rem,5vw,3.3rem);line-height:1.08;margin:.4em 0 .35em;letter-spacing:-.02em;max-width:820px}
+.hero p.lead{font-size:1.15rem;color:#d5deeb;max-width:680px;margin:0 0 28px}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap}
+.hero .ctas .ghost{color:#fff !important}
+.aud{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:-48px}
+@media(max-width:1000px){.aud{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.aud{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px}
+.aud .card{box-shadow:0 8px 28px rgba(30,37,51,.10)}
+.aud h3{margin:.2em 0 .3em;font-size:1.1rem}
+.aud p{margin:0;color:var(--muted);font-size:.95rem}
+.tag{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:var(--orange-soft);color:#6b5200;padding:3px 9px;border-radius:999px}
+section{padding:72px 0}
+section h2{font-size:clamp(1.6rem,3.4vw,2.2rem);letter-spacing:-.015em;margin:.25em 0 .4em;line-height:1.15}
+section p.intro{color:var(--muted);max-width:720px;margin:0 0 32px;font-size:1.05rem}
+.grid6{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:860px){.grid6{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.grid6{grid-template-columns:1fr}}
+.feat .num{width:34px;height:34px;border-radius:10px;background:var(--navy);color:#fff;display:grid;place-items:center;font-weight:700;margin-bottom:10px}
+.feat h3{margin:0 0 .3em;font-size:1.05rem}
+.feat p{margin:0;color:var(--muted);font-size:.94rem}
+
+/* tables */
+table{width:100%;border-collapse:collapse;font-size:.9rem}
+th{text-align:left;font-size:.74rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:600;border-bottom:1px solid var(--line);padding:8px 6px}
+td{padding:8px 6px;border-bottom:1px solid var(--line);vertical-align:top}
+.tablewrap{overflow-x:auto}
+.cats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+@media(max-width:1000px){.cats{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.cats{grid-template-columns:1fr}}
+.cat{border-top:4px solid var(--orange)}
+.cat h3{margin:0 0 .5em;font-size:1.02rem}
+.cat ul{margin:0;padding-left:18px;color:var(--muted);font-size:.9rem}
+.cat li{margin:.3em 0}
+.cat.wide{grid-column:1/-1}
+.cats.q{grid-template-columns:repeat(3,1fr)}
+@media(max-width:1000px){.cats.q{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.cats.q{grid-template-columns:1fr}}
+.cat.wide ul{columns:2;column-gap:32px}
+@media(max-width:760px){.cat.wide ul{columns:1}}
+.flow{display:flex;align-items:stretch;gap:8px;flex-wrap:wrap}
+.flow .step{flex:1 1 120px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 12px;text-align:center;font-weight:700;color:var(--navy);display:flex;flex-direction:column;justify-content:center}
+.flow .step small{display:block;font-weight:500;color:var(--muted);font-size:.78rem;margin-top:4px}
+.flow .step.hl{background:var(--orange);border-color:var(--orange)}
+.flow .step.hl small{color:var(--navy)}
+.flow .arr{align-self:center;color:var(--muted);font-size:1.3rem}
+@media(max-width:760px){.flow{flex-direction:column}.flow .arr{transform:rotate(90deg)}}
+/* offer */
+.offer{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+@media(max-width:1180px){.offer{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:1000px){.offer{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.offer{grid-template-columns:1fr}}
+@media(max-width:960px){.offer{grid-template-columns:1fr 1fr}}
+@media(max-width:760px){.offer{grid-template-columns:1fr}}
+.offer .card h3{margin:.3em 0}
+.offer ul{padding-left:18px;margin:.6em 0 0;color:var(--muted)}
+.offer li{margin:.25em 0}
+.offer .card.hl{border:2px solid var(--orange)}
+
+.checks{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+@media(max-width:760px){.checks{grid-template-columns:1fr}}
+.checks li{padding-left:28px;position:relative;font-weight:600}
+.checks li::before{content:"";position:absolute;left:0;top:3px;width:18px;height:18px;border-radius:50%;background:var(--orange)}
+.checks li::after{content:"";position:absolute;left:6px;top:7px;width:5px;height:9px;border:solid var(--navy);border-width:0 2px 2px 0;transform:rotate(45deg)}
+.wp{display:grid;grid-template-columns:1.6fr 1fr;gap:28px;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:32px;border-top:4px solid var(--orange)}
+@media(max-width:860px){.wp{grid-template-columns:1fr;padding:22px}}
+.wp-cta{background:var(--orange-soft);border-radius:12px;padding:22px;align-self:start}
+.checks.one{grid-template-columns:1fr}
+.checks.one li{font-weight:500;color:var(--ink)}
+.mission{margin-top:48px;text-align:center}
+.mission p{font-size:clamp(1.3rem,3vw,1.9rem);font-weight:800;letter-spacing:-.015em;color:var(--navy);margin:.3em auto 0;max-width:820px;line-height:1.25}
+.kern{display:grid;grid-template-columns:1.2fr 1fr;gap:24px;align-items:center;background:var(--navy);color:#fff;border-radius:var(--r);padding:28px;margin-bottom:16px}
+@media(max-width:860px){.kern{grid-template-columns:1fr}}
+.kern h3{margin:.4em 0 .3em;font-size:1.4rem;color:#fff}
+.kern p{margin:0;color:#d5deeb}
+.funnel{display:flex;flex-direction:column;gap:8px;align-items:center}
+.funnel>div{background:var(--orange);color:var(--navy);font-weight:800;text-align:center;padding:12px;border-radius:10px}
+.funnel small{display:block;font-weight:500;font-size:.78rem}
+.funnel .f1{width:100%}.funnel .f2{width:78%}.funnel .f3{width:56%}
+footer a{color:#ffcc00}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin-bottom:10px}
+.faq summary{cursor:pointer;font-weight:700;color:var(--navy)}
+.faq details p{margin:.6em 0 0;color:var(--muted)}
+/* EBA */
+@media(min-width:700px){.eba td:first-child{white-space:nowrap}}
+.eba td:first-child{font-weight:600;color:var(--navy)}
+.callout{border-left:4px solid var(--orange);background:#fff;padding:14px 18px;border-radius:0 10px 10px 0;margin-top:18px;font-size:.92rem;color:var(--muted)}
+.method{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+@media(max-width:760px){.method{grid-template-columns:1fr}}
+.method h3{margin:0 0 .3em;font-size:1.02rem}
+.method p{margin:0;color:var(--muted);font-size:.93rem}
+.people{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:900px;margin:0 auto;text-align:left}
+@media(max-width:760px){.people{grid-template-columns:1fr}}
+.person{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:var(--r);padding:20px}
+.person h3{margin:0 0 8px;font-size:1.05rem;color:#fff}
+.person a{display:block;color:#d5deeb;text-decoration:none;font-size:.92rem;margin-top:4px;word-break:break-all}
+.person a:hover{color:#ffcc00}
+footer{background:var(--navy);color:#b9c5d6;padding:40px 0;font-size:.88rem}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+#contact{background:var(--navy-2);color:#fff;text-align:center}
+#contact p{color:#d5deeb;max-width:640px;margin:0 auto 24px}
+.price{font-size:1.7rem;font-weight:800;color:var(--navy);letter-spacing:-.02em;margin:.2em 0 .4em;white-space:nowrap}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">Naar de inhoud</a>
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#" aria-label="assurantie-onderzoek.nl, een activiteit van Blinqx"><svg width="26" height="28" viewBox="0 0 26 28" aria-hidden="true" style="vertical-align:-7px;margin-right:8px"><path d="M13 0l13 7v14l-13 7L0 21V7z" fill="#ffcc00"/><path d="M11 12l6 9h-3.4l-6-9z" fill="#1e2533"/></svg>assurantie-<span>onderzoek</span>.nl</a>
+    <nav>
+      <a href="#vragen">Uw vragen</a>
+      <a href="#bron">Onze data</a>
+            <a href="#onderzoek">Benchmarks</a>
+      <a href="#schade">Schade &amp; claims</a>
+      <a href="#aanbod">Aanbod</a>
+      <a href="#regelgeving">Regelgeving</a>
+      <a href="#monitor">Monitor</a>
+      <a href="#contact" class="btn">Offerte aanvragen</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<div class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Marktinformatie en onderzoek voor de assurantiebranche</span>
+    <h1>Dé plek waar u alles vindt over de assurantiemarkt.</h1>
+    <p class="lead" style="color:#fff;font-weight:600;margin-bottom:12px">Hier doet u benchmarkonderzoek en analyses: zie waar u staat, per maand, per branche, per assurantiekantoor en per klantprofiel. Van offerte en polis tot schademelding en afwikkeling.</p>
+    <p class="lead"><strong style="color:#ffcc00">Wij zien offertes, aanvragen, polissen, mutaties en schademeldingen uit het intermediaire kanaal</strong>, omdat assurantiekantoren en volmachtbedrijven werken met de advies-, administratie- en CRM-software van Blinqx. Assurantie-onderzoek.nl is het onderzoeksbureau van Blinqx. Wij maken van die data stuurinformatie: een eenmalig rapport, doorlopend inzicht of onderzoek op maat, ook over schadeafhandeling en claimonderzoek.</p>
+    <div class="ctas">
+      <a href="#aanbod" class="btn">Bekijk het aanbod</a>
+      <a href="#schade" class="btn ghost">Schade &amp; claimonderzoek</a>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="aud">
+    <div class="card"><span class="tag">Schadeverzekeraars</span><h3>Positie en distributie</h3><p>Uw aandeel in offertes, aanvragen en nieuwe polissen per branche, de trend door het jaar en uw aandeel bij elk assurantiekantoor.</p></div>
+    <div class="card"><span class="tag">Leven &amp; inkomen</span><h3>AOV, ORV en verzuim</h3><p>Uw aandeel in arbeidsongeschiktheids-, overlijdensrisico- en verzuimverzekeringen, met het klantprofiel per kantoor en per beroepsklasse.</p></div>
+    <div class="card"><span class="tag">Volmachtbedrijven</span><h3>Uw volmachtportefeuille</h3><p>Instroom, royementen, premieontwikkeling en schadelast van uw volmachten, afgezet tegen de markt en tegen andere gevolmachtigden, ook als onderbouwing bij uw volmachtaudit.</p></div>
+    <div class="card"><span class="tag">Assurantiekantoren</span><h3>Uw kantoor in beeld</h3><p>Trends in uw portefeuille: nieuwe polissen, mutaties en schades per maatschappij en per branche, en hoe u zich verhoudt tot vergelijkbare kantoren.</p></div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="mission">
+    <span class="eyebrow">Ons doel</span>
+    <p>Marktinformatie en onderzoek voor verzekeraars, volmachtbedrijven en assurantie-intermediairs.</p>
+  </div>
+</div>
+
+<section id="inzichten">
+  <div class="wrap">
+    <span class="eyebrow">Wat u ziet</span>
+    <h2>Uw positie, altijd afgezet tegen de markt</h2>
+    <p class="intro">Voor schadeverzekeraars, leven- en inkomensverzekeraars, volmachtbedrijven en assurantiekantoren. Bij elk cijfer ziet u ook het marktgemiddelde en het verschil daarmee.</p>
+    <div class="kern">
+      <div>
+        <span class="tag">Kerngetal</span>
+        <h3>Conversie in het advies</h3>
+        <p>Een kerngetal dat al bij de offerte begint: hoe vaak uw premie wordt opgevraagd, hoe vaak dat leidt tot een aanvraag, en hoe vaak die aanvraag een lopende polis wordt. Elke maand, per branche, voor uw eigen positie en tegenover de markt.</p>
+      </div>
+      <div class="funnel" aria-label="Offerte, aanvraag, polis">
+        <div class="f1">Offerte<small>uw premie wordt vergeleken</small></div>
+        <div class="f2">Aanvraag<small>de adviseur kiest u</small></div>
+        <div class="f3">Polis<small>de verzekering loopt</small></div>
+      </div>
+    </div>
+    <div class="kern">
+      <div>
+        <span class="tag">Kerngetal</span>
+        <h3>Kwaliteit van de schadeafhandeling</h3>
+        <p>Van melding tot uitkering: hoe snel een schade in behandeling wordt genomen, hoe vaak expertise of onderzoek wordt ingezet, en hoe lang het duurt tot afwikkeling. Gemeten in het kanaal waar de klant zijn schade meldt: bij het assurantiekantoor.</p>
+      </div>
+      <div class="funnel" aria-label="Melding, behandeling, afwikkeling">
+        <div class="f1">Melding<small>de klant meldt de schade</small></div>
+        <div class="f2">Behandeling<small>dekking, expertise, onderzoek</small></div>
+        <div class="f3">Afwikkeling<small>uitkering of afwijzing</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="vragen">
+  <div class="wrap">
+    <span class="eyebrow">Uw vragen</span>
+    <h2>Wat wilt u als verzekeraar allemaal weten?</h2>
+    <p class="intro">Dit zijn de vragen die wij voor verzekeraars en volmachtbedrijven beantwoorden, steeds voor uw eigen positie en afgezet tegen de markt.</p>
+    <div class="cats q">
+      <div class="card cat"><h3>Commercieel</h3><ul><li>Groeit of krimpt mijn aandeel in nieuwe polissen, en in welke branches?</li><li>Waar win en waar verlies ik ten opzichte van de markt?</li><li>Hoe vaak word ik geoffreerd, en hoe vaak leidt dat tot een aanvraag en een polis?</li><li>Bij welke premieverschillen kiest de adviseur voor een ander?</li></ul></div>
+      <div class="card cat"><h3>Distributie</h3><ul><li>Bij welke assurantiekantoren ben ik sterk, en waar zit groeiruimte?</li><li>Hoe afhankelijk ben ik van een klein aantal kantoren of volmachten?</li><li>Welke kantoren stijgen of dalen in mijn productie?</li><li>Hoe sta ik ervoor per regio en per kantoorgrootte?</li></ul></div>
+      <div class="card cat"><h3>Klant &amp; doelgroep</h3><ul><li>Wie zijn mijn verzekerden: particulier of zakelijk, leeftijd, huishouden, sector?</li><li>Bereik ik zzp'ers, mkb en starters net zo goed als de markt?</li><li>Welke beroepsklassen sluiten bij mij een AOV af, en welke niet?</li><li>Welke doelgroepen groeien in het advies?</li></ul></div>
+      <div class="card cat"><h3>Product &amp; premie</h3><ul><li>Hoe verhoudt mijn gepubliceerde premie zich tot de marktbandbreedte?</li><li>Wat deed mijn laatste premie- of voorwaardenwijziging met mijn aandeel, achteraf gezien?</li><li>Welke dekkingen, eigen risico's en clausules kiezen klanten bij mij en in de markt?</li><li>Hoe vaak wordt een pakketpolis gekozen boven losse polissen?</li></ul></div>
+      <div class="card cat"><h3>Portefeuille &amp; royementen</h3><ul><li>Hoeveel polissen vertrekken er bij mij, en naar welke branche of kanaal?</li><li>Wat is de oorzaak: premie, schadeafhandeling, of een verhuizing van het kantoor?</li><li>Hoe vaak leidt een premieverhoging bij prolongatie tot oversluiten?</li><li>Hoe ontwikkelen de mutaties in mijn lopende portefeuille zich?</li></ul></div>
+      <div class="card cat"><h3>Schade &amp; afhandeling</h3><ul><li>Hoe snel neem ik een schade in behandeling, vergeleken met de markt?</li><li>Hoe vaak schakel ik een schade-expert in, en wat doet dat met de doorlooptijd?</li><li>Hoeveel schades wijs ik af, en hoe vaak volgt een klacht of contra-expertise?</li><li>Hoe beoordelen adviseurs mijn schadeafhandeling?</li></ul></div>
+      <div class="card cat"><h3>Claimonderzoek &amp; fraude</h3><ul><li>Hoe vaak start ik een toedracht- of claimonderzoek, en bij welke branches?</li><li>Welke signalen gaan vaker vooraf aan een onderzoek in de markt dan bij mij?</li><li>Hoeveel onderzoeken leiden tot een gewijzigde uitkomst?</li><li>Hoe ontwikkelt het aantal herhaalclaims per branche zich?</li></ul></div>
+      <div class="card cat"><h3>Regelgeving &amp; ESG</h3><ul><li>Kan ik met marktdata onderbouwen dat mijn product past bij de doelgroep (PARP)?</li><li>Hoe ontwikkelt de klimaatschade (storm, hagel, wateroverlast) zich in mijn portefeuille?</li><li>Welke referentiedata kan ik gebruiken voor mijn ESG- en Solvency II-rapportage?</li><li>Sluiten mijn verzekerden de dekking af die bij hun risico past?</li></ul></div>
+      <div class="card cat"><h3>Vooruitkijken</h3><ul><li>Hoeveel nieuwe polissen kan ik de komende drie maanden verwachten?</li><li>Zie ik een daling in offertes al voordat mijn productie daalt?</li><li>Welke prolongaties staan de komende maanden onder druk?</li></ul></div>
+      <div class="card cat wide"><h3>Uw intermediairs: wat zij offreren, aanvragen en melden</h3><ul>
+        <li>Bij welke kantoren word ik vaak geoffreerd, maar weinig aangevraagd?</li>
+        <li>Valt een kantoor bij mij af op premie, op voorwaarden of op acceptatie?</li>
+        <li>Welke branches en dekkingen offreert een kantoor bij mij, tegenover de markt?</li>
+        <li>Hoe lang duurt het per kantoor van offerte naar aanvraag en polis?</li>
+        <li>Welke kantoren zijn gespecialiseerd in de doelgroepen waar ik zwak ben, zoals zzp, agrarisch, transport of vastgoed?</li>
+        <li>Welke kantoren groeien, welke zijn nieuw, en welke gebruiken mij steeds minder?</li>
+        <li>Bij welke kantoren verliest u lopende polissen aan andere maatschappijen?</li>
+        <li>Hoe ervaren kantoren uw schadeafhandeling, en waar leidt dat tot het verplaatsen van portefeuille?</li>
+        <li>Hoeveel van uw productie komt van een paar kantoren, en hoe kwetsbaar maakt u dat?</li>
+        <li>Welke kantoren melden relatief veel of weinig schade bij u, gecorrigeerd voor de portefeuille?</li>
+      </ul></div>
+    </div>
+    <p style="margin:20px 0 0"><a class="btn" href="#contact">Stel uw vraag</a></p>
+  </div>
+</section>
+
+<section id="bron">
+  <div class="wrap">
+    <span class="eyebrow">Data uit de bron</span>
+    <h2>Direct inzicht in offertes, polissen en schades</h2>
+    <p class="intro">Assurantie-onderzoek.nl is een activiteit van Blinqx. Assurantiekantoren en volmachtbedrijven gebruiken de advies-, administratie- en CRM-software van Blinqx. Daardoor zien wij wat er in het advies gebeurt voordat een aanvraag bij een verzekeraar binnenkomt, wat er een lopende polis wordt, en wat er gebeurt als de klant schade meldt. Wat u ontvangt is altijd geaggregeerd en laat uw eigen positie tegenover de markt zien.</p>
+    <div class="flow" aria-label="Van klant tot verzekeraar">
+      <div class="step">Klant</div><div class="arr">→</div>
+      <div class="step">Assurantiekantoor</div><div class="arr">→</div>
+      <div class="step hl">Advies-, administratie- &amp; CRM-software<small>hier ontstaat de data</small></div><div class="arr">→</div>
+      <div class="step">Aanvraag &amp; polis<small>via SIVI-berichten</small></div><div class="arr">→</div>
+      <div class="step">Verzekeraar of volmacht<small>ziet alleen eigen polissen</small></div><div class="arr">→</div>
+      <div class="step">Schademelding<small>ook in beeld</small></div>
+    </div>
+    <div class="cats" style="margin-top:24px">
+      <div class="card cat"><h3>Welke offertes worden gemaakt</h3><ul><li>Premievergelijkingen die de adviseur maakt</li><li>Welke maatschappijen en dekkingen worden meegenomen</li><li>Welke eigen risico's en clausules worden gekozen</li></ul></div>
+      <div class="card cat"><h3>Welke aanvragen niet naar u gaan</h3><ul><li>Hoe vaak u wel in een vergelijking zat, maar de aanvraag niet bij u terechtkwam</li><li>In welke branches en bij welke kantoren dat gebeurt</li><li>Geaggregeerd, zonder te tonen naar welke concurrent de aanvraag ging</li></ul></div>
+      <div class="card cat"><h3>Uw aandeel in het hele netwerk</h3><ul><li>Gemeten over alle verzekeraars en volmachten in het netwerk</li><li>Per maand, kwartaal en jaar, per branche</li><li>Per segment, regio en kantoor, tegenover de markt of een anonieme groep vergelijkbare partijen</li></ul></div>
+      <div class="card cat"><h3>Wat er met de polis gebeurt</h3><ul><li>Mutaties, prolongaties en royementen</li><li>Schademeldingen en de doorlooptijd tot afwikkeling</li><li>Combinaties van polissen per klant, zoals pakketten en kruisverkoop</li></ul></div>
+    </div>
+    <h3 style="margin:32px 0 6px;font-size:1.15rem">Wat wij meer weten dan u als verzekeraar zelf</h3>
+    <p style="color:var(--muted);margin:0 0 12px;max-width:760px">Een verzekeraar ziet alleen wat er bij hem binnenkomt. Wij zien ook wat er vóór de aanvraag gebeurt, wat er naar de rest van de markt gaat, en hoe uw schadeafhandeling zich verhoudt tot die van anderen.</p>
+    <div class="tablewrap">
+    <table class="eba"><thead><tr><th>Onderwerp</th><th>Wat u zelf ziet</th><th>Wat assurantie-onderzoek.nl ziet</th></tr></thead><tbody>
+      <tr><td>Offertes</td><td>Weinig: u ziet een klant pas bij de aanvraag</td><td>Elke premievergelijking waarin u wel of niet voorkomt</td></tr>
+      <tr><td>Verloren aanvragen</td><td>Niets: een klant die elders afsluit, ziet u nooit</td><td>Hoe vaak u wel in beeld was, maar de aanvraag niet bij u terechtkwam (geaggregeerd)</td></tr>
+      <tr><td>Marktaandeel</td><td>Alleen uw eigen productie, zonder noemer</td><td>Uw aandeel in het hele netwerk, per branche, maand, regio en kantoor</td></tr>
+      <tr><td>Royementen</td><td>Dat een polis vertrekt</td><td>Waar de klant naartoe gaat (als groep) en of dat bij prolongatie of na een schade gebeurt</td></tr>
+      <tr><td>Assurantiekantoren</td><td>Uw productie per kantoor</td><td>Uw aandeel bij elk kantoor, dus ook het deel dat naar de markt gaat</td></tr>
+      <tr><td>Klantprofiel</td><td>Alleen uw eigen verzekerden</td><td>Uw verzekerden naast alle klanten in het advies: particulier, zakelijk, sector, beroepsklasse</td></tr>
+      <tr><td>Schadeafhandeling</td><td>Uw eigen doorlooptijden</td><td>Uw doorlooptijd, expertise-inzet en afwijzingen tegenover de markt</td></tr>
+      <tr><td>Premie</td><td>Uw eigen tarieven</td><td>Uw gepubliceerde premie tegenover de bandbreedte van alle aanbieders, achteraf</td></tr>
+    </tbody></table>
+    </div>
+    <h3 style="margin:32px 0 6px;font-size:1.15rem">Aanvullend op publieke bronnen</h3>
+    <p style="color:var(--muted);margin:0 0 12px;max-width:760px">Het Verbond van Verzekeraars, DNB, CBS en Adfiz publiceren waardevolle cijfers over de verzekeringsmarkt en het advies. Die laten de markt als geheel zien. Assurantie-onderzoek.nl gaat een niveau dieper: per partij, per assurantiekantoor en per klantprofiel.</p>
+    <div class="tablewrap">
+    <table class="eba">
+      <thead><tr><th>Publieke bron</th><th>Wat het laat zien</th><th>Wat assurantie-onderzoek.nl toevoegt</th></tr></thead>
+      <tbody>
+        <tr><td><a href="https://www.verzekeraars.nl" target="_blank" rel="noopener">Verbond van Verzekeraars</a></td><td>Brancheoverzichten van premie, schadelast en marktontwikkeling, en thema's als klimaatschade en verzekeringscriminaliteit.</td><td>Het aandeel per verzekeraar in de nieuwe productie via het intermediair, per maand, branche en kantoor.</td></tr>
+        <tr><td><a href="https://www.dnb.nl/statistieken/dashboards/verzekeraars/" target="_blank" rel="noopener">DNB: dashboard verzekeraars</a></td><td>Balans-, premie- en solvabiliteitsgegevens van verzekeraars op geaggregeerd niveau.</td><td>Wat er in het advies gebeurt vóór de polis: offertes, verloren aanvragen en de kantoren via welke de klant komt.</td></tr>
+        <tr><td><a href="https://www.adfiz.nl" target="_blank" rel="noopener">Adfiz: Advies in Cijfers</a></td><td>Een naslagwerk over de financiële adviesmarkt: aantallen kantoren, klanttevredenheid en ontwikkelingen in het advies.</td><td>De productie en schadeafhandeling per maatschappij, zoals die in de software van de kantoren zichtbaar is.</td></tr>
+        <tr><td><a href="https://www.cbs.nl" target="_blank" rel="noopener">CBS</a></td><td>Gegevens over huishoudens, bedrijven, zzp'ers en voertuigen per regio.</td><td>Hoe goed uw portefeuille die bevolking dekt: welke doelgroepen en regio's u wel en niet bereikt.</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="callout">Alle analyses zijn geaggregeerd en gaan over het netwerk van kantoren dat met de software van Blinqx werkt. Ze zijn niet herleidbaar tot individuele consumenten, ondernemingen of adviseurs, en we delen geen concurrentiegevoelige details van andere partijen.</div>
+  </div>
+</section>
+
+<section id="rapportages" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <span class="eyebrow">Overzicht</span>
+    <h2>Onze rapportages bieden inzicht in:</h2>
+    <p class="intro">Verzekeraars, volmachtbedrijven en kantoren kunnen informatie opvragen op allerlei gebieden. Elk onderwerp kan los worden afgenomen, gecombineerd in een marktrapport, of als onderdeel van doorlopend inzicht.</p>
+    <div class="cats">
+      <div class="card cat"><h3>Markt &amp; positie</h3><ul><li>Aandeel in nieuwe polissen per maand, kwartaal en jaar</li><li>Per branche: auto, wonen, aansprakelijkheid, rechtsbijstand, zakelijk, AOV, ORV, verzuim</li><li>Ranglijst en positie tegenover concurrenten als groep</li><li>Trend- en seizoensanalyse</li><li>Regionale spreiding</li></ul></div>
+      <div class="card cat"><h3>Distributie &amp; intermediair</h3><ul><li>Aandeel per assurantiekantoor</li><li>Index tegenover uw marktaandeel per kantoor</li><li>Stijgers en dalers in uw distributie</li><li>Concentratie bij de grootste kantoren en volmachten</li><li>Spreiding over ketens, serviceproviders en formules</li></ul></div>
+      <div class="card cat"><h3>Klantprofiel</h3><ul><li>Particulier, zzp en mkb</li><li>Leeftijdsklassen en huishouden</li><li>Sector en SBI-code bij zakelijke klanten</li><li>Beroepsklasse bij AOV</li><li>Aantal polissen per klant</li></ul></div>
+      <div class="card cat"><h3>Product &amp; dekking</h3><ul><li>Gekozen dekkingen en verzekerde bedragen</li><li>Eigen risico en clausules</li><li>Pakket of losse polis</li><li>Wachttijden en eindleeftijd bij AOV</li><li>Contractduur en betaaltermijn</li></ul></div>
+      <div class="card cat"><h3>Portefeuille</h3><ul><li>Instroom, mutaties en royementen</li><li>Royementsreden waar vastgelegd</li><li>Effect van prolongatie en premieherziening</li><li>Portefeuilleverschuivingen tussen maatschappijen</li><li>Bestandsoverdrachten tussen kantoren</li></ul></div>
+      <div class="card cat"><h3>Premie &amp; voorwaarden</h3><ul><li>Openbaar gepubliceerde premies en voorwaarden van alle aanbieders, gestructureerd</li><li>Uw positie tegenover de marktbandbreedte, met vertraging</li><li>Historie van premie- en voorwaardenwijzigingen</li><li>Relatie tussen uw premieniveau en uw eigen aandeel, achteraf</li></ul></div>
+      <div class="card cat"><h3>Schade &amp; afhandeling</h3><ul><li>Schademeldingen per branche en oorzaak</li><li>Doorlooptijd van melding tot afwikkeling</li><li>Inzet van schade-expertise en contra-expertise</li><li>Afwijzingen en uitkeringsklassen</li><li>Schadefrequentie per kantoor en klantprofiel</li></ul></div>
+      <div class="card cat"><h3>Risico &amp; regelgeving</h3><ul><li>Marktreferentie voor productreview en doelgroepbepaling (PARP)</li><li>Klimaatschade per regio voor ESG- en ORSA-analyses</li><li>Signalen van onderverzekering</li><li>Rapportages voor risicocomité en directie</li></ul></div>
+      <div class="card cat wide"><h3>Marketing &amp; doelgroepen</h3><ul><li>Doelgroepen waar u onder- of oververtegenwoordigd bent: zzp, starters, mkb, agrarisch, transport</li><li>Van offerte naar aanvraag: in welke fase u klanten verliest</li><li>Regio's en kantoren met de meeste groeiruimte</li><li>Effect van uw eigen premie- of acceptatiewijziging op uw aandeel, achteraf geanalyseerd</li><li>Hoe uw positie zich ontwikkelt rond campagnes en productintroducties</li><li>Kruisverkoop: welke polissen samen worden afgesloten</li><li>Doelgroepprofielen voor uw campagnes</li><li>Timing: in welke maanden welke branches het meest actief zijn</li></ul></div>
+    </div>
+    <div class="callout">Welke onderwerpen en uitsplitsingen beschikbaar zijn, hangt af van de gegevens die in de software zijn vastgelegd en van de minimale aantallen per segment. In de offerte stemmen we samen af wat u precies ontvangt.</div>
+  </div>
+</section>
+
+<section id="onderzoek">
+  <div class="wrap">
+    <span class="eyebrow">Onderzoek in de branche</span>
+    <h2>Drie soorten onderzoek in de verzekeringswereld</h2>
+    <p class="intro">Onderzoek in de assurantiebranche heeft verschillende doelen: een schadeclaim controleren, een risico beoordelen bij de aanvraag, of de sector als geheel in beeld brengen. Assurantie-onderzoek.nl levert de marktdata die bij alle drie past, altijd geaggregeerd.</p>
+    <div class="grid6">
+      <div class="card feat"><div class="num">1</div><h3>Claim- en toedrachtonderzoek</h3><p>Bij twijfel over de toedracht van een schade, zoals brand, een aanrijding of diefstal. Met gesprekken, registers, technisch onderzoek en soms voorspellende software, binnen de Gedragscode Persoonlijk Onderzoek. <a href="#schade">Lees meer</a></p></div>
+      <div class="card feat"><div class="num">2</div><h3>Acceptatie en medisch onderzoek</h3><p>Bij levens- en arbeidsongeschiktheidsverzekeringen kan een gezondheidsverklaring of medische keuring nodig zijn. Daarvoor gelden wettelijke grenzen, bijvoorbeeld de vragengrens voor erfelijkheidsonderzoek. Wij meten alleen hoe vaak en hoe lang acceptatie duurt, nooit medische gegevens.</p></div>
+      <div class="card feat"><div class="num">3</div><h3>Sectoronderzoek</h3><p>DNB onderzoekt onder meer risicobeheer en het gebruik van AI bij risico-inschatting en premiestelling. De AFM publiceert onderzoek naar gedrag en zorgplicht. Het Verbond van Verzekeraars doet sectoronderzoek via het Data Analytics Centre. Wij voegen daar de blik uit het intermediaire kanaal aan toe.</p></div>
+    </div>
+
+    <h3 style="margin:32px 0 6px;font-size:1.15rem">Bestaande benchmarks, en wat wij toevoegen</h3>
+    <p style="color:var(--muted);margin:0 0 12px;max-width:760px">Er zijn waardevolle benchmarks naar verzekeraars. Ze meten duurzaamheid, digitale processen, merkbeleving of de zakelijke markt. Wij meten uw positie in het advies zelf: wat adviseurs offreren, aanvragen en melden.</p>
+    <div class="tablewrap">
+    <table class="eba">
+      <thead><tr><th>Benchmark</th><th>Wat het meet</th><th>Wat assurantie-onderzoek.nl toevoegt</th></tr></thead>
+      <tbody>
+        <tr><td><a href="https://www.verzekeraars.nl/branche/data-analytics-en-onderzoek" target="_blank" rel="noopener">Verbond: Data Analytics Centre</a></td><td>Sectoronderzoek, trends en dashboards op basis van gegevens van verzekeraars.</td><td>Het intermediaire kanaal per kantoor, inclusief offertes en verloren aanvragen.</td></tr>
+        <tr><td><a href="https://vbdo.nl/ons-werk/benchmarks/" target="_blank" rel="noopener">VBDO Duurzaamheidsbenchmark</a></td><td>Het verantwoord en duurzaam beleggingsbeleid van de grootste verzekeraars.</td><td>De duurzaamheid aan de verzekeringskant: klimaatschade en verduurzaming in de portefeuille.</td></tr>
+        <tr><td><a href="https://benchmark.novulo.com/" target="_blank" rel="noopener">Digitale Verzekeringsbenchmark</a></td><td>Digitale processen en klantgemak bij schadeverzekeraars, volmachten en intermediairs.</td><td>Het effect in de markt: wat de doorlooptijd van aanvraag en schade doet met uw aandeel.</td></tr>
+        <tr><td><a href="https://www.verzekeraars.nl/publicaties/actueel/digitale-klantreizen-verzekeraars-sterk-verdere-verbetering-mogelijk" target="_blank" rel="noopener">Benchmark digitale klantreizen</a></td><td>Internationale vergelijking van digitale klantreizen bij verzekeraars: informatie, online afsluiten, claims indienen en volgen, selfservice en AI.</td><td>De klantreis via de adviseur: van offerte tot polis en van melding tot afwikkeling.</td></tr>
+        <tr><td><a href="https://www.multiscope.nl/diensten/marktcijfers/nationale-benchmark-autoverzekeringen.html" target="_blank" rel="noopener">Nationale Benchmark Autoverzekeringen</a></td><td>Reclame, naamsbekendheid, NPS en loyaliteit onder consumenten.</td><td>Het keuzegedrag van de adviseur: wanneer uw autopolis wordt geoffreerd en gekozen.</td></tr>
+        <tr><td><a href="https://www.marsh.com/nl/services/international-placement-services/insights/national-benchmark-general-insurance.html" target="_blank" rel="noopener">Marsh: National Benchmark General Insurance</a></td><td>Risico's, kosten en premieontwikkeling in de zakelijke schademarkt.</td><td>De mkb- en zzp-markt via het assurantiekantoor, per branche en sector.</td></tr>
+        <tr><td><a href="https://www.dnb.nl/nieuws-voor-de-sector/toezicht-2025/q2/resultaten-dnb-benchmarkstudie-aov-fma/" target="_blank" rel="noopener">DNB: Benchmarkstudie AOV</a></td><td>Toezichtonderzoek naar arbeidsongeschiktheidsverzekeringen.</td><td>De vraag naar AOV in het advies: beroepsklassen, wachttijden en conversie.</td></tr>
+        <tr><td><a href="https://www.letselschade.nu/letselschadebranche/benchmark-slechts-drie-van-48-verzekeraars-en-labels-bieden-online-letselschademelding-voor-slachtoffers/" target="_blank" rel="noopener">Benchmark online letselschademelding</a></td><td>Welke verzekeraars en labels slachtoffers de mogelijkheid bieden letselschade online te melden.</td><td>Het meldkanaal en de doorlooptijd van schades zoals die via het assurantiekantoor lopen.</td></tr>
+        <tr><td><a href="https://dfobv.nl" target="_blank" rel="noopener">DFO: Onderzoek serviceproviders</a></td><td>Hoe financieel adviseurs serviceproviders waarderen, afgezet tegen wat zij belangrijk vinden.</td><td>Het gedrag naast het oordeel: hoe waardering samenhangt met wat kantoren werkelijk aanvragen.</td></tr>
+        <tr><td><a href="https://www.pwc.nl/nl/actueel-en-publicaties/diensten-en-sectoren/verzekeraars/global-pricing-benchmark-dynamisch-pricen-is-in-opkomst.html" target="_blank" rel="noopener">PwC: Global Pricing Benchmark</a></td><td>Hoe ver verzekeraars zijn met pricing, zoals dynamisch prijzen.</td><td>Achteraf: wat uw premiewijziging deed met uw aandeel in het advies.</td></tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+</section>
+
+<section id="schade" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <span class="eyebrow">Schade &amp; claimonderzoek</span>
+    <h2>Wat is een assurantieonderzoek?</h2>
+    <p class="intro">In de branche betekent assurantieonderzoek ook: het onderzoek dat een verzekeraar, of een extern bureau in opdracht van de verzekeraar, instelt bij een schadeclaim, een uitkering of een aanvraag. Het doel is de toedracht van een schade vast te stellen, de aansprakelijkheid te controleren, of een vermoeden van verzekeringsfraude te onderzoeken. Wij maken dat onderzoek meetbaar: hoe vaak, waarom, en met welke uitkomst, tegenover de markt.</p>
+
+    <h3 style="margin:0 0 12px;font-size:1.15rem">Zo verloopt een schadeprocedure</h3>
+    <div class="flow" aria-label="Schadeprocedure">
+      <div class="step">Melding<small>via het kantoor of online</small></div><div class="arr">→</div>
+      <div class="step">Dossier &amp; dekking<small>schadebehandelaar controleert de polis</small></div><div class="arr">→</div>
+      <div class="step">Expertise<small>schade-expert, eventueel contra-expert</small></div><div class="arr">→</div>
+      <div class="step hl">Onderzoek<small>alleen als de claim vragen oproept</small></div><div class="arr">→</div>
+      <div class="step">Afwikkeling<small>met klant of hersteller</small></div>
+    </div>
+
+    <div class="cats" style="margin-top:24px">
+      <div class="card cat"><h3>Waarom een onderzoek</h3><ul><li>Toedracht: wat is er gebeurd en wie waren erbij betrokken?</li><li>Dekking: valt de schade onder de polis?</li><li>Aansprakelijkheid: wie draagt de schade?</li><li>Vermoeden van fraude: afwijkende signalen, hoge bedragen of tegenstrijdigheden, bij de aanvraag of bij de schade</li></ul></div>
+      <div class="card cat"><h3>Onderzoeksmethoden</h3><ul><li>Deskresearch: openbare registers zoals RDW, KvK en Kadaster, open bronnen en eerdere meldingen</li><li>Technisch onderzoek: brandonderzoek, ongevalsanalyse, braaksporen, notacontrole</li><li>Interviews met de verzekerde en getuigen</li><li>Persoonlijk onderzoek, alleen binnen strikte regels</li></ul></div>
+      <div class="card cat"><h3>Regels en privacy</h3><ul><li>De AVG en de Gedragscode Persoonlijk Onderzoek (GPO) van het Verbond van Verzekeraars</li><li>Het belang van de verzekeraar wordt altijd afgewogen tegen de privacy van de betrokkene</li><li>Een extern recherchebureau heeft een vergunning nodig onder de Wpbr</li><li>Schade-experts staan ingeschreven bij het NIVRE en volgen de Gedragscode schade-expertise-organisaties</li></ul></div>
+      <div class="card cat"><h3>Gevolgen bij vastgestelde fraude</h3><ul><li>Geen uitkering of vergoeding</li><li>Terugvordering van onderzoekskosten en uitgekeerde schade</li><li>Beëindiging van de verzekering</li><li>Registratie in het incidentenregister en bij Stichting CIS</li><li>Aangifte bij de politie</li></ul></div>
+    </div>
+
+    <h3 style="margin:32px 0 12px;font-size:1.15rem">Wat wij voor u meten</h3>
+    <div class="grid6">
+      <div class="card feat"><div class="num">1</div><h3>Schadebenchmark</h3><p>Uw doorlooptijd van melding tot afwikkeling, de inzet van expertise, het aandeel afwijzingen en het aantal klachten en contra-expertises, per branche en tegenover de markt.</p></div>
+      <div class="card feat"><div class="num">2</div><h3>Onderzoeksmonitor</h3><p>Hoe vaak u een toedracht- of claimonderzoek start, in welke branches en bij welke schadebedragen, en hoe vaak dat tot een andere uitkomst leidt. Altijd op portefeuilleniveau.</p></div>
+      <div class="card feat"><div class="num">3</div><h3>Signalen op portefeuilleniveau</h3><p>Patronen in herhaalclaims, meldingen kort na ingang van de polis en afwijkende schadefrequenties per segment. Een hulpmiddel voor uw fraudebeleid, geen oordeel over een individuele claim.</p></div>
+    </div>
+    <div class="callout"><strong>Afbakening.</strong> Assurantie-onderzoek.nl doet geen persoonlijk onderzoek naar individuele verzekerden en geeft geen oordeel over individuele claims. Wij leveren geaggregeerde inzichten over het schade- en onderzoeksproces. Voor onderzoek in een individueel dossier verwijzen wij naar een vergunninghoudend onderzoeksbureau of een schade-expert.</div>
+  </div>
+</section>
+
+<section id="aanbod">
+  <div class="wrap">
+    <span class="eyebrow">Aanbod</span>
+    <h2>Voor verzekeraars, volmachtbedrijven en assurantiekantoren</h2>
+    <p class="intro">Alle inzichten zijn als product te koop. U kunt beginnen met een rapport voor een vraag die nu speelt, of kiezen voor een maandelijks bijgewerkt dashboard waarmee u uw positie en portefeuille blijft volgen.</p>
+    <div class="offer">
+      <div class="card">
+        <span class="tag">Instap</span>
+        <h3>Positiescan</h3><div class="price">Op aanvraag</div>
+        <p style="color:var(--muted);margin:0">Een compacte eerste meting van uw positie in één branche over één kwartaal, met een bespreking van de uitkomsten.</p>
+        <ul>
+          <li>Uw aandeel in nieuwe polissen en de trend</li>
+          <li>Uw conversie: offerte, aanvraag en polis</li>
+          <li>Uw tien belangrijkste assurantiekantoren</li>
+          <li>Een samenvatting in één rapport, plus een presentatie van een uur</li>
+        </ul>
+      </div>
+      <div class="card">
+        <span class="tag">Eenmalig</span>
+        <h3>Marktrapport</h3><div class="price">Op aanvraag</div>
+        <p style="color:var(--muted);margin:0">Een momentopname over een periode en branches die u kiest, als PDF-rapport met toelichting.</p>
+        <ul>
+          <li>Aandeel per maand, kwartaal en periode, per branche</li>
+          <li>Ranglijst en trendanalyse</li>
+          <li>Klantprofiel en gekozen dekkingen</li>
+          <li>Premiepositie tegenover de markt, op basis van gepubliceerde premies</li>
+          <li>Methodologische verantwoording</li>
+        </ul>
+      </div>
+      <div class="card hl">
+        <span class="tag">Doorlopend</span>
+        <h3>Inzicht-abonnement</h3><div class="price">Op aanvraag</div>
+        <p style="color:var(--muted);margin:0">Een dashboard dat elke maand wordt bijgewerkt, met alerts bij duidelijke verschuivingen.</p>
+        <ul>
+          <li>Alles uit het marktrapport, elke maand bijgewerkt</li>
+          <li>Aandeel per kantoor, met signalering van stijgers en dalers</li>
+          <li>Royementen en portefeuilleverschuivingen</li>
+          <li>Kwartaalrapport voor uw risico- en directierapportage</li>
+          <li>Prognose van uw productie</li>
+        </ul>
+      </div>
+      <div class="card">
+        <span class="tag">Schade</span>
+        <h3>Schadebenchmark</h3><div class="price">Op aanvraag</div>
+        <p style="color:var(--muted);margin:0">Uw schadeafhandeling en claimonderzoek tegenover de markt en een anonieme vergelijkingsgroep.</p>
+        <ul>
+          <li>Doorlooptijden van melding tot afwikkeling</li>
+          <li>Inzet van expertise, contra-expertise en onderzoek</li>
+          <li>Afwijzingen, klachten en herhaalclaims</li>
+          <li>Het oordeel van kantoren over uw afhandeling</li>
+        </ul>
+      </div>
+      <div class="card">
+        <span class="tag">Benchmark</span>
+        <h3>Benchmarkonderzoek</h3><div class="price">Op aanvraag</div>
+        <p style="color:var(--muted);margin:0">Uw prestaties op een aantal kernindicatoren, vergeleken met een anonieme groep vergelijkbare aanbieders en met de totale markt.</p>
+        <ul>
+          <li>U kiest de vergelijkingsgroep, zoals grote verzekeraars, onderlinges, volmachten of nichespelers</li>
+          <li>Kernindicatoren zoals aandeel, aandeel per kantoor, royementen en schadeafhandeling</li>
+          <li>Een anonieme groep van minstens vijf partijen, zonder concurrenten bij naam</li>
+        </ul>
+      </div>
+      <div class="card">
+        <span class="tag">Maatwerk</span>
+        <h3>Onderzoek op maat</h3><div class="price">Op aanvraag</div>
+        <p style="color:var(--muted);margin:0">Ons onderzoeksteam beantwoordt uw specifieke vraag met onze data, eventueel aangevuld met eigen onderzoek.</p>
+        <ul>
+          <li>Doelgroeponderzoek, bijvoorbeeld naar zzp'ers of mkb</li>
+          <li>Onderzoek naar klimaatschade en verduurzaming</li>
+          <li>Onderzoek naar uw distributie en volmachten</li>
+          <li>Kwalitatief onderzoek onder adviseurs en klanten</li>
+        </ul>
+      </div>
+      <div class="card">
+        <span class="tag">Onderzoek</span>
+        <h3>Adviseursenquête</h3><div class="price">Op aanvraag</div>
+        <p style="color:var(--muted);margin:0">Een jaarlijks onderzoek naar hoe assurantie-adviseurs uw acceptatie, premie, voorwaarden, schadeafhandeling en accountmanagement beoordelen.</p>
+        <ul>
+          <li>Scores en open antwoorden, gekoppeld aan uw conversie</li>
+          <li>Alleen per groep gerapporteerd, nooit per individuele adviseur</li>
+        </ul>
+      </div>
+      <div class="card">
+        <span class="tag">Kantoren</span>
+        <h3>Kantoorabonnement</h3><div class="price">Op aanvraag</div>
+        <p style="color:var(--muted);margin:0">Een dashboard met de trends in de portefeuille van uw kantoor.</p>
+        <ul>
+          <li>Nieuwe polissen, mutaties en royementen per maand</li>
+          <li>Productie per maatschappij en per branche</li>
+          <li>Schademeldingen en doorlooptijden per maatschappij</li>
+          <li>Uw kantoor naast het gemiddelde in het netwerk</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="regelgeving" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <span class="eyebrow">Regelgeving &amp; toezicht</span>
+    <h2>Data voor toezicht, productontwikkeling en ESG</h2>
+    <p class="intro">De regels voor verzekeraars en adviseurs vragen steeds vaker om onderbouwing met data. Per kader: wat er gevraagd wordt en hoe marktdata kan helpen.</p>
+    <div class="tablewrap">
+    <table class="eba">
+      <thead><tr><th>Kader</th><th>Wat er gevraagd wordt</th><th>Wat wij leveren</th></tr></thead>
+      <tbody>
+        <tr><td>Wft en IDD: productontwikkeling (PARP)</td><td>Producten moeten passen bij de doelgroep en regelmatig worden getoetst.</td><td>Marktreferentie voor doelgroep, gekozen dekkingen en verkoopkanaal.</td></tr>
+        <tr><td>Transparantie schadeverzekeringen</td><td>Inzicht in de kosten van advies en bemiddeling voor de klant.</td><td>Geaggregeerde trends in het advies, zonder tarieven van individuele partijen.</td></tr>
+        <tr><td>Solvency II en ORSA</td><td>Inzicht in verzekeringsrisico's, waaronder klimaatrisico.</td><td>Klimaatschade en schadefrequentie per regio, naast de markt.</td></tr>
+        <tr><td>ESG en CSRD</td><td>Rapportage over duurzaamheid en de impact van klimaatverandering.</td><td>Referentiedata over klimaatschade en verduurzaming in de portefeuille.</td></tr>
+        <tr><td>AVG en GPO</td><td>Zorgvuldige omgang met persoonsgegevens, ook bij claimonderzoek.</td><td>Alleen geaggregeerde cijfers, zonder herleidbare persoonsgegevens.</td></tr>
+        <tr><td>Volmacht: NVGA en Verbond</td><td>Gevolmachtigden en volmachtgevers leggen verantwoording af over acceptatie, schadebehandeling en klantbelang.</td><td>Benchmark van productie, royementen en schadeafhandeling per volmacht, tegenover de markt.</td></tr>
+        <tr><td>Kifid en klachtbehandeling</td><td>Een zorgvuldige en tijdige afhandeling van klachten en geschillen.</td><td>Benchmark van afwijzingen, klachten en doorlooptijden.</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="callout">Deze tabel is een vereenvoudigd overzicht en geen juridisch advies. Of en hoe marktdata bijdraagt aan uw verplichtingen, beoordeelt u zelf met uw compliance-afdeling.</div>
+  </div>
+</section>
+
+<section id="methode">
+  <div class="wrap">
+    <span class="eyebrow">Methode &amp; privacy</span>
+    <h2>Zo komen de cijfers tot stand</h2>
+    <div class="method">
+      <div class="card"><h3>Databron</h3><p>De cijfers zijn gebaseerd op offertes, aanvragen, polissen, mutaties en schademeldingen die via het intermediaire kanaal zijn geregistreerd. Ze geven een beeld van dat kanaal en niet van de totale Nederlandse verzekeringsmarkt. Direct writers en online aanbieders vallen buiten beeld.</p></div>
+      <div class="card"><h3>Rekenmethode</h3><p>Het marktaandeel is een gewogen aandeel: het aantal polissen of de premie per partij gedeeld door het totaal in dezelfde periode en branche. Voor kwartalen en jaren is het dus niet het gemiddelde van losse maandpercentages.</p></div>
+      <div class="card"><h3>Alleen geaggregeerd</h3><p>We rapporteren alleen geaggregeerde cijfers. Segmenten met te weinig waarnemingen worden niet getoond, zodat cijfers niet terug te herleiden zijn naar individuele consumenten, ondernemingen of adviseurs.</p></div>
+      <div class="card"><h3>Mededinging</h3><p>Om de concurrentie niet te beperken, hanteren we vaste waarborgen:</p>
+        <ul style="margin:.6em 0 0;padding-left:18px;color:var(--muted);font-size:.93rem">
+          <li>U ziet uw eigen positie tegenover de markt, nooit cijfers van individuele concurrenten</li>
+          <li>Vergelijkingsgroepen bestaan uit minstens vijf partijen, zonder dat één partij de uitkomst bepaalt</li>
+          <li>Premie-informatie komt alleen uit openbaar gepubliceerde bronnen, met vertraging en als bandbreedte</li>
+          <li>Geen informatie over toekomstige of niet-openbare premies, provisies of acceptatiebeleid</li>
+          <li>Afnemers wisselen via ons geen informatie onderling uit</li>
+        </ul></div>
+      <div class="card"><h3>Toezicht en kaders</h3><p>Onze methodologie sluit aan op publicaties van
+        <a href="https://www.dnb.nl" target="_blank" rel="noopener">DNB</a>,
+        <a href="https://www.afm.nl" target="_blank" rel="noopener">AFM</a>,
+        <a href="https://www.autoriteitpersoonsgegevens.nl" target="_blank" rel="noopener">AP</a>,
+        <a href="https://www.kifid.nl" target="_blank" rel="noopener">Kifid</a>,
+        <a href="https://www.adfiz.nl" target="_blank" rel="noopener">Adfiz</a>,
+        <a href="https://www.sivi.org" target="_blank" rel="noopener">SIVI</a>,
+        <a href="https://www.nvga.nl" target="_blank" rel="noopener">NVGA</a> en het
+        <a href="https://www.verzekeraars.nl" target="_blank" rel="noopener">Verbond van Verzekeraars</a>.</p></div>
+      <div class="card"><h3>Onderzoeksbureau</h3><p>Naast de standaardrapportages voert ons onderzoeksteam maatwerkonderzoek uit, kwantitatief op onze eigen data en kwalitatief onder adviseurs en klanten.</p></div>
+    </div>
+    <h3 style="margin:32px 0 12px;font-size:1.15rem">Veelgestelde vragen van inkoop en compliance</h3>
+    <div class="faq">
+      <details><summary>Wat mogen wij met de data en rapporten doen?</summary><p>Het gebruik leggen we vast in een licentieovereenkomst bij de offerte. Standaard is dat voor intern gebruik binnen uw organisatie, zonder verdere verspreiding aan derden.</p></details>
+      <details><summary>Doet u onderzoek naar individuele claims of verzekerden?</summary><p>Nee. Wij leveren geaggregeerde inzichten over het schade- en onderzoeksproces. Persoonlijk onderzoek in een individueel dossier valt buiten ons aanbod.</p></details>
+      <details><summary>Hoe is de informatiebeveiliging geregeld?</summary><p>Bij de offerte vullen wij uw security- en leveranciersvragenlijst in, en lichten we toe hoe hosting, toegang en logging zijn ingericht.</p></details>
+      <details><summary>Krijgen wij een verwerkersovereenkomst?</summary><p>Onze rapportages bevatten geen persoonsgegevens van consumenten. Voor de contactgegevens van uw medewerkers sluiten we waar nodig een verwerkersovereenkomst af.</p></details>
+      <details><summary>Kunnen wij eerst een proef doen?</summary><p>Ja. De Positiescan is bedoeld als eerste kennismaking: één branche, één kwartaal, één rapport en een bespreking van de uitkomsten.</p></details>
+    </div>
+  </div>
+</section>
+
+<section id="monitor" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <span class="eyebrow">Assurantiemonitor</span>
+    <h2>De Assurantiemonitor: elk kwartaal de trends uit het advies</h2>
+    <p class="intro">Een openbare kwartaalpublicatie met de belangrijkste marktbrede trends uit het assurantieadvies. Er staan alleen geaggregeerde cijfers in, zonder partijen bij naam.</p>
+    <div class="grid6">
+      <div class="card feat"><div class="num">1</div><h3>Vraag in het advies</h3><p>De ontwikkeling van offertes, aanvragen en nieuwe polissen per branche, voor particulier en zakelijk.</p></div>
+      <div class="card feat"><div class="num">2</div><h3>Schade</h3><p>Trends in schademeldingen, doorlooptijden en klimaatschade, zoals storm, hagel en wateroverlast.</p></div>
+      <div class="card feat"><div class="num">3</div><h3>Inkomen en zzp</h3><p>De ontwikkeling van AOV en verzuim, ook in het licht van de basisverzekering arbeidsongeschiktheid voor zelfstandigen.</p></div>
+    </div>
+    <div class="callout">De eerste editie is in voorbereiding. <a href="mailto:jeroen.oversteegen@blinqx.tech?subject=Aanmelden%20Assurantiemonitor">Meld u aan</a> om de Assurantiemonitor te ontvangen zodra hij verschijnt.</div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <h2>Inzicht in uw positie kopen?</h2>
+    <p>Vraag een offerte aan voor een eenmalig rapport, doorlopend inzicht, een schadebenchmark of onderzoek op maat. Dan bespreken we welke inzichten en welke periode u nodig heeft.</p>
+    <h3 style="margin:0 0 16px;font-size:1rem;color:#ffcc00;letter-spacing:.08em;text-transform:uppercase">Voor meer informatie</h3>
+    <div class="people">
+      <div class="person"><h3>Jos van Driesum</h3><a href="mailto:jos.van.driesum@blinqx.tech?subject=Offerte%20assurantie-onderzoek.nl">jos.van.driesum@blinqx.tech</a><a href="tel:+31644081447">06 44 081 447</a></div>
+      <div class="person"><h3>Dennes Roes</h3><a href="mailto:dennes.roes@blinqx.tech?subject=Offerte%20assurantie-onderzoek.nl">dennes.roes@blinqx.tech</a><a href="tel:+31651117893">06 51 117 893</a></div>
+      <div class="person"><h3>Jeroen Oversteegen</h3><a href="mailto:jeroen.oversteegen@blinqx.tech?subject=Offerte%20assurantie-onderzoek.nl">jeroen.oversteegen@blinqx.tech</a><a href="tel:+31621247257">06 21 247 257</a></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><strong style="color:#fff">assurantie-onderzoek.nl</strong><br>Marktinformatie en onderzoek voor de assurantiebranche<br>Een activiteit van <strong style="color:#ffcc00">Blinqx</strong></div>
+    <div class="colofon">
+      <strong style="color:#fff">Colofon</strong><br>
+      Blinqx [juridische entiteit] · [vestigingsadres]<br>
+      KvK [nummer] · btw [nummer]<br>
+      <a href="#methode">Methode &amp; mededinging</a> · <a href="#regelgeving">Regelgeving</a> · <a href="#schade">Schade &amp; claimonderzoek</a> · <a href="https://jeroen-o.github.io/hypotheekonderzoek.nl/" target="_blank" rel="noopener">Hypotheekonderzoek.nl</a><br>
+      <span style="font-size:.8rem">Deze site is geen juridisch of regelgevend advies.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
