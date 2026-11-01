@@ -279,15 +279,30 @@ footer b{color:#fff}
 
 <!-- 15 -->
 <section class="ch" id="s15"><div class="wrap">
-  <span class="chn"><i>15</i> Benchmark</span>
+  <span class="chn"><i>15</i> AI in het advies</span>
+  <h2>Wat AI doet in uw distributie, en of uitkomsten eerlijk uitpakken</h2>
+  <p class="lead">Hoe vaak de kantoren die u bedienen AI gebruiken in het advies, wat dat doet met de doorlooptijd, en hoe uw acceptatie-uitkomsten per doelgroep zich verhouden tot de markt. Plus een vergelijking van uw voorwaarden, met AI omgezet naar data en door een onderzoeker gecontroleerd.</p>
+  <div class="g2">
+    <div class="card"><h3>Adviesgesprekken met AI-ondersteuning</h3><p class="sub">Aandeel adviesdossiers met een AI-gespreksverslag of AI-risico-inventarisatie</p><div id="c_ai"></div></div>
+    <div class="card"><h3>Doorlooptijd offerte → polis</h3><p class="sub">Mediaan in werkdagen, dossiers met en zonder AI-ondersteuning (Q3)</p><div id="c_aidl"></div>
+      <div class="ins"><b>Inzicht:</b> bij kantoren die AI gebruiken, wordt u sneller en vaker gekozen. Uw koppelingen en snelle acceptatie sluiten daar goed op aan.</div></div>
+    <div class="card"><h3>Fairness-check acceptatie</h3><p class="sub">Afwijzing of opslag per doelgroep, als index tegenover uw gemiddelde (100), naast dezelfde index in de markt</p><div class="tw" id="t_fair"></div>
+      <div class="note">Een afwijkende index is een signaal voor nader onderzoek naar uw acceptatieregels of model, geen bewijs van ongelijke behandeling. Beschermde kenmerken zoals etniciteit gebruiken we niet.</div></div>
+    <div class="card"><h3>Uw voorwaarden tegenover de markt</h3><p class="sub">Inboedel extra uitgebreid, 12 kenmerken uit openbare voorwaarden (peildatum 30 september 2026)</p><div class="tw" id="t_vw"></div></div>
+  </div>
+</div></section>
+
+<!-- 16 -->
+<section class="ch" id="s16"><div class="wrap">
+  <span class="chn"><i>16</i> Benchmark</span>
   <h2>Scorecard tegenover de vergelijkingsgroep</h2>
   <p class="lead">De vergelijkingsgroep bestaat uit acht anonieme schadeverzekeraars die u zelf heeft gekozen uit een categorie. Groen: beter dan de mediaan van de groep. Rood: slechter.</p>
   <div class="card"><div class="tw sc" id="t_sc"></div></div>
 </div></section>
 
-<!-- 16 -->
-<section class="ch" id="s16"><div class="wrap">
-  <span class="chn"><i>16</i> Methodologie &amp; mededinging</span>
+<!-- 17 -->
+<section class="ch" id="s17"><div class="wrap">
+  <span class="chn"><i>17</i> Methodologie &amp; mededinging</span>
   <h2>Zo komen de cijfers tot stand</h2>
   <div class="g2">
     <div class="card"><h3>Bron en dekking</h3><p style="margin:0;color:var(--mut);font-size:.92rem">Offertes, aanvragen, polissen, mutaties en schademeldingen uit het intermediaire kanaal, voor zover vastgelegd in de software van de deelnemende kantoren en volmachten. Direct writers en online aanbieders vallen buiten beeld.</p></div>
@@ -455,6 +470,13 @@ $('t_sc').innerHTML=tbl(['Indicator','U','Mediaan groep','Oordeel'],[
  sc('Aandeel top 3 kantoren',P(16,0),P(9,0),false),
  sc('Oordeel adviseurs (gemiddeld)',nl(7.3),nl(7.1),true)
 ],[1,2]);
+// 15 AI
+$('c_ai').innerHTML=line([{n:'Kantoren die u bedienen',c:NAVY,v:[11,13,15,18,20,23,25,29,32,35]},{n:'Markt',c:MKT,w:2,v:[10,11,13,15,17,19,21,24,26,28]}],M,{dec:0,max:40});
+$('c_aidl').innerHTML=pair(['Met AI','Zonder AI'],[2,4],[3,5],' d');
+const fi=(v,m)=>`<span class="pill ${v>=120?'r':v<=80?'g':'n'}">${v}</span>`;
+$('t_fair').innerHTML=tbl(['Doelgroep','U','Markt'],[['18–24 jaar',fi(168),fi(141)],['65 jaar en ouder',fi(124),fi(108)],['Alleenstaand',fi(97),fi(102)],['Huurwoning',fi(131),fi(112)],['Zzp',fi(118),fi(121)],['Stedelijke regio',fi(104),fi(99)]],[1,2]);
+const vw=(k,u)=>[k,`<span class="pill ${u==='beter'?'g':u==='minder'?'r':'n'}">${u}</span>`];
+$('t_vw').innerHTML=tbl(['Kenmerk','U tegenover de mediaan'],[vw('Glasdekking inbegrepen','minder'),vw('Tuin en buitenzaken','minder'),vw('Eigen risico bij storm','beter'),vw('Vervangende woonruimte, maximum','beter'),vw('Nieuwwaarderegeling','gelijk'),vw('Garantie tegen onderverzekering','beter'),vw('Kostbaarheden zonder taxatie','gelijk'),vw('Eigen gebrek','gelijk'),vw('Inbraak zonder braaksporen','minder'),vw('Zonnepanelen meeverzekerd','beter'),vw('Wachttijd na ingang','gelijk'),vw('Dekking bij verhuizing','gelijk')]);
 })();
 </script>
 </body>
