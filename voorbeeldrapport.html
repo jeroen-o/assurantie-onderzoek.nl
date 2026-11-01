@@ -2,10 +2,25 @@
 <html lang="nl">
 <head>
 <meta charset="utf-8">
+<style id="gate-css">
+html:not(.ok) body>*:not(#gate){display:none!important}
+html.ok #gate{display:none!important}
+#gate{position:fixed;inset:0;z-index:1000;display:flex;align-items:center;justify-content:center;padding:16px;background:linear-gradient(160deg,#1e2533,#2b3345);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+#gate .gbox{width:100%;max-width:380px;background:#fff;border-radius:16px;padding:28px 24px;box-shadow:0 20px 50px rgba(0,0,0,.3);color:#1b2535}
+#gate .glogo{font-weight:800;font-size:1.1rem;margin:0 0 4px;color:#1e2533}#gate .glogo span{color:#b08a00}
+#gate p{margin:0 0 16px;color:#5b6678;font-size:.92rem}
+#gate label{display:block;font-size:.85rem;font-weight:600;margin-bottom:6px}
+#gate input{display:block;width:100%;box-sizing:border-box;font:inherit;padding:11px 12px;border:1.5px solid #e1e6ee;border-radius:10px;margin-bottom:12px}
+#gate input:focus{outline:3px solid #ffcc00;outline-offset:1px}
+#gate button{width:100%;font:inherit;font-weight:700;background:#ffcc00;color:#1e2533;border:0;border-radius:999px;padding:11px 16px;cursor:pointer}
+#gate .gerr{color:#c0392b;font-size:.88rem;min-height:1.2em;margin:10px 0 0}
+.tm{font-size:.5em;vertical-align:super;line-height:0;margin-left:1px;font-weight:700}
+</style>
+<script>try{if(sessionStorage.getItem('ao_ok')==='1')document.documentElement.classList.add('ok')}catch(e){}</script>
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Voorbeeldrapport · assurantie-onderzoek.nl</title>
+<title>Voorbeeldrapport · Assurantie-onderzoek.nl</title>
 <meta name="description" content="Voorbeeldrapport met fictieve cijfers: marktpositie, conversie, distributie, portefeuille, schadeafhandeling, claimonderzoek en klimaatschade voor een schadeverzekeraar.">
-<meta name="robots" content="noindex">
 <meta name="theme-color" content="#1e2533">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 26 28%22%3E%3Cpath d=%22M13 0l13 7v14l-13 7L0 21V7z%22 fill=%22%23ffcc00%22/%3E%3Cpath d=%22M11 12l6 9h-3.4l-6-9z%22 fill=%22%231e2533%22/%3E%3C/svg%3E">
 <style>
@@ -80,11 +95,43 @@ footer b{color:#fff}
 h1,h2,h3{overflow-wrap:break-word;hyphens:auto}
 @media(max-width:560px){.bar-top .wrap>a:first-child{display:none}}
 </style>
+<meta property="og:image" content="https://assurantie-onderzoek.nl/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://assurantie-onderzoek.nl/og.png">
+<meta name="robots" content="noindex, nofollow">
 </head>
 <body>
+<div id="gate" role="dialog" aria-modal="true" aria-labelledby="gtitle">
+  <form class="gbox" id="gform" autocomplete="off">
+    <p class="glogo" id="gtitle">Assurantie-<span>onderzoek</span>.nl<sup class="tm" aria-hidden="true">™</sup></p>
+    <p>Deze site is nog niet openbaar. Voer het wachtwoord in om verder te gaan.</p>
+    <label for="gpw">Wachtwoord</label>
+    <input id="gpw" type="password" autocomplete="current-password" required>
+    <button type="submit">Openen</button>
+    <p class="gerr" id="gerr" role="alert"></p>
+    <noscript><p class="gerr">Schakel JavaScript in om deze site te bekijken.</p></noscript>
+  </form>
+</div>
+<script>
+(function(){
+  var root=document.documentElement;if(root.classList.contains('ok'))return;
+  function h(s){var x=5381;for(var i=0;i<s.length;i++){x=(Math.imul(x,33)^s.charCodeAt(i))>>>0}return x}
+  var f=document.getElementById('gform'),pw=document.getElementById('gpw'),err=document.getElementById('gerr');
+  setTimeout(function(){pw.focus()},50);
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(h(pw.value.trim().toLowerCase())===1121249330){
+      try{sessionStorage.setItem('ao_ok','1')}catch(x){}
+      root.classList.add('ok');
+    }else{err.textContent='Onjuist wachtwoord. Probeer het opnieuw.';pw.select()}
+  });
+})();
+</script>
 
 <div class="bar-top"><div class="wrap">
-  <a href="index.html" style="color:#fff;text-decoration:none"><b>assurantie-<span>onderzoek</span>.nl</b></a>
+  <a href="index.html" style="color:#fff;text-decoration:none"><b>Assurantie-<span>onderzoek</span>.nl<sup class="tm" aria-hidden="true">™</sup></b></a>
   <span style="display:flex;gap:10px;align-items:center"><a class="home" href="index.html" aria-label="Naar de homepage"><svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg><span class="ht">Home</span></a><span class="stamp">Voorbeeld · fictieve cijfers</span></span>
   <button class="pr" id="pr" type="button">Afdrukken / PDF</button>
 </div></div>
@@ -92,7 +139,7 @@ h1,h2,h3{overflow-wrap:break-word;hyphens:auto}
 <div class="cover"><div class="wrap">
   <div class="ey">Voorbeeldrapport · Marktpositie, portefeuille &amp; schade</div>
   <h1>Verzekeraar X<br><em>Q3 2026</em></h1>
-  <p>Dit rapport laat zien wat assurantie-onderzoek.nl voor een schadeverzekeraar kan maken: positie, conversie in het advies, distributie, klantprofiel, dekking, premie, portefeuille, schadeafhandeling, claimonderzoek, klimaat en verzekerbaarheid. Alles staat steeds tegenover de markt en tegenover een anonieme vergelijkingsgroep.</p>
+  <p>Dit rapport laat zien wat Assurantie-onderzoek.nl voor een schadeverzekeraar kan maken: positie, conversie in het advies, distributie, klantprofiel, dekking, premie, portefeuille, schadeafhandeling, claimonderzoek, klimaat en verzekerbaarheid. Alles staat steeds tegenover de markt en tegenover een anonieme vergelijkingsgroep.</p>
   <div class="meta">
     <div><b>Periode</b>jan t/m okt 2026, focus Q3</div>
     <div><b>Bron</b>offertes, aanvragen, polissen en schademeldingen in het Blinqx-netwerk</div>
@@ -319,7 +366,7 @@ h1,h2,h3{overflow-wrap:break-word;hyphens:auto}
 </div></section>
 
 <footer><div class="wrap">
-  <b>assurantie-onderzoek.nl</b> · voorbeeldrapport met fictieve cijfers · een activiteit van Blinqx · <a href="index.html" style="color:#ffcc00">terug naar de site</a> · <a href="index.html?onderwerp=Marktrapport#contact" style="color:#ffcc00">offerte aanvragen</a> · <a href="regelgeving.html" style="color:#ffcc00">regelgeving</a> · <a href="methodologie.html" style="color:#ffcc00">methodologie</a> · <a href="privacy.html" style="color:#ffcc00">privacy</a>
+  <b>Assurantie-onderzoek.nl™</b> · voorbeeldrapport met fictieve cijfers · een activiteit van Blinqx · <a href="index.html" style="color:#ffcc00">terug naar de site</a> · <a href="index.html?onderwerp=Marktrapport#contact" style="color:#ffcc00">offerte aanvragen</a> · <a href="regelgeving.html" style="color:#ffcc00">regelgeving</a> · <a href="methodologie.html" style="color:#ffcc00">methodologie</a> · <a href="privacy.html" style="color:#ffcc00">privacy</a>
 </div></footer>
 
 <script>

@@ -1,0 +1,6 @@
+# De site is tijdelijk afgeschermd met een wachtwoord en wordt niet geïndexeerd.
+# Verwijder "Disallow: /" en de noindex-tags zodra de site openbaar wordt.
+User-agent: *
+Disallow: /
+
+Sitemap: https://assurantie-onderzoek.nl/sitemap.xml

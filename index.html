@@ -2,6 +2,22 @@
 <html lang="nl" data-productnamen="uit">
 <head>
 <meta charset="utf-8">
+<style id="gate-css">
+html:not(.ok) body>*:not(#gate){display:none!important}
+html.ok #gate{display:none!important}
+#gate{position:fixed;inset:0;z-index:1000;display:flex;align-items:center;justify-content:center;padding:16px;background:linear-gradient(160deg,#1e2533,#2b3345);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+#gate .gbox{width:100%;max-width:380px;background:#fff;border-radius:16px;padding:28px 24px;box-shadow:0 20px 50px rgba(0,0,0,.3);color:#1b2535}
+#gate .glogo{font-weight:800;font-size:1.1rem;margin:0 0 4px;color:#1e2533}#gate .glogo span{color:#b08a00}
+#gate p{margin:0 0 16px;color:#5b6678;font-size:.92rem}
+#gate label{display:block;font-size:.85rem;font-weight:600;margin-bottom:6px}
+#gate input{display:block;width:100%;box-sizing:border-box;font:inherit;padding:11px 12px;border:1.5px solid #e1e6ee;border-radius:10px;margin-bottom:12px}
+#gate input:focus{outline:3px solid #ffcc00;outline-offset:1px}
+#gate button{width:100%;font:inherit;font-weight:700;background:#ffcc00;color:#1e2533;border:0;border-radius:999px;padding:11px 16px;cursor:pointer}
+#gate .gerr{color:#c0392b;font-size:.88rem;min-height:1.2em;margin:10px 0 0}
+.tm{font-size:.5em;vertical-align:super;line-height:0;margin-left:1px;font-weight:700}
+</style>
+<script>try{if(sessionStorage.getItem('ao_ok')==='1')document.documentElement.classList.add('ok')}catch(e){}</script>
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Assurantie-onderzoek.nl</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 26 28%22%3E%3Cpath d=%22M13 0l13 7v14l-13 7L0 21V7z%22 fill=%22%23ffcc00%22/%3E%3Cpath d=%22M11 12l6 9h-3.4l-6-9z%22 fill=%22%231e2533%22/%3E%3C/svg%3E">
@@ -9,7 +25,7 @@
 <meta name="theme-color" content="#1e2533">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="nl_NL">
-<meta property="og:site_name" content="assurantie-onderzoek.nl">
+<meta property="og:site_name" content="Assurantie-onderzoek.nl">
 <meta property="og:title" content="Assurantie-onderzoek.nl: marktinformatie en onderzoek voor de assurantiebranche">
 <meta property="og:description" content="Marktinformatie voor verzekeraars, volmachtbedrijven en assurantiekantoren: positie, distributie, portefeuille, schadeafhandeling en claimonderzoek.">
 <meta property="og:url" content="https://assurantie-onderzoek.nl/">
@@ -33,9 +49,9 @@ header.top .wrap{display:flex;align-items:center;justify-content:space-between;h
 nav a{color:#cfd8e6;text-decoration:none;margin-left:20px;font-size:.92rem}
 nav a:hover{color:#fff}
 nav{white-space:nowrap}
-nav a:not(.btn):not(.home){margin-left:14px;font-size:.88rem}
+nav>a:not(.btn):not(.home){margin-left:14px;font-size:.88rem}
 .logo{white-space:nowrap}
-@media(max-width:1240px){nav a:not(.btn):not(.home){display:none}}
+@media(max-width:1420px){nav>a:not(.btn):not(.home){display:none}}
 @media(max-width:400px){header.top .btn{padding:7px 10px!important;font-size:.76rem!important}.logo{font-size:.88rem!important}}
 @media(max-width:480px){header.top .btn{padding:8px 12px;font-size:.82rem;margin-left:8px}header.top .wrap{gap:8px}.logo{font-size:.98rem}.logo svg{width:20px;height:22px;margin-right:6px!important}}
 .btn{display:inline-block;background:var(--orange);color:var(--navy) !important;padding:10px 18px;border-radius:999px;font-weight:600;text-decoration:none;border:0;cursor:pointer;font-size:.95rem}
@@ -215,14 +231,57 @@ h3.grp{font-size:1.15rem;margin:28px 0 12px}
 .card{min-width:0}
 .card h3,.card p,.card li,td{overflow-wrap:break-word;hyphens:auto}
 h1,h2,h3{overflow-wrap:break-word;hyphens:auto}
+@media(max-width:380px){header.top nav>a.btn:not(.home){display:none}}
+.menu{display:inline-block;position:relative;margin-left:10px;vertical-align:middle}
+.menu summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:6px;color:#fff;border:1.5px solid rgba(255,255,255,.35);border-radius:999px;padding:7px 14px;font-size:.88rem;font-weight:600}
+.menu summary::-webkit-details-marker{display:none}
+.menu summary:hover,.menu[open] summary{border-color:#ffcc00;color:#ffcc00}
+.menu .mpanel{position:absolute;right:0;top:calc(100% + 10px);background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:0 16px 40px rgba(30,37,51,.25);padding:16px;display:grid;grid-template-columns:1fr 1fr;gap:4px 24px;width:min(460px,calc(100vw - 32px));white-space:normal;z-index:20}
+.menu .mpanel b{display:block;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:2px 0 6px}
+.menu .mpanel a{display:block;color:var(--navy)!important;margin:0!important;padding:6px 0;font-size:.92rem!important;text-decoration:none;border-bottom:1px solid var(--line)}
+.menu .mpanel a:hover{color:#7a5c00!important}
+@media(max-width:560px){.menu .mpanel{grid-template-columns:1fr;position:fixed;left:16px;right:16px;top:64px;width:auto;max-height:calc(100vh - 80px);overflow:auto}}
+@media(max-width:480px){.menu summary{padding:6px 10px;font-size:.78rem}.menu .mt{display:none}.menu{margin-left:4px}}
 </style>
+<meta property="og:image" content="https://assurantie-onderzoek.nl/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://assurantie-onderzoek.nl/og.png">
+<meta name="robots" content="noindex, nofollow">
 </head>
 <body>
+<div id="gate" role="dialog" aria-modal="true" aria-labelledby="gtitle">
+  <form class="gbox" id="gform" autocomplete="off">
+    <p class="glogo" id="gtitle">Assurantie-<span>onderzoek</span>.nl<sup class="tm" aria-hidden="true">™</sup></p>
+    <p>Deze site is nog niet openbaar. Voer het wachtwoord in om verder te gaan.</p>
+    <label for="gpw">Wachtwoord</label>
+    <input id="gpw" type="password" autocomplete="current-password" required>
+    <button type="submit">Openen</button>
+    <p class="gerr" id="gerr" role="alert"></p>
+    <noscript><p class="gerr">Schakel JavaScript in om deze site te bekijken.</p></noscript>
+  </form>
+</div>
+<script>
+(function(){
+  var root=document.documentElement;if(root.classList.contains('ok'))return;
+  function h(s){var x=5381;for(var i=0;i<s.length;i++){x=(Math.imul(x,33)^s.charCodeAt(i))>>>0}return x}
+  var f=document.getElementById('gform'),pw=document.getElementById('gpw'),err=document.getElementById('gerr');
+  setTimeout(function(){pw.focus()},50);
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(h(pw.value.trim().toLowerCase())===1121249330){
+      try{sessionStorage.setItem('ao_ok','1')}catch(x){}
+      root.classList.add('ok');
+    }else{err.textContent='Onjuist wachtwoord. Probeer het opnieuw.';pw.select()}
+  });
+})();
+</script>
 
 <a class="skip" href="#main">Naar de inhoud</a>
 <header class="top">
   <div class="wrap">
-    <a class="logo" href="#" aria-label="assurantie-onderzoek.nl, een activiteit van Blinqx"><svg width="26" height="28" viewBox="0 0 26 28" aria-hidden="true" style="vertical-align:-7px;margin-right:8px"><path d="M13 0l13 7v14l-13 7L0 21V7z" fill="#ffcc00"/><path d="M11 12l6 9h-3.4l-6-9z" fill="#1e2533"/></svg>assurantie-<span>onderzoek</span>.nl</a>
+    <a class="logo" href="#" aria-label="Assurantie-onderzoek.nl, een activiteit van Blinqx"><svg width="26" height="28" viewBox="0 0 26 28" aria-hidden="true" style="vertical-align:-7px;margin-right:8px"><path d="M13 0l13 7v14l-13 7L0 21V7z" fill="#ffcc00"/><path d="M11 12l6 9h-3.4l-6-9z" fill="#1e2533"/></svg>Assurantie-<span>onderzoek</span>.nl<sup class="tm" aria-hidden="true">™</sup></a>
     <nav>
       <a class="home" href="#" aria-label="Naar de homepage"><svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg><span class="ht">Home</span></a>
       <a href="#vragen">Uw vragen</a>
@@ -233,6 +292,7 @@ h1,h2,h3{overflow-wrap:break-word;hyphens:auto}
       <a href="regelgeving.html">Regelgeving</a>
       <a href="#idee">Uw vraag</a>
       <a href="#contact" class="btn">Offerte<span class="bt-x"> aanvragen</span></a>
+      <details class="menu"><summary aria-label="Menu"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span class="mt">Menu</span></summary><div class="mpanel"><div><b>Op de homepage</b><a href="#">Home</a><a href="#vragen">Uw vragen</a><a href="#bron">Onze data</a><a href="#rapportages">Rapportages</a><a href="#onderzoek">Benchmarks</a><a href="#schade">Schade &amp; claims</a><a href="#ai">AI-onderzoek</a><a href="#aanbod">Aanbod &amp; abonnementen</a><a href="#monitor">Assurantiemonitor</a><a href="#idee">Uw onderzoeksvraag</a><a href="#contact">Contact &amp; offerte</a></div><div><b>Pagina's</b><a href="voorbeeldrapport.html">Voorbeeldrapport</a><a href="whitepaper.html">Whitepaper</a><a href="regelgeving.html">Regelgeving</a><a href="methodologie.html">Methodologie</a><a href="over-ons.html">Over ons</a><a href="privacy.html">Privacyverklaring</a></div></div></details>
     </nav>
   </div>
 </header>
@@ -383,7 +443,7 @@ h1,h2,h3{overflow-wrap:break-word;hyphens:auto}
     <h3 style="margin:32px 0 6px;font-size:1.15rem">Wat wij meer weten dan u als verzekeraar zelf</h3>
     <p style="color:var(--muted);margin:0 0 12px;max-width:760px">Een verzekeraar ziet alleen wat er bij hem binnenkomt. Wij zien ook wat er vóór de aanvraag gebeurt, wat er naar de rest van de markt gaat, en hoe uw schadeafhandeling zich verhoudt tot die van anderen.</p>
     <div class="tablewrap">
-    <table class="eba"><thead><tr><th>Onderwerp</th><th>Wat u zelf ziet</th><th>Wat assurantie-onderzoek.nl ziet</th></tr></thead><tbody>
+    <table class="eba"><thead><tr><th>Onderwerp</th><th>Wat u zelf ziet</th><th>Wat Assurantie-onderzoek.nl ziet</th></tr></thead><tbody>
       <tr><td>Offertes</td><td>Weinig: u ziet een klant pas bij de aanvraag</td><td>Elke premievergelijking waarin u wel of niet voorkomt</td></tr>
       <tr><td>Verloren aanvragen</td><td>Niets: een klant die elders afsluit, ziet u nooit</td><td>Hoe vaak u wel in beeld was, maar de aanvraag niet bij u terechtkwam (geaggregeerd)</td></tr>
       <tr><td>Marktaandeel</td><td>Alleen uw eigen productie, zonder noemer</td><td>Uw aandeel in het hele netwerk, per branche, maand, regio en kantoor</td></tr>
@@ -398,7 +458,7 @@ h1,h2,h3{overflow-wrap:break-word;hyphens:auto}
     <p style="color:var(--muted);margin:0 0 12px;max-width:760px">Het Verbond van Verzekeraars, DNB, CBS en Adfiz publiceren waardevolle cijfers over de verzekeringsmarkt en het advies. Die laten de markt als geheel zien. Assurantie-onderzoek.nl gaat een niveau dieper: per partij, per assurantiekantoor en per klantprofiel.</p>
     <div class="tablewrap">
     <table class="eba">
-      <thead><tr><th>Publieke bron</th><th>Wat het laat zien</th><th>Wat assurantie-onderzoek.nl toevoegt</th></tr></thead>
+      <thead><tr><th>Publieke bron</th><th>Wat het laat zien</th><th>Wat Assurantie-onderzoek.nl toevoegt</th></tr></thead>
       <tbody>
         <tr><td><a href="https://www.verzekeraars.nl/branche/data-analytics-en-onderzoek/cijfers-statistieken" target="_blank" rel="noopener">Verbond: cijfers en statistieken (DAC)</a></td><td>Openbare dataproducten zoals de extreemweermonitor, de marktomvang per productcluster schade, indexcijfers voor inboedels en gebouwen, de solidariteitsmonitor en de factsheet verzekeringscriminaliteit.</td><td>Het aandeel per verzekeraar in de nieuwe productie via het intermediair, per maand, branche en kantoor.</td></tr>
         <tr><td><a href="https://www.dnb.nl/statistieken/dashboards/verzekeraars/" target="_blank" rel="noopener">DNB: dashboard verzekeraars</a></td><td>Balans-, premie- en solvabiliteitsgegevens van verzekeraars op geaggregeerd niveau.</td><td>Wat er in het advies gebeurt vóór de polis: offertes, verloren aanvragen en de kantoren via welke de klant komt.</td></tr>
@@ -470,7 +530,7 @@ h1,h2,h3{overflow-wrap:break-word;hyphens:auto}
     <p style="color:var(--muted);margin:0 0 12px;max-width:760px">Er zijn waardevolle benchmarks naar verzekeraars. Ze meten duurzaamheid, digitale processen, merkbeleving of de zakelijke markt. Wij meten uw positie in het advies zelf: wat adviseurs offreren, aanvragen en melden.</p>
     <div class="tablewrap">
     <table class="eba">
-      <thead><tr><th>Benchmark</th><th>Wat het meet</th><th>Wat assurantie-onderzoek.nl toevoegt</th></tr></thead>
+      <thead><tr><th>Benchmark</th><th>Wat het meet</th><th>Wat Assurantie-onderzoek.nl toevoegt</th></tr></thead>
       <tbody>
         <tr><td><a href="https://www.verzekeraars.nl/branche/data-analytics-en-onderzoek" target="_blank" rel="noopener">Verbond: Data Analytics Centre</a></td><td>Sectoronderzoek, trends en dashboards op basis van gegevens van verzekeraars.</td><td>Het intermediaire kanaal per kantoor, inclusief offertes en verloren aanvragen.</td></tr>
         <tr><td><a href="https://www.verzekeraars.nl/branche/data-analytics-en-onderzoek" target="_blank" rel="noopener">Verbond: Consumentenmonitor</a></td><td>Jaarlijks consumentenonderzoek naar het imago van verzekeraars, de dienstverlening, het vertrouwen in de afhandeling van claims, het klantbelang en duurzaamheid.</td><td>Het gedrag naast de mening: hoe de afhandeling van claims en de controle van verzekeringen er in de praktijk uitzien.</td></tr>
@@ -726,6 +786,24 @@ h1,h2,h3{overflow-wrap:break-word;hyphens:auto}
       <div class="card feat"><div class="num">3</div><h3>Inkomen en zzp</h3><p>De ontwikkeling van AOV en verzuim, ook in het licht van de basisverzekering arbeidsongeschiktheid voor zelfstandigen.</p></div>
     </div>
     <div class="callout">De eerste editie is in voorbereiding. <a href="?onderwerp=Aanmelden%20Assurantiemonitor#contact" data-offerte="Aanmelden Assurantiemonitor">Meld u aan</a> om de Assurantiemonitor te ontvangen zodra hij verschijnt.</div>
+    <div class="wp" style="margin-top:32px">
+      <div>
+        <span class="eyebrow">Whitepaper</span>
+        <h2 style="margin-top:.2em">Klantbelang in cijfers</h2>
+        <p style="color:var(--muted);margin:0 0 16px">Een praktische gids voor product-, pricing-, compliance- en schadeteams van verzekeraars en volmachten. Welke vragen stellen toezichthouders over klantbelang, en hoe onderbouwt u de antwoorden met marktdata?</p>
+        <ul class="checks one">
+          <li>Productreview (PARP): past het product bij de doelgroep?</li>
+          <li>Prijs en loyaliteit: betalen trouwe klanten een eerlijke premie?</li>
+          <li>Schadeafhandeling, AI en eerlijke uitkomsten, klimaat en verzekerbaarheid</li>
+          <li>Met een checklist voor uw organisatie</li>
+        </ul>
+      </div>
+      <div class="wp-cta">
+        <p style="margin:0 0 12px;font-weight:700;color:var(--navy)">Gratis te lezen</p>
+        <a class="btn" href="whitepaper.html">Lees de whitepaper</a>
+        <p style="margin:12px 0 0;font-size:.85rem;color:var(--muted)">Ook als PDF af te drukken vanaf de pagina.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -778,8 +856,8 @@ h1,h2,h3{overflow-wrap:break-word;hyphens:auto}
     ta.closest('label').classList.remove('err');em.closest('label').classList.remove('err');
     if(!v('vraag')){ta.closest('label').classList.add('err');msg.textContent='Vul uw onderzoeksvraag in.';ta.focus();return}
     if(v('email')&&!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v('email'))){em.closest('label').classList.add('err');msg.textContent='Controleer uw e-mailadres.';em.focus();return}
-    var body=['Onderzoeksvraag:',v('vraag'),'','Rol: '+(v('rol')||'-'),'E-mail voor reactie: '+(v('email')||'-'),'Mag gebruikt worden in de Assurantiemonitor: '+(f.get('anoniem')?'ja':'nee'),'','Verstuurd via assurantie-onderzoek.nl'].join('\n');
-    var url='mailto:jeroen.oversteegen@blinqx.tech?subject='+encodeURIComponent('Onderzoeksvraag via assurantie-onderzoek.nl')+'&body='+encodeURIComponent(body);
+    var body=['Onderzoeksvraag:',v('vraag'),'','Rol: '+(v('rol')||'-'),'E-mail voor reactie: '+(v('email')||'-'),'Mag gebruikt worden in de Assurantiemonitor: '+(f.get('anoniem')?'ja':'nee'),'','Verstuurd via Assurantie-onderzoek.nl'].join('\n');
+    var url='mailto:jeroen.oversteegen@blinqx.tech?subject='+encodeURIComponent('Onderzoeksvraag via Assurantie-onderzoek.nl')+'&body='+encodeURIComponent(body);
     var inFrame=true;try{inFrame=window.self!==window.top}catch(e){}
     if(inFrame){window.open(url,'_blank')}else{window.location.href=url}
     msg.textContent='Uw e-mailprogramma wordt geopend. Verstuur het bericht om uw vraag in te dienen.';
@@ -831,7 +909,7 @@ h1,h2,h3{overflow-wrap:break-word;hyphens:auto}
         </select>
       </label>
       <label>Uw vraag of toelichting<textarea name="bericht" rows="5" placeholder="Bijvoorbeeld: welke branches, periode en vergelijkingsgroep u zoekt"></textarea></label>
-      <label class="chk"><input type="checkbox" name="akkoord" required> <span>Ik ga ermee akkoord dat assurantie-onderzoek.nl mijn gegevens gebruikt om op deze aanvraag te reageren. Zie de <a href="privacy.html">privacyverklaring</a>. *</span></label>
+      <label class="chk"><input type="checkbox" name="akkoord" required> <span>Ik ga ermee akkoord dat Assurantie-onderzoek.nl mijn gegevens gebruikt om op deze aanvraag te reageren. Zie de <a href="privacy.html">privacyverklaring</a>. *</span></label>
       <div class="factions">
         <button type="submit" class="btn">Verstuur via e-mail</button>
         <span id="cmsg" class="cmsg" role="status" aria-live="polite"></span>
@@ -841,9 +919,9 @@ h1,h2,h3{overflow-wrap:break-word;hyphens:auto}
 
     <h3 style="margin:40px 0 16px;font-size:1rem;color:#ffcc00;letter-spacing:.08em;text-transform:uppercase">Of neem direct contact op</h3>
     <div class="people">
-      <div class="person"><h3>Jos van Driesum</h3><a href="mailto:jos.van.driesum@blinqx.tech?subject=Offerte%20assurantie-onderzoek.nl">jos.van.driesum@blinqx.tech</a><a href="tel:+31644081447">06 44 081 447</a></div>
-      <div class="person"><h3>Dennes Roes</h3><a href="mailto:dennes.roes@blinqx.tech?subject=Offerte%20assurantie-onderzoek.nl">dennes.roes@blinqx.tech</a><a href="tel:+31651117893">06 51 117 893</a></div>
-      <div class="person"><h3>Jeroen Oversteegen</h3><a href="mailto:jeroen.oversteegen@blinqx.tech?subject=Offerte%20assurantie-onderzoek.nl">jeroen.oversteegen@blinqx.tech</a><a href="tel:+31621247257">06 21 247 257</a></div>
+      <div class="person"><h3>Jos van Driesum</h3><a href="mailto:jos.van.driesum@blinqx.tech?subject=Offerte%20Assurantie-onderzoek.nl">jos.van.driesum@blinqx.tech</a><a href="tel:+31644081447">06 44 081 447</a></div>
+      <div class="person"><h3>Dennes Roes</h3><a href="mailto:dennes.roes@blinqx.tech?subject=Offerte%20Assurantie-onderzoek.nl">dennes.roes@blinqx.tech</a><a href="tel:+31651117893">06 51 117 893</a></div>
+      <div class="person"><h3>Jeroen Oversteegen</h3><a href="mailto:jeroen.oversteegen@blinqx.tech?subject=Offerte%20Assurantie-onderzoek.nl">jeroen.oversteegen@blinqx.tech</a><a href="tel:+31621247257">06 21 247 257</a></div>
     </div>
   </div>
 </section>
@@ -873,8 +951,8 @@ h1,h2,h3{overflow-wrap:break-word;hyphens:auto}
     form.querySelectorAll('.err').forEach(function(el){el.classList.remove('err')});
     if(bad.length){bad.forEach(function(el){(el.closest('label')||el).classList.add('err')});msg.textContent='Vul de verplichte velden (*) correct in.';bad[0].focus();return}
     var f=new FormData(form),v=function(k){return (f.get(k)||'').toString().trim()};
-    var subject='Offerteaanvraag assurantie-onderzoek.nl: '+v('onderwerp')+' – '+v('organisatie');
-    var body=['Onderwerp: '+v('onderwerp'),'','Naam: '+v('naam'),'Organisatie: '+v('organisatie'),'Functie: '+(v('functie')||'-'),'Type organisatie: '+v('type'),'E-mail: '+v('email'),'Telefoon: '+(v('telefoon')||'-'),'','Vraag of toelichting:',v('bericht')||'-','','Verstuurd via het contactformulier op assurantie-onderzoek.nl'].join('\n');
+    var subject='Offerteaanvraag Assurantie-onderzoek.nl: '+v('onderwerp')+' – '+v('organisatie');
+    var body=['Onderwerp: '+v('onderwerp'),'','Naam: '+v('naam'),'Organisatie: '+v('organisatie'),'Functie: '+(v('functie')||'-'),'Type organisatie: '+v('type'),'E-mail: '+v('email'),'Telefoon: '+(v('telefoon')||'-'),'','Vraag of toelichting:',v('bericht')||'-','','Verstuurd via het contactformulier op Assurantie-onderzoek.nl'].join('\n');
     var url='mailto:'+TO+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
     var inFrame=true;try{inFrame=window.self!==window.top}catch(e){}
     if(inFrame){window.open(url,'_blank')}else{window.location.href=url}
@@ -887,7 +965,7 @@ h1,h2,h3{overflow-wrap:break-word;hyphens:auto}
 
 <footer>
   <div class="wrap">
-    <div><strong style="color:#fff">assurantie-onderzoek.nl</strong><br>Marktinformatie en onderzoek voor de assurantiebranche<br>Een activiteit van <strong style="color:#ffcc00">Blinqx</strong></div>
+    <div><strong style="color:#fff">Assurantie-onderzoek.nl™</strong><br>Marktinformatie en onderzoek voor de assurantiebranche<br>Een activiteit van <strong style="color:#ffcc00">Blinqx</strong></div>
     <div class="colofon">
       <strong style="color:#fff">Colofon</strong><br>
       Blinqx · Hullenbergweg 109, 1101 CL Amsterdam<br>

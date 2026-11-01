@@ -2,14 +2,30 @@
 <html lang="nl" data-productnamen="uit">
 <head>
 <meta charset="utf-8">
+<style id="gate-css">
+html:not(.ok) body>*:not(#gate){display:none!important}
+html.ok #gate{display:none!important}
+#gate{position:fixed;inset:0;z-index:1000;display:flex;align-items:center;justify-content:center;padding:16px;background:linear-gradient(160deg,#1e2533,#2b3345);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+#gate .gbox{width:100%;max-width:380px;background:#fff;border-radius:16px;padding:28px 24px;box-shadow:0 20px 50px rgba(0,0,0,.3);color:#1b2535}
+#gate .glogo{font-weight:800;font-size:1.1rem;margin:0 0 4px;color:#1e2533}#gate .glogo span{color:#b08a00}
+#gate p{margin:0 0 16px;color:#5b6678;font-size:.92rem}
+#gate label{display:block;font-size:.85rem;font-weight:600;margin-bottom:6px}
+#gate input{display:block;width:100%;box-sizing:border-box;font:inherit;padding:11px 12px;border:1.5px solid #e1e6ee;border-radius:10px;margin-bottom:12px}
+#gate input:focus{outline:3px solid #ffcc00;outline-offset:1px}
+#gate button{width:100%;font:inherit;font-weight:700;background:#ffcc00;color:#1e2533;border:0;border-radius:999px;padding:11px 16px;cursor:pointer}
+#gate .gerr{color:#c0392b;font-size:.88rem;min-height:1.2em;margin:10px 0 0}
+.tm{font-size:.5em;vertical-align:super;line-height:0;margin-left:1px;font-weight:700}
+</style>
+<script>try{if(sessionStorage.getItem('ao_ok')==='1')document.documentElement.classList.add('ok')}catch(e){}</script>
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Regelgeving · assurantie-onderzoek.nl</title>
+<title>Regelgeving · Assurantie-onderzoek.nl</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 26 28%22%3E%3Cpath d=%22M13 0l13 7v14l-13 7L0 21V7z%22 fill=%22%23ffcc00%22/%3E%3Cpath d=%22M11 12l6 9h-3.4l-6-9z%22 fill=%22%231e2533%22/%3E%3C/svg%3E">
 <link rel="canonical" href="https://assurantie-onderzoek.nl/regelgeving.html">
 <meta name="theme-color" content="#1e2533">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="nl_NL">
-<meta property="og:site_name" content="assurantie-onderzoek.nl">
+<meta property="og:site_name" content="Assurantie-onderzoek.nl">
 <meta property="og:title" content="Assurantie-onderzoek.nl: marktinformatie en onderzoek voor de assurantiebranche">
 <meta property="og:description" content="Marktinformatie voor verzekeraars, volmachtbedrijven en assurantiekantoren: positie, distributie, portefeuille, schadeafhandeling en claimonderzoek.">
 <meta property="og:url" content="https://assurantie-onderzoek.nl/">
@@ -33,9 +49,9 @@ header.top .wrap{display:flex;align-items:center;justify-content:space-between;h
 nav a{color:#cfd8e6;text-decoration:none;margin-left:20px;font-size:.92rem}
 nav a:hover{color:#fff}
 nav{white-space:nowrap}
-nav a:not(.btn):not(.home){margin-left:14px;font-size:.88rem}
+nav>a:not(.btn):not(.home){margin-left:14px;font-size:.88rem}
 .logo{white-space:nowrap}
-@media(max-width:1240px){nav a:not(.btn):not(.home){display:none}}
+@media(max-width:1420px){nav>a:not(.btn):not(.home){display:none}}
 @media(max-width:400px){header.top .btn{padding:7px 10px!important;font-size:.76rem!important}.logo{font-size:.88rem!important}}
 @media(max-width:480px){header.top .btn{padding:8px 12px;font-size:.82rem;margin-left:8px}header.top .wrap{gap:8px}.logo{font-size:.98rem}.logo svg{width:20px;height:22px;margin-right:6px!important}}
 .btn{display:inline-block;background:var(--orange);color:var(--navy) !important;padding:10px 18px;border-radius:999px;font-weight:600;text-decoration:none;border:0;cursor:pointer;font-size:.95rem}
@@ -172,14 +188,57 @@ html[data-productnamen="aan"] .gen{display:none}
 .card{min-width:0}
 .card h3,.card p,.card li,td{overflow-wrap:break-word;hyphens:auto}
 h1,h2,h3{overflow-wrap:break-word;hyphens:auto}
+@media(max-width:380px){header.top nav>a.btn:not(.home){display:none}}
+.menu{display:inline-block;position:relative;margin-left:10px;vertical-align:middle}
+.menu summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:6px;color:#fff;border:1.5px solid rgba(255,255,255,.35);border-radius:999px;padding:7px 14px;font-size:.88rem;font-weight:600}
+.menu summary::-webkit-details-marker{display:none}
+.menu summary:hover,.menu[open] summary{border-color:#ffcc00;color:#ffcc00}
+.menu .mpanel{position:absolute;right:0;top:calc(100% + 10px);background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:0 16px 40px rgba(30,37,51,.25);padding:16px;display:grid;grid-template-columns:1fr 1fr;gap:4px 24px;width:min(460px,calc(100vw - 32px));white-space:normal;z-index:20}
+.menu .mpanel b{display:block;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:2px 0 6px}
+.menu .mpanel a{display:block;color:var(--navy)!important;margin:0!important;padding:6px 0;font-size:.92rem!important;text-decoration:none;border-bottom:1px solid var(--line)}
+.menu .mpanel a:hover{color:#7a5c00!important}
+@media(max-width:560px){.menu .mpanel{grid-template-columns:1fr;position:fixed;left:16px;right:16px;top:64px;width:auto;max-height:calc(100vh - 80px);overflow:auto}}
+@media(max-width:480px){.menu summary{padding:6px 10px;font-size:.78rem}.menu .mt{display:none}.menu{margin-left:4px}}
 </style>
+<meta property="og:image" content="https://assurantie-onderzoek.nl/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://assurantie-onderzoek.nl/og.png">
+<meta name="robots" content="noindex, nofollow">
 </head>
 <body>
+<div id="gate" role="dialog" aria-modal="true" aria-labelledby="gtitle">
+  <form class="gbox" id="gform" autocomplete="off">
+    <p class="glogo" id="gtitle">Assurantie-<span>onderzoek</span>.nl<sup class="tm" aria-hidden="true">™</sup></p>
+    <p>Deze site is nog niet openbaar. Voer het wachtwoord in om verder te gaan.</p>
+    <label for="gpw">Wachtwoord</label>
+    <input id="gpw" type="password" autocomplete="current-password" required>
+    <button type="submit">Openen</button>
+    <p class="gerr" id="gerr" role="alert"></p>
+    <noscript><p class="gerr">Schakel JavaScript in om deze site te bekijken.</p></noscript>
+  </form>
+</div>
+<script>
+(function(){
+  var root=document.documentElement;if(root.classList.contains('ok'))return;
+  function h(s){var x=5381;for(var i=0;i<s.length;i++){x=(Math.imul(x,33)^s.charCodeAt(i))>>>0}return x}
+  var f=document.getElementById('gform'),pw=document.getElementById('gpw'),err=document.getElementById('gerr');
+  setTimeout(function(){pw.focus()},50);
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(h(pw.value.trim().toLowerCase())===1121249330){
+      try{sessionStorage.setItem('ao_ok','1')}catch(x){}
+      root.classList.add('ok');
+    }else{err.textContent='Onjuist wachtwoord. Probeer het opnieuw.';pw.select()}
+  });
+})();
+</script>
 
 <a class="skip" href="index.html#main">Naar de inhoud</a>
 <header class="top">
   <div class="wrap">
-    <a class="logo" href="index.html" aria-label="assurantie-onderzoek.nl, een activiteit van Blinqx"><svg width="26" height="28" viewBox="0 0 26 28" aria-hidden="true" style="vertical-align:-7px;margin-right:8px"><path d="M13 0l13 7v14l-13 7L0 21V7z" fill="#ffcc00"/><path d="M11 12l6 9h-3.4l-6-9z" fill="#1e2533"/></svg>assurantie-<span>onderzoek</span>.nl</a>
+    <a class="logo" href="index.html" aria-label="Assurantie-onderzoek.nl, een activiteit van Blinqx"><svg width="26" height="28" viewBox="0 0 26 28" aria-hidden="true" style="vertical-align:-7px;margin-right:8px"><path d="M13 0l13 7v14l-13 7L0 21V7z" fill="#ffcc00"/><path d="M11 12l6 9h-3.4l-6-9z" fill="#1e2533"/></svg>Assurantie-<span>onderzoek</span>.nl<sup class="tm" aria-hidden="true">™</sup></a>
     <nav>
       <a class="home" href="index.html" aria-label="Naar de homepage"><svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg><span class="ht">Home</span></a>
       <a href="index.html#vragen">Uw vragen</a>
@@ -190,6 +249,7 @@ h1,h2,h3{overflow-wrap:break-word;hyphens:auto}
       <a href="regelgeving.html">Regelgeving</a>
       <a href="index.html#idee">Uw vraag</a>
       <a href="index.html#contact" class="btn">Offerte<span class="bt-x"> aanvragen</span></a>
+      <details class="menu"><summary aria-label="Menu"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span class="mt">Menu</span></summary><div class="mpanel"><div><b>Op de homepage</b><a href="index.html#">Home</a><a href="index.html#vragen">Uw vragen</a><a href="index.html#bron">Onze data</a><a href="index.html#rapportages">Rapportages</a><a href="index.html#onderzoek">Benchmarks</a><a href="index.html#schade">Schade &amp; claims</a><a href="index.html#ai">AI-onderzoek</a><a href="index.html#aanbod">Aanbod &amp; abonnementen</a><a href="index.html#monitor">Assurantiemonitor</a><a href="index.html#idee">Uw onderzoeksvraag</a><a href="index.html#contact">Contact &amp; offerte</a></div><div><b>Pagina's</b><a href="voorbeeldrapport.html">Voorbeeldrapport</a><a href="whitepaper.html">Whitepaper</a><a href="regelgeving.html">Regelgeving</a><a href="methodologie.html">Methodologie</a><a href="over-ons.html">Over ons</a><a href="privacy.html">Privacyverklaring</a></div></div></details>
     </nav>
   </div>
 </header>
@@ -219,7 +279,7 @@ h1,h2,h3{overflow-wrap:break-word;hyphens:auto}
     <p class="intro">Verzekeraars moeten bij het ontwikkelen en herzien van producten aantonen dat ze passen bij de doelgroep en het distributiekanaal. Adviseurs hebben een zorgplicht. Voor beide is het nuttig om te weten hoe het product in de praktijk wordt gekozen, en door wie.</p>
     <div class="tablewrap">
     <table class="eba">
-      <thead><tr><th>Kader</th><th>Wat er gevraagd wordt</th><th>Wat assurantie-onderzoek.nl levert</th></tr></thead>
+      <thead><tr><th>Kader</th><th>Wat er gevraagd wordt</th><th>Wat Assurantie-onderzoek.nl levert</th></tr></thead>
       <tbody>
         <tr><td>Wft en IDD: productgoedkeuring en -review (PARP / POG)</td><td>Een doelgroep bepalen, het product testen, de distributiestrategie vastleggen en het product periodiek herzien, ook op basis van informatie uit de distributie.</td><td>Wie het product in de praktijk afsluit (klantprofiel, dekking, kanaal), tegenover de beoogde doelgroep en de markt. Plus signalen als hoge royementen kort na ingang.</td></tr>
         <tr><td>Zorgplicht van verzekeraar en adviseur</td><td>Zorgvuldig handelen in het belang van de klant, ook na het afsluiten.</td><td>Inzicht in prolongatie, premieontwikkeling naar looptijd en de afhandeling van schades, als onderbouwing van het klantbelang.</td></tr>
@@ -341,7 +401,7 @@ h1,h2,h3{overflow-wrap:break-word;hyphens:auto}
 
 <footer>
   <div class="wrap">
-    <div><strong style="color:#fff">assurantie-onderzoek.nl</strong><br>Marktinformatie en onderzoek voor de assurantiebranche<br>Een activiteit van <strong style="color:#ffcc00">Blinqx</strong></div>
+    <div><strong style="color:#fff">Assurantie-onderzoek.nl™</strong><br>Marktinformatie en onderzoek voor de assurantiebranche<br>Een activiteit van <strong style="color:#ffcc00">Blinqx</strong></div>
     <div class="colofon">
       <strong style="color:#fff">Colofon</strong><br>
       Blinqx · Hullenbergweg 109, 1101 CL Amsterdam<br>
