@@ -16,6 +16,8 @@ html.ok #gate{display:none!important}
 #gate .gerr{color:#c0392b;font-size:.88rem;min-height:1.2em;margin:10px 0 0}
 .tm{font-size:.5em;vertical-align:super;line-height:0;margin-left:1px;font-weight:700}
 .concept{border-left:4px solid #e0a800;background:var(--orange-soft)!important}
+.team img.av{object-fit:cover;display:block}
+.team .card p a{font-size:.8rem;overflow-wrap:normal;word-break:keep-all}
 </style>
 <script>try{if(sessionStorage.getItem('ao_ok')==='1')document.documentElement.classList.add('ok')}catch(e){}</script>
 
@@ -276,7 +278,7 @@ h1,h2,h3{overflow-wrap:break-word;hyphens:auto}
       <a href="regelgeving.html">Regelgeving</a>
       <a href="index.html#idee">Uw vraag</a>
       <a href="index.html#contact" class="btn">Offerte<span class="bt-x"> aanvragen</span></a>
-      <details class="menu"><summary aria-label="Menu"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span class="mt">Menu</span></summary><div class="mpanel"><div><b>Op de homepage</b><a href="index.html#">Home</a><a href="index.html#vragen">Uw vragen</a><a href="index.html#bron">Onze data</a><a href="index.html#rapportages">Rapportages</a><a href="index.html#onderzoek">Benchmarks</a><a href="index.html#schade">Schade &amp; claims</a><a href="index.html#ai">AI-onderzoek</a><a href="index.html#aanbod">Aanbod &amp; abonnementen</a><a href="index.html#monitor">Assurantiemonitor</a><a href="index.html#idee">Uw onderzoeksvraag</a><a href="index.html#contact">Contact &amp; offerte</a></div><div><b>Pagina's</b><a href="voorbeeldrapport.html">Voorbeeldrapport</a><a href="whitepaper.html">Whitepaper</a><a href="regelgeving.html">Regelgeving</a><a href="methodologie.html">Methodologie</a><a href="over-ons.html">Over ons</a><a href="privacy.html">Privacyverklaring</a></div></div></details>
+      <details class="menu"><summary aria-label="Menu"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span class="mt">Menu</span></summary><div class="mpanel"><div><b>Op de homepage</b><a href="index.html#">Home</a><a href="index.html#vragen">Uw vragen</a><a href="index.html#bron">Onze data</a><a href="index.html#rapportages">Rapportages</a><a href="index.html#onderzoek">Benchmarks</a><a href="index.html#schade">Schade &amp; claims</a><a href="index.html#ai">AI-onderzoek</a><a href="index.html#aanbod">Aanbod &amp; abonnementen</a><a href="index.html#monitor">Assurantiemonitor</a><a href="index.html#idee">Uw onderzoeksvraag</a><a href="index.html#contact">Contact &amp; offerte</a></div><div><b>Pagina's</b><a href="voorbeeldrapport.html">Voorbeeldrapport</a><a href="whitepaper.html">Whitepaper</a><a href="regelgeving.html">Regelgeving</a><a href="methodologie.html">Methodologie</a><a href="over-ons.html">Over ons</a><a href="privacy.html">Privacyverklaring</a><a href="licentievoorwaarden.html">Licentievoorwaarden</a></div></div></details>
     </nav>
   </div>
 </header>
@@ -300,7 +302,7 @@ h1,h2,h3{overflow-wrap:break-word;hyphens:auto}
 
   <h2>Hoe wij werken</h2>
   <div class="team" style="grid-template-columns:repeat(2,1fr)" id="werkwijze">
-    <div class="card cat"><h3>Onafhankelijk</h3><ul><li>Het onderzoeksteam werkt los van de commerciële afdelingen van Blinqx</li><li>Geen afnemer krijgt voorrang of invloed op de uitkomsten van een ander</li><li>Een onafhankelijke adviesraad gaat onze methodologie en publicaties toetsen (in voorbereiding, zie <a href="#governance">governance</a>)</li></ul></div>
+    <div class="card cat"><h3>Onafhankelijk</h3><ul><li>Het onderzoeksteam werkt los van de commerciële afdelingen van Blinqx</li><li>Geen afnemer krijgt voorrang of invloed op de uitkomsten van een ander</li></ul></div>
     <div class="card cat"><h3>Zorgvuldig met data</h3><ul><li>Alleen geaggregeerde cijfers, niet herleidbaar tot klanten of adviseurs</li><li>Geen medische of strafrechtelijke gegevens</li><li>Vastgelegde methodologie en datakwaliteitscontroles</li></ul></div>
     <div class="card cat"><h3>Eerlijke concurrentie</h3><ul><li>U ziet uw eigen positie, nooit cijfers van individuele concurrenten</li><li>Vergelijkingsgroepen van minstens vijf partijen</li><li>Premies alleen als bandbreedte en achteraf</li></ul></div>
     <div class="card cat"><h3>Iets terug voor kantoren</h3><ul><li>Kantoren krijgen inzicht in hun eigen portefeuille via het adviseursabonnement</li><li>Uitkomsten van de adviseursenquête worden met de deelnemers gedeeld</li><li>Marktbrede trends in de openbare Assurantiemonitor</li></ul></div>
@@ -308,13 +310,12 @@ h1,h2,h3{overflow-wrap:break-word;hyphens:auto}
   <p style="margin-top:14px"><a href="methodologie.html">Lees onze methodologie</a> · <a href="regelgeving.html">Regelgeving &amp; toezicht</a> · <a href="index.html#methode">Mededinging en privacy</a></p>
 
   <h2 id="governance">Governance</h2>
-  <p class="box concept"><strong>Status.</strong> De overeenkomsten met deelnemende kantoren en volmachten, de belangenafweging, de DPIA en de governance hieronder (adviesraad, privacy officer, compliance officer) zijn in voorbereiding. Wij leveren pas rapportages op basis van klantdata als deze zijn afgerond.</p>
+  <p class="box concept"><strong>Status.</strong> De overeenkomsten met deelnemende kantoren en volmachten, de belangenafweging, de DPIA en de governance hieronder (privacy officer, compliance officer) zijn in voorbereiding. Wij leveren pas rapportages op basis van klantdata als deze zijn afgerond.</p>
   <p>Assurantie-onderzoek.nl werkt met data uit de software die Blinqx levert aan kantoren en volmachten, en verkoopt inzichten aan verzekeraars. Daarom hebben we de onafhankelijkheid, de omgang met data en de mededinging vast georganiseerd.</p>
   <div class="tablewrap"><table class="eba">
     <thead><tr><th>Orgaan of rol</th><th>Taak</th></tr></thead>
     <tbody>
-      <tr><td>Directie</td><td>Eindverantwoordelijk voor de onderzoeksactiviteit, het productaanbod en de naleving van deze governance. Legt jaarlijks verantwoording af aan de directie van Blinqx en aan de adviesraad.</td></tr>
-      <tr><td>Onafhankelijke adviesraad</td><td>Drie externe leden met expertise in onderzoeksmethodologie, verzekeringstoezicht en privacy of mededinging. De raad toetst nieuwe producten en methoden en beoordeelt jaarlijks de Assurantiemonitor en de methodologie.</td></tr>
+      <tr><td>Directie</td><td>Eindverantwoordelijk voor de onderzoeksactiviteit, het productaanbod en de naleving van deze governance. Legt jaarlijks verantwoording af aan de directie van Blinqx.</td></tr>
       <tr><td>Onderzoeksteam</td><td>Alleen het onderzoeksteam heeft toegang tot de onderliggende, niet-geaggregeerde data. Toegang wordt per persoon toegekend, gelogd en elk kwartaal herzien.</td></tr>
       <tr><td>Privacy officer (met de FG van Blinqx)</td><td>Bewaakt de afspraken met kantoren en volmachten, de DPIA, de minimale celgrootte en de aggregatie. Keurt elke nieuwe datatoepassing vooraf goed.</td></tr>
       <tr><td>Compliance officer mededinging</td><td>Toetst elk nieuw product en elke nieuwe rapportage aan de mededingingswaarborgen. Is aanspreekpunt voor afnemers bij vragen.</td></tr>
@@ -322,21 +323,20 @@ h1,h2,h3{overflow-wrap:break-word;hyphens:auto}
   </table></div>
   <h3>Vaste afspraken</h3>
   <ul>
-    <li><b>Gebruiksbeperking.</b> Afnemers mogen onze inzichten niet gebruiken voor loyaliteitsbeprijzing, margepersonalisatie of het sturen en belonen van adviseurs. Dit staat in de licentie.</li>
+    <li><b>Gebruiksbeperking.</b> Afnemers mogen onze inzichten niet gebruiken voor loyaliteitsbeprijzing, margepersonalisatie of het sturen en belonen van adviseurs. Dit staat in artikel 5 van de <a href="licentievoorwaarden.html#l5">licentievoorwaarden</a>.</li>
     <li><b>Scheiding van functies.</b> Commerciële teams van Blinqx hebben geen toegang tot rapportages van afnemers of tot de onderliggende data.</li>
     <li><b>Geen invloed van afnemers.</b> Een verzekeraar kan de uitkomsten, de vergelijkingsgroepen of de methodologie niet beïnvloeden, en krijgt geen inzage in rapportages van andere afnemers.</li>
     <li><b>Geen invloed op het advies.</b> Onze inzichten worden niet gebruikt om adviseurs in de software of in de premievergelijking richting een maatschappij te sturen. Er is geen vergoeding per aanvraag, polis of kantoor.</li>
     <li><b>Geen persoonlijk onderzoek.</b> Wij doen geen onderzoek naar individuele verzekerden en geven geen oordeel over individuele claims.</li>
     <li><b>Transparantie naar kantoren.</b> Deelnemende kantoren en volmachten weten welke data voor onderzoek wordt gebruikt en voor welke producten.</li>
-    <li><b>Klachten en escalatie.</b> Afnemers en kantoren kunnen vragen of klachten melden bij de compliance officer. Komen we er samen niet uit, dan kan de zaak aan de adviesraad worden voorgelegd.</li>
+    <li><b>Klachten en escalatie.</b> Afnemers en kantoren kunnen vragen of klachten melden bij de compliance officer. Komen we er samen niet uit, dan kan de zaak aan de directie van Blinqx worden voorgelegd.</li>
   </ul>
-  <p class="src">Samenstelling van de adviesraad: <span class="ph">[namen en achtergrond van de drie leden]</span>.</p>
 
   <h2>Het team</h2>
   <div class="team">
-    <div class="card"><div class="av" aria-hidden="true">JD</div><h3>Jos van Driesum</h3><p style="font-size:.88rem;margin:0"><a href="mailto:jos.van.driesum@blinqx.tech">jos.van.driesum@blinqx.tech</a></p></div>
-    <div class="card"><div class="av" aria-hidden="true">DR</div><h3>Dennes Roes</h3><p style="font-size:.88rem;margin:0"><a href="mailto:dennes.roes@blinqx.tech">dennes.roes@blinqx.tech</a></p></div>
-    <div class="card"><div class="av" aria-hidden="true">JO</div><h3>Jeroen Oversteegen</h3><p style="font-size:.88rem;margin:0"><a href="mailto:jeroen.oversteegen@blinqx.tech">jeroen.oversteegen@blinqx.tech</a></p></div>
+    <div class="card"><img class="av" src="img/jos-van-driesum.jpg" alt="Jos van Driesum" width="72" height="72" loading="lazy"><h3>Jos van Driesum</h3><p style="font-size:.88rem;margin:0"><a href="mailto:jos.van.driesum@blinqx.tech">jos.van.driesum<wbr>@blinqx.tech</a></p></div>
+    <div class="card"><img class="av" src="img/dennes-roes.jpg" alt="Dennes Roes" width="72" height="72" loading="lazy"><h3>Dennes Roes</h3><p style="font-size:.88rem;margin:0"><a href="mailto:dennes.roes@blinqx.tech">dennes.roes<wbr>@blinqx.tech</a></p></div>
+    <div class="card"><img class="av" src="img/jeroen-oversteegen.jpg" alt="Jeroen Oversteegen" width="72" height="72" loading="lazy"><h3>Jeroen Oversteegen</h3><p style="font-size:.88rem;margin:0"><a href="mailto:jeroen.oversteegen@blinqx.tech">jeroen.oversteegen<wbr>@blinqx.tech</a></p></div>
   </div>
 
   <h2>Bedrijfsgegevens</h2>
@@ -360,7 +360,7 @@ h1,h2,h3{overflow-wrap:break-word;hyphens:auto}
       <strong style="color:#fff">Colofon</strong><br>
       Blinqx (waaronder Blinqx Verzekering &amp; Hypotheek en het cloudplatform eBlinqx)<br>
       Hullenbergweg 109, 1101 CL Amsterdam · KvK 84045132<br>
-      <a href="over-ons.html">Over ons</a> · <a href="privacy.html">Privacyverklaring</a> · <a href="methodologie.html">Methodologie</a> · <a href="regelgeving.html">Regelgeving</a> · <a href="voorbeeldrapport.html">Voorbeeldrapport</a> · <a href="index.html#schade">Schade &amp; claimonderzoek</a> · <a href="https://jeroen-o.github.io/hypotheekonderzoek.nl/" target="_blank" rel="noopener">Hypotheekonderzoek.nl</a><br>
+      <a href="over-ons.html">Over ons</a> · <a href="privacy.html">Privacyverklaring</a> · <a href="licentievoorwaarden.html">Licentievoorwaarden</a> · <a href="methodologie.html">Methodologie</a> · <a href="regelgeving.html">Regelgeving</a> · <a href="voorbeeldrapport.html">Voorbeeldrapport</a> · <a href="index.html#schade">Schade &amp; claimonderzoek</a> · <a href="https://jeroen-o.github.io/hypotheekonderzoek.nl/" target="_blank" rel="noopener">Hypotheekonderzoek.nl</a><br>
       <span style="font-size:.8rem">Deze site is geen juridisch of regelgevend advies.</span>
     </div>
   </div>

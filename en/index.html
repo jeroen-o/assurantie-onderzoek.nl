@@ -253,6 +253,7 @@ h1,h2,h3{overflow-wrap:break-word;hyphens:auto}
 @media(max-width:600px){.logo svg{display:none!important}header.top .wrap{gap:6px!important}.home,.lang,.menu summary{padding:6px 9px!important}.home,.lang,.menu{margin-left:4px!important}header.top nav>a.btn:not(.home){padding:7px 12px!important;font-size:.8rem!important;margin-left:4px!important}}
 @media(min-width:401px){header.top nav>a.btn:not(.home){display:inline-block!important}}
 @media(max-width:400px){header.top nav>a.btn:not(.home){display:none!important}.logo{font-size:.84rem!important}}
+.person{display:flex;flex-direction:column}.person .pav{width:64px;height:64px;border-radius:50%;object-fit:cover;margin:0 0 10px;border:2px solid #ffcc00}
 </style>
 <meta property="og:image" content="https://assurantie-onderzoek.nl/og.png">
 <meta property="og:image:width" content="1200">
@@ -304,7 +305,7 @@ h1,h2,h3{overflow-wrap:break-word;hyphens:auto}
       <a href="regulation.html">Regulation</a>
       <a href="#idee">Your question</a>
       <a href="#contact" class="btn">Request<span class="bt-x"> a quote</span></a>
-      <details class="menu"><summary aria-label="Menu"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span class="mt">Menu</span></summary><div class="mpanel"><div><b>On the homepage</b><a href="#">Home</a><a href="#vragen">Your questions</a><a href="#bron">Our data</a><a href="#rapportages">Reports</a><a href="#onderzoek">Benchmarks</a><a href="#schade">Claims</a><a href="#ai">AI research</a><a href="#aanbod">Products &amp; subscriptions</a><a href="#monitor">Insurance Monitor</a><a href="#idee">Your research question</a><a href="#contact">Contact &amp; quote</a></div><div><b>Pages</b><a href="sample-report.html">Sample report</a><a href="whitepaper.html">Whitepaper</a><a href="regulation.html">Regulation</a><a href="methodology.html">Methodology</a><a href="about.html">About us</a><a href="privacy.html">Privacy statement</a></div></div></details>
+      <details class="menu"><summary aria-label="Menu"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span class="mt">Menu</span></summary><div class="mpanel"><div><b>On the homepage</b><a href="#">Home</a><a href="#vragen">Your questions</a><a href="#bron">Our data</a><a href="#rapportages">Reports</a><a href="#onderzoek">Benchmarks</a><a href="#schade">Claims</a><a href="#ai">AI research</a><a href="#aanbod">Products &amp; subscriptions</a><a href="#monitor">Insurance Monitor</a><a href="#idee">Your research question</a><a href="#contact">Contact &amp; quote</a></div><div><b>Pages</b><a href="sample-report.html">Sample report</a><a href="whitepaper.html">Whitepaper</a><a href="regulation.html">Regulation</a><a href="methodology.html">Methodology</a><a href="about.html">About us</a><a href="privacy.html">Privacy statement</a><a href="license-terms.html">Licence terms</a></div></div></details>
     </nav>
   </div>
 </header>
@@ -446,6 +447,15 @@ h1,h2,h3{overflow-wrap:break-word;hyphens:auto}
         <p class="wat"><strong>Key metric:</strong> the quality of your claims handling, against the market.</p></div>
     </div>
     <div class="callout" style="margin-bottom:8px"><strong>The bridge to mortgages, too.</strong> Through <span class="gen">mortgage software and HDN applications</span><span class="pn">eBlinqx Hypotheek and HDN</span> we see which term life, mortgage payment protection and income protection products are taken out with a mortgage. See also <a href="https://jeroen-o.github.io/hypotheekonderzoek.nl/" target="_blank" rel="noopener">hypotheekonderzoek.nl</a>.</div>
+
+    <h3 style="margin:32px 0 6px;font-size:1.15rem">Message traffic: Aplaza and ADN</h3>
+    <p style="color:var(--muted);margin:0 0 12px;max-width:760px">Applications, policies, policy changes, renewals and claims are exchanged between intermediaries, MGAs and insurers as standardised messages: via Aplaza and as ADN messages under the SIVI standard. We know the number of these messages. That makes them an early and objective indicator of what is happening in the market, before annual figures are published.</p>
+    <div class="cats">
+      <div class="card cat"><h3>What we count</h3><ul><li>Application, policy, policy change, renewal, cancellation and claim messages</li><li>By insurer, MGA and line of business</li><li>By day, week and month</li></ul></div>
+      <div class="card cat"><h3>What it says about the market</h3><ul><li>Market activity, month by month</li><li>Seasonal patterns and renewal waves</li><li>Shifts between insurers, visible in cancellation and policy messages</li></ul></div>
+      <div class="card cat"><h3>What it says about you</h3><ul><li>Your share of message traffic by message type</li><li>The time between application and policy message</li><li>The share processed digitally, without manual entry</li></ul></div>
+      <div class="card cat"><h3>Caveats</h3><ul><li>A message is not a policy: repeated and duplicate messages are de-duplicated</li><li>Only intermediaries and MGAs with a connection are visible</li><li>Always aggregated, with no message content about individuals</li></ul></div>
+    </div>
     <div class="cats" style="margin-top:24px">
       <div class="card cat"><h3>Which quotes are made</h3><ul><li>Premium comparisons made by the adviser</li><li>Which insurers and covers are included</li><li>Which excesses and clauses are chosen</li></ul></div>
       <div class="card cat"><h3>Which applications do not go to you</h3><ul><li>How often you were in a comparison but the application did not come to you</li><li>In which lines of business and at which intermediaries this happens</li><li>Aggregated, without showing which competitor received the application</li></ul></div>
@@ -499,6 +509,14 @@ h1,h2,h3{overflow-wrap:break-word;hyphens:auto}
       <div class="card cat"><h3>Premium &amp; terms</h3><ul><li>Publicly published premiums and terms of all providers, structured</li><li>Your position against the market range, with a delay</li><li>History of premium and terms changes</li><li>Relationship between your premium level and your own share, in hindsight</li></ul></div>
       <div class="card cat"><h3>Claims &amp; handling</h3><ul><li>Claim notifications by line of business and cause</li><li>Lead time from notification to settlement</li><li>Use of loss adjusters and counter-assessment</li><li>Rejections and payment bands</li><li>Claims frequency by intermediary and customer profile</li></ul></div>
       <div class="card cat"><h3>Risk &amp; regulation</h3><ul><li>Market reference for product review and target market definition (PARP)</li><li>Climate-related damage by region for ESG and ORSA analyses</li><li>Signals of underinsurance and lack of insurance</li><li>Insurability: which groups are rejected or loaded more often</li><li>Reports for the risk committee and the board</li></ul></div>
+      <div class="card cat wide"><h3>Message traffic (Aplaza and ADN)</h3><ul>
+        <li>Number of application, policy, policy change, renewal, cancellation and claim messages per month</li>
+        <li>Your share of message traffic by message type, compared with the market</li>
+        <li>Market activity as an early indicator, ahead of annual figures</li>
+        <li>Renewal waves and the outflow that follows</li>
+        <li>Lead time from application to policy message</li>
+        <li>Degree of digital processing, without manual entry</li>
+      </ul></div>
       <div class="card cat wide"><h3>Customer profile by type of insurance</h3><ul>
         <li><b>Motor:</b> driver age, no-claims years, type and age of the vehicle, mileage, region</li>
         <li><b>Buildings:</b> type of home, year of construction, roofing (e.g. thatch or tiles), rebuild value via calculator or fixed amount, solar panels, outbuildings</li>
@@ -715,7 +733,7 @@ h1,h2,h3{overflow-wrap:break-word;hyphens:auto}
         <a class="btn offerte" href="?onderwerp=Network%20subscription#contact" data-offerte="Network subscription">Request a quote</a>
       </div>
     </div>
-    <div class="callout"><strong>Terms of use.</strong> Our insights are intended to support customer interest. The licence states that clients will not use them for loyalty penalties (higher premiums for long-standing customers without a risk-based reason), for margin personalisation, or to steer or reward advisers based on their production with an insurer.</div>
+    <div class="callout"><strong>Terms of use.</strong> Our insights are intended to support customer interest. The <a href="license-terms.html">licence terms</a> state that clients will not use them for loyalty penalties (higher premiums for long-standing customers without a risk-based reason), for margin personalisation, or to steer or reward advisers based on their production with an insurer.</div>
   </div>
 </section>
 
@@ -779,7 +797,7 @@ h1,h2,h3{overflow-wrap:break-word;hyphens:auto}
     </div>
     <h3 style="margin:32px 0 12px;font-size:1.15rem">Frequently asked questions from procurement and compliance</h3>
     <div class="faq">
-      <details><summary>What may we do with the data and reports?</summary><p>Usage is set out in a licence agreement with the quote. As standard, this is for internal use within your organisation, without further distribution to third parties. Use for loyalty penalties, margin personalisation or steering advisers is excluded.</p></details>
+      <details><summary>What may we do with the data and reports?</summary><p>Usage is governed by our <a href="license-terms.html">licence terms</a>, which form part of the quote. As standard, this is for internal use within your organisation, without further distribution to third parties. Use for loyalty penalties, margin personalisation or steering advisers is excluded.</p></details>
       <details><summary>Do you investigate individual claims or policyholders?</summary><p>No. We provide aggregated insights into the claims and investigation process. Personal investigation in an individual file is outside the scope of our services.</p></details>
       <details><summary>How is information security arranged?</summary><p>With the quote, we complete your security and supplier questionnaire, and explain how hosting, access and logging are set up.</p></details>
       <details><summary>Do we get a data processing agreement?</summary><p>Our reports do not contain personal data of consumers. For the contact details of your employees, we conclude a data processing agreement where necessary.</p></details>
@@ -932,9 +950,9 @@ h1,h2,h3{overflow-wrap:break-word;hyphens:auto}
 
     <h3 style="margin:40px 0 16px;font-size:1rem;color:#ffcc00;letter-spacing:.08em;text-transform:uppercase">Or contact us directly</h3>
     <div class="people">
-      <div class="person"><h3>Jos van Driesum</h3><a href="mailto:jos.van.driesum@blinqx.tech?subject=Quote%20request%20Assurantie-onderzoek.nl">jos.van.driesum@blinqx.tech</a><a href="tel:+31644081447">06 44 081 447</a></div>
-      <div class="person"><h3>Dennes Roes</h3><a href="mailto:dennes.roes@blinqx.tech?subject=Quote%20request%20Assurantie-onderzoek.nl">dennes.roes@blinqx.tech</a><a href="tel:+31651117893">06 51 117 893</a></div>
-      <div class="person"><h3>Jeroen Oversteegen</h3><a href="mailto:jeroen.oversteegen@blinqx.tech?subject=Quote%20request%20Assurantie-onderzoek.nl">jeroen.oversteegen@blinqx.tech</a><a href="tel:+31621247257">06 21 247 257</a></div>
+      <div class="person"><img class="pav" src="../img/jos-van-driesum.jpg" alt="Jos van Driesum" width="64" height="64" loading="lazy"><h3>Jos van Driesum</h3><a href="mailto:jos.van.driesum@blinqx.tech?subject=Quote%20request%20Assurantie-onderzoek.nl">jos.van.driesum@blinqx.tech</a><a href="tel:+31644081447">06 44 081 447</a></div>
+      <div class="person"><img class="pav" src="../img/dennes-roes.jpg" alt="Dennes Roes" width="64" height="64" loading="lazy"><h3>Dennes Roes</h3><a href="mailto:dennes.roes@blinqx.tech?subject=Quote%20request%20Assurantie-onderzoek.nl">dennes.roes@blinqx.tech</a><a href="tel:+31651117893">06 51 117 893</a></div>
+      <div class="person"><img class="pav" src="../img/jeroen-oversteegen.jpg" alt="Jeroen Oversteegen" width="64" height="64" loading="lazy"><h3>Jeroen Oversteegen</h3><a href="mailto:jeroen.oversteegen@blinqx.tech?subject=Quote%20request%20Assurantie-onderzoek.nl">jeroen.oversteegen@blinqx.tech</a><a href="tel:+31621247257">06 21 247 257</a></div>
     </div>
   </div>
 </section>
@@ -983,7 +1001,7 @@ h1,h2,h3{overflow-wrap:break-word;hyphens:auto}
       <strong style="color:#fff">Colophon</strong><br>
       Blinqx (including Blinqx Verzekering &amp; Hypotheek and the eBlinqx cloud platform)<br>
       Hullenbergweg 109, 1101 CL Amsterdam · Chamber of Commerce (KvK) 84045132<br>
-      <a href="about.html">About us</a> · <a href="privacy.html">Privacy statement</a> · <a href="methodology.html">Methodology</a> · <a href="regulation.html">Regulation</a> · <a href="sample-report.html">Sample report</a> · <a href="#schade">Claims &amp; claims investigation</a> · <a href="https://jeroen-o.github.io/hypotheekonderzoek.nl/" target="_blank" rel="noopener">Hypotheekonderzoek.nl</a><br>
+      <a href="about.html">About us</a> · <a href="privacy.html">Privacy statement</a> · <a href="license-terms.html">Licence terms</a> · <a href="methodology.html">Methodology</a> · <a href="regulation.html">Regulation</a> · <a href="sample-report.html">Sample report</a> · <a href="#schade">Claims &amp; claims investigation</a> · <a href="https://jeroen-o.github.io/hypotheekonderzoek.nl/" target="_blank" rel="noopener">Hypotheekonderzoek.nl</a><br>
       <span style="font-size:.8rem">This site does not constitute legal or regulatory advice.</span>
     </div>
   </div>
